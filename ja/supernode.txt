@@ -1,0 +1,38 @@
+{"Enlink": {
+  "region": "Asia",
+  "url": "https://lora.rosanetworks.com",
+  "misc": {
+    "logo": "https://lora.rosanetworks.com//branding.png",
+    "appver":"1.0.3",
+    "apkurl":"https://lora.rosanetworks.com/app/mxc1_0_3.apk"
+    }
+  },
+  "XY": {
+  "region": "Asia",
+  "url": "https://mxcxy.com",
+  "misc": {
+    "logo": "https://mxcxy.com//branding.png",
+    "appver":"1.0.3",
+    "apkurl":"https://mxcxy.com/app/mxc1_0_3.apk"
+    }
+  },
+  "Huaweitech": {
+  "region": "Asia",
+  "url": "https://lora.hunanhuaweikeji.com",
+  "misc": {
+    "logo": "https://lora.hunanhuaweikeji.com//branding.png",
+    "appver":"1.0.3",
+    "apkurl":"https://lora.hunanhuaweikeji.com/app/mxc1_0_3.apk"
+    }
+  },
+  "MatchX": {
+  "region": "Europe",
+  "url": "https://lora.supernode.matchx.io",
+  "misc": {
+    "logo": "https://lora.supernode.matchx.io//branding.png",
+    "appver":"1.0.3",
+    "apkurl":"https://lora.supernode.matchx.io/app/mxc1_0_3.apk"
+    }
+  },
+
+}

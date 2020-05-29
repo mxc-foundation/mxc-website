@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<!--  This site was created in Webflow. http://www.webflow.com  -->
+<!--  Last Published: Thu May 28 2020 13:24:29 GMT+0000 (Coordinated Universal Time)  -->
+<html data-wf-page="5ebaab9732ecf4a9c4804c39" data-wf-site="5e7892290014e634331ec873">
+<head>
+  <meta charset="utf-8">
+  <title>MXC-Token</title>
+  <meta content="MXC is an ERC20 utility token used for device transactions conducted through the MXC Supernode network. MXC adds value by giving the MXC community a chance to share in Supernode profits through staking." name="description">
+  <meta content="MXC-Token" property="og:title">
+  <meta content="MXC is an ERC20 utility token used for device transactions conducted through the MXC Supernode network. MXC adds value by giving the MXC community a chance to share in Supernode profits through staking." property="og:description">
+  <meta content="https://uploads-ssl.webflow.com/5e7892290014e634331ec873/5ec24b8564431c3731a6c681_MXC%20opengraph.png" property="og:image">
+  <meta content="MXC-Token" property="twitter:title">
+  <meta content="MXC is an ERC20 utility token used for device transactions conducted through the MXC Supernode network. MXC adds value by giving the MXC community a chance to share in Supernode profits through staking." property="twitter:description">
+  <meta content="https://uploads-ssl.webflow.com/5e7892290014e634331ec873/5ec24b8564431c3731a6c681_MXC%20opengraph.png" property="twitter:image">
+  <meta property="og:type" content="website">
+  <meta content="summary_large_image" name="twitter:card">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="Webflow" name="generator">
+  <link href="css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="css/webflow.css" rel="stylesheet" type="text/css">
+  <link href="css/mxc-387cd4.webflow.css" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+  <script type="text/javascript">WebFont.load({  google: {    families: ["Roboto:100,300,regular,500,700,900"]  }});</script>
+  <!-- [if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif] -->
+  <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
+  <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
+  <link href="images/webclip.png" rel="apple-touch-icon">
+  <!--  Tracking Links, added stuff that makes this look ugly  -->
+  <!--  Global site tag (gtag.js) - Google Analytics  -->
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-118154589-1"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-118154589-1');
+</script>
+  <!--  Google Tag Manager  -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NB72D8S');</script>
+  <!--  End Google Tag Manager  -->
+  <!--  Reddit Conversion Pixel  -->
+  <script>
+var now=Date.now();var i=new Image();i.src="https://alb.reddit.com/snoo.gif?q=CAAHAAABAAoACQAAABWuUh4qAA==&s=btgL_qStscxUVi6xa8AbDMCwm2RYYhu1qlssG1tMw2A=&ts="+now;
+</script>
+  <noscript>
+<img height="1" width="1" style="display:none" src="https://alb.reddit.com/snoo.gif?q=CAAHAAABAAoACQAAABWuUh4qAA==&s=btgL_qStscxUVi6xa8AbDMCwm2RYYhu1qlssG1tMw2A=">
+</noscript>
+  <!--  DO NOT MODIFY  -->
+  <!--  End Reddit Conversion Pixel  -->
+  <!--  Start of HubSpot Embed Code  -->
+  <script type="text/javascript" id="hs-script-loader" async="" defer="" src="https://js.hs-scripts.com/4475127.js"></script>
+  <!--  End of HubSpot Embed Code  -->
+  <!--  Reddit Conversion Pixel  -->
+  <script>
+	!function(w,d){if(!w.rdt){var p=w.rdt=function(){p.sendEvent?p.sendEvent.apply(p,arguments):p.callQueue.push(arguments)};p.callQueue=[];var t=d.createElement("script");t.src="https://www.redditstatic.com/ads/pixel.js%22,t.async=!0;var s=d.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}}(window,document);rdt('init','t2_15alxvbb');rdt('track', 'PageVisit');
+	</script>
+  <!--  DO NOT MODIFY  -->
+  <!--  End Reddit Conversion Pixel  -->
+  <!--  Taboola Pixel Code  -->
+  <script type="text/javascript">
+  window._tfa = window._tfa || [];
+  window._tfa.push({notify: 'event', name: 'page_view', id: 1217273});
+  !function (t, f, a, x) {
+         if (!document.getElementById(x)) {
+            t.async = 1;t.src = a;t.id=x;f.parentNode.insertBefore(t, f);
+         }
+  }(document.createElement('script'),
+  document.getElementsByTagName('script')[0],
+  '//cdn.taboola.com/libtrc/unip/1217273/tfa.js',
+  'tb_tfa_script');
+</script>
+  <noscript>
+  <img src="https://trc.taboola.com/1217273/log/3/unip?en=page_view" width="0" height="0" style="display:none">
+</noscript>
+  <!--  End of Taboola Pixel Code  -->
+  <!--  Start Outbrain Pixel  -->
+  <script data-obct="" type="text/javascript">
+	/** DO NOT MODIFY THIS CODE**/
+	!function(_window, _document) {
+	  var OB_ADV_ID='008f2a00265b9a1ce3bf6db8c4be7b7d17';
+	  if (_window.obApi) {var toArray = function(object) {return Object.prototype.toString.call(object) === '[object Array]' ? object : [object];};_window.obApi.marketerId = toArray(_window.obApi.marketerId).concat(toArray(OB_ADV_ID));return;}
+	  var api = _window.obApi = function() {api.dispatch ? api.dispatch.apply(api, arguments) : api.queue.push(arguments);};api.version = '1.1';api.loaded = true;api.marketerId = OB_ADV_ID;api.queue = [];var tag = _document.createElement('script');tag.async = true;tag.src = '//amplify.outbrain.com/cp/obtp.js';tag.type = 'text/javascript';var script = _document.getElementsByTagName('script')[0];script.parentNode.insertBefore(tag, script);}(window, document);
+  obApi('track', 'PAGE_VIEW');
+  </script>
+  <!--  End Outbrain Pixel -->
+  <!--  end of the tracking links  -->
+  <!--  MailerLite Universal  -->
+  <script>
+(function(m,a,i,l,e,r){ m['MailerLiteObject']=e;function f(){
+var c={ a:arguments,q:[]};var r=this.push(c);return "number"!=typeof r?r:f.bind(c.q);}
+f.q=f.q||[];m[e]=m[e]||f.bind(f.q);m[e].q=m[e].q||f.q;r=a.createElement(i);
+var _=a.getElementsByTagName(i)[0];r.async=1;r.src=l+'?v'+(~~(new Date().getTime()/1000000));
+_.parentNode.insertBefore(r,_);})(window, document, 'script', 'https://static.mailerlite.com/js/universal.js', 'ml');
+var ml_account = ml('accounts', '1479110', 'v9j1r7r5k1', 'load');
+</script>
+  <!--  End MailerLite Universal  -->
+  <script>("body").html((“body”).html().replace(/.html/g,’’));
+("body").html((“body”).html().replace(/index.html/g,’/’));
+</script>
+</head>
+<body>
+  <div data-collapse="medium" data-animation="default" data-duration="400" role="banner" class="navbar w-nav">
+    <div class="navcontainer w-container"><a href="index.html" class="brand w-nav-brand"><img src="images/mxc_logo-social.svg" height="35" alt="" class="image"></a>
+      <div class="div-block-95 w-clearfix">
+        <nav role="navigation" class="nav-menu left w-nav-menu">
+          <div class="div-block-97"><a href="index.html" class="nav-link w-nav-link">Home</a><a href="mxc-token.html" aria-current="page" class="nav-link w-nav-link w--current">Token</a><a href="mxc-supernode.html" class="nav-link w-nav-link">Supernode</a><a href="mxc-about.html" class="nav-link w-nav-link">About</a><a href="https://blog.mxc.org/" target="_blank" class="nav-link w-nav-link">Blog</a></div>
+          <div class="div-block-98">
+            <div data-hover="" data-delay="0" class="nav-link w-dropdown">
+              <div class="dropdown-toggle-4 w-dropdown-toggle">
+                <div class="icon-3 w-icon-dropdown-toggle"></div>
+                <div class="text-block-3">LPWAN Server</div>
+              </div>
+              <nav class="w-dropdown-list"><a href="https://lora.supernode.matchx.io" target="_blank" class="dropdown-link-8 w-dropdown-link">MatchX</a><a href="https://lora.hunanhuaweikeji.com" target="_blank" class="dropdown-link-9 w-dropdown-link">Huawei Tech</a><a href="https://lora.rosanetworks.com" target="_blank" class="dropdown-link-10 w-dropdown-link">EnLink</a><a href="https://mxcxy.com" target="_blank" class="dropdown-link-11 w-dropdown-link">XY Pool</a></nav>
+            </div>
+            <div data-hover="" data-delay="0" class="nav-link w-dropdown">
+              <div class="dropdown-toggle-4 language w-dropdown-toggle">
+                <div class="icon-2 w-icon-dropdown-toggle"></div>
+                <div class="text-block-2">Language</div>
+              </div>
+              <nav class="w-dropdown-list"><a href="index.html" class="dropdown-link-6 w-dropdown-link">English</a><a href="cn/mxc-foundation.html" class="dropdown-link-6 w-dropdown-link">简体中文</a><a href="kr/mxc-foundation.html" class="dropdown-link-6 w-dropdown-link">한국어</a><a href="#" class="dropdown-link-7 w-dropdown-link">繁體中文</a></nav>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div class="menu-button w-nav-button">
+        <div class="w-icon-nav-menu"></div>
+      </div>
+    </div>
+  </div>
+  <div class="market">
+    <div class="div-block-4 token">
+      <div class="w-layout-grid grid-2">
+        <div class="marketstatus">
+          <p class="paragraph-4">Market Price</p>
+          <h2 class="value">$ 0.003412</h2>
+        </div>
+        <div class="marketstatus">
+          <p class="paragraph-4">Daily Transaction (Avg.)</p>
+          <h2 class="value">300</h2>
+        </div>
+        <div class="marketstatus">
+          <p class="paragraph-4">Staked</p>
+          <h2 class="value">450,000 MXC</h2>
+        </div>
+        <div class="marketstatus">
+          <p class="paragraph-4">Connected Devices</p>
+          <h2 class="value">100</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="abouttoken token">
+    <div class="container-01 token">
+      <div class="heroholder">
+        <div data-w-id="872cd539-b6c6-5db6-db1b-97de4fa7f11e" style="-webkit-transform:translate3d(0, 100PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 100PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 100PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 100PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="halftextholder token">
+          <div class="divider"></div>
+          <h3 class="heroheading token">About the MXC Token</h3>
+          <p class="paragraph token">MXC is an ERC20 utility token used for device transactions conducted through the MXC Supernode network. MXC adds value by giving the MXC community a chance to share in Supernode profits through staking.</p>
+        </div>
+        <div data-w-id="86d5e94c-30d2-812a-16a9-b848c25b1a09" class="div-block-13 token"><a href="#" class="w-inline-block w-lightbox"><img src="images/videothumbnail.png" srcset="images/videothumbnail-p-500.png 500w, images/videothumbnail-p-800.png 800w, images/videothumbnail-p-1080.png 1080w, images/videothumbnail.png 1090w" sizes="(max-width: 767px) 96vw, (max-width: 991px) 700px, (max-width: 1919px) 450px, 29vw" alt=""><script type="application/json" class="w-json">{
+  "items": [
+    {
+      "type": "video",
+      "originalUrl": "https://youtu.be/26mYsNw32YM",
+      "url": "https://youtube.com/watch?v=26mYsNw32YM",
+      "html": "<iframe class=\"embedly-embed\" src=\"https://cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2F26mYsNw32YM%3Ffeature%3Doembed&display_name=YouTube&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D26mYsNw32YM&image=https%3A%2F%2Fi.ytimg.com%2Fvi%2F26mYsNw32YM%2Fhqdefault.jpg&key=96f1f04c5f4143bcb0f2e68c87d65feb&type=text%2Fhtml&schema=youtube\" width=\"940\" height=\"528\" scrolling=\"no\" title=\"YouTube embed\" frameborder=\"0\" allow=\"autoplay; fullscreen\" allowfullscreen=\"true\"></iframe>",
+      "thumbnailUrl": "https://i.ytimg.com/vi/26mYsNw32YM/hqdefault.jpg",
+      "width": 940,
+      "height": 528
+    }
+  ]
+}</script></a></div>
+      </div>
+    </div>
+  </div>
+  <section id="whitepapers" class="whitepaper">
+    <div class="div-block-18">
+      <div data-w-id="f9e4e7da-4913-243d-3307-a547e71a4528" style="-webkit-transform:translate3d(0, 91PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 91PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 91PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 91PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="container-01">
+        <h1 class="heading-5">Whitepapers</h1>
+        <p class="paragraph-9">Our white papers explain in detail how MXC is building an open-source protocol to revolutionize open-source wireless communication. Our one-pagers transform the &quot;tech talk&quot; into everyday language.</p>
+        <div>
+          <div class="w-layout-grid grid-5">
+            <div id="w-node-b9d5eb5e7c97-c4804c39" class="whitepapers">
+              <div class="div-block-93"><img src="images/WPicon-protocol.png" alt="" class="image-30"></div>
+              <div class="div-block-15">
+                <div class="divider whitepaper"></div>
+                <h3 class="heading-4">MXC Protocol</h3>
+                <div class="div-block-16"><a href="documents/MXC_technical_whitepaper.pdf" target="_blank" class="link-2">English</a>
+                  <div class="div-block-17"></div><a href="documents/MXC_technical_whitepaper-cnsimplified.pdf" target="_blank" class="link-2">Chinese</a>
+                  <div class="div-block-17"></div><a href="documents/MXC_technical_whitepaper-kr.pdf" target="_blank" class="link-2">Korean</a></div>
+              </div>
+            </div>
+            <div id="w-node-2ea9bfab92f1-c4804c39" class="whitepapers">
+              <div class="div-block-93"><img src="images/WPicon-SMB.png" alt="" class="image-30"></div>
+              <div class="div-block-15">
+                <div class="divider whitepaper"></div>
+                <h3 class="heading-4">Smart Machine Bidding</h3>
+                <div class="div-block-16"><a href="documents/MXC_smb_whitepaper.pdf" target="_blank" class="link-2">English</a></div>
+              </div>
+            </div>
+            <div id="w-node-c1be01093707-c4804c39" class="whitepapers">
+              <div class="div-block-93"><img src="images/WPicon-Data-econ.png" alt="" class="image-30"></div>
+              <div class="div-block-15">
+                <div class="divider whitepaper"></div>
+                <h3 class="heading-4"><strong class="bold-text">MXC Data Economy</strong></h3>
+                <div class="div-block-16"><a href="documents/MXC_data_economy_whitepaper.pdf" target="_blank" class="link-2">English</a>
+                  <div class="div-block-17"></div><a href="documents/wp-e2-update-0729-Chinese.pdf" target="_blank" class="link-2">Chinese</a></div>
+              </div>
+            </div>
+            <div id="w-node-93438232cd00-c4804c39" class="whitepapers">
+              <div class="div-block-93"><img src="images/WPicon-tokenomics.png" alt="" class="image-30"></div>
+              <div class="div-block-15">
+                <div class="divider whitepaper"></div>
+                <h3 class="heading-4"><strong class="bold-text-2">Tokenomics</strong></h3>
+                <div class="div-block-16"><a href="documents/MXC_economic_whitepaper-01.pdf" target="_blank" class="link-2">English</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="exchange">
+    <div class="container-01">
+      <div data-w-id="875fbcf6-a250-22bf-7f8b-d6b63807e8f5" style="-webkit-transform:translate3d(0, 91PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 91PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 91PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 91PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="fulltextholder">
+        <div class="divider"></div>
+        <h1 class="title">Exchanges</h1>
+        <p class="paragraph exchanges">The MXC token is available at the following digital asset exchanges.</p>
+      </div>
+      <div class="div-block-19">
+        <div class="w-layout-grid grid-6">
+          <div id="w-node-961872f6e893-c4804c39" class="exchangebox">
+            <div class="exchange-image"><img src="images/huobi.png" alt="" class="image-11"></div>
+            <div class="exchangetradepair">
+              <p class="paragraph-11">MXC/BTC</p>
+            </div>
+          </div>
+          <div id="w-node-16b806f5cfbf-c4804c39" class="exchangebox">
+            <div class="exchange-image"><img src="images/gate.png" alt="" class="image-11"></div>
+            <div class="exchangetradepair">
+              <p class="paragraph-11">MXC/BTC, MXC/USDT, MXC/ETH</p>
+            </div>
+          </div>
+          <div id="w-node-d4118862fddf-c4804c39" class="exchangebox">
+            <div class="exchange-image"><img src="images/bithumb-hak.png" alt="" class="image-11"></div>
+            <div class="exchangetradepair">
+              <p class="paragraph-11">MXC/KRW</p>
+            </div>
+          </div>
+        </div>
+        <div class="w-layout-grid grid-7">
+          <div class="exchangebox">
+            <div class="exchange-image"><img src="images/logo-b-global.svg" width="300" alt="" class="image-11"></div>
+            <div class="exchangetradepair">
+              <p class="paragraph-11">MXC/USDT</p>
+            </div>
+          </div>
+          <div class="exchangebox">
+            <div class="exchange-image"><img src="images/chainx.png" alt="" class="image-11"></div>
+            <div class="exchangetradepair">
+              <p class="paragraph-11">MXC/KRW</p>
+            </div>
+          </div>
+          <div class="exchangebox">
+            <div class="exchange-image"><img src="images/huobi-kr.png" alt="" class="image-11"></div>
+            <div class="exchangetradepair">
+              <p class="paragraph-11">MXC/BTC</p>
+            </div>
+          </div>
+          <div class="exchangebox">
+            <div class="exchange-image"><img src="images/bibox.png" alt="" class="image-11"></div>
+            <div class="exchangetradepair">
+              <p class="paragraph-11">MXC/BTC</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ambassadors">
+    <div class="container-01">
+      <div data-w-id="20b2a0d1-8d7e-1614-af35-da06a239ce24" style="-webkit-transform:translate3d(0, 91PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 91PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 91PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 91PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="fulltextholder">
+        <div class="divider"></div>
+        <h1 class="title">MXC Ambassadors</h1>
+        <p class="paragraph ambassadors">MXC Ambassadors support the MXC global community by participating in industry events, actively participating in the MXC Community, and planning events for their local community. </p>
+      </div>
+      <div class="div-block-94">
+        <div data-w-id="4c522869-2fb9-2a67-5ab0-a1569b1ba17c" style="-webkit-transform:translate3d(0, 91PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 91PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 91PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 91PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="w-layout-grid ambassadors">
+          <div class="profilebox"><img src="images/calvin-min.png" alt="">
+            <div class="profile-detail">
+              <div class="dividerverticalblack"></div>
+              <div class="team-detail">
+                <h4 class="name ambassador">Calvin</h4>
+                <p class="paragraph-12 ambassador">Telegram @kcalvink</p>
+                <p class="paragraph-13">Hongkong</p>
+              </div>
+            </div>
+          </div>
+          <div class="profilebox"><img src="images/ripple-min.png" alt="">
+            <div class="profile-detail">
+              <div class="dividerverticalblack"></div>
+              <div class="team-detail">
+                <h4 class="name ambassador">Geert-Jan</h4>
+                <p class="paragraph-12 ambassador">Telegram @Ripplesteeltje7</p>
+                <p class="paragraph-13">Netherlands</p>
+              </div>
+            </div>
+          </div>
+          <div class="profilebox"><img src="images/jong-ryoul-min.png" alt="">
+            <div class="profile-detail">
+              <div class="dividerverticalblack"></div>
+              <div class="team-detail">
+                <h4 class="name ambassador">Jong Ryoul</h4>
+                <p class="paragraph-12 ambassador">Telegram @jongryoulkim</p>
+                <p class="paragraph-13">South Korea</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="div-block-24">
+    <div class="container-01">
+      <p class="paragraph-22">Are you interested in joining the global Blockchain-IoT movement? Become an MXC Ambassador, and help us bring the MXC vision to your home country! As an MXC Ambassador, you grow with our success. You will be given the opportunity to attend events in your country to represent MXC, and to host various events and meet ups to expand our community. We will make sure to support you to become a successful MXC Ambassador!</p>
+      <a href="https://t.me/mxcfoundation" target="_blank" class="link-block-4 w-inline-block">
+        <div class="div-block-96"><img src="images/telegram-copy.svg" width="60" alt="" class="image-31"></div>
+        <p class="paragraph-23">Reach out to us to become an MXC Ambassador</p>
+      </a>
+    </div>
+  </div>
+  <footer id="footer" class="footer">
+    <div class="container-2 w-container">
+      <div class="footer-flex-container">
+        <div id="w-node-eb91c7355c93-c7355c90" class="div-block-8">
+          <h2 class="footer-heading">Company</h2>
+          <ul role="list" class="w-list-unstyled">
+            <li><a href="mxc-about.html" class="footer-link">About</a></li>
+            <li><a href="mxc-token.html" aria-current="page" class="footer-link w--current">Token</a></li>
+            <li><a href="mxc-supernode.html" class="footer-link">Supernode</a></li>
+            <li><a href="https://blog.mxc.org/" target="_blank" class="footer-link">Blog</a></li>
+            <li><a href="https://www.linkedin.com/company/mxc-foundation/jobs/" target="_blank" class="footer-link">Careers</a></li>
+            <li><a href="imprint.html" class="footer-link">Imprint</a></li>
+            <li><a href="privacy-policy.html" class="footer-link">Privacy Policy</a></li>
+            <li><a href="terms-and-conditions.html" class="footer-link">Terms &amp; Conditions</a></li>
+          </ul>
+        </div>
+        <div class="div-block-9">
+          <h2 class="footer-heading">Community</h2>
+          <ul role="list" class="w-list-unstyled">
+            <li class="list-item"><a href="#" class="footer-link">Event</a></li>
+            <li><a href="https://github.com/mxc-foundation" target="_blank" class="footer-link">Github</a></li>
+            <li><a href="https://www.facebook.com/MXCfoundation/" target="_blank" class="footer-link">Facebook</a></li>
+            <li><a href="https://twitter.com/mxcfoundation" target="_blank" class="footer-link">Twitter</a></li>
+            <li><a href="https://www.youtube.com/c/mxcfoundation" target="_blank" class="footer-link">Youtube</a></li>
+            <li><a href="https://t.me/mxcfoundation" target="_blank" class="footer-link">Telegram</a></li>
+            <li><a href="https://medium.com/mxc" target="_blank" class="footer-link">Medium</a></li>
+            <li><a href="https://www.reddit.com/r/MXCFoundation/" target="_blank" class="footer-link">Reddit</a></li>
+          </ul>
+        </div>
+        <div class="div-block-10">
+          <h2 class="footer-heading">Resources</h2>
+          <ul role="list" class="w-list-unstyled">
+            <li class="list-item-4"><a href="#" class="footer-link">Press Center</a></li>
+            <li><a href="mxc-token.html" aria-current="page" class="footer-link w--current">Whitepapers</a></li>
+            <li class="list-item-3"><a href="#" class="footer-link">Documentation</a></li>
+            <li><a href="https://t.me/mxcfoundation" target="_blank" class="footer-link">Live Chat</a></li>
+            <li><a href="https://wallet.mxc.org/" target="_blank" class="footer-link">AXS Wallet</a></li>
+          </ul>
+        </div>
+        <div id="w-node-eb91c7355cde-c7355c90" class="div-block-7">
+          <div class="html-embed w-embed">
+            <div class="ml-form-embed" data-account="1479110:v9j1r7r5k1" data-form="2081088:q7h7s1">
+            </div>
+          </div>
+          <h2 class="heading-3">Subscribe to our newsletter</h2>
+          <p class="paragraph-7">Receive the latest about our newest partnerships, integrations, and events by subscribing to our weekly news update.</p>
+          <div class="form-block w-form">
+            <form id="email-form" name="email-form" data-name="Email Form" class="subscribe-form-flex">
+              <div class="subscribe-form-input-wrapper"><input type="email" class="subscribe-form-input w-input" maxlength="256" name="Subscriber-Email-2" data-name="Subscriber Email 2" placeholder="Your Email address" id="Subscriber-Email-2" required=""></div><input type="submit" value="Subscribe" data-wait="Please wait..." class="submit-button w-button"></form>
+            <div class="w-form-done">
+              <div>Thank you! Your submission has been received!</div>
+            </div>
+            <div class="w-form-fail">
+              <div>Oops! Something went wrong while submitting the form.</div>
+            </div>
+          </div>
+          <p class="paragraph-8"> MXC needs the contact information you provide to us to contact you about our products and services. You may unsubscribe from these communications at any time. For information on how to unsubscribe, as well as our privacy practices and commitment to protecting your privacy, please review our Privacy Policy.</p>
+        </div>
+      </div>
+      <div class="text-block-4">Copyright © 2020 MXC Foundation. All rights reserved.</div>
+    </div>
+  </footer>
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.4.1.min.220afd743d.js?site=5e7892290014e634331ec873" type="text/javascript" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="js/webflow.js" type="text/javascript"></script>
+  <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+  <!--  Google Tag Manager (noscript)  -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NB72D8S" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!--  End Google Tag Manager (noscript)  -->
+  <script>("body").html((“body”).html().replace(/.html/g,’’));
+("body").html((“body”).html().replace(/index.html/g,’/’));
+</script>
+</body>
+</html>
