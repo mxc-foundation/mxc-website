@@ -274,4 +274,4 @@
 /blog/mxc-smart-city-new-york https://blog.mxc.org/mxc-smart-city-new-york
 /newsroom https://blog.mxc.org
 /blog/mxc-hackathon-new-exchange https://blog.mxc.org/mxc-hackathon-and-new-exchange
-/imprint/*      /imprint.html   200
+/imprint.html /imprint   200
