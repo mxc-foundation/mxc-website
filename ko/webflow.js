@@ -1677,7 +1677,7 @@
                     }
                     var r = {
                         ease: l.ease[1],
-                        from: 0,
+                        from: '0',
                         to: 1
                     };
                     e.init = function (t) {
@@ -3308,7 +3308,7 @@
             }, t.defer = function (e) {
                 return t.delay.apply(t, [
                     e,
-                    1
+                    '1'
                 ].concat(a.call(arguments, 1)));
             }, t.throttle = function (t) {
                 var e, n, r;
@@ -3818,11 +3818,11 @@
         Object.defineProperty(e, '__esModule', { value: !0 }), e.ixSession = void 0;
         var r = n(2), i = n(13), o = r.IX2EngineActionTypes, a = o.IX2_SESSION_INITIALIZED, u = o.IX2_SESSION_STARTED, c = o.IX2_TEST_FRAME_RENDERED, s = o.IX2_SESSION_STOPPED, f = o.IX2_EVENT_LISTENER_ADDED, l = o.IX2_EVENT_STATE_CHANGED, d = o.IX2_ANIMATION_FRAME_CHANGED, p = o.IX2_ACTION_LIST_PLAYBACK_CHANGED, v = o.IX2_VIEWPORT_WIDTH_CHANGED, h = o.IX2_MEDIA_QUERIES_DEFINED, E = {
                 active: !1,
-                tick: 0,
+                tick: '0',
                 eventListeners: [],
                 eventState: {},
                 playbackState: {},
-                viewportWidth: 0,
+                viewportWidth: '0',
                 mediaQueryKey: null,
                 hasBoundaryNodes: !1,
                 hasDefinedMediaQueries: !1
@@ -4549,7 +4549,7 @@
             return n > 0 ? 1000 * n : 1000 * parseFloat(t.getAttribute('data-default-duration'));
         };
         e.getPluginOrigin = function (t) {
-            return t || { value: 0 };
+            return t || { value: '0' };
         };
         e.getPluginDestination = function (t) {
             return { value: t.value };
@@ -4662,7 +4662,7 @@
             case st:
                 return { value: (0, f.default)(i(t, U), n.display) };
             case ft:
-                return e[o] || { value: 0 };
+                return e[o] || { value: '0' };
             default:
                 return;
             }
@@ -4820,8 +4820,8 @@
         }, e.reduceListToGroup = function (t) {
             var e = t.actionList, n = t.actionItemId, r = t.rawData, i = e.actionItemGroups, o = e.continuousParameterGroups, a = [], u = function (t) {
                     return a.push((0, v.mergeIn)(t, ['config'], {
-                        delay: 0,
-                        duration: 0
+                        delay: '0',
+                        duration: '0'
                     })), t.id === n;
                 };
             return i && i.some(function (t) {
@@ -4941,27 +4941,27 @@
             }
         };
         var At = (o = {}, (0, c.default)(o, J, Object.freeze({
-                xValue: 0,
-                yValue: 0,
-                zValue: 0
+                xValue: '0',
+                yValue: '0',
+                zValue: '0'
             })), (0, c.default)(o, tt, Object.freeze({
                 xValue: 1,
                 yValue: 1,
                 zValue: 1
             })), (0, c.default)(o, et, Object.freeze({
-                xValue: 0,
-                yValue: 0,
-                zValue: 0
+                xValue: '0',
+                yValue: '0',
+                zValue: '0'
             })), (0, c.default)(o, nt, Object.freeze({
-                xValue: 0,
-                yValue: 0
+                xValue: '0',
+                yValue: '0'
             })), o), bt = Object.freeze({
-                blur: 0,
-                'hue-rotate': 0,
-                invert: 0,
-                grayscale: 0,
+                blur: '0',
+                'hue-rotate': '0',
+                invert: '0',
+                grayscale: '0',
                 saturate: 100,
-                sepia: 0,
+                sepia: '0',
                 contrast: 100,
                 brightness: 100
             }), St = function (t, e) {
@@ -5240,8 +5240,8 @@
                     id: r,
                     elementId: i,
                     active: !1,
-                    position: 0,
-                    start: 0,
+                    position: '0',
+                    start: '0',
                     origin: A,
                     destination: b,
                     destinationKeys: G,
@@ -5771,7 +5771,7 @@
             }, st = function (t) {
                 var e, n, r = t.element, i = t.event.config, o = ut(), a = o.clientWidth, u = o.clientHeight, c = i.scrollOffsetValue, s = 'PX' === i.scrollOffsetUnit ? c : u * (c || 0) / 100;
                 return e = r.getBoundingClientRect(), n = {
-                    left: 0,
+                    left: '0',
                     top: s,
                     right: a,
                     bottom: u - s
@@ -5806,7 +5806,7 @@
                 };
             }, pt = function (t) {
                 return function (e) {
-                    var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { clickCount: 0 }, r = { clickCount: n.clickCount % 2 + 1 };
+                    var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { clickCount: '0' }, r = { clickCount: n.clickCount % 2 + 1 };
                     return r.clickCount !== n.clickCount && t(e, r) || r;
                 };
             }, vt = function () {
@@ -5862,10 +5862,10 @@
                 types: 'mousemove mouseout scroll',
                 handler: function (t) {
                     var e = t.store, n = t.element, r = t.eventConfig, i = t.nativeEvent, o = t.eventStateKey, a = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
-                            clientX: 0,
-                            clientY: 0,
-                            pageX: 0,
-                            pageY: 0
+                            clientX: '0',
+                            clientY: '0',
+                            pageX: '0',
+                            pageY: '0'
                         }, u = r.basedOn, c = r.selectedAxis, s = r.continuousParameterGroupId, f = r.reverse, l = r.restingState, d = void 0 === l ? 0 : l, p = i.clientX, v = void 0 === p ? a.clientX : p, E = i.clientY, g = void 0 === E ? a.clientY : E, y = i.pageX, I = void 0 === y ? a.pageX : y, m = i.pageY, T = void 0 === m ? a.pageY : m, O = 'X_AXIS' === c, A = 'mouseout' === i.type, b = d / 100, S = s, w = !1;
                     switch (u) {
                     case h.EventBasedOn.VIEWPORT:
@@ -5911,7 +5911,7 @@
             }), (0, o.default)(r, G, {
                 types: it,
                 handler: function (t) {
-                    var e = t.element, n = t.store, r = t.eventConfig, i = t.eventStateKey, o = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { scrollPercent: 0 }, a = ut(), u = a.scrollLeft, c = a.scrollTop, s = a.scrollWidth, f = a.scrollHeight, l = a.clientHeight, d = r.basedOn, p = r.selectedAxis, v = r.continuousParameterGroupId, E = r.startsEntering, g = r.startsExiting, y = r.addEndOffset, I = r.addStartOffset, m = r.addOffsetValue, T = void 0 === m ? 0 : m, O = r.endOffsetValue, A = void 0 === O ? 0 : O, b = 'X_AXIS' === p;
+                    var e = t.element, n = t.store, r = t.eventConfig, i = t.eventStateKey, o = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { scrollPercent: '0' }, a = ut(), u = a.scrollLeft, c = a.scrollTop, s = a.scrollWidth, f = a.scrollHeight, l = a.clientHeight, d = r.basedOn, p = r.selectedAxis, v = r.continuousParameterGroupId, E = r.startsEntering, g = r.startsExiting, y = r.addEndOffset, I = r.addStartOffset, m = r.addOffsetValue, T = void 0 === m ? 0 : m, O = r.endOffsetValue, A = void 0 === O ? 0 : O, b = 'X_AXIS' === p;
                     if (d === h.EventBasedOn.VIEWPORT) {
                         var S = b ? u / s : c / f;
                         return S !== o.scrollPercent && n.dispatch((0, _.parameterChanged)(v, S)), { scrollPercent: S };
@@ -6448,9 +6448,9 @@
                             return f(t.menu).add(l).set({
                                 x: n.animDirect * a,
                                 height: i
-                            }).start({ x: 0 }).then(v), void (t.overlay && t.overlay.width(a));
+                            }).start({ x: '0' }).then(v), void (t.overlay && t.overlay.width(a));
                         var p = c + o;
-                        f(t.menu).add(l).set({ y: -p }).start({ y: 0 }).then(v);
+                        f(t.menu).add(l).set({ y: -p }).start({ y: '0' }).then(v);
                     }
                 }
                 function v() {
@@ -6477,8 +6477,8 @@
                 }
                 function c() {
                     t.menu.height(''), f(t.menu).set({
-                        x: 0,
-                        y: 0
+                        x: '0',
+                        y: '0'
                     }), t.menu.each(X), t.links.removeClass(m), t.dropdowns.removeClass(g), t.dropdownToggle.removeClass(y), t.dropdownList.removeClass(I), t.overlay && t.overlay.children().length && (O.length ? t.menu.insertAfter(O) : t.menu.prependTo(t.parent), t.overlay.attr('style', '').hide()), t.el.triggerHandler('w-close'), t.button.attr('aria-expanded', 'false');
                 }
             }
@@ -6499,9 +6499,9 @@ Webflow.require('ix2').init({
                 'id': '',
                 'actionTypeId': 'GENERAL_START_ACTION',
                 'config': {
-                    'delay': 0,
+                    'delay': '0',
                     'easing': '',
-                    'duration': 0,
+                    'duration': '0',
                     'actionListId': 'a-3',
                     'affectedElements': {},
                     'playInReverse': false,
@@ -6522,7 +6522,7 @@ Webflow.require('ix2').init({
             'config': {
                 'loop': false,
                 'playInReverse': false,
-                'scrollOffsetValue': 0,
+                'scrollOffsetValue': '0',
                 'scrollOffsetUnit': '%',
                 'delay': null,
                 'direction': null,
@@ -6537,9 +6537,9 @@ Webflow.require('ix2').init({
                 'id': '',
                 'actionTypeId': 'GENERAL_START_ACTION',
                 'config': {
-                    'delay': 0,
+                    'delay': '0',
                     'easing': '',
-                    'duration': 0,
+                    'duration': '0',
                     'actionListId': 'a-8',
                     'affectedElements': {},
                     'playInReverse': false,
@@ -6560,7 +6560,7 @@ Webflow.require('ix2').init({
             'config': {
                 'loop': false,
                 'playInReverse': false,
-                'scrollOffsetValue': 0,
+                'scrollOffsetValue': '0',
                 'scrollOffsetUnit': '%',
                 'delay': null,
                 'direction': null,
@@ -6575,9 +6575,9 @@ Webflow.require('ix2').init({
                 'id': '',
                 'actionTypeId': 'GENERAL_START_ACTION',
                 'config': {
-                    'delay': 0,
+                    'delay': '0',
                     'easing': '',
-                    'duration': 0,
+                    'duration': '0',
                     'actionListId': 'a-6',
                     'affectedElements': {},
                     'playInReverse': false,
@@ -6598,7 +6598,7 @@ Webflow.require('ix2').init({
             'config': {
                 'loop': false,
                 'playInReverse': false,
-                'scrollOffsetValue': 0,
+                'scrollOffsetValue': '0',
                 'scrollOffsetUnit': '%',
                 'delay': null,
                 'direction': null,
@@ -6613,9 +6613,9 @@ Webflow.require('ix2').init({
                 'id': '',
                 'actionTypeId': 'GENERAL_START_ACTION',
                 'config': {
-                    'delay': 0,
+                    'delay': '0',
                     'easing': '',
-                    'duration': 0,
+                    'duration': '0',
                     'actionListId': 'a-4',
                     'affectedElements': {},
                     'playInReverse': false,
@@ -6636,7 +6636,7 @@ Webflow.require('ix2').init({
             'config': {
                 'loop': false,
                 'playInReverse': false,
-                'scrollOffsetValue': 0,
+                'scrollOffsetValue': '0',
                 'scrollOffsetUnit': '%',
                 'delay': null,
                 'direction': null,
@@ -6651,9 +6651,9 @@ Webflow.require('ix2').init({
                 'id': '',
                 'actionTypeId': 'GENERAL_START_ACTION',
                 'config': {
-                    'delay': 0,
+                    'delay': '0',
                     'easing': '',
-                    'duration': 0,
+                    'duration': '0',
                     'actionListId': 'a-9',
                     'affectedElements': {},
                     'playInReverse': false,
@@ -6689,9 +6689,9 @@ Webflow.require('ix2').init({
                 'id': '',
                 'actionTypeId': 'GENERAL_START_ACTION',
                 'config': {
-                    'delay': 0,
+                    'delay': '0',
                     'easing': '',
-                    'duration': 0,
+                    'duration': '0',
                     'actionListId': 'a-9',
                     'affectedElements': {},
                     'playInReverse': false,
@@ -6727,9 +6727,9 @@ Webflow.require('ix2').init({
                 'id': '',
                 'actionTypeId': 'GENERAL_START_ACTION',
                 'config': {
-                    'delay': 0,
+                    'delay': '0',
                     'easing': '',
-                    'duration': 0,
+                    'duration': '0',
                     'actionListId': 'a-11',
                     'affectedElements': {},
                     'playInReverse': false,
@@ -6765,9 +6765,9 @@ Webflow.require('ix2').init({
                 'id': '',
                 'actionTypeId': 'GENERAL_START_ACTION',
                 'config': {
-                    'delay': 0,
+                    'delay': '0',
                     'easing': '',
-                    'duration': 0,
+                    'duration': '0',
                     'actionListId': 'a-10',
                     'affectedElements': {},
                     'playInReverse': false,
@@ -6803,9 +6803,9 @@ Webflow.require('ix2').init({
                 'id': '',
                 'actionTypeId': 'GENERAL_START_ACTION',
                 'config': {
-                    'delay': 0,
+                    'delay': '0',
                     'easing': '',
-                    'duration': 0,
+                    'duration': '0',
                     'actionListId': 'a-12',
                     'affectedElements': {},
                     'playInReverse': false,
@@ -6841,9 +6841,9 @@ Webflow.require('ix2').init({
                 'id': '',
                 'actionTypeId': 'GENERAL_START_ACTION',
                 'config': {
-                    'delay': 0,
+                    'delay': '0',
                     'easing': '',
-                    'duration': 0,
+                    'duration': '0',
                     'actionListId': 'a-13',
                     'affectedElements': {},
                     'playInReverse': false,
@@ -6879,9 +6879,9 @@ Webflow.require('ix2').init({
                 'id': '',
                 'actionTypeId': 'GENERAL_START_ACTION',
                 'config': {
-                    'delay': 0,
+                    'delay': '0',
                     'easing': '',
-                    'duration': 0,
+                    'duration': '0',
                     'actionListId': 'a-8',
                     'affectedElements': {},
                     'playInReverse': false,
@@ -6902,7 +6902,7 @@ Webflow.require('ix2').init({
             'config': {
                 'loop': false,
                 'playInReverse': false,
-                'scrollOffsetValue': 0,
+                'scrollOffsetValue': '0',
                 'scrollOffsetUnit': '%',
                 'delay': null,
                 'direction': null,
@@ -6917,9 +6917,9 @@ Webflow.require('ix2').init({
                 'id': '',
                 'actionTypeId': 'GENERAL_START_ACTION',
                 'config': {
-                    'delay': 0,
+                    'delay': '0',
                     'easing': '',
-                    'duration': 0,
+                    'duration': '0',
                     'actionListId': 'a-6',
                     'affectedElements': {},
                     'playInReverse': false,
@@ -6940,7 +6940,7 @@ Webflow.require('ix2').init({
             'config': {
                 'loop': false,
                 'playInReverse': false,
-                'scrollOffsetValue': 0,
+                'scrollOffsetValue': '0',
                 'scrollOffsetUnit': '%',
                 'delay': null,
                 'direction': null,
@@ -6955,9 +6955,9 @@ Webflow.require('ix2').init({
                 'id': '',
                 'actionTypeId': 'GENERAL_START_ACTION',
                 'config': {
-                    'delay': 0,
+                    'delay': '0',
                     'easing': '',
-                    'duration': 0,
+                    'duration': '0',
                     'actionListId': 'a-4',
                     'affectedElements': {},
                     'playInReverse': false,
@@ -6978,7 +6978,7 @@ Webflow.require('ix2').init({
             'config': {
                 'loop': false,
                 'playInReverse': false,
-                'scrollOffsetValue': 0,
+                'scrollOffsetValue': '0',
                 'scrollOffsetUnit': '%',
                 'delay': null,
                 'direction': null,
@@ -6993,9 +6993,9 @@ Webflow.require('ix2').init({
                 'id': '',
                 'actionTypeId': 'GENERAL_START_ACTION',
                 'config': {
-                    'delay': 0,
+                    'delay': '0',
                     'easing': '',
-                    'duration': 0,
+                    'duration': '0',
                     'actionListId': 'a-14',
                     'affectedElements': {},
                     'playInReverse': false,
@@ -7031,9 +7031,9 @@ Webflow.require('ix2').init({
                 'id': '',
                 'actionTypeId': 'GENERAL_START_ACTION',
                 'config': {
-                    'delay': 0,
+                    'delay': '0',
                     'easing': '',
-                    'duration': 0,
+                    'duration': '0',
                     'actionListId': 'a-14',
                     'affectedElements': {},
                     'playInReverse': false,
@@ -7069,9 +7069,9 @@ Webflow.require('ix2').init({
                 'id': '',
                 'actionTypeId': 'GENERAL_START_ACTION',
                 'config': {
-                    'delay': 0,
+                    'delay': '0',
                     'easing': '',
-                    'duration': 0,
+                    'duration': '0',
                     'actionListId': 'a-15',
                     'affectedElements': {},
                     'playInReverse': false,
@@ -7107,9 +7107,9 @@ Webflow.require('ix2').init({
                 'id': '',
                 'actionTypeId': 'GENERAL_START_ACTION',
                 'config': {
-                    'delay': 0,
+                    'delay': '0',
                     'easing': '',
-                    'duration': 0,
+                    'duration': '0',
                     'actionListId': 'a-16',
                     'affectedElements': {},
                     'playInReverse': false,
@@ -7145,9 +7145,9 @@ Webflow.require('ix2').init({
                 'id': '',
                 'actionTypeId': 'GENERAL_START_ACTION',
                 'config': {
-                    'delay': 0,
+                    'delay': '0',
                     'easing': '',
-                    'duration': 0,
+                    'duration': '0',
                     'actionListId': 'a-17',
                     'affectedElements': {},
                     'playInReverse': false,
@@ -7183,9 +7183,9 @@ Webflow.require('ix2').init({
                 'id': '',
                 'actionTypeId': 'GENERAL_START_ACTION',
                 'config': {
-                    'delay': 0,
+                    'delay': '0',
                     'easing': '',
-                    'duration': 0,
+                    'duration': '0',
                     'actionListId': 'a-18',
                     'affectedElements': {},
                     'playInReverse': false,
@@ -7226,7 +7226,7 @@ Webflow.require('ix2').init({
                             'id': 'a-3-n',
                             'actionTypeId': 'TRANSFORM_MOVE',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': '',
                                 'duration': 500,
                                 'target': {
@@ -7243,14 +7243,14 @@ Webflow.require('ix2').init({
                             'id': 'a-3-n-2',
                             'actionTypeId': 'STYLE_OPACITY',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': '',
                                 'duration': 500,
                                 'target': {
                                     'selector': '.icon',
                                     'selectorGuids': ['96b9a722-6da7-150b-4091-ad354832c2c2']
                                 },
-                                'value': 0,
+                                'value': '0',
                                 'unit': ''
                             }
                         }
@@ -7262,14 +7262,14 @@ Webflow.require('ix2').init({
                             'id': 'a-3-n-3',
                             'actionTypeId': 'TRANSFORM_MOVE',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': 'inOutQuint',
                                 'duration': 1000,
                                 'target': {
                                     'selector': '.icon',
                                     'selectorGuids': ['96b9a722-6da7-150b-4091-ad354832c2c2']
                                 },
-                                'yValue': 0,
+                                'yValue': '0',
                                 'xUnit': 'PX',
                                 'yUnit': 'PX',
                                 'zUnit': 'PX'
@@ -7279,7 +7279,7 @@ Webflow.require('ix2').init({
                             'id': 'a-3-n-4',
                             'actionTypeId': 'STYLE_OPACITY',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': 'inOutQuint',
                                 'duration': 1000,
                                 'target': {
@@ -7306,7 +7306,7 @@ Webflow.require('ix2').init({
                             'id': 'a-8-n',
                             'actionTypeId': 'TRANSFORM_MOVE',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': '',
                                 'duration': 500,
                                 'target': {
@@ -7323,14 +7323,14 @@ Webflow.require('ix2').init({
                             'id': 'a-8-n-2',
                             'actionTypeId': 'STYLE_OPACITY',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': '',
                                 'duration': 500,
                                 'target': {
                                     'useEventTarget': true,
                                     'id': '5f06dfca22397e1ad58be3d8|4b54b195-a09a-2ffc-4de7-3d3da00c9d38'
                                 },
-                                'value': 0,
+                                'value': '0',
                                 'unit': ''
                             }
                         }
@@ -7342,14 +7342,14 @@ Webflow.require('ix2').init({
                             'id': 'a-8-n-3',
                             'actionTypeId': 'TRANSFORM_MOVE',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': 'inOutQuad',
                                 'duration': 1000,
                                 'target': {
                                     'useEventTarget': true,
                                     'id': '5f06dfca22397e1ad58be3d8|4b54b195-a09a-2ffc-4de7-3d3da00c9d38'
                                 },
-                                'yValue': 0,
+                                'yValue': '0',
                                 'xUnit': 'PX',
                                 'yUnit': 'PX',
                                 'zUnit': 'PX'
@@ -7359,7 +7359,7 @@ Webflow.require('ix2').init({
                             'id': 'a-8-n-4',
                             'actionTypeId': 'STYLE_OPACITY',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': 'inOutQuad',
                                 'duration': 1000,
                                 'target': {
@@ -7386,7 +7386,7 @@ Webflow.require('ix2').init({
                             'id': 'a-6-n',
                             'actionTypeId': 'TRANSFORM_MOVE',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': '',
                                 'duration': 500,
                                 'target': {
@@ -7403,14 +7403,14 @@ Webflow.require('ix2').init({
                             'id': 'a-6-n-2',
                             'actionTypeId': 'STYLE_OPACITY',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': '',
                                 'duration': 500,
                                 'target': {
                                     'useEventTarget': true,
                                     'id': '5f06dfca22397e1ad58be3d8|af99dd38-e9d3-4e87-2673-2b3aa9075f38'
                                 },
-                                'value': 0,
+                                'value': '0',
                                 'unit': ''
                             }
                         }
@@ -7422,14 +7422,14 @@ Webflow.require('ix2').init({
                             'id': 'a-6-n-3',
                             'actionTypeId': 'TRANSFORM_MOVE',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': 'inOutQuad',
                                 'duration': 1000,
                                 'target': {
                                     'useEventTarget': true,
                                     'id': '5f06dfca22397e1ad58be3d8|af99dd38-e9d3-4e87-2673-2b3aa9075f38'
                                 },
-                                'yValue': 0,
+                                'yValue': '0',
                                 'xUnit': 'PX',
                                 'yUnit': 'PX',
                                 'zUnit': 'PX'
@@ -7439,7 +7439,7 @@ Webflow.require('ix2').init({
                             'id': 'a-6-n-4',
                             'actionTypeId': 'STYLE_OPACITY',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': 'inOutQuad',
                                 'duration': 1000,
                                 'target': {
@@ -7466,7 +7466,7 @@ Webflow.require('ix2').init({
                             'id': 'a-4-n',
                             'actionTypeId': 'TRANSFORM_MOVE',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': '',
                                 'duration': 1000,
                                 'target': {
@@ -7483,14 +7483,14 @@ Webflow.require('ix2').init({
                             'id': 'a-4-n-2',
                             'actionTypeId': 'STYLE_OPACITY',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': '',
                                 'duration': 1000,
                                 'target': {
                                     'useEventTarget': true,
                                     'id': '5f06dfca22397e1ad58be3d8|af99dd38-e9d3-4e87-2673-2b3aa9075f38'
                                 },
-                                'value': 0,
+                                'value': '0',
                                 'unit': ''
                             }
                         }
@@ -7502,14 +7502,14 @@ Webflow.require('ix2').init({
                             'id': 'a-4-n-3',
                             'actionTypeId': 'TRANSFORM_MOVE',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': '',
                                 'duration': 500,
                                 'target': {
                                     'useEventTarget': true,
                                     'id': '5f06dfca22397e1ad58be3d8|af99dd38-e9d3-4e87-2673-2b3aa9075f38'
                                 },
-                                'yValue': 0,
+                                'yValue': '0',
                                 'xUnit': 'PX',
                                 'yUnit': 'PX',
                                 'zUnit': 'PX'
@@ -7519,7 +7519,7 @@ Webflow.require('ix2').init({
                             'id': 'a-4-n-4',
                             'actionTypeId': 'STYLE_OPACITY',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': '',
                                 'duration': 500,
                                 'target': {
@@ -7545,12 +7545,12 @@ Webflow.require('ix2').init({
                             'id': 'a-9-n',
                             'actionTypeId': 'TRANSFORM_ROTATE',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': '',
                                 'duration': 500,
                                 'target': { 'id': '5f06dfca22397ed4048be3d9|9e7e841c-ca12-90d9-2752-96bf1cd6302f' },
-                                'xValue': 0,
-                                'zValue': 0,
+                                'xValue': '0',
+                                'zValue': '0',
                                 'xUnit': 'DEG',
                                 'yUnit': 'DEG',
                                 'zUnit': 'DEG'
@@ -7562,7 +7562,7 @@ Webflow.require('ix2').init({
                             'id': 'a-9-n-2',
                             'actionTypeId': 'TRANSFORM_ROTATE',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': '',
                                 'duration': 20000,
                                 'target': { 'id': '5f06dfca22397ed4048be3d9|9e7e841c-ca12-90d9-2752-96bf1cd6302f' },
@@ -7587,7 +7587,7 @@ Webflow.require('ix2').init({
                             'id': 'a-11-n',
                             'actionTypeId': 'TRANSFORM_MOVE',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': 'inBack',
                                 'duration': 500,
                                 'target': { 'id': '5f06dfca22397ed4048be3d9|b56e79c4-7f75-4d90-505d-6f6caeaf13ed' },
@@ -7601,11 +7601,11 @@ Webflow.require('ix2').init({
                             'id': 'a-11-n-3',
                             'actionTypeId': 'STYLE_OPACITY',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': '',
                                 'duration': 500,
                                 'target': { 'id': '5f06dfca22397ed4048be3d9|b56e79c4-7f75-4d90-505d-6f6caeaf13ed' },
-                                'value': 0,
+                                'value': '0',
                                 'unit': ''
                             }
                         },
@@ -7613,7 +7613,7 @@ Webflow.require('ix2').init({
                             'id': 'a-11-n-5',
                             'actionTypeId': 'TRANSFORM_MOVE',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': '',
                                 'duration': 500,
                                 'target': { 'id': '5f06dfca22397ed4048be3d9|49fa369b-14a3-93ef-e874-df4e40dc5b4d' },
@@ -7627,11 +7627,11 @@ Webflow.require('ix2').init({
                             'id': 'a-11-n-6',
                             'actionTypeId': 'STYLE_OPACITY',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': '',
                                 'duration': 500,
                                 'target': { 'id': '5f06dfca22397ed4048be3d9|49fa369b-14a3-93ef-e874-df4e40dc5b4d' },
-                                'value': 0,
+                                'value': '0',
                                 'unit': ''
                             }
                         },
@@ -7639,7 +7639,7 @@ Webflow.require('ix2').init({
                             'id': 'a-11-n-9',
                             'actionTypeId': 'TRANSFORM_MOVE',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': '',
                                 'duration': 500,
                                 'target': { 'id': '5f06dfca22397ed4048be3d9|84725a51-3fbc-1f84-230c-63888400f7a4' },
@@ -7653,11 +7653,11 @@ Webflow.require('ix2').init({
                             'id': 'a-11-n-10',
                             'actionTypeId': 'STYLE_OPACITY',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': '',
                                 'duration': 500,
                                 'target': { 'id': '5f06dfca22397ed4048be3d9|84725a51-3fbc-1f84-230c-63888400f7a4' },
-                                'value': 0,
+                                'value': '0',
                                 'unit': ''
                             }
                         }
@@ -7669,11 +7669,11 @@ Webflow.require('ix2').init({
                             'id': 'a-11-n-2',
                             'actionTypeId': 'TRANSFORM_MOVE',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': 'easeIn',
                                 'duration': 500,
                                 'target': { 'id': '5f06dfca22397ed4048be3d9|b56e79c4-7f75-4d90-505d-6f6caeaf13ed' },
-                                'xValue': 0,
+                                'xValue': '0',
                                 'xUnit': 'PX',
                                 'yUnit': 'PX',
                                 'zUnit': 'PX'
@@ -7683,7 +7683,7 @@ Webflow.require('ix2').init({
                             'id': 'a-11-n-4',
                             'actionTypeId': 'STYLE_OPACITY',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': '',
                                 'duration': 500,
                                 'target': { 'id': '5f06dfca22397ed4048be3d9|b56e79c4-7f75-4d90-505d-6f6caeaf13ed' },
@@ -7699,11 +7699,11 @@ Webflow.require('ix2').init({
                             'id': 'a-11-n-7',
                             'actionTypeId': 'TRANSFORM_MOVE',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': 'easeIn',
                                 'duration': 500,
                                 'target': { 'id': '5f06dfca22397ed4048be3d9|49fa369b-14a3-93ef-e874-df4e40dc5b4d' },
-                                'xValue': 0,
+                                'xValue': '0',
                                 'xUnit': 'PX',
                                 'yUnit': 'PX',
                                 'zUnit': 'PX'
@@ -7713,7 +7713,7 @@ Webflow.require('ix2').init({
                             'id': 'a-11-n-8',
                             'actionTypeId': 'STYLE_OPACITY',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': '',
                                 'duration': 500,
                                 'target': { 'id': '5f06dfca22397ed4048be3d9|49fa369b-14a3-93ef-e874-df4e40dc5b4d' },
@@ -7729,11 +7729,11 @@ Webflow.require('ix2').init({
                             'id': 'a-11-n-11',
                             'actionTypeId': 'TRANSFORM_MOVE',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': 'easeIn',
                                 'duration': 500,
                                 'target': { 'id': '5f06dfca22397ed4048be3d9|84725a51-3fbc-1f84-230c-63888400f7a4' },
-                                'xValue': 0,
+                                'xValue': '0',
                                 'xUnit': 'PX',
                                 'yUnit': 'PX',
                                 'zUnit': 'PX'
@@ -7743,7 +7743,7 @@ Webflow.require('ix2').init({
                             'id': 'a-11-n-12',
                             'actionTypeId': 'STYLE_OPACITY',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': '',
                                 'duration': 500,
                                 'target': { 'id': '5f06dfca22397ed4048be3d9|84725a51-3fbc-1f84-230c-63888400f7a4' },
@@ -7766,11 +7766,11 @@ Webflow.require('ix2').init({
                             'id': 'a-10-n',
                             'actionTypeId': 'TRANSFORM_MOVE',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': '',
                                 'duration': 500,
                                 'target': { 'id': '5f06dfca22397ed4048be3d9|5d982744-cc96-f493-39b2-b51c1068486d' },
-                                'xValue': 0,
+                                'xValue': '0',
                                 'yValue': -7,
                                 'xUnit': 'PX',
                                 'yUnit': 'PX',
@@ -7783,11 +7783,11 @@ Webflow.require('ix2').init({
                             'id': 'a-10-n-3',
                             'actionTypeId': 'TRANSFORM_MOVE',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': '',
                                 'duration': 1500,
                                 'target': { 'id': '5f06dfca22397ed4048be3d9|5d982744-cc96-f493-39b2-b51c1068486d' },
-                                'yValue': 0,
+                                'yValue': '0',
                                 'xUnit': 'PX',
                                 'yUnit': 'PX',
                                 'zUnit': 'PX'
@@ -7799,7 +7799,7 @@ Webflow.require('ix2').init({
                             'id': 'a-10-n-5',
                             'actionTypeId': 'TRANSFORM_MOVE',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': '',
                                 'duration': 1500,
                                 'target': { 'id': '5f06dfca22397ed4048be3d9|5d982744-cc96-f493-39b2-b51c1068486d' },
@@ -7824,11 +7824,11 @@ Webflow.require('ix2').init({
                             'id': 'a-12-n',
                             'actionTypeId': 'TRANSFORM_MOVE',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': '',
                                 'duration': 500,
                                 'target': { 'id': '5f06dfca22397ea6ca8be3da|7461fed4-58cc-9fe8-6319-9af5e9e034ca' },
-                                'yValue': 0,
+                                'yValue': '0',
                                 'xUnit': 'PX',
                                 'yUnit': 'PX',
                                 'zUnit': 'PX'
@@ -7838,11 +7838,11 @@ Webflow.require('ix2').init({
                             'id': 'a-12-n-4',
                             'actionTypeId': 'TRANSFORM_MOVE',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': '',
                                 'duration': 500,
                                 'target': { 'id': '5f06dfca22397ea6ca8be3da|ced7da79-0ad7-f812-0d1c-732b2a898cb2' },
-                                'yValue': 0,
+                                'yValue': '0',
                                 'xUnit': 'PX',
                                 'yUnit': 'PX',
                                 'zUnit': 'PX'
@@ -7852,11 +7852,11 @@ Webflow.require('ix2').init({
                             'id': 'a-12-n-7',
                             'actionTypeId': 'TRANSFORM_MOVE',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': '',
                                 'duration': 500,
                                 'target': { 'id': '5f06dfca22397ea6ca8be3da|a8310ec5-97d4-2120-6370-4155688e9a21' },
-                                'yValue': 0,
+                                'yValue': '0',
                                 'xUnit': 'PX',
                                 'yUnit': 'PX',
                                 'zUnit': 'PX'
@@ -7866,11 +7866,11 @@ Webflow.require('ix2').init({
                             'id': 'a-12-n-10',
                             'actionTypeId': 'TRANSFORM_MOVE',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': '',
                                 'duration': 500,
                                 'target': { 'id': '5f06dfca22397ea6ca8be3da|bbaa6ec4-f4d2-fdc0-8539-fca17922f0a7' },
-                                'yValue': 0,
+                                'yValue': '0',
                                 'xUnit': 'PX',
                                 'yUnit': 'PX',
                                 'zUnit': 'PX'
@@ -7884,7 +7884,7 @@ Webflow.require('ix2').init({
                             'id': 'a-12-n-2',
                             'actionTypeId': 'TRANSFORM_MOVE',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': '',
                                 'duration': 1000,
                                 'target': { 'id': '5f06dfca22397ea6ca8be3da|7461fed4-58cc-9fe8-6319-9af5e9e034ca' },
@@ -7944,11 +7944,11 @@ Webflow.require('ix2').init({
                             'id': 'a-12-n-3',
                             'actionTypeId': 'TRANSFORM_MOVE',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': '',
                                 'duration': 1000,
                                 'target': { 'id': '5f06dfca22397ea6ca8be3da|7461fed4-58cc-9fe8-6319-9af5e9e034ca' },
-                                'yValue': 0,
+                                'yValue': '0',
                                 'xUnit': 'PX',
                                 'yUnit': 'PX',
                                 'zUnit': 'PX'
@@ -7962,7 +7962,7 @@ Webflow.require('ix2').init({
                                 'easing': '',
                                 'duration': 1000,
                                 'target': { 'id': '5f06dfca22397ea6ca8be3da|ced7da79-0ad7-f812-0d1c-732b2a898cb2' },
-                                'yValue': 0,
+                                'yValue': '0',
                                 'xUnit': 'PX',
                                 'yUnit': 'PX',
                                 'zUnit': 'PX'
@@ -7976,7 +7976,7 @@ Webflow.require('ix2').init({
                                 'easing': '',
                                 'duration': 1000,
                                 'target': { 'id': '5f06dfca22397ea6ca8be3da|a8310ec5-97d4-2120-6370-4155688e9a21' },
-                                'yValue': 0,
+                                'yValue': '0',
                                 'xUnit': 'PX',
                                 'yUnit': 'PX',
                                 'zUnit': 'PX'
@@ -7990,7 +7990,7 @@ Webflow.require('ix2').init({
                                 'easing': '',
                                 'duration': 1000,
                                 'target': { 'id': '5f06dfca22397ea6ca8be3da|bbaa6ec4-f4d2-fdc0-8539-fca17922f0a7' },
-                                'yValue': 0,
+                                'yValue': '0',
                                 'xUnit': 'PX',
                                 'yUnit': 'PX',
                                 'zUnit': 'PX'
@@ -8011,7 +8011,7 @@ Webflow.require('ix2').init({
                             'id': 'a-13-n',
                             'actionTypeId': 'TRANSFORM_MOVE',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': '',
                                 'duration': 500,
                                 'target': { 'id': '5f06dfca22397ea6ca8be3da|70768702-9898-7aee-6783-187ccedf7d77' },
@@ -8027,11 +8027,11 @@ Webflow.require('ix2').init({
                             'id': 'a-13-n-2',
                             'actionTypeId': 'TRANSFORM_MOVE',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': 'easeIn',
                                 'duration': 500,
                                 'target': { 'id': '5f06dfca22397ea6ca8be3da|70768702-9898-7aee-6783-187ccedf7d77' },
-                                'xValue': 0,
+                                'xValue': '0',
                                 'xUnit': 'PX',
                                 'yUnit': 'PX',
                                 'zUnit': 'PX'
@@ -8043,12 +8043,12 @@ Webflow.require('ix2').init({
                             'id': 'a-13-n-3',
                             'actionTypeId': 'TRANSFORM_SCALE',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': '',
                                 'duration': 500,
                                 'target': { 'id': '5f06dfca22397ea6ca8be3da|70768702-9898-7aee-6783-187ccedf7d77' },
-                                'xValue': 1.2,
-                                'yValue': 1.2,
+                                'xValue': '1.2',
+                                'yValue': '1.2',
                                 'locked': true
                             }
                         }]
@@ -8058,7 +8058,7 @@ Webflow.require('ix2').init({
                             'id': 'a-13-n-4',
                             'actionTypeId': 'TRANSFORM_SCALE',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': '',
                                 'duration': 500,
                                 'target': { 'id': '5f06dfca22397ea6ca8be3da|70768702-9898-7aee-6783-187ccedf7d77' },
@@ -8073,11 +8073,11 @@ Webflow.require('ix2').init({
                             'id': 'a-13-n-5',
                             'actionTypeId': 'TRANSFORM_MOVE',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': '',
                                 'duration': 500,
                                 'target': { 'id': '5f06dfca22397ea6ca8be3da|70768702-9898-7aee-6783-187ccedf7d77' },
-                                'xValue': 0,
+                                'xValue': '0',
                                 'xUnit': 'PX',
                                 'yUnit': 'PX',
                                 'zUnit': 'PX'
@@ -8097,12 +8097,12 @@ Webflow.require('ix2').init({
                             'id': 'a-14-n',
                             'actionTypeId': 'TRANSFORM_ROTATE',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': '',
                                 'duration': 500,
                                 'target': { 'id': '5f06dfca22397e4b278be3dc|9e7e841c-ca12-90d9-2752-96bf1cd6302f' },
-                                'xValue': 0,
-                                'zValue': 0,
+                                'xValue': '0',
+                                'zValue': '0',
                                 'xUnit': 'DEG',
                                 'yUnit': 'DEG',
                                 'zUnit': 'DEG'
@@ -8114,7 +8114,7 @@ Webflow.require('ix2').init({
                             'id': 'a-14-n-2',
                             'actionTypeId': 'TRANSFORM_ROTATE',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': '',
                                 'duration': 20000,
                                 'target': { 'id': '5f06dfca22397e4b278be3dc|9e7e841c-ca12-90d9-2752-96bf1cd6302f' },
@@ -8139,7 +8139,7 @@ Webflow.require('ix2').init({
                             'id': 'a-15-n',
                             'actionTypeId': 'TRANSFORM_MOVE',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': 'inBack',
                                 'duration': 500,
                                 'target': { 'id': '5f06dfca22397e4b278be3dc|b56e79c4-7f75-4d90-505d-6f6caeaf13ed' },
@@ -8153,11 +8153,11 @@ Webflow.require('ix2').init({
                             'id': 'a-15-n-2',
                             'actionTypeId': 'STYLE_OPACITY',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': '',
                                 'duration': 500,
                                 'target': { 'id': '5f06dfca22397e4b278be3dc|b56e79c4-7f75-4d90-505d-6f6caeaf13ed' },
-                                'value': 0,
+                                'value': '0',
                                 'unit': ''
                             }
                         },
@@ -8165,7 +8165,7 @@ Webflow.require('ix2').init({
                             'id': 'a-15-n-3',
                             'actionTypeId': 'TRANSFORM_MOVE',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': '',
                                 'duration': 500,
                                 'target': { 'id': '5f06dfca22397e4b278be3dc|49fa369b-14a3-93ef-e874-df4e40dc5b4d' },
@@ -8179,11 +8179,11 @@ Webflow.require('ix2').init({
                             'id': 'a-15-n-4',
                             'actionTypeId': 'STYLE_OPACITY',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': '',
                                 'duration': 500,
                                 'target': { 'id': '5f06dfca22397e4b278be3dc|49fa369b-14a3-93ef-e874-df4e40dc5b4d' },
-                                'value': 0,
+                                'value': '0',
                                 'unit': ''
                             }
                         },
@@ -8191,7 +8191,7 @@ Webflow.require('ix2').init({
                             'id': 'a-15-n-5',
                             'actionTypeId': 'TRANSFORM_MOVE',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': '',
                                 'duration': 500,
                                 'target': { 'id': '5f06dfca22397e4b278be3dc|84725a51-3fbc-1f84-230c-63888400f7a4' },
@@ -8205,11 +8205,11 @@ Webflow.require('ix2').init({
                             'id': 'a-15-n-6',
                             'actionTypeId': 'STYLE_OPACITY',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': '',
                                 'duration': 500,
                                 'target': { 'id': '5f06dfca22397e4b278be3dc|84725a51-3fbc-1f84-230c-63888400f7a4' },
-                                'value': 0,
+                                'value': '0',
                                 'unit': ''
                             }
                         }
@@ -8221,11 +8221,11 @@ Webflow.require('ix2').init({
                             'id': 'a-15-n-7',
                             'actionTypeId': 'TRANSFORM_MOVE',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': 'easeIn',
                                 'duration': 500,
                                 'target': { 'id': '5f06dfca22397e4b278be3dc|b56e79c4-7f75-4d90-505d-6f6caeaf13ed' },
-                                'xValue': 0,
+                                'xValue': '0',
                                 'xUnit': 'PX',
                                 'yUnit': 'PX',
                                 'zUnit': 'PX'
@@ -8235,7 +8235,7 @@ Webflow.require('ix2').init({
                             'id': 'a-15-n-8',
                             'actionTypeId': 'STYLE_OPACITY',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': '',
                                 'duration': 500,
                                 'target': { 'id': '5f06dfca22397e4b278be3dc|b56e79c4-7f75-4d90-505d-6f6caeaf13ed' },
@@ -8251,11 +8251,11 @@ Webflow.require('ix2').init({
                             'id': 'a-15-n-9',
                             'actionTypeId': 'TRANSFORM_MOVE',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': 'easeIn',
                                 'duration': 500,
                                 'target': { 'id': '5f06dfca22397e4b278be3dc|49fa369b-14a3-93ef-e874-df4e40dc5b4d' },
-                                'xValue': 0,
+                                'xValue': '0',
                                 'xUnit': 'PX',
                                 'yUnit': 'PX',
                                 'zUnit': 'PX'
@@ -8265,7 +8265,7 @@ Webflow.require('ix2').init({
                             'id': 'a-15-n-10',
                             'actionTypeId': 'STYLE_OPACITY',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': '',
                                 'duration': 500,
                                 'target': { 'id': '5f06dfca22397e4b278be3dc|49fa369b-14a3-93ef-e874-df4e40dc5b4d' },
@@ -8281,11 +8281,11 @@ Webflow.require('ix2').init({
                             'id': 'a-15-n-11',
                             'actionTypeId': 'TRANSFORM_MOVE',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': 'easeIn',
                                 'duration': 500,
                                 'target': { 'id': '5f06dfca22397e4b278be3dc|84725a51-3fbc-1f84-230c-63888400f7a4' },
-                                'xValue': 0,
+                                'xValue': '0',
                                 'xUnit': 'PX',
                                 'yUnit': 'PX',
                                 'zUnit': 'PX'
@@ -8295,7 +8295,7 @@ Webflow.require('ix2').init({
                             'id': 'a-15-n-12',
                             'actionTypeId': 'STYLE_OPACITY',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': '',
                                 'duration': 500,
                                 'target': { 'id': '5f06dfca22397e4b278be3dc|84725a51-3fbc-1f84-230c-63888400f7a4' },
@@ -8318,11 +8318,11 @@ Webflow.require('ix2').init({
                             'id': 'a-16-n',
                             'actionTypeId': 'TRANSFORM_MOVE',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': '',
                                 'duration': 500,
                                 'target': { 'id': '5f06dfca22397e4b278be3dc|5d982744-cc96-f493-39b2-b51c1068486d' },
-                                'xValue': 0,
+                                'xValue': '0',
                                 'yValue': -7,
                                 'xUnit': 'PX',
                                 'yUnit': 'PX',
@@ -8335,11 +8335,11 @@ Webflow.require('ix2').init({
                             'id': 'a-16-n-2',
                             'actionTypeId': 'TRANSFORM_MOVE',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': '',
                                 'duration': 1500,
                                 'target': { 'id': '5f06dfca22397e4b278be3dc|5d982744-cc96-f493-39b2-b51c1068486d' },
-                                'yValue': 0,
+                                'yValue': '0',
                                 'xUnit': 'PX',
                                 'yUnit': 'PX',
                                 'zUnit': 'PX'
@@ -8351,7 +8351,7 @@ Webflow.require('ix2').init({
                             'id': 'a-16-n-3',
                             'actionTypeId': 'TRANSFORM_MOVE',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': '',
                                 'duration': 1500,
                                 'target': { 'id': '5f06dfca22397e4b278be3dc|5d982744-cc96-f493-39b2-b51c1068486d' },
@@ -8376,11 +8376,11 @@ Webflow.require('ix2').init({
                             'id': 'a-17-n',
                             'actionTypeId': 'TRANSFORM_MOVE',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': '',
                                 'duration': 500,
                                 'target': { 'id': '5f06dfca22397efd808be3dd|7461fed4-58cc-9fe8-6319-9af5e9e034ca' },
-                                'yValue': 0,
+                                'yValue': '0',
                                 'xUnit': 'PX',
                                 'yUnit': 'PX',
                                 'zUnit': 'PX'
@@ -8390,11 +8390,11 @@ Webflow.require('ix2').init({
                             'id': 'a-17-n-2',
                             'actionTypeId': 'TRANSFORM_MOVE',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': '',
                                 'duration': 500,
                                 'target': { 'id': '5f06dfca22397efd808be3dd|ced7da79-0ad7-f812-0d1c-732b2a898cb2' },
-                                'yValue': 0,
+                                'yValue': '0',
                                 'xUnit': 'PX',
                                 'yUnit': 'PX',
                                 'zUnit': 'PX'
@@ -8404,11 +8404,11 @@ Webflow.require('ix2').init({
                             'id': 'a-17-n-3',
                             'actionTypeId': 'TRANSFORM_MOVE',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': '',
                                 'duration': 500,
                                 'target': { 'id': '5f06dfca22397efd808be3dd|a8310ec5-97d4-2120-6370-4155688e9a21' },
-                                'yValue': 0,
+                                'yValue': '0',
                                 'xUnit': 'PX',
                                 'yUnit': 'PX',
                                 'zUnit': 'PX'
@@ -8418,11 +8418,11 @@ Webflow.require('ix2').init({
                             'id': 'a-17-n-4',
                             'actionTypeId': 'TRANSFORM_MOVE',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': '',
                                 'duration': 500,
                                 'target': { 'id': '5f06dfca22397efd808be3dd|bbaa6ec4-f4d2-fdc0-8539-fca17922f0a7' },
-                                'yValue': 0,
+                                'yValue': '0',
                                 'xUnit': 'PX',
                                 'yUnit': 'PX',
                                 'zUnit': 'PX'
@@ -8436,7 +8436,7 @@ Webflow.require('ix2').init({
                             'id': 'a-17-n-5',
                             'actionTypeId': 'TRANSFORM_MOVE',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': '',
                                 'duration': 1000,
                                 'target': { 'id': '5f06dfca22397efd808be3dd|7461fed4-58cc-9fe8-6319-9af5e9e034ca' },
@@ -8496,11 +8496,11 @@ Webflow.require('ix2').init({
                             'id': 'a-17-n-9',
                             'actionTypeId': 'TRANSFORM_MOVE',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': '',
                                 'duration': 1000,
                                 'target': { 'id': '5f06dfca22397efd808be3dd|7461fed4-58cc-9fe8-6319-9af5e9e034ca' },
-                                'yValue': 0,
+                                'yValue': '0',
                                 'xUnit': 'PX',
                                 'yUnit': 'PX',
                                 'zUnit': 'PX'
@@ -8514,7 +8514,7 @@ Webflow.require('ix2').init({
                                 'easing': '',
                                 'duration': 1000,
                                 'target': { 'id': '5f06dfca22397efd808be3dd|ced7da79-0ad7-f812-0d1c-732b2a898cb2' },
-                                'yValue': 0,
+                                'yValue': '0',
                                 'xUnit': 'PX',
                                 'yUnit': 'PX',
                                 'zUnit': 'PX'
@@ -8528,7 +8528,7 @@ Webflow.require('ix2').init({
                                 'easing': '',
                                 'duration': 1000,
                                 'target': { 'id': '5f06dfca22397efd808be3dd|a8310ec5-97d4-2120-6370-4155688e9a21' },
-                                'yValue': 0,
+                                'yValue': '0',
                                 'xUnit': 'PX',
                                 'yUnit': 'PX',
                                 'zUnit': 'PX'
@@ -8542,7 +8542,7 @@ Webflow.require('ix2').init({
                                 'easing': '',
                                 'duration': 1000,
                                 'target': { 'id': '5f06dfca22397efd808be3dd|bbaa6ec4-f4d2-fdc0-8539-fca17922f0a7' },
-                                'yValue': 0,
+                                'yValue': '0',
                                 'xUnit': 'PX',
                                 'yUnit': 'PX',
                                 'zUnit': 'PX'
@@ -8563,7 +8563,7 @@ Webflow.require('ix2').init({
                             'id': 'a-18-n',
                             'actionTypeId': 'TRANSFORM_MOVE',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': '',
                                 'duration': 500,
                                 'target': { 'id': '5f06dfca22397efd808be3dd|70768702-9898-7aee-6783-187ccedf7d77' },
@@ -8579,11 +8579,11 @@ Webflow.require('ix2').init({
                             'id': 'a-18-n-2',
                             'actionTypeId': 'TRANSFORM_MOVE',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': 'easeIn',
                                 'duration': 500,
                                 'target': { 'id': '5f06dfca22397efd808be3dd|70768702-9898-7aee-6783-187ccedf7d77' },
-                                'xValue': 0,
+                                'xValue': '0',
                                 'xUnit': 'PX',
                                 'yUnit': 'PX',
                                 'zUnit': 'PX'
@@ -8595,12 +8595,12 @@ Webflow.require('ix2').init({
                             'id': 'a-18-n-3',
                             'actionTypeId': 'TRANSFORM_SCALE',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': '',
                                 'duration': 500,
                                 'target': { 'id': '5f06dfca22397efd808be3dd|70768702-9898-7aee-6783-187ccedf7d77' },
-                                'xValue': 1.2,
-                                'yValue': 1.2,
+                                'xValue': '1.2',
+                                'yValue': '1.2',
                                 'locked': true
                             }
                         }]
@@ -8610,7 +8610,7 @@ Webflow.require('ix2').init({
                             'id': 'a-18-n-4',
                             'actionTypeId': 'TRANSFORM_SCALE',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': '',
                                 'duration': 500,
                                 'target': { 'id': '5f06dfca22397efd808be3dd|70768702-9898-7aee-6783-187ccedf7d77' },
@@ -8625,11 +8625,11 @@ Webflow.require('ix2').init({
                             'id': 'a-18-n-5',
                             'actionTypeId': 'TRANSFORM_MOVE',
                             'config': {
-                                'delay': 0,
+                                'delay': '0',
                                 'easing': '',
                                 'duration': 500,
                                 'target': { 'id': '5f06dfca22397efd808be3dd|70768702-9898-7aee-6783-187ccedf7d77' },
-                                'xValue': 0,
+                                'xValue': '0',
                                 'xUnit': 'PX',
                                 'yUnit': 'PX',
                                 'zUnit': 'PX'
@@ -8660,7 +8660,7 @@ Webflow.require('ix2').init({
             },
             {
                 'key': 'tiny',
-                'min': 0,
+                'min': '0',
                 'max': 479
             }
         ]
