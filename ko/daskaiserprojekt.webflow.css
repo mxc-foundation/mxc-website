@@ -1310,6 +1310,11 @@ a {
   color: #fff;
 }
 
+.paragraph-6.end {
+  font-size: 32px;
+  line-height: 60px;
+}
+
 .bold-text {
   color: #fff;
 }
