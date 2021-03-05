@@ -160,7 +160,7 @@ strong {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 100vh;
+  height: 80vh;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -268,7 +268,7 @@ strong {
 }
 
 .space {
-  display: none;
+  display: block;
   overflow: visible;
   height: 15vh;
   max-height: 15vh;
@@ -4491,6 +4491,217 @@ strong {
   color: #fff;
 }
 
+.slider-3 {
+  overflow: hidden;
+  width: 100vw;
+  height: 20vh;
+  padding-bottom: 38px;
+}
+
+.slider-3.thing-1 {
+  background-color: #fff;
+}
+
+.mask {
+  overflow: visible;
+  width: 20%;
+}
+
+.slidething {
+  height: 100%;
+  margin: 10px;
+  background-color: #c5d19e;
+}
+
+.slidething.thing-1 {
+  width: 100%;
+  border-radius: 5px;
+  background-color: #fdeaa8;
+  background-image: url('../images/IMG_5754.JPG');
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.slidething.thing-1.img1 {
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.slidething.thing-1.img3 {
+  background-image: url('../images/mmexport1613154650776.jpg');
+  background-position: 50% 100%;
+  background-size: cover;
+}
+
+.slidething.thing-1.img5 {
+  background-image: url('../images/IMG_5753.JPG');
+  background-position: 50% 20%;
+  background-size: cover;
+}
+
+.slidething.thing-1.img7 {
+  background-image: url('../images/IMG_5752.JPG');
+  background-size: cover;
+}
+
+.slidething.thing-1.img9 {
+  background-image: url('../images/IMG_5746.JPG');
+  background-position: 50% 40%;
+  background-size: cover;
+}
+
+.slidething.thing-1.img11 {
+  background-image: url('../images/IMG_5744.JPG');
+  background-size: cover;
+}
+
+.slidething.thing-1.img13 {
+  background-image: url('../images/IMG_5748.JPG');
+  background-position: 50% 0%;
+  background-size: cover;
+}
+
+.slidething.thing-1.img15 {
+  background-image: url('../images/IMG_5750.JPG');
+  background-position: 50% 20%;
+  background-size: cover;
+}
+
+.slidething.thing-1.img17 {
+  background-image: url('../images/IMG_5741.JPG');
+  background-position: 50% 30%;
+  background-size: cover;
+}
+
+.slidething.thing-1.img19 {
+  background-image: url('../images/image0-8.jpg');
+  background-position: 50% 0%;
+  background-size: cover;
+}
+
+.slidething.thing-1.img21 {
+  background-image: url('../images/image1.jpg');
+  background-position: 0% 0%;
+  background-size: cover;
+}
+
+.slidething.thing-1.img23 {
+  background-image: url('../images/image0-10.jpg');
+  background-position: 50% 0%;
+  background-size: cover;
+}
+
+.slidething.thing-2 {
+  width: 100%;
+}
+
+.slidething.thing-2.img2 {
+  border-radius: 5px;
+  background-image: url('../images/mmexport1589713517090.jpg');
+  background-position: 50% 100%;
+  background-size: cover;
+}
+
+.slidething.thing-2.img4 {
+  border-radius: 5px;
+  background-image: url('../images/M2-Pro---Brand-Tor.jpg');
+  background-position: 0px 0px;
+  background-size: cover;
+}
+
+.slidething.thing-2.img6 {
+  border-radius: 5px;
+  background-image: url('../images/IMG_5751.JPG');
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.slidething.thing-2.img8 {
+  border-radius: 5px;
+  background-image: url('../images/lpwan-m2-pro-crypto-miner-mounted.jpeg.jpg');
+  background-position: 0px 0px;
+  background-size: cover;
+}
+
+.slidething.thing-2.img10 {
+  border-radius: 5px;
+  background-image: url('../images/IMG_5745.JPG');
+  background-position: 50% 30%;
+  background-size: cover;
+}
+
+.slidething.thing-2.img12 {
+  border-radius: 5px;
+  background-image: url('../images/IMG_5749.JPG');
+  background-position: 50% 30%;
+  background-size: cover;
+}
+
+.slidething.thing-2.img14 {
+  border-radius: 5px;
+  background-image: url('../images/_MG_3832.jpg');
+  background-position: 50% 90%;
+  background-size: cover;
+}
+
+.slidething.thing-2.img16 {
+  border-radius: 5px;
+  background-image: url('../images/_MG_3856.jpg');
+  background-position: 0px 0px;
+  background-size: cover;
+}
+
+.slidething.thing-2.img18 {
+  border-radius: 5px;
+  background-image: url('../images/IMG_5740.JPG');
+  background-position: 50% 0%;
+  background-size: cover;
+}
+
+.slidething.thing-2.img20 {
+  border-radius: 5px;
+  background-image: url('../images/IMG_5743.JPG');
+  background-position: 50% 20%;
+  background-size: cover;
+}
+
+.slidething.thing-2.img22 {
+  border-radius: 5px;
+  background-image: url('../images/image2.jpg');
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.slidething.thing-2.img24 {
+  border-radius: 5px;
+  background-image: url('../images/Screenshot-2021-03-05-at-15.57.31.png');
+  background-position: 50% 40%;
+  background-size: cover;
+}
+
+.slide-7 {
+  margin: 10px;
+}
+
+.slide-8 {
+  margin: 10px;
+}
+
+.last-slider-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  height: 100%;
+}
+
+.slide-nav-2 {
+  display: none;
+  overflow: visible;
+}
+
 @media screen and (min-width: 1280px) {
   .heroheading {
     font-size: 40px;
@@ -5077,6 +5288,54 @@ strong {
   .div-block-160 {
     background-size: cover;
   }
+
+  .slidething.thing-2.img2 {
+    border-radius: 5px;
+  }
+
+  .slidething.thing-2.img4 {
+    border-radius: 5px;
+  }
+
+  .slidething.thing-2.img6 {
+    border-radius: 5px;
+  }
+
+  .slidething.thing-2.img8 {
+    border-radius: 5px;
+  }
+
+  .slidething.thing-2.img10 {
+    border-radius: 5px;
+  }
+
+  .slidething.thing-2.img12 {
+    border-radius: 5px;
+  }
+
+  .slidething.thing-2.img14 {
+    border-radius: 5px;
+  }
+
+  .slidething.thing-2.img16 {
+    border-radius: 5px;
+  }
+
+  .slidething.thing-2.img18 {
+    border-radius: 5px;
+  }
+
+  .slidething.thing-2.img20 {
+    border-radius: 5px;
+  }
+
+  .slidething.thing-2.img22 {
+    border-radius: 5px;
+  }
+
+  .slidething.thing-2.img24 {
+    border-radius: 5px;
+  }
 }
 
 @media screen and (min-width: 1920px) {
@@ -5108,7 +5367,7 @@ strong {
   }
 
   .hero {
-    height: 100vh;
+    height: 80vh;
     text-align: center;
   }
 
@@ -7824,7 +8083,7 @@ strong {
   }
 
   .hero {
-    height: 100vh;
+    height: 80vh;
   }
 
   .mxcherohalf {
@@ -7868,7 +8127,7 @@ strong {
   }
 
   .space {
-    display: none;
+    display: block;
   }
 
   .div-block-4 {
@@ -8946,6 +9205,14 @@ strong {
   .div-block-163 {
     background-position: 50% 100%;
     background-size: cover;
+  }
+
+  .text-block-9 {
+    color: #333;
+  }
+
+  .icon-5 {
+    color: #333;
   }
 }
 
