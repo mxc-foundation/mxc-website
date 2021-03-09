@@ -271,7 +271,7 @@ strong {
   display: block;
   overflow: visible;
   height: 25vh;
-  max-height: 15vh;
+  max-height: 25vh;
   background-color: #fff;
 }
 
@@ -4722,6 +4722,11 @@ strong {
   overflow: visible;
 }
 
+.telegramlinkblock {
+  width: 100%;
+  height: 100%;
+}
+
 @media screen and (min-width: 1280px) {
   .heroheading {
     font-size: 40px;
@@ -5004,7 +5009,7 @@ strong {
 
   .slidething.thing-1.img21 {
     background-color: #fff;
-    background-image: url('../images/image1.jpg');
+    background-image: url('../images/image1_1.jpg');
   }
 
   .slidething.thing-1.img23 {
@@ -5063,7 +5068,7 @@ strong {
 
   .slidething.thing-2.img22 {
     background-color: #fff;
-    background-image: url('../images/image2.jpg');
+    background-image: url('../images/image2_1.jpg');
   }
 
   .slidething.thing-2.img24 {
@@ -5092,6 +5097,11 @@ strong {
   .div-block {
     width: auto;
     text-align: center;
+  }
+
+  .space {
+    height: 30vh;
+    max-height: 30vh;
   }
 
   .grid-3.map.mobile {
@@ -5427,6 +5437,10 @@ strong {
     background-size: cover;
   }
 
+  .slider-3.thing-1 {
+    height: 30vh;
+  }
+
   .slidething.thing-2.img2 {
     border-radius: 5px;
   }
@@ -5525,8 +5539,8 @@ strong {
   }
 
   .space {
-    height: 20vh;
-    max-height: 20vh;
+    height: 30vh;
+    max-height: 30vh;
   }
 
   .value {
