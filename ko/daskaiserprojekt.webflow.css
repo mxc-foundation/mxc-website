@@ -77,7 +77,9 @@ a {
   display: flex;
   height: 100vh;
   max-width: 100%;
+  margin-bottom: 0px;
   padding-top: 0vh;
+  padding-bottom: 0px;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
@@ -92,10 +94,10 @@ a {
   -ms-flex-align: center;
   align-items: center;
   background-color: #000;
-  background-image: url('../images/Web_Chair.png'), url('../images/Web_BG.png');
-  background-position: 0% 100%, 50% 50%;
-  background-size: contain, cover;
-  background-repeat: no-repeat, no-repeat;
+  background-image: url('../images/DKP2_header7.jpg');
+  background-position: 50% 0%;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .section.column {
@@ -455,7 +457,8 @@ a {
   display: inline-block;
   overflow: visible;
   margin-top: 0px;
-  margin-right: 0px;
+  margin-right: 57px;
+  margin-left: -1px;
   padding: 20px 40px;
   border-radius: 3px;
   background-color: #f7931a;
@@ -928,7 +931,7 @@ a {
   overflow: visible;
   width: 50%;
   margin-top: 0px;
-  padding: 4vw;
+  padding: 4vw 4vw 0vw;
 }
 
 .feature-wrap {
@@ -1010,7 +1013,7 @@ a {
   flex: 0 auto;
   border: 1px none #000;
   background-image: url('../images/01_Community-Participation.png');
-  background-position: 0% 50%;
+  background-position: 50% 50%;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -1035,6 +1038,7 @@ a {
 .hero-subhead {
   max-width: 60%;
   margin-bottom: 10px;
+  margin-left: -4px;
   font-family: Montserrat, sans-serif;
   color: #fff;
   font-size: 50px;
@@ -1043,8 +1047,11 @@ a {
 }
 
 .hero-subhead._1 {
-  margin-left: 80px;
+  margin-top: -32px;
+  margin-bottom: 4px;
+  margin-left: -15px;
   padding-left: 10px;
+  font-style: normal;
 }
 
 .bottom-image-wrap {
@@ -1283,9 +1290,9 @@ a {
 }
 
 .heading-3 {
-  margin-top: 10px;
-  margin-left: 30px;
-  padding: 10px;
+  margin-top: -38px;
+  margin-left: -4px;
+  padding: 10px 10px 10px 0px;
   font-family: Montserrat, sans-serif;
   text-transform: uppercase;
 }
@@ -1333,9 +1340,11 @@ a {
 }
 
 .heading-4 {
+  padding-left: 0px;
   font-family: Montserrat, sans-serif;
   color: #fff;
   font-size: 24px;
+  line-height: 30px;
 }
 
 .html-embed {
@@ -1387,10 +1396,10 @@ a {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
-    background-image: url('../images/Web_Chair.png'), url('../images/Web_BG.png');
-    background-position: 0% 100%, 50% 50%;
-    background-size: contain, cover;
-    background-repeat: no-repeat, no-repeat;
+    background-image: url('../images/DKP2_header2.jpg');
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
   .hero {
@@ -1407,7 +1416,10 @@ a {
   }
 
   .button {
+    margin-right: 64px;
     margin-bottom: 50px;
+    margin-left: 97px;
+    padding-left: 38px;
   }
 
   .nav-link {
@@ -1440,7 +1452,7 @@ a {
     overflow: hidden;
     margin-top: 38px;
     padding-right: 5vw;
-    padding-left: 5vw;
+    padding-left: 0vw;
   }
 
   .feature-wrap {
@@ -1461,8 +1473,13 @@ a {
   }
 
   .hero-subhead {
+    padding-left: 5px;
     font-size: 24px;
     line-height: 31px;
+  }
+
+  .hero-subhead._1 {
+    font-size: 35px;
   }
 
   .bottom-image-wrap {
@@ -1511,11 +1528,25 @@ a {
   }
 
   .heading-3 {
+    margin-top: -49px;
+    padding-top: 22px;
     font-size: 8vw;
   }
 
   .heading-4 {
-    font-size: 16px;
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  .div-block-13 {
+    margin-bottom: -109px;
+    padding-top: 0px;
+    padding-bottom: 149px;
+  }
+
+  .div-block-14 {
+    margin-top: -111px;
+    padding-top: 0px;
   }
 }
 
@@ -1531,11 +1562,16 @@ a {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url('../images/Mobile---Portrait2x.png');
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/Mobile---Portrait2x.png');
+    background-color: transparent;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.47)), to(rgba(0, 0, 0, 0.47))), url('../images/DKP2_MobileHeader.jpg');
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.47), rgba(0, 0, 0, 0.47)), url('../images/DKP2_MobileHeader.jpg');
     background-position: 0px 0px, 50% 50%;
-    background-size: auto, cover;
+    background-size: auto, 650px;
     background-repeat: repeat, no-repeat;
+  }
+
+  .section.wide.img {
+    padding-top: 0vh;
   }
 
   .feature-content.icons {
@@ -1560,6 +1596,11 @@ a {
     -webkit-flex: 0 0 auto;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
+  }
+
+  .button {
+    margin-left: 85px;
+    padding-left: 42px;
   }
 
   .button.form-button {
@@ -1605,6 +1646,7 @@ a {
     display: flex;
     width: 90%;
     margin-bottom: 5vh;
+    padding-top: 12vw;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
@@ -1647,15 +1689,21 @@ a {
     display: flex;
   }
 
+  .feature-image {
+    background-position: 50% 50%;
+  }
+
   .hero-subhead {
-    font-size: 30px;
+    margin-top: 9px;
+    font-size: 50px;
   }
 
   .hero-subhead._1 {
     max-width: none;
     margin-left: 0px;
     padding: 10px;
-    font-size: 30px;
+    font-size: 50px;
+    text-align: left;
   }
 
   .footer-link {
@@ -1696,7 +1744,17 @@ a {
   }
 
   .heading-3 {
+    margin-top: -33px;
+    margin-bottom: -3px;
     margin-left: 0px;
+    padding-top: 23px;
+    padding-bottom: 30px;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 auto;
+    -ms-flex: 0 auto;
+    flex: 0 auto;
+    font-size: 14vw;
+    text-align: left;
   }
 
   .form-block {
@@ -1720,11 +1778,17 @@ a {
   }
 
   .heading-4 {
+    line-height: 22px;
     text-align: center;
   }
 
   .div-block-13 {
-    display: none;
+    display: block;
+    grid-auto-columns: 1fr;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: auto auto;
+    grid-template-rows: auto auto;
   }
 
   .div-block-14 {
@@ -1760,10 +1824,12 @@ a {
   }
 
   .section.center {
-    padding-bottom: 10vh;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url('../images/Mobile---Portrait2x.png');
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/Mobile---Portrait2x.png');
+    padding-top: 4vh;
+    padding-bottom: 0vh;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.52)), to(rgba(0, 0, 0, 0.52))), url('../images/DKP2_MobileHeader_2.jpg');
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 0.52)), url('../images/DKP2_MobileHeader_2.jpg');
     background-position: 0px 0px, 50% 50%;
+    background-size: auto, cover;
   }
 
   .hero {
@@ -1783,6 +1849,12 @@ a {
     padding-right: 15px;
     padding-left: 15px;
     text-align: center;
+  }
+
+  .button {
+    margin-right: 49px;
+    margin-left: 53px;
+    padding-left: 31px;
   }
 
   .button.contact {
@@ -1844,6 +1916,10 @@ a {
     background-repeat: no-repeat;
   }
 
+  .hero-subhead._1 {
+    font-size: 45px;
+  }
+
   .feature-icon {
     margin-bottom: 20px;
   }
@@ -1882,6 +1958,23 @@ a {
   .heading-3 {
     font-size: 42px;
     line-height: 56px;
+  }
+
+  .heading-4 {
+    line-height: 22px;
+  }
+
+  .div-block-13 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .div-block-14 {
+    margin-top: 17px;
+    padding-top: 70px;
+    padding-bottom: 16px;
   }
 }
 
