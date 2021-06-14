@@ -160,7 +160,7 @@ strong {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 75vh;
+  height: 90vh;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -170,7 +170,7 @@ strong {
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  background-image: url('../images/Hero-background-min.jpg');
+  background-image: url('../images/Homepage_Header_BG.jpg');
   background-position: 50% 50%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -255,11 +255,8 @@ strong {
   border-style: solid;
   border-width: 1px;
   border-color: #fff;
-  border-radius: 30px;
-  background-image: url('../images/button-image-min.jpg');
-  background-position: 50% 50%;
-  background-size: cover;
-  background-repeat: no-repeat;
+  border-radius: 12px;
+  background-color: transparent;
   box-shadow: 0 0 49px 4px hsla(0, 0%, 100%, 0.3);
   font-family: Roboto, sans-serif;
   font-size: 17px;
@@ -440,15 +437,17 @@ strong {
 }
 
 .title {
-  margin-top: 22px;
-  margin-bottom: 41px;
+  margin-top: 25px;
+  margin-bottom: 16px;
   font-family: Roboto, sans-serif;
-  font-size: 26px;
+  font-size: 43px;
+  line-height: 43px;
   font-weight: 500;
 }
 
 .title.dark {
-  font-size: 26px;
+  margin-bottom: -10px;
+  font-size: 43px;
 }
 
 .paragraph {
@@ -581,8 +580,8 @@ strong {
 .stakingimage {
   height: 450px;
   background-image: url('../images/3-iphones-in-row-01-min-1.png');
-  background-position: 50% 100%;
-  background-size: cover;
+  background-position: 100% 50%;
+  background-size: 600px;
   background-repeat: no-repeat;
 }
 
@@ -1150,8 +1149,8 @@ strong {
   align-items: center;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   -ms-grid-rows: auto;
   grid-template-rows: auto;
   border: 1px none #000;
@@ -1175,8 +1174,8 @@ strong {
   align-content: end;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   -ms-grid-rows: auto;
   grid-template-rows: auto;
 }
@@ -4027,6 +4026,7 @@ strong {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  background-color: transparent;
 }
 
 .div-block-141 {
@@ -4043,7 +4043,7 @@ strong {
   -ms-flex-item-align: end;
   align-self: flex-end;
   font-family: Roboto, sans-serif;
-  font-size: 26px;
+  font-size: 43px;
   line-height: 30px;
   font-weight: 500;
   text-align: right;
@@ -4053,6 +4053,7 @@ strong {
   -webkit-align-self: flex-start;
   -ms-flex-item-align: start;
   align-self: flex-start;
+  font-size: 43px;
 }
 
 .paragraph-41 {
@@ -4078,9 +4079,9 @@ strong {
   border-top: 1px solid #ebeff2;
   border-bottom: 1px solid #ebeff2;
   background-color: #fff;
-  background-image: url('../images/acec_Iphone-screens-ios.png');
-  background-position: 90% 50%;
-  background-size: auto 400px;
+  background-image: url('../images/DataDash---Stake-Earn-Relax.png');
+  background-position: 100% 50%;
+  background-size: 721px;
   background-repeat: no-repeat;
 }
 
@@ -4091,6 +4092,7 @@ strong {
   display: flex;
   height: auto;
   border-bottom: 1px solid #ebeff2;
+  background-color: transparent;
 }
 
 .div-block-144 {
@@ -4138,12 +4140,10 @@ strong {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  background-color: #ebeff2;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ebeff2), to(#ebeff2)), url('../images/iPhone-XR-Isometric-white-bg-01.png');
-  background-image: linear-gradient(180deg, #ebeff2, #ebeff2), url('../images/iPhone-XR-Isometric-white-bg-01.png');
-  background-position: 0px 0px, 50% 50%;
-  background-size: auto, cover;
-  background-repeat: repeat, no-repeat;
+  background-color: transparent;
+  background-image: url('../images/DataDash_Mining.png');
+  background-position: 50% 0%;
+  background-size: 600px;
   -o-object-fit: fill;
   object-fit: fill;
 }
@@ -4197,8 +4197,8 @@ strong {
   -ms-flex: 1;
   flex: 1;
   background-color: #ebeff2;
-  background-image: url('../images/long-scroll-iphone-mxcdatadash.png');
-  background-position: 50% 100%;
+  background-image: url('../images/DataDash_Data-Tracking.png');
+  background-position: 50% 50%;
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -4209,6 +4209,7 @@ strong {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  background-color: #ebeff2;
 }
 
 .div-block-151 {
@@ -4296,8 +4297,8 @@ strong {
 
 .div-block-155 {
   height: 130vh;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), color-stop(50%, rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.8))), url('../images/mxcdatadashapphero.jpg');
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.8)), url('../images/mxcdatadashapphero.jpg');
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), color-stop(50%, rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.8))), url('../images/DataDash_Header.jpeg');
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.8)), url('../images/DataDash_Header.jpeg');
   background-position: 0px 0px, 50% 50%;
   background-size: auto, cover;
   background-repeat: repeat, no-repeat;
@@ -4309,10 +4310,6 @@ strong {
   display: -ms-flexbox;
   display: flex;
   height: 130vh;
-  background-image: url('../images/iPhone-XR-Isometric-01-min.png');
-  background-position: 50% 50%;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .div-block-157 {
@@ -4350,9 +4347,10 @@ strong {
 }
 
 .div-block-160 {
-  background-image: url('../images/3-Iphone-screen-white-with-space-min.png');
+  background-color: #ebeff2;
+  background-image: url('../images/DataDash---Staking.png');
   background-position: 0% 50%;
-  background-size: 1225px;
+  background-size: 600px;
   background-repeat: no-repeat;
 }
 
@@ -4425,6 +4423,8 @@ strong {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: -37px;
+  padding-bottom: 0px;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
@@ -4438,10 +4438,9 @@ strong {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  background-image: url('../images/newheroimagemxc-min.png');
+  background-image: url('../images/Homepage_Header.png');
   background-position: 50% 100%;
-  background-size: contain;
-  background-repeat: no-repeat;
+  background-size: 1850px;
 }
 
 .utility-page-form {
@@ -4797,6 +4796,7 @@ strong {
 
   .stakingimage {
     height: 550px;
+    background-size: contain;
   }
 
   .div-right {
@@ -4959,9 +4959,26 @@ strong {
     max-width: 100%;
   }
 
+  .div-block-155 {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), color-stop(50%, rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.8))), url('../images/DataDash_Header.jpeg');
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.8)), url('../images/DataDash_Header.jpeg');
+    background-position: 0px 0px, 50% 50%;
+  }
+
+  .div-block-156 {
+    background-image: none;
+    background-size: auto;
+    background-repeat: repeat;
+  }
+
   .div-block-163 {
+    margin-bottom: 18px;
     background-position: 50% 100%;
-    background-size: contain;
+    background-size: 1300px;
+  }
+
+  .slider-3.thing-1 {
+    background-color: #fff;
   }
 
   .slidething.thing-1 {
@@ -5137,12 +5154,12 @@ strong {
   }
 
   .title {
-    font-size: 30px;
+    font-size: 43px;
   }
 
   .title.dark {
     color: #333;
-    font-size: 30px;
+    font-size: 43px;
   }
 
   .paragraph {
@@ -5217,7 +5234,8 @@ strong {
   }
 
   .stakingimage {
-    background-position: 70% 100%;
+    background-position: 100% 50%;
+    background-size: 550px;
   }
 
   .div-right {
@@ -5379,11 +5397,13 @@ strong {
   }
 
   .div-block-144 {
-    height: 550px;
+    height: 300px;
   }
 
   .div-block-145 {
     height: 550px;
+    background-image: url('../images/DataDash_Mining.png');
+    background-repeat: no-repeat;
   }
 
   .div-block-146 {
@@ -5409,6 +5429,7 @@ strong {
 
   .div-block-149 {
     height: 550px;
+    background-position: 100% 50%;
   }
 
   .div-block-150 {
@@ -5435,11 +5456,23 @@ strong {
     max-width: 100%;
   }
 
+  .div-block-156 {
+    background-image: none;
+    background-size: auto;
+    background-repeat: repeat;
+  }
+
   .div-block-158 {
     width: 1100px;
   }
 
   .div-block-160 {
+    background-size: 721px;
+  }
+
+  .div-block-163 {
+    margin-bottom: -6px;
+    background-position: 50% 100%;
     background-size: cover;
   }
 
@@ -5525,8 +5558,15 @@ strong {
   }
 
   .hero {
-    height: 80vh;
+    height: 90vh;
+    background-size: cover;
+    background-repeat: no-repeat;
     text-align: center;
+  }
+
+  .grid {
+    margin-bottom: 0px;
+    line-height: 30px;
   }
 
   .heroheading {
@@ -5602,6 +5642,7 @@ strong {
     -ms-flex-item-align: auto;
     -ms-grid-row-align: auto;
     align-self: auto;
+    font-size: 43px;
     text-align: left;
   }
 
@@ -5611,6 +5652,11 @@ strong {
     -ms-grid-row-align: center;
     align-self: center;
     color: #fff;
+    font-size: 45px;
+  }
+
+  .title.h3ok {
+    text-align: right;
   }
 
   .paragraph {
@@ -5621,6 +5667,7 @@ strong {
 
   .paragraph.dark {
     color: #fff;
+    font-size: 1.2rem;
     text-align: center;
   }
 
@@ -5647,6 +5694,8 @@ strong {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
+    background-color: transparent;
+    opacity: 1;
     text-align: center;
   }
 
@@ -5658,6 +5707,8 @@ strong {
 
   .stakingimage {
     height: 650px;
+    background-position: 100% 50%;
+    background-size: 650px;
   }
 
   .div-right {
@@ -5905,23 +5956,66 @@ strong {
     line-height: 1em;
   }
 
+  .div-block-136 {
+    background-image: url('../images/DataDash---Stake-Earn-Relax.png');
+    background-position: 50% 50%;
+    background-size: 721px;
+  }
+
+  .div-block-140 {
+    background-image: url('../images/DataDash---Staking.png');
+    background-position: 100% 50%;
+    background-size: 721px;
+    background-repeat: no-repeat;
+  }
+
   .paragraph-41 {
     -webkit-align-self: flex-end;
     -ms-flex-item-align: end;
     align-self: flex-end;
   }
 
+  .div-block-142 {
+    background-image: none;
+  }
+
+  .div-block-144 {
+    height: 300px;
+  }
+
+  .div-block-149 {
+    background-position: 100% 50%;
+  }
+
   .image-56 {
     max-width: 100%;
   }
 
+  .div-block-154 {
+    padding-top: 0px;
+  }
+
   .div-block-155 {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), color-stop(50%, rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.8))), url('../images/mxcdatadashapphero.jpg');
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.8)), url('../images/mxcdatadashapphero.jpg');
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), color-stop(50%, rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.8))), url('../images/DataDash_Header.jpeg');
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.8)), url('../images/DataDash_Header.jpeg');
   }
 
   .div-block-158 {
     width: 1100px;
+  }
+
+  .div-block-160 {
+    background-image: none;
+  }
+
+  .div-block-163 {
+    display: block;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 0px;
+    background-position: 50% 100%;
+    background-size: 1850px;
+    background-repeat: no-repeat;
   }
 }
 
@@ -6096,7 +6190,12 @@ strong {
   .title {
     margin-top: 15px;
     margin-bottom: 15px;
-    font-size: 22px;
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  .title.dark {
+    font-size: 40px;
   }
 
   .paragraph {
@@ -6135,6 +6234,8 @@ strong {
 
   .stakingimage {
     height: 450px;
+    background-position: 50% 50%;
+    background-size: cover;
   }
 
   .div-right {
@@ -6987,6 +7088,11 @@ strong {
     width: 700px;
   }
 
+  .heading-23.left {
+    line-height: 43px;
+    text-align: left;
+  }
+
   .div-block-142 {
     background-position: 100% 50%;
     background-size: auto 300px;
@@ -6994,6 +7100,11 @@ strong {
 
   .div-block-146 {
     width: 350px;
+  }
+
+  .div-block-149 {
+    background-position: 100% 50%;
+    background-size: cover;
   }
 
   .div-block-151 {
@@ -7004,8 +7115,18 @@ strong {
     width: 700px;
   }
 
+  .div-block-160 {
+    background-position: 0% 50%;
+    background-size: 500px;
+  }
+
   .div-block-162 {
     width: 80%;
+  }
+
+  .div-block-163 {
+    margin-bottom: -36px;
+    background-position: 50% 100%;
   }
 
   .dropdown-list {
@@ -7064,6 +7185,10 @@ strong {
 
   .icon-3 {
     color: #333;
+  }
+
+  .hero {
+    height: 95vh;
   }
 
   .heroheading {
@@ -7158,7 +7283,7 @@ strong {
   }
 
   .title {
-    font-size: 26px;
+    font-size: 43px;
     text-align: center;
   }
 
@@ -7245,8 +7370,8 @@ strong {
     height: 50vh;
     padding-right: 0px;
     padding-bottom: 0px;
-    background-position: 50% 100%;
-    background-size: cover;
+    background-position: 50% 50%;
+    background-size: 500px;
   }
 
   .div-right {
@@ -7931,9 +8056,9 @@ strong {
     -webkit-flex: 0 0 auto;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    background-image: url('../images/Iphone-screens-ios3x-min.png');
+    background-image: url('../images/DataDash---Stake-Earn-Relax.png');
     background-position: 50% 50%;
-    background-size: contain;
+    background-size: 650px;
     background-repeat: no-repeat;
   }
 
@@ -7998,6 +8123,9 @@ strong {
     overflow: hidden;
     width: 100vw;
     height: 450px;
+    margin-top: 26px;
+    margin-bottom: -109px;
+    padding-top: 23px;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
@@ -8013,9 +8141,9 @@ strong {
     -webkit-flex: 0 auto;
     -ms-flex: 0 auto;
     flex: 0 auto;
-    background-image: url('../images/3-Iphone-screen-white-resized-min.png');
-    background-position: 50% 50%;
-    background-size: 797px;
+    background-image: url('../images/DataDash---Staking.png');
+    background-position: 50% 0%;
+    background-size: 600px;
     background-repeat: no-repeat;
     -o-object-fit: none;
     object-fit: none;
@@ -8086,6 +8214,12 @@ strong {
     align-items: center;
   }
 
+  .div-block-145 {
+    margin-top: 39px;
+    margin-bottom: -114px;
+    padding-top: 12px;
+  }
+
   .div-block-146 {
     width: 80%;
     margin-right: auto;
@@ -8111,6 +8245,9 @@ strong {
     display: -ms-flexbox;
     display: flex;
     width: 100%;
+    margin-top: -2px;
+    margin-bottom: -4px;
+    padding-top: 0px;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
@@ -8126,6 +8263,8 @@ strong {
     -webkit-flex: 0 0 auto;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
+    background-position: 100% 50%;
+    background-size: 721px;
   }
 
   .div-block-150 {
@@ -8144,8 +8283,8 @@ strong {
 
   .div-block-151 {
     width: 80%;
-    margin-right: auto;
-    margin-left: auto;
+    margin: -81px auto -37px;
+    padding-bottom: 0px;
     -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
@@ -8206,6 +8345,11 @@ strong {
     -webkit-flex: 0 0 auto;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
+  }
+
+  .div-block-163 {
+    margin-bottom: -32px;
+    background-position: 50% 100%;
   }
 
   .mask {
@@ -8269,7 +8413,8 @@ strong {
 
   .heroheading {
     font-size: 26px;
-    line-height: 39px;
+    line-height: 28px;
+    letter-spacing: 0px;
   }
 
   .div-block {
@@ -8401,6 +8546,7 @@ strong {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
+    background-color: rgba(0, 0, 0, 0.44);
   }
 
   .button2 {
@@ -8452,6 +8598,7 @@ strong {
 
   .gatewayimage {
     height: 350px;
+    margin-bottom: 39px;
     background-position: 50% 50%;
     background-size: cover;
   }
@@ -9234,6 +9381,12 @@ strong {
 
   .div-block-136 {
     height: 350px;
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+
+  .div-block-137 {
+    margin-top: 29px;
   }
 
   .div-block-139 {
@@ -9243,9 +9396,13 @@ strong {
 
   .div-block-140 {
     height: 350px;
+    margin-bottom: -53px;
+    background-position: 50% 50%;
+    background-size: 500px;
   }
 
   .heading-23.left {
+    line-height: 43px;
     text-align: center;
   }
 
@@ -9260,6 +9417,11 @@ strong {
 
   .div-block-145 {
     height: 400px;
+    margin-top: 10px;
+    margin-bottom: -50px;
+    background-image: url('../images/DataDash_Mining.png');
+    background-position: 50% 50%;
+    background-size: 500px;
   }
 
   .div-block-146 {
@@ -9283,6 +9445,8 @@ strong {
 
   .div-block-149 {
     height: 350px;
+    background-position: 50% 50%;
+    background-size: cover;
   }
 
   .div-block-150 {
@@ -9295,6 +9459,8 @@ strong {
 
   .div-block-151 {
     width: 90%;
+    margin-top: -36px;
+    padding-bottom: 0px;
   }
 
   .image-56 {
@@ -9369,8 +9535,11 @@ strong {
   }
 
   .div-block-163 {
+    margin-bottom: 1px;
+    padding-bottom: 0px;
     background-position: 50% 100%;
-    background-size: cover;
+    background-size: 800px;
+    background-repeat: no-repeat;
   }
 
   .text-block-9 {
