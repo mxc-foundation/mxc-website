@@ -48,7 +48,7 @@
         return n.d(e, 'a', e), e;
     }, n.o = function (t, e) {
         return Object.prototype.hasOwnProperty.call(t, e);
-    }, n.p = '', n(n.s = 98);
+    }, n.p = '', n(n.s = 120);
 }([
     function (t, e) {
         t.exports = function (t) {
@@ -61,14 +61,14 @@
     },
     function (t, e, n) {
         'use strict';
-        var r = n(12);
+        var r = n(14);
         Object.defineProperty(e, '__esModule', { value: !0 });
         var i = {
             IX2EngineActionTypes: !0,
             IX2EngineConstants: !0
         };
         e.IX2EngineConstants = e.IX2EngineActionTypes = void 0;
-        var o = n(117);
+        var o = n(169);
         Object.keys(o).forEach(function (t) {
             'default' !== t && '__esModule' !== t && (Object.prototype.hasOwnProperty.call(i, t) || Object.defineProperty(e, t, {
                 enumerable: !0,
@@ -77,7 +77,7 @@
                 }
             }));
         });
-        var a = n(118);
+        var a = n(170);
         Object.keys(a).forEach(function (t) {
             'default' !== t && '__esModule' !== t && (Object.prototype.hasOwnProperty.call(i, t) || Object.defineProperty(e, t, {
                 enumerable: !0,
@@ -86,7 +86,7 @@
                 }
             }));
         });
-        var u = n(119);
+        var u = n(171);
         Object.keys(u).forEach(function (t) {
             'default' !== t && '__esModule' !== t && (Object.prototype.hasOwnProperty.call(i, t) || Object.defineProperty(e, t, {
                 enumerable: !0,
@@ -95,42 +95,14 @@
                 }
             }));
         });
-        var c = r(n(120));
+        var c = r(n(172));
         e.IX2EngineActionTypes = c;
-        var s = r(n(121));
+        var s = r(n(173));
         e.IX2EngineConstants = s;
     },
     function (t, e, n) {
-        var r = n(65), i = 'object' == typeof self && self && self.Object === Object && self, o = r || i || Function('return this')();
-        t.exports = o;
-    },
-    function (t, e) {
-        t.exports = function (t) {
-            var e = typeof t;
-            return null != t && ('object' == e || 'function' == e);
-        };
-    },
-    function (t, e, n) {
-        var r = n(124), i = n(178), o = n(45), a = n(1), u = n(185);
-        t.exports = function (t) {
-            return 'function' == typeof t ? t : null == t ? o : 'object' == typeof t ? a(t) ? i(t[0], t[1]) : r(t) : u(t);
-        };
-    },
-    function (t, e, n) {
-        var r = n(136), i = n(141);
-        t.exports = function (t, e) {
-            var n = i(t, e);
-            return r(n) ? n : void 0;
-        };
-    },
-    function (t, e) {
-        t.exports = function (t) {
-            return null != t && 'object' == typeof t;
-        };
-    },
-    function (t, e, n) {
         'use strict';
-        var r = {}, i = {}, o = [], a = window.Webflow || [], u = window.jQuery, c = u(window), s = u(document), f = u.isFunction, l = r._ = n(100), d = r.tram = n(52) && u.tram, p = !1, v = !1;
+        var r = {}, i = {}, o = [], a = window.Webflow || [], u = window.jQuery, c = u(window), s = u(document), f = u.isFunction, l = r._ = n(122), d = r.tram = n(65) && u.tram, p = !1, v = !1;
         function h(t) {
             r.env() && (f(t.design) && c.on('__wf_design', t.design), f(t.preview) && c.on('__wf_preview', t.preview)), f(t.destroy) && c.on('__wf_destroy', t.destroy), t.ready && f(t.ready) && function (t) {
                 if (p)
@@ -140,7 +112,7 @@
                 o.push(t.ready);
             }(t);
         }
-        function E(t) {
+        function g(t) {
             f(t.design) && c.off('__wf_design', t.design), f(t.preview) && c.off('__wf_preview', t.preview), f(t.destroy) && c.off('__wf_destroy', t.destroy), t.ready && f(t.ready) && function (t) {
                 o = l.filter(o, function (e) {
                     return e !== t.ready;
@@ -148,7 +120,7 @@
             }(t);
         }
         d.config.hideBackface = !1, d.config.keepInherited = !0, r.define = function (t, e, n) {
-            i[t] && E(i[t]);
+            i[t] && g(i[t]);
             var r = i[t] = e(u, l, n) || {};
             return h(r), r;
         }, r.require = function (t) {
@@ -159,16 +131,16 @@
             var e = window.__wf_design, n = void 0 !== e;
             return t ? 'design' === t ? n && e : 'preview' === t ? n && !e : 'slug' === t ? n && window.__wf_slug : 'editor' === t ? window.WebflowEditor : 'test' === t ? window.__wf_test : 'frame' === t ? window !== window.top : void 0 : n;
         };
-        var _, g = navigator.userAgent.toLowerCase(), y = r.env.touch = 'ontouchstart' in window || window.DocumentTouch && document instanceof window.DocumentTouch, I = r.env.chrome = /chrome/.test(g) && /Google/.test(navigator.vendor) && parseInt(g.match(/chrome\/(\d+)\./)[1], 10), m = r.env.ios = /(ipod|iphone|ipad)/.test(g);
-        r.env.safari = /safari/.test(g) && !I && !m, y && s.on('touchstart mousedown', function (t) {
-            _ = t.target;
+        var E, m = navigator.userAgent.toLowerCase(), y = r.env.touch = 'ontouchstart' in window || window.DocumentTouch && document instanceof window.DocumentTouch, _ = r.env.chrome = /chrome/.test(m) && /Google/.test(navigator.vendor) && parseInt(m.match(/chrome\/(\d+)\./)[1], 10), I = r.env.ios = /(ipod|iphone|ipad)/.test(m);
+        r.env.safari = /safari/.test(m) && !_ && !I, y && s.on('touchstart mousedown', function (t) {
+            E = t.target;
         }), r.validClick = y ? function (t) {
-            return t === _ || u.contains(t, _);
+            return t === E || u.contains(t, E);
         } : function () {
             return !0;
         };
-        var T, O = 'resize.webflow orientationchange.webflow load.webflow';
-        function A(t, e) {
+        var b, w = 'resize.webflow orientationchange.webflow load.webflow';
+        function T(t, e) {
             var n = [], r = {};
             return r.up = l.throttle(function (t) {
                 l.each(n, function (e) {
@@ -182,51 +154,110 @@
                 }) : [];
             }, r;
         }
-        function b(t) {
+        function O(t) {
             f(t) && t();
         }
-        function S() {
-            T && (T.reject(), c.off('load', T.resolve)), T = new u.Deferred(), c.on('load', T.resolve);
+        function A() {
+            b && (b.reject(), c.off('load', b.resolve)), b = new u.Deferred(), c.on('load', b.resolve);
         }
-        r.resize = A(c, O), r.scroll = A(c, 'scroll.webflow resize.webflow orientationchange.webflow load.webflow'), r.redraw = A(), r.location = function (t) {
+        r.resize = T(c, w), r.scroll = T(c, 'scroll.webflow resize.webflow orientationchange.webflow load.webflow'), r.redraw = T(), r.location = function (t) {
             window.location = t;
         }, r.env() && (r.location = function () {
         }), r.ready = function () {
-            p = !0, v ? (v = !1, l.each(i, h)) : l.each(o, b), l.each(a, b), r.resize.up();
+            p = !0, v ? (v = !1, l.each(i, h)) : l.each(o, O), l.each(a, O), r.resize.up();
         }, r.load = function (t) {
-            T.then(t);
+            b.then(t);
         }, r.destroy = function (t) {
-            t = t || {}, v = !0, c.triggerHandler('__wf_destroy'), null != t.domready && (p = t.domready), l.each(i, E), r.resize.off(), r.scroll.off(), r.redraw.off(), o = [], a = [], 'pending' === T.state() && S();
-        }, u(r.ready), S(), t.exports = window.Webflow = r;
+            t = t || {}, v = !0, c.triggerHandler('__wf_destroy'), null != t.domready && (p = t.domready), l.each(i, g), r.resize.off(), r.scroll.off(), r.redraw.off(), o = [], a = [], 'pending' === b.state() && A();
+        }, u(r.ready), A(), t.exports = window.Webflow = r;
+    },
+    function (t, e, n) {
+        (function (e) {
+            var n = 'object', r = function (t) {
+                    return t && t.Math == Math && t;
+                };
+            t.exports = r(typeof globalThis == n && globalThis) || r(typeof window == n && window) || r(typeof self == n && self) || r(typeof e == n && e) || Function('return this')();
+        }.call(this, n(23)));
+    },
+    function (t, e, n) {
+        var r = n(89), i = 'object' == typeof self && self && self.Object === Object && self, o = r || i || Function('return this')();
+        t.exports = o;
+    },
+    function (t, e) {
+        t.exports = function (t) {
+            var e = typeof t;
+            return null != t && ('object' == e || 'function' == e);
+        };
+    },
+    function (t, e, n) {
+        var r = n(176), i = n(230), o = n(59), a = n(1), u = n(239);
+        t.exports = function (t) {
+            return 'function' == typeof t ? t : null == t ? o : 'object' == typeof t ? a(t) ? i(t[0], t[1]) : r(t) : u(t);
+        };
+    },
+    function (t, e, n) {
+        var r = n(188), i = n(193);
+        t.exports = function (t, e) {
+            var n = i(t, e);
+            return r(n) ? n : void 0;
+        };
+    },
+    function (t, e) {
+        t.exports = function (t) {
+            return null != t && 'object' == typeof t;
+        };
     },
     function (t, e, n) {
         'use strict';
-        var r = n(12);
+        var r = n(14);
         Object.defineProperty(e, '__esModule', { value: !0 }), e.IX2VanillaUtils = e.IX2VanillaPlugins = e.IX2ElementsReducer = e.IX2EasingUtils = e.IX2Easings = e.IX2BrowserSupport = void 0;
-        var i = r(n(31));
+        var i = r(n(44));
         e.IX2BrowserSupport = i;
-        var o = r(n(83));
+        var o = r(n(106));
         e.IX2Easings = o;
-        var a = r(n(85));
+        var a = r(n(108));
         e.IX2EasingUtils = a;
-        var u = r(n(192));
+        var u = r(n(248));
         e.IX2ElementsReducer = u;
-        var c = r(n(87));
+        var c = r(n(110));
         e.IX2VanillaPlugins = c;
-        var s = r(n(194));
+        var s = r(n(250));
         e.IX2VanillaUtils = s;
     },
     function (t, e, n) {
-        var r = n(14), i = n(137), o = n(138), a = '[object Null]', u = '[object Undefined]', c = r ? r.toStringTag : void 0;
+        var r = n(20), i = n(189), o = n(190), a = '[object Null]', u = '[object Undefined]', c = r ? r.toStringTag : void 0;
         t.exports = function (t) {
             return null == t ? void 0 === t ? u : a : c && c in Object(t) ? i(t) : o(t);
         };
     },
     function (t, e, n) {
-        var r = n(64), i = n(39);
+        var r = n(88), i = n(52);
         t.exports = function (t) {
             return null != t && i(t.length) && !r(t);
         };
+    },
+    function (t, e, n) {
+        'use strict';
+        var r = n(123);
+        function i(t, e) {
+            var n = document.createEvent('CustomEvent');
+            n.initCustomEvent(e, !0, !0, null), t.dispatchEvent(n);
+        }
+        var o = window.jQuery, a = {}, u = {
+                reset: function (t, e) {
+                    r.triggers.reset(t, e);
+                },
+                intro: function (t, e) {
+                    r.triggers.intro(t, e), i(e, 'COMPONENT_ACTIVE');
+                },
+                outro: function (t, e) {
+                    r.triggers.outro(t, e), i(e, 'COMPONENT_INACTIVE');
+                }
+            };
+        a.triggers = {}, a.types = {
+            INTRO: 'w-ix-intro.w-ix',
+            OUTRO: 'w-ix-outro.w-ix'
+        }, o.extend(a.triggers, u), t.exports = a;
     },
     function (t, e) {
         t.exports = function (t) {
@@ -243,6 +274,39 @@
         };
     },
     function (t, e, n) {
+        var r = n(16);
+        t.exports = !r(function () {
+            return 7 != Object.defineProperty({}, 'a', {
+                get: function () {
+                    return 7;
+                }
+            }).a;
+        });
+    },
+    function (t, e) {
+        t.exports = function (t) {
+            try {
+                return !!t();
+            } catch (t) {
+                return !0;
+            }
+        };
+    },
+    function (t, e) {
+        var n = {}.hasOwnProperty;
+        t.exports = function (t, e) {
+            return n.call(t, e);
+        };
+    },
+    function (t, e, n) {
+        var r = n(15), i = n(38), o = n(67);
+        t.exports = r ? function (t, e, n) {
+            return i.f(t, e, o(1, n));
+        } : function (t, e, n) {
+            return t[e] = n, t;
+        };
+    },
+    function (t, e, n) {
         'use strict';
         Object.defineProperty(e, '__esModule', { value: !0 });
         var r = 'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator ? function (t) {
@@ -250,7 +314,7 @@
         } : function (t) {
             return t && 'function' == typeof Symbol && t.constructor === Symbol && t !== Symbol.prototype ? 'symbol' : typeof t;
         };
-        e.clone = c, e.addLast = l, e.addFirst = d, e.removeLast = p, e.removeFirst = v, e.insert = h, e.removeAt = E, e.replaceAt = _, e.getIn = g, e.set = y, e.setIn = I, e.update = m, e.updateIn = T, e.merge = O, e.mergeDeep = A, e.mergeIn = b, e.omit = S, e.addDefaults = w;
+        e.clone = c, e.addLast = l, e.addFirst = d, e.removeLast = p, e.removeFirst = v, e.insert = h, e.removeAt = g, e.replaceAt = E, e.getIn = m, e.set = y, e.setIn = _, e.update = I, e.updateIn = b, e.merge = w, e.mergeDeep = T, e.mergeIn = O, e.omit = A, e.addDefaults = x;
         /*!
  * Timm
  *
@@ -285,13 +349,13 @@
             for (var v = 0; v < d.length; v++) {
                 var h = d[v];
                 if (null != h) {
-                    var E = a(h);
-                    if (E.length)
-                        for (var _ = 0; _ <= E.length; _++) {
-                            var g = E[_];
-                            if (!t || void 0 === r[g]) {
-                                var y = h[g];
-                                e && f(r[g]) && f(y) && (y = s(t, e, r[g], y)), void 0 !== y && y !== r[g] && (u || (u = !0, r = c(r)), r[g] = y);
+                    var g = a(h);
+                    if (g.length)
+                        for (var E = 0; E <= g.length; E++) {
+                            var m = g[E];
+                            if (!t || void 0 === r[m]) {
+                                var y = h[m];
+                                e && f(r[m]) && f(y) && (y = s(t, e, r[m], y)), void 0 !== y && y !== r[m] && (u || (u = !0, r = c(r)), r[m] = y);
                             }
                         }
                 }
@@ -317,17 +381,17 @@
         function h(t, e, n) {
             return t.slice(0, e).concat(Array.isArray(n) ? n : [n]).concat(t.slice(e));
         }
-        function E(t, e) {
+        function g(t, e) {
             return e >= t.length || e < 0 ? t : t.slice(0, e).concat(t.slice(e + 1));
         }
-        function _(t, e, n) {
+        function E(t, e, n) {
             if (t[e] === n)
                 return t;
             for (var r = t.length, i = Array(r), o = 0; o < r; o++)
                 i[o] = t[o];
             return i[e] = n, i;
         }
-        function g(t, e) {
+        function m(t, e) {
             if (!Array.isArray(e) && o(i), null != t) {
                 for (var n = t, r = 0; r < e.length; r++) {
                     var a = e[r];
@@ -344,20 +408,20 @@
             var i = c(r);
             return i[e] = n, i;
         }
-        function I(t, e, n) {
+        function _(t, e, n) {
             return e.length ? function t(e, n, r, i) {
                 var o = void 0, a = n[i];
                 o = i === n.length - 1 ? r : t(f(e) && f(e[a]) ? e[a] : 'number' == typeof n[i + 1] ? [] : {}, n, r, i + 1);
                 return y(e, a, o);
             }(t, e, n, 0) : n;
         }
-        function m(t, e, n) {
+        function I(t, e, n) {
             return y(t, e, n(null == t ? void 0 : t[e]));
         }
-        function T(t, e, n) {
-            return I(t, e, n(g(t, e)));
+        function b(t, e, n) {
+            return _(t, e, n(m(t, e)));
         }
-        function O(t, e, n, r, i, o) {
+        function w(t, e, n, r, i, o) {
             for (var a = arguments.length, u = Array(a > 6 ? a - 6 : 0), c = 6; c < a; c++)
                 u[c - 6] = arguments[c];
             return u.length ? s.call.apply(s, [
@@ -372,7 +436,7 @@
                 o
             ].concat(u)) : s(!1, !1, t, e, n, r, i, o);
         }
-        function A(t, e, n, r, i, o) {
+        function T(t, e, n, r, i, o) {
             for (var a = arguments.length, u = Array(a > 6 ? a - 6 : 0), c = 6; c < a; c++)
                 u[c - 6] = arguments[c];
             return u.length ? s.call.apply(s, [
@@ -387,12 +451,12 @@
                 o
             ].concat(u)) : s(!1, !0, t, e, n, r, i, o);
         }
-        function b(t, e, n, r, i, o, a) {
-            var u = g(t, e);
+        function O(t, e, n, r, i, o, a) {
+            var u = m(t, e);
             null == u && (u = {});
             for (var c = arguments.length, f = Array(c > 7 ? c - 7 : 0), l = 7; l < c; l++)
                 f[l - 7] = arguments[l];
-            return I(t, e, f.length ? s.call.apply(s, [
+            return _(t, e, f.length ? s.call.apply(s, [
                 null,
                 !1,
                 !1,
@@ -404,7 +468,7 @@
                 a
             ].concat(f)) : s(!1, !1, u, n, r, i, o, a));
         }
-        function S(t, e) {
+        function A(t, e) {
             for (var n = Array.isArray(e) ? e : [e], r = !1, i = 0; i < n.length; i++)
                 if (u.call(t, n[i])) {
                     r = !0;
@@ -418,7 +482,7 @@
             }
             return o;
         }
-        function w(t, e, n, r, i, o) {
+        function x(t, e, n, r, i, o) {
             for (var a = arguments.length, u = Array(a > 6 ? a - 6 : 0), c = 6; c < a; c++)
                 u[c - 6] = arguments[c];
             return u.length ? s.call.apply(s, [
@@ -433,34 +497,34 @@
                 o
             ].concat(u)) : s(!0, !1, t, e, n, r, i, o);
         }
-        var R = {
+        var S = {
             clone: c,
             addLast: l,
             addFirst: d,
             removeLast: p,
             removeFirst: v,
             insert: h,
-            removeAt: E,
-            replaceAt: _,
-            getIn: g,
+            removeAt: g,
+            replaceAt: E,
+            getIn: m,
             set: y,
-            setIn: I,
-            update: m,
-            updateIn: T,
-            merge: O,
-            mergeDeep: A,
-            mergeIn: b,
-            omit: S,
-            addDefaults: w
+            setIn: _,
+            update: I,
+            updateIn: b,
+            merge: w,
+            mergeDeep: T,
+            mergeIn: O,
+            omit: A,
+            addDefaults: x
         };
-        e.default = R;
+        e.default = S;
     },
     function (t, e, n) {
-        var r = n(3).Symbol;
+        var r = n(5).Symbol;
         t.exports = r;
     },
     function (t, e, n) {
-        var r = n(27), i = 1 / 0;
+        var r = n(36), i = 1 / 0;
         t.exports = function (t) {
             if ('string' == typeof t || r(t))
                 return t;
@@ -486,6 +550,41 @@
         t.exports = r;
     },
     function (t, e) {
+        var n;
+        n = function () {
+            return this;
+        }();
+        try {
+            n = n || new Function('return this')();
+        } catch (t) {
+            'object' == typeof window && (n = window);
+        }
+        t.exports = n;
+    },
+    function (t, e) {
+        t.exports = function (t) {
+            return 'object' == typeof t ? null !== t : 'function' == typeof t;
+        };
+    },
+    function (t, e, n) {
+        var r = n(24);
+        t.exports = function (t) {
+            if (!r(t))
+                throw TypeError(String(t) + ' is not an object');
+            return t;
+        };
+    },
+    function (t, e, n) {
+        var r = n(4), i = n(39), o = n(135), a = r['__core-js_shared__'] || i('__core-js_shared__', {});
+        (t.exports = function (t, e) {
+            return a[t] || (a[t] = void 0 !== e ? e : {});
+        })('versions', []).push({
+            version: '3.1.3',
+            mode: o ? 'pure' : 'global',
+            copyright: '© 2019 Denis Pushkarev (zloirock.ru)'
+        });
+    },
+    function (t, e) {
         t.exports = function (t, e, n) {
             return e in t ? Object.defineProperty(t, e, {
                 value: n,
@@ -509,7 +608,7 @@
         t.exports = n;
     },
     function (t, e, n) {
-        var r = n(126), i = n(127), o = n(128), a = n(129), u = n(130);
+        var r = n(178), i = n(179), o = n(180), a = n(181), u = n(182);
         function c(t) {
             var e = -1, n = null == t ? 0 : t.length;
             for (this.clear(); ++e < n;) {
@@ -520,7 +619,7 @@
         c.prototype.clear = r, c.prototype.delete = i, c.prototype.get = o, c.prototype.has = a, c.prototype.set = u, t.exports = c;
     },
     function (t, e, n) {
-        var r = n(32);
+        var r = n(45);
         t.exports = function (t, e) {
             for (var n = t.length; n--;)
                 if (r(t[n][0], e))
@@ -529,24 +628,24 @@
         };
     },
     function (t, e, n) {
-        var r = n(6)(Object, 'create');
+        var r = n(8)(Object, 'create');
         t.exports = r;
     },
     function (t, e, n) {
-        var r = n(150);
+        var r = n(202);
         t.exports = function (t, e) {
             var n = t.__data__;
             return r(e) ? n['string' == typeof e ? 'string' : 'hash'] : n.map;
         };
     },
     function (t, e, n) {
-        var r = n(72), i = n(40), o = n(11);
+        var r = n(96), i = n(53), o = n(12);
         t.exports = function (t) {
             return o(t) ? r(t) : i(t);
         };
     },
     function (t, e, n) {
-        var r = n(168), i = n(7), o = Object.prototype, a = o.hasOwnProperty, u = o.propertyIsEnumerable, c = r(function () {
+        var r = n(220), i = n(9), o = Object.prototype, a = o.hasOwnProperty, u = o.propertyIsEnumerable, c = r(function () {
                 return arguments;
             }()) ? r : function (t) {
                 return i(t) && a.call(t, 'callee') && !u.call(t, 'callee');
@@ -554,23 +653,60 @@
         t.exports = c;
     },
     function (t, e, n) {
-        var r = n(43);
-        t.exports = function (t, e, n) {
-            var i = null == t ? void 0 : r(t, e);
-            return void 0 === i ? n : i;
-        };
-    },
-    function (t, e, n) {
-        var r = n(1), i = n(44), o = n(179), a = n(78);
+        var r = n(1), i = n(58), o = n(231), a = n(234);
         t.exports = function (t, e) {
             return r(t) ? t : i(t, e) ? [t] : o(a(t));
         };
     },
     function (t, e, n) {
-        var r = n(10), i = n(7), o = '[object Symbol]';
+        var r = n(11), i = n(9), o = '[object Symbol]';
         t.exports = function (t) {
             return 'symbol' == typeof t || i(t) && r(t) == o;
         };
+    },
+    function (t, e, n) {
+        var r = n(131), i = n(133);
+        t.exports = function (t) {
+            return r(i(t));
+        };
+    },
+    function (t, e, n) {
+        var r = n(15), i = n(69), o = n(25), a = n(68), u = Object.defineProperty;
+        e.f = r ? u : function (t, e, n) {
+            if (o(t), e = a(e, !0), o(n), i)
+                try {
+                    return u(t, e, n);
+                } catch (t) {
+                }
+            if ('get' in n || 'set' in n)
+                throw TypeError('Accessors not supported');
+            return 'value' in n && (t[e] = n.value), t;
+        };
+    },
+    function (t, e, n) {
+        var r = n(4), i = n(18);
+        t.exports = function (t, e) {
+            try {
+                i(r, t, e);
+            } catch (n) {
+                r[t] = e;
+            }
+            return e;
+        };
+    },
+    function (t, e) {
+        t.exports = {};
+    },
+    function (t, e) {
+        t.exports = [
+            'constructor',
+            'hasOwnProperty',
+            'isPrototypeOf',
+            'propertyIsEnumerable',
+            'toLocaleString',
+            'toString',
+            'valueOf'
+        ];
     },
     function (t, e, n) {
         'use strict';
@@ -579,7 +715,7 @@
         }), n.d(e, 'default', function () {
             return a;
         });
-        var r = n(55), i = n(112), o = { INIT: '@@redux/INIT' };
+        var r = n(79), i = n(164), o = { INIT: '@@redux/INIT' };
         function a(t, e, n) {
             var u;
             if ('function' == typeof e && void 0 === n && (n = e, e = void 0), void 0 !== n) {
@@ -608,7 +744,7 @@
                     }
                 };
             }
-            function E(t) {
+            function g(t) {
                 if (!Object(r.default)(t))
                     throw new Error('Actions must be plain objects. Use custom middleware for async actions.');
                 if (void 0 === t.type)
@@ -624,14 +760,14 @@
                     e[n]();
                 return t;
             }
-            return E({ type: o.INIT }), (u = {
-                dispatch: E,
+            return g({ type: o.INIT }), (u = {
+                dispatch: g,
                 subscribe: h,
                 getState: v,
                 replaceReducer: function (t) {
                     if ('function' != typeof t)
                         throw new Error('Expected the nextReducer to be a function.');
-                    c = t, E({ type: o.INIT });
+                    c = t, g({ type: o.INIT });
                 }
             })[i.default] = function () {
                 var t, e = h;
@@ -649,18 +785,6 @@
                 }, t;
             }, u;
         }
-    },
-    function (t, e) {
-        var n;
-        n = function () {
-            return this;
-        }();
-        try {
-            n = n || new Function('return this')();
-        } catch (t) {
-            'object' == typeof window && (n = window);
-        }
-        t.exports = n;
     },
     function (t, e, n) {
         'use strict';
@@ -688,7 +812,7 @@
         'use strict';
         var r = n(0);
         Object.defineProperty(e, '__esModule', { value: !0 }), e.TRANSFORM_STYLE_PREFIXED = e.TRANSFORM_PREFIXED = e.FLEX_PREFIXED = e.ELEMENT_MATCHES = e.withBrowser = e.IS_BROWSER_ENV = void 0;
-        var i = r(n(61)), o = 'undefined' != typeof window;
+        var i = r(n(85)), o = 'undefined' != typeof window;
         e.IS_BROWSER_ENV = o;
         var a = function (t, e) {
             return o ? t() : e;
@@ -751,11 +875,11 @@
         };
     },
     function (t, e, n) {
-        var r = n(6)(n(3), 'Map');
+        var r = n(8)(n(5), 'Map');
         t.exports = r;
     },
     function (t, e, n) {
-        var r = n(142), i = n(149), o = n(151), a = n(152), u = n(153);
+        var r = n(194), i = n(201), o = n(203), a = n(204), u = n(205);
         function c(t) {
             var e = -1, n = null == t ? 0 : t.length;
             for (this.clear(); ++e < n;) {
@@ -774,9 +898,9 @@
     },
     function (t, e, n) {
         (function (t) {
-            var r = n(3), i = n(169), o = e && !e.nodeType && e, a = o && 'object' == typeof t && t && !t.nodeType && t, u = a && a.exports === o ? r.Buffer : void 0, c = (u ? u.isBuffer : void 0) || i;
+            var r = n(5), i = n(221), o = e && !e.nodeType && e, a = o && 'object' == typeof t && t && !t.nodeType && t, u = a && a.exports === o ? r.Buffer : void 0, c = (u ? u.isBuffer : void 0) || i;
             t.exports = c;
-        }.call(this, n(73)(t)));
+        }.call(this, n(97)(t)));
     },
     function (t, e) {
         var n = 9007199254740991, r = /^(?:0|[1-9]\d*)$/;
@@ -786,7 +910,7 @@
         };
     },
     function (t, e, n) {
-        var r = n(170), i = n(171), o = n(172), a = o && o.isTypedArray, u = a ? i(a) : r;
+        var r = n(222), i = n(223), o = n(224), a = o && o.isTypedArray, u = a ? i(a) : r;
         t.exports = u;
     },
     function (t, e) {
@@ -796,7 +920,7 @@
         };
     },
     function (t, e, n) {
-        var r = n(41), i = n(173), o = Object.prototype.hasOwnProperty;
+        var r = n(54), i = n(225), o = Object.prototype.hasOwnProperty;
         t.exports = function (t) {
             if (!r(t))
                 return i(t);
@@ -814,7 +938,7 @@
         };
     },
     function (t, e, n) {
-        var r = n(174), i = n(33), o = n(175), a = n(176), u = n(75), c = n(10), s = n(66), f = s(r), l = s(i), d = s(o), p = s(a), v = s(u), h = c;
+        var r = n(226), i = n(46), o = n(227), a = n(228), u = n(99), c = n(11), s = n(90), f = s(r), l = s(i), d = s(o), p = s(a), v = s(u), h = c;
         (r && '[object DataView]' != h(new r(new ArrayBuffer(1))) || i && '[object Map]' != h(new i()) || o && '[object Promise]' != h(o.resolve()) || a && '[object Set]' != h(new a()) || u && '[object WeakMap]' != h(new u())) && (h = function (t) {
             var e = c(t), n = '[object Object]' == e ? t.constructor : void 0, r = n ? s(n) : '';
             if (r)
@@ -834,7 +958,14 @@
         }), t.exports = h;
     },
     function (t, e, n) {
-        var r = n(26), i = n(15);
+        var r = n(57);
+        t.exports = function (t, e, n) {
+            var i = null == t ? void 0 : r(t, e);
+            return void 0 === i ? n : i;
+        };
+    },
+    function (t, e, n) {
+        var r = n(35), i = n(21);
         t.exports = function (t, e) {
             for (var n = 0, o = (e = r(e, t)).length; null != t && n < o;)
                 t = t[i(e[n++])];
@@ -842,7 +973,7 @@
         };
     },
     function (t, e, n) {
-        var r = n(1), i = n(27), o = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/, a = /^\w*$/;
+        var r = n(1), i = n(36), o = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/, a = /^\w*$/;
         t.exports = function (t, e) {
             if (r(t))
                 return !1;
@@ -856,39 +987,32 @@
         };
     },
     function (t, e, n) {
-        var r = n(188);
-        t.exports = function (t) {
-            var e = r(t), n = e % 1;
-            return e == e ? n ? e - n : e : 0;
-        };
-    },
-    function (t, e, n) {
-        var r = n(4), i = n(27), o = NaN, a = /^\s+|\s+$/g, u = /^[-+]0x[0-9a-f]+$/i, c = /^0b[01]+$/i, s = /^0o[0-7]+$/i, f = parseInt;
+        var r = n(243), i = n(6), o = n(36), a = NaN, u = /^[-+]0x[0-9a-f]+$/i, c = /^0b[01]+$/i, s = /^0o[0-7]+$/i, f = parseInt;
         t.exports = function (t) {
             if ('number' == typeof t)
                 return t;
-            if (i(t))
-                return o;
-            if (r(t)) {
+            if (o(t))
+                return a;
+            if (i(t)) {
                 var e = 'function' == typeof t.valueOf ? t.valueOf() : t;
-                t = r(e) ? e + '' : e;
+                t = i(e) ? e + '' : e;
             }
             if ('string' != typeof t)
                 return 0 === t ? t : +t;
-            t = t.replace(a, '');
+            t = r(t);
             var n = c.test(t);
-            return n || s.test(t) ? f(t.slice(2), n ? 2 : 8) : u.test(t) ? o : +t;
+            return n || s.test(t) ? f(t.slice(2), n ? 2 : 8) : u.test(t) ? a : +t;
         };
     },
     function (t, e, n) {
         'use strict';
         var r = n(0);
         Object.defineProperty(e, '__esModule', { value: !0 }), e.mediaQueriesDefined = e.viewportWidthChanged = e.actionListPlaybackChanged = e.elementStateChanged = e.instanceRemoved = e.instanceStarted = e.instanceAdded = e.parameterChanged = e.animationFrameChanged = e.eventStateChanged = e.testFrameRendered = e.eventListenerAdded = e.clearRequested = e.stopRequested = e.playbackRequested = e.previewRequested = e.sessionStopped = e.sessionStarted = e.sessionInitialized = e.rawDataImported = void 0;
-        var i = r(n(18)), o = n(2), a = n(9), u = o.IX2EngineActionTypes, c = u.IX2_RAW_DATA_IMPORTED, s = u.IX2_SESSION_INITIALIZED, f = u.IX2_SESSION_STARTED, l = u.IX2_SESSION_STOPPED, d = u.IX2_PREVIEW_REQUESTED, p = u.IX2_PLAYBACK_REQUESTED, v = u.IX2_STOP_REQUESTED, h = u.IX2_CLEAR_REQUESTED, E = u.IX2_EVENT_LISTENER_ADDED, _ = u.IX2_TEST_FRAME_RENDERED, g = u.IX2_EVENT_STATE_CHANGED, y = u.IX2_ANIMATION_FRAME_CHANGED, I = u.IX2_PARAMETER_CHANGED, m = u.IX2_INSTANCE_ADDED, T = u.IX2_INSTANCE_STARTED, O = u.IX2_INSTANCE_REMOVED, A = u.IX2_ELEMENT_STATE_CHANGED, b = u.IX2_ACTION_LIST_PLAYBACK_CHANGED, S = u.IX2_VIEWPORT_WIDTH_CHANGED, w = u.IX2_MEDIA_QUERIES_DEFINED, R = a.IX2VanillaUtils.reifyState;
+        var i = r(n(28)), o = n(2), a = n(10), u = o.IX2EngineActionTypes, c = u.IX2_RAW_DATA_IMPORTED, s = u.IX2_SESSION_INITIALIZED, f = u.IX2_SESSION_STARTED, l = u.IX2_SESSION_STOPPED, d = u.IX2_PREVIEW_REQUESTED, p = u.IX2_PLAYBACK_REQUESTED, v = u.IX2_STOP_REQUESTED, h = u.IX2_CLEAR_REQUESTED, g = u.IX2_EVENT_LISTENER_ADDED, E = u.IX2_TEST_FRAME_RENDERED, m = u.IX2_EVENT_STATE_CHANGED, y = u.IX2_ANIMATION_FRAME_CHANGED, _ = u.IX2_PARAMETER_CHANGED, I = u.IX2_INSTANCE_ADDED, b = u.IX2_INSTANCE_STARTED, w = u.IX2_INSTANCE_REMOVED, T = u.IX2_ELEMENT_STATE_CHANGED, O = u.IX2_ACTION_LIST_PLAYBACK_CHANGED, A = u.IX2_VIEWPORT_WIDTH_CHANGED, x = u.IX2_MEDIA_QUERIES_DEFINED, S = a.IX2VanillaUtils.reifyState;
         e.rawDataImported = function (t) {
             return {
                 type: c,
-                payload: (0, i.default)({}, R(t))
+                payload: (0, i.default)({}, S(t))
             };
         };
         e.sessionInitialized = function (t) {
@@ -942,7 +1066,7 @@
         };
         e.eventListenerAdded = function (t, e) {
             return {
-                type: E,
+                type: g,
                 payload: {
                     target: t,
                     listenerParams: e
@@ -952,13 +1076,13 @@
         e.testFrameRendered = function () {
             var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1;
             return {
-                type: _,
+                type: E,
                 payload: { step: t }
             };
         };
         e.eventStateChanged = function (t, e) {
             return {
-                type: g,
+                type: m,
                 payload: {
                     stateKey: t,
                     newState: e
@@ -976,7 +1100,7 @@
         };
         e.parameterChanged = function (t, e) {
             return {
-                type: I,
+                type: _,
                 payload: {
                     key: t,
                     value: e
@@ -985,13 +1109,13 @@
         };
         e.instanceAdded = function (t) {
             return {
-                type: m,
+                type: I,
                 payload: (0, i.default)({}, t)
             };
         };
         e.instanceStarted = function (t, e) {
             return {
-                type: T,
+                type: b,
                 payload: {
                     instanceId: t,
                     time: e
@@ -1000,13 +1124,13 @@
         };
         e.instanceRemoved = function (t) {
             return {
-                type: O,
+                type: w,
                 payload: { instanceId: t }
             };
         };
         e.elementStateChanged = function (t, e, n, r) {
             return {
-                type: A,
+                type: T,
                 payload: {
                     elementId: t,
                     actionTypeId: e,
@@ -1018,7 +1142,7 @@
         e.actionListPlaybackChanged = function (t) {
             var e = t.actionListId, n = t.isPlaying;
             return {
-                type: b,
+                type: O,
                 payload: {
                     actionListId: e,
                     isPlaying: n
@@ -1028,7 +1152,7 @@
         e.viewportWidthChanged = function (t) {
             var e = t.width, n = t.mediaQueries;
             return {
-                type: S,
+                type: A,
                 payload: {
                     width: e,
                     mediaQueries: n
@@ -1036,11 +1160,11 @@
             };
         };
         e.mediaQueriesDefined = function () {
-            return { type: w };
+            return { type: x };
         };
     },
     function (t, e, n) {
-        var r = n(95), i = n(50);
+        var r = n(117), i = n(63);
         function o(t, e) {
             this.__wrapped__ = t, this.__actions__ = [], this.__chain__ = !!e, this.__index__ = 0, this.__values__ = void 0;
         }
@@ -1051,7 +1175,7 @@
         };
     },
     function (t, e, n) {
-        var r = n(95), i = n(50), o = 4294967295;
+        var r = n(117), i = n(63), o = 4294967295;
         function a(t) {
             this.__wrapped__ = t, this.__actions__ = [], this.__dir__ = 1, this.__filtered__ = !1, this.__iteratees__ = [], this.__takeCount__ = o, this.__views__ = [];
         }
@@ -1059,10 +1183,10 @@
     },
     function (t, e, n) {
         'use strict';
-        var r = n(0)(n(16));
+        var r = n(0)(n(22));
         window.tram = function (t) {
             function e(t, e) {
-                return new j.Bare().init(t, e);
+                return new F.Bare().init(t, e);
             }
             function n(t) {
                 return t.replace(/[A-Z]/g, function (t) {
@@ -1304,18 +1428,18 @@
                     'ease-in-back': 'cubic-bezier(0.600, 0, 0.735, 0.045)',
                     'ease-out-back': 'cubic-bezier(0.175, 0.885, 0.320, 1)',
                     'ease-in-out-back': 'cubic-bezier(0.680, 0, 0.265, 1)'
-                }, p = document, v = window, h = 'bkwld-tram', E = /[\-\.0-9]/g, _ = /[A-Z]/, g = 'number', y = /^(rgb|#)/, I = /(em|cm|mm|in|pt|pc|px)$/, m = /(em|cm|mm|in|pt|pc|px|%)$/, T = /(deg|rad|turn)$/, O = 'unitless', A = /(all|none) 0s ease 0s/, b = /^(width|height)$/, S = ' ', w = p.createElement('a'), R = [
+                }, p = document, v = window, h = 'bkwld-tram', g = /[\-\.0-9]/g, E = /[A-Z]/, m = 'number', y = /^(rgb|#)/, _ = /(em|cm|mm|in|pt|pc|px)$/, I = /(em|cm|mm|in|pt|pc|px|%)$/, b = /(deg|rad|turn)$/, w = 'unitless', T = /(all|none) 0s ease 0s/, O = /^(width|height)$/, A = ' ', x = p.createElement('a'), S = [
                     'Webkit',
                     'Moz',
                     'O',
                     'ms'
-                ], N = [
+                ], R = [
                     '-webkit-',
                     '-moz-',
                     '-o-',
                     '-ms-'
                 ], C = function (t) {
-                    if (t in w.style)
+                    if (t in x.style)
                         return {
                             dom: t,
                             css: t
@@ -1323,36 +1447,36 @@
                     var e, n, r = '', i = t.split('-');
                     for (e = 0; e < i.length; e++)
                         r += i[e].charAt(0).toUpperCase() + i[e].slice(1);
-                    for (e = 0; e < R.length; e++)
-                        if ((n = R[e] + r) in w.style)
+                    for (e = 0; e < S.length; e++)
+                        if ((n = S[e] + r) in x.style)
                             return {
                                 dom: n,
-                                css: N[e] + t
+                                css: R[e] + t
                             };
-                }, L = e.support = {
+                }, N = e.support = {
                     bind: Function.prototype.bind,
                     transform: C('transform'),
                     transition: C('transition'),
                     backface: C('backface-visibility'),
                     timing: C('transition-timing-function')
                 };
-            if (L.transition) {
-                var x = L.timing.dom;
-                if (w.style[x] = l['ease-in-back'][0], !w.style[x])
+            if (N.transition) {
+                var L = N.timing.dom;
+                if (x.style[L] = l['ease-in-back'][0], !x.style[L])
                     for (var D in d)
                         l[D][0] = d[D];
             }
             var P = e.frame = function () {
                     var t = v.requestAnimationFrame || v.webkitRequestAnimationFrame || v.mozRequestAnimationFrame || v.oRequestAnimationFrame || v.msRequestAnimationFrame;
-                    return t && L.bind ? t.bind(v) : function (t) {
+                    return t && N.bind ? t.bind(v) : function (t) {
                         v.setTimeout(t, 16);
                     };
                 }(), M = e.now = function () {
                     var t = v.performance, e = t && (t.now || t.webkitNow || t.msNow || t.mozNow);
-                    return e && L.bind ? e.bind(t) : Date.now || function () {
+                    return e && N.bind ? e.bind(t) : Date.now || function () {
                         return +new Date();
                     };
-                }(), F = f(function (e) {
+                }(), j = f(function (e) {
                     function i(t, e) {
                         var n = function (t) {
                                 for (var e = -1, n = t ? t.length : 0, r = []; ++e < n;) {
@@ -1360,7 +1484,7 @@
                                     i && r.push(i);
                                 }
                                 return r;
-                            }(('' + t).split(S)), r = n[0];
+                            }(('' + t).split(A)), r = n[0];
                         e = e || {};
                         var i = Q[r];
                         if (!i)
@@ -1374,7 +1498,7 @@
                         if (t) {
                             var o = (0, r.default)(t);
                             if (e || (this.timer && this.timer.destroy(), this.queue = [], this.active = !1), 'number' == o && e)
-                                return this.timer = new B({
+                                return this.timer = new W({
                                     duration: t,
                                     context: this,
                                     complete: a
@@ -1403,15 +1527,15 @@
                                     t.span > s && (s = t.span), t.stop(), t.animate(e);
                                 }, function (t) {
                                     'wait' in t && (s = c(t.wait, 0));
-                                }), d.call(this), s > 0 && (this.timer = new B({
+                                }), d.call(this), s > 0 && (this.timer = new W({
                                     duration: s,
                                     context: this
                                 }), this.active = !0, e && (this.timer.complete = a));
-                                var v = this, h = !1, E = {};
+                                var v = this, h = !1, g = {};
                                 P(function () {
                                     p.call(v, t, function (t) {
-                                        t.active && (h = !0, E[t.name] = t.nextStyle);
-                                    }), h && v.$el.css(E);
+                                        t.active && (h = !0, g[t.name] = t.nextStyle);
+                                    }), h && v.$el.css(g);
                                 });
                             }
                         }
@@ -1436,12 +1560,12 @@
                         var t, e, n = [];
                         for (t in (this.upstream && n.push(this.upstream), this.props))
                             (e = this.props[t]).active && n.push(e.string);
-                        n = n.join(','), this.style !== n && (this.style = n, this.el.style[L.transition.dom] = n);
+                        n = n.join(','), this.style !== n && (this.style = n, this.el.style[N.transition.dom] = n);
                     }
                     function p(t, e, r) {
                         var o, a, u, c, s = e !== v, f = {};
                         for (o in t)
-                            u = t[o], o in q ? (f.transform || (f.transform = {}), f.transform[o] = u) : (_.test(o) && (o = n(o)), o in Q ? f[o] = u : (c || (c = {}), c[o] = u));
+                            u = t[o], o in q ? (f.transform || (f.transform = {}), f.transform[o] = u) : (E.test(o) && (o = n(o)), o in Q ? f[o] = u : (c || (c = {}), c[o] = u));
                         for (o in f) {
                             if (u = f[o], !(a = this.props[o])) {
                                 if (!s)
@@ -1455,10 +1579,10 @@
                     function v(t) {
                         t.stop();
                     }
-                    function E(t, e) {
+                    function g(t, e) {
                         t.set(e);
                     }
-                    function g(t) {
+                    function m(t) {
                         this.$el.css(t);
                     }
                     function y(t, n) {
@@ -1474,11 +1598,11 @@
                     e.init = function (e) {
                         if (this.$el = t(e), this.el = this.$el[0], this.props = {}, this.queue = [], this.style = '', this.active = !1, H.keepInherited && !H.fallback) {
                             var n = Y(this.el, 'transition');
-                            n && !A.test(n) && (this.upstream = n);
+                            n && !T.test(n) && (this.upstream = n);
                         }
-                        L.backface && H.hideBackface && z(this.el, L.backface.css, 'hidden');
+                        N.backface && H.hideBackface && z(this.el, N.backface.css, 'hidden');
                     }, y('add', i), y('start', o), y('wait', function (t) {
-                        t = c(t, 0), this.active ? this.queue.push({ options: t }) : (this.timer = new B({
+                        t = c(t, 0), this.active ? this.queue.push({ options: t }) : (this.timer = new W({
                             duration: t,
                             context: this,
                             complete: a
@@ -1489,15 +1613,15 @@
                             args: arguments
                         }), void (this.timer.complete = a)) : s('No active transition timer. Use start() or wait() before then().');
                     }), y('next', a), y('stop', u), y('set', function (t) {
-                        u.call(this, t), p.call(this, t, E, g);
+                        u.call(this, t), p.call(this, t, g, m);
                     }), y('show', function (t) {
                         'string' != typeof t && (t = 'block'), this.el.style.display = t;
                     }), y('hide', f), y('redraw', l), y('destroy', function () {
                         u.call(this), t.removeData(this.el, h), this.$el = this.el = null;
                     });
-                }), j = f(F, function (e) {
+                }), F = f(j, function (e) {
                     function n(e, n) {
-                        var r = t.data(e, h) || t.data(e, h, new F.Bare());
+                        var r = t.data(e, h) || t.data(e, h, new j.Bare());
                         return r.el || r.init(e), n ? r.start(n) : r;
                     }
                     e.init = function (e, r) {
@@ -1511,7 +1635,7 @@
                             o.push(n(e, r));
                         }), this.children = o, this;
                     };
-                }), X = f(function (t) {
+                }), k = f(function (t) {
                     function e() {
                         var t = this.get();
                         this.update('auto');
@@ -1528,14 +1652,14 @@
                         var o = e[0];
                         n[2] && (o = n[2]), K[o] && (o = K[o]), this.name = o, this.type = n[1], this.duration = c(e[1], this.duration, i), this.ease = function (t, e, n) {
                             return void 0 !== e && (n = e), t in l ? t : n;
-                        }(e[2], this.ease, a), this.delay = c(e[3], this.delay, u), this.span = this.duration + this.delay, this.active = !1, this.nextStyle = null, this.auto = b.test(this.name), this.unit = r.unit || this.unit || H.defaultUnit, this.angle = r.angle || this.angle || H.defaultAngle, H.fallback || r.fallback ? this.animate = this.fallback : (this.animate = this.transition, this.string = this.name + S + this.duration + 'ms' + ('ease' != this.ease ? S + l[this.ease][0] : '') + (this.delay ? S + this.delay + 'ms' : ''));
+                        }(e[2], this.ease, a), this.delay = c(e[3], this.delay, u), this.span = this.duration + this.delay, this.active = !1, this.nextStyle = null, this.auto = O.test(this.name), this.unit = r.unit || this.unit || H.defaultUnit, this.angle = r.angle || this.angle || H.defaultAngle, H.fallback || r.fallback ? this.animate = this.fallback : (this.animate = this.transition, this.string = this.name + A + this.duration + 'ms' + ('ease' != this.ease ? A + l[this.ease][0] : '') + (this.delay ? A + this.delay + 'ms' : ''));
                     }, t.set = function (t) {
                         t = this.convert(t, this.type), this.update(t), this.redraw();
                     }, t.transition = function (t) {
                         this.active = !0, t = this.convert(t, this.type), this.auto && ('auto' == this.el.style[this.name] && (this.update(this.get()), this.redraw()), 'auto' == t && (t = e.call(this))), this.nextStyle = t;
                     }, t.fallback = function (t) {
                         var n = this.el.style[this.name] || this.convert(this.get(), this.type);
-                        t = this.convert(t, this.type), this.auto && ('auto' == n && (n = this.convert(this.get(), this.type)), 'auto' == t && (t = e.call(this))), this.tween = new U({
+                        t = this.convert(t, this.type), this.auto && ('auto' == n && (n = this.convert(this.get(), this.type)), 'auto' == t && (t = e.call(this))), this.tween = new V({
                             from: n,
                             to: t,
                             duration: this.duration,
@@ -1557,10 +1681,10 @@
                             return t;
                         var i, o = 'number' == typeof t, a = 'string' == typeof t;
                         switch (e) {
-                        case g:
+                        case m:
                             if (o)
                                 return t;
-                            if (a && '' === t.replace(E, ''))
+                            if (a && '' === t.replace(g, ''))
                                 return +t;
                             i = 'number(unitless)';
                             break;
@@ -1573,31 +1697,31 @@
                             }
                             i = 'hex or rgb string';
                             break;
-                        case I:
+                        case _:
                             if (o)
                                 return t + this.unit;
                             if (a && e.test(t))
                                 return t;
                             i = 'number(px) or string(unit)';
                             break;
-                        case m:
+                        case I:
                             if (o)
                                 return t + this.unit;
                             if (a && e.test(t))
                                 return t;
                             i = 'number(px) or string(unit or %)';
                             break;
-                        case T:
+                        case b:
                             if (o)
                                 return t + this.angle;
                             if (a && e.test(t))
                                 return t;
                             i = 'number(deg) or string(angle)';
                             break;
-                        case O:
+                        case w:
                             if (o)
                                 return t;
-                            if (a && m.test(t))
+                            if (a && I.test(t))
                                 return t;
                             i = 'number(unitless) or string(unit or %)';
                         }
@@ -1607,11 +1731,11 @@
                     }, t.redraw = function () {
                         this.el.offsetHeight;
                     };
-                }), G = f(X, function (t, e) {
+                }), X = f(k, function (t, e) {
                     t.init = function () {
                         e.init.apply(this, arguments), this.original || (this.original = this.convert(this.get(), y));
                     };
-                }), V = f(X, function (t, e) {
+                }), G = f(k, function (t, e) {
                     t.init = function () {
                         e.init.apply(this, arguments), this.animate = this.fallback;
                     }, t.get = function () {
@@ -1619,7 +1743,7 @@
                     }, t.update = function (t) {
                         this.$el[this.name](t);
                     };
-                }), k = f(X, function (t, e) {
+                }), U = f(k, function (t, e) {
                     function n(t, e) {
                         var n, r, i, o, a;
                         for (n in t)
@@ -1633,7 +1757,7 @@
                         }), z(this.el, this.name, this.style(this.current)), this.redraw();
                     }, t.transition = function (t) {
                         var e = this.values(t);
-                        this.tween = new W({
+                        this.tween = new B({
                             current: this.current,
                             values: e,
                             duration: this.duration,
@@ -1646,7 +1770,7 @@
                         this.active = !0, this.nextStyle = this.style(r);
                     }, t.fallback = function (t) {
                         var e = this.values(t);
-                        this.tween = new W({
+                        this.tween = new B({
                             current: this.current,
                             values: e,
                             duration: this.duration,
@@ -1668,7 +1792,7 @@
                             r[t] = n, void 0 === this.current[t] && (e = 0, ~t.indexOf('scale') && (e = 1), this.current[t] = this.convert(e, i));
                         }), r;
                     };
-                }), U = f(function (e) {
+                }), V = f(function (e) {
                     function n() {
                         var t, e, r, i = c.length;
                         if (i)
@@ -1677,7 +1801,7 @@
                     }
                     var r = {
                         ease: l.ease[1],
-                        from: '0',
+                        from: 0,
                         to: 1
                     };
                     e.init = function (t) {
@@ -1712,25 +1836,25 @@
                         if (e += '', '#' == (t += '').charAt(0))
                             return this.startRGB = i(e), this.endRGB = i(t), this.endHex = t, this.begin = 0, void (this.change = 1);
                         if (!this.unit) {
-                            var n = e.replace(E, '');
-                            n !== t.replace(E, '') && u('tween', e, t), this.unit = n;
+                            var n = e.replace(g, '');
+                            n !== t.replace(g, '') && u('tween', e, t), this.unit = n;
                         }
                         e = parseFloat(e), t = parseFloat(t), this.begin = this.value = e, this.change = t - e;
                     }, e.destroy = function () {
                         this.stop(), this.context = null, this.ease = this.update = this.complete = a;
                     };
                     var c = [], s = 1000;
-                }), B = f(U, function (t) {
+                }), W = f(V, function (t) {
                     t.init = function (t) {
                         this.duration = t.duration || 0, this.complete = t.complete || a, this.context = t.context, this.play();
                     }, t.render = function (t) {
                         t - this.start < this.duration || (this.complete.call(this.context), this.destroy());
                     };
-                }), W = f(U, function (t, e) {
+                }), B = f(V, function (t, e) {
                     t.init = function (t) {
                         var e, n;
                         for (e in (this.context = t.context, this.update = t.update, this.tweens = [], this.current = t.current, t.values))
-                            n = t.values[e], this.current[e] !== n && this.tweens.push(new U({
+                            n = t.values[e], this.current[e] !== n && this.tweens.push(new V({
                                 name: e,
                                 from: this.current[e],
                                 to: n,
@@ -1760,19 +1884,19 @@
                     keepInherited: !1,
                     hideBackface: !1,
                     perspective: '',
-                    fallback: !L.transition,
+                    fallback: !N.transition,
                     agentTests: []
                 };
             e.fallback = function (t) {
-                if (!L.transition)
+                if (!N.transition)
                     return H.fallback = !0;
                 H.agentTests.push('(' + t + ')');
                 var e = new RegExp(H.agentTests.join('|'), 'i');
                 H.fallback = e.test(navigator.userAgent);
             }, e.fallback('6.0.[2-5] Safari'), e.tween = function (t) {
-                return new U(t);
+                return new V(t);
             }, e.delay = function (t, e, n) {
-                return new B({
+                return new W({
                     complete: e,
                     duration: t,
                     context: n
@@ -1780,261 +1904,352 @@
             }, t.fn.tram = function (t) {
                 return e.call(null, this, t);
             };
-            var z = t.style, Y = t.css, K = { transform: L.transform && L.transform.css }, Q = {
+            var z = t.style, Y = t.css, K = { transform: N.transform && N.transform.css }, Q = {
                     color: [
-                        G,
+                        X,
                         y
                     ],
                     background: [
-                        G,
+                        X,
                         y,
                         'background-color'
                     ],
                     'outline-color': [
-                        G,
+                        X,
                         y
                     ],
                     'border-color': [
-                        G,
+                        X,
                         y
                     ],
                     'border-top-color': [
-                        G,
+                        X,
                         y
                     ],
                     'border-right-color': [
-                        G,
+                        X,
                         y
                     ],
                     'border-bottom-color': [
-                        G,
+                        X,
                         y
                     ],
                     'border-left-color': [
-                        G,
+                        X,
                         y
                     ],
                     'border-width': [
-                        X,
-                        I
+                        k,
+                        _
                     ],
                     'border-top-width': [
-                        X,
-                        I
+                        k,
+                        _
                     ],
                     'border-right-width': [
-                        X,
-                        I
+                        k,
+                        _
                     ],
                     'border-bottom-width': [
-                        X,
-                        I
+                        k,
+                        _
                     ],
                     'border-left-width': [
-                        X,
-                        I
+                        k,
+                        _
                     ],
                     'border-spacing': [
-                        X,
-                        I
+                        k,
+                        _
                     ],
                     'letter-spacing': [
-                        X,
-                        I
+                        k,
+                        _
                     ],
                     margin: [
-                        X,
-                        I
+                        k,
+                        _
                     ],
                     'margin-top': [
-                        X,
-                        I
+                        k,
+                        _
                     ],
                     'margin-right': [
-                        X,
-                        I
+                        k,
+                        _
                     ],
                     'margin-bottom': [
-                        X,
-                        I
+                        k,
+                        _
                     ],
                     'margin-left': [
-                        X,
-                        I
+                        k,
+                        _
                     ],
                     padding: [
-                        X,
-                        I
+                        k,
+                        _
                     ],
                     'padding-top': [
-                        X,
-                        I
+                        k,
+                        _
                     ],
                     'padding-right': [
-                        X,
-                        I
+                        k,
+                        _
                     ],
                     'padding-bottom': [
-                        X,
-                        I
+                        k,
+                        _
                     ],
                     'padding-left': [
-                        X,
-                        I
+                        k,
+                        _
                     ],
                     'outline-width': [
-                        X,
-                        I
+                        k,
+                        _
                     ],
                     opacity: [
-                        X,
-                        g
+                        k,
+                        m
                     ],
                     top: [
-                        X,
-                        m
+                        k,
+                        I
                     ],
                     right: [
-                        X,
-                        m
+                        k,
+                        I
                     ],
                     bottom: [
-                        X,
-                        m
+                        k,
+                        I
                     ],
                     left: [
-                        X,
-                        m
+                        k,
+                        I
                     ],
                     'font-size': [
-                        X,
-                        m
+                        k,
+                        I
                     ],
                     'text-indent': [
-                        X,
-                        m
+                        k,
+                        I
                     ],
                     'word-spacing': [
-                        X,
-                        m
+                        k,
+                        I
                     ],
                     width: [
-                        X,
-                        m
+                        k,
+                        I
                     ],
                     'min-width': [
-                        X,
-                        m
+                        k,
+                        I
                     ],
                     'max-width': [
-                        X,
-                        m
+                        k,
+                        I
                     ],
                     height: [
-                        X,
-                        m
+                        k,
+                        I
                     ],
                     'min-height': [
-                        X,
-                        m
+                        k,
+                        I
                     ],
                     'max-height': [
-                        X,
-                        m
+                        k,
+                        I
                     ],
                     'line-height': [
-                        X,
-                        O
+                        k,
+                        w
                     ],
                     'scroll-top': [
-                        V,
-                        g,
+                        G,
+                        m,
                         'scrollTop'
                     ],
                     'scroll-left': [
-                        V,
-                        g,
+                        G,
+                        m,
                         'scrollLeft'
                     ]
                 }, q = {};
-            L.transform && (Q.transform = [k], q = {
+            N.transform && (Q.transform = [U], q = {
                 x: [
-                    m,
+                    I,
                     'translateX'
                 ],
                 y: [
-                    m,
+                    I,
                     'translateY'
                 ],
-                rotate: [T],
-                rotateX: [T],
-                rotateY: [T],
-                scale: [g],
-                scaleX: [g],
-                scaleY: [g],
-                skew: [T],
-                skewX: [T],
-                skewY: [T]
-            }), L.transform && L.backface && (q.z = [
-                m,
+                rotate: [b],
+                rotateX: [b],
+                rotateY: [b],
+                scale: [m],
+                scaleX: [m],
+                scaleY: [m],
+                skew: [b],
+                skewX: [b],
+                skewY: [b]
+            }), N.transform && N.backface && (q.z = [
+                I,
                 'translateZ'
-            ], q.rotateZ = [T], q.scaleZ = [g], q.perspective = [I]);
+            ], q.rotateZ = [b], q.scaleZ = [m], q.perspective = [_]);
             var $ = /ms/, Z = /s|\./;
             return t.tram = e;
         }(window.jQuery);
     },
     function (t, e, n) {
-        'use strict';
-        var r = n(101);
-        function i(t, e) {
-            var n = document.createEvent('CustomEvent');
-            n.initCustomEvent(e, !0, !0, null), t.dispatchEvent(n);
-        }
-        var o = window.jQuery, a = {}, u = {
-                reset: function (t, e) {
-                    r.triggers.reset(t, e);
-                },
-                intro: function (t, e) {
-                    r.triggers.intro(t, e), i(e, 'COMPONENT_ACTIVE');
-                },
-                outro: function (t, e) {
-                    r.triggers.outro(t, e), i(e, 'COMPONENT_INACTIVE');
+        var r = n(15), i = n(130), o = n(67), a = n(37), u = n(68), c = n(17), s = n(69), f = Object.getOwnPropertyDescriptor;
+        e.f = r ? f : function (t, e) {
+            if (t = a(t), e = u(e, !0), s)
+                try {
+                    return f(t, e);
+                } catch (t) {
                 }
+            if (c(t, e))
+                return o(!i.f.call(t, e), t[e]);
+        };
+    },
+    function (t, e) {
+        t.exports = function (t, e) {
+            return {
+                enumerable: !(1 & t),
+                configurable: !(2 & t),
+                writable: !(4 & t),
+                value: e
             };
-        a.triggers = {}, a.types = {
-            INTRO: 'w-ix-intro.w-ix',
-            OUTRO: 'w-ix-outro.w-ix'
-        }, o.extend(a.triggers, u), t.exports = a;
+        };
+    },
+    function (t, e, n) {
+        var r = n(24);
+        t.exports = function (t, e) {
+            if (!r(t))
+                return t;
+            var n, i;
+            if (e && 'function' == typeof (n = t.toString) && !r(i = n.call(t)))
+                return i;
+            if ('function' == typeof (n = t.valueOf) && !r(i = n.call(t)))
+                return i;
+            if (!e && 'function' == typeof (n = t.toString) && !r(i = n.call(t)))
+                return i;
+            throw TypeError('Can\'t convert object to primitive value');
+        };
+    },
+    function (t, e, n) {
+        var r = n(15), i = n(16), o = n(70);
+        t.exports = !r && !i(function () {
+            return 7 != Object.defineProperty(o('div'), 'a', {
+                get: function () {
+                    return 7;
+                }
+            }).a;
+        });
+    },
+    function (t, e, n) {
+        var r = n(4), i = n(24), o = r.document, a = i(o) && i(o.createElement);
+        t.exports = function (t) {
+            return a ? o.createElement(t) : {};
+        };
+    },
+    function (t, e, n) {
+        var r = n(26);
+        t.exports = r('native-function-to-string', Function.toString);
+    },
+    function (t, e, n) {
+        var r = n(26), i = n(73), o = r('keys');
+        t.exports = function (t) {
+            return o[t] || (o[t] = i(t));
+        };
+    },
+    function (t, e) {
+        var n = 0, r = Math.random();
+        t.exports = function (t) {
+            return 'Symbol(' + String(void 0 === t ? '' : t) + ')_' + (++n + r).toString(36);
+        };
+    },
+    function (t, e, n) {
+        var r = n(140), i = n(4), o = function (t) {
+                return 'function' == typeof t ? t : void 0;
+            };
+        t.exports = function (t, e) {
+            return arguments.length < 2 ? o(r[t]) || o(i[t]) : r[t] && r[t][e] || i[t] && i[t][e];
+        };
+    },
+    function (t, e, n) {
+        var r = n(17), i = n(37), o = n(76).indexOf, a = n(40);
+        t.exports = function (t, e) {
+            var n, u = i(t), c = 0, s = [];
+            for (n in u)
+                !r(a, n) && r(u, n) && s.push(n);
+            for (; e.length > c;)
+                r(u, n = e[c++]) && (~o(s, n) || s.push(n));
+            return s;
+        };
+    },
+    function (t, e, n) {
+        var r = n(37), i = n(142), o = n(143), a = function (t) {
+                return function (e, n, a) {
+                    var u, c = r(e), s = i(c.length), f = o(a, s);
+                    if (t && n != n) {
+                        for (; s > f;)
+                            if ((u = c[f++]) != u)
+                                return !0;
+                    } else
+                        for (; s > f; f++)
+                            if ((t || f in c) && c[f] === n)
+                                return t || f || 0;
+                    return !t && -1;
+                };
+            };
+        t.exports = {
+            includes: a(!0),
+            indexOf: a(!1)
+        };
+    },
+    function (t, e) {
+        var n = Math.ceil, r = Math.floor;
+        t.exports = function (t) {
+            return isNaN(t = +t) ? 0 : (t > 0 ? r : n)(t);
+        };
     },
     function (t, e, n) {
         'use strict';
         n.r(e);
-        var r = n(28);
+        var r = n(42);
         n.d(e, 'createStore', function () {
             return r.default;
         });
-        var i = n(57);
+        var i = n(81);
         n.d(e, 'combineReducers', function () {
             return i.default;
         });
-        var o = n(59);
+        var o = n(83);
         n.d(e, 'bindActionCreators', function () {
             return o.default;
         });
-        var a = n(60);
+        var a = n(84);
         n.d(e, 'applyMiddleware', function () {
             return a.default;
         });
-        var u = n(30);
+        var u = n(43);
         n.d(e, 'compose', function () {
             return u.default;
         });
-        n(58);
+        n(82);
     },
     function (t, e, n) {
         'use strict';
         n.r(e);
-        var r = n(104), i = n(109), o = n(111), a = '[object Object]', u = Function.prototype, c = Object.prototype, s = u.toString, f = c.hasOwnProperty, l = s.call(Object);
+        var r = n(156), i = n(161), o = n(163), a = '[object Object]', u = Function.prototype, c = Object.prototype, s = u.toString, f = c.hasOwnProperty, l = s.call(Object);
         e.default = function (t) {
             if (!Object(o.default)(t) || Object(r.default)(t) != a)
                 return !1;
@@ -2048,7 +2263,7 @@
     function (t, e, n) {
         'use strict';
         n.r(e);
-        var r = n(105).default.Symbol;
+        var r = n(157).default.Symbol;
         e.default = r;
     },
     function (t, e, n) {
@@ -2056,8 +2271,8 @@
         n.r(e), n.d(e, 'default', function () {
             return o;
         });
-        var r = n(28);
-        n(55), n(58);
+        var r = n(42);
+        n(79), n(82);
         function i(t, e) {
             var n = e && e.type;
             return 'Given action ' + (n && '"' + n.toString() + '"' || 'an action') + ', reducer "' + t + '" returned undefined. To ignore an action, you must explicitly return the previous state.';
@@ -2137,7 +2352,7 @@
         n.r(e), n.d(e, 'default', function () {
             return o;
         });
-        var r = n(30), i = Object.assign || function (t) {
+        var r = n(43), i = Object.assign || function (t) {
                 for (var e = 1; e < arguments.length; e++) {
                     var n = arguments[e];
                     for (var r in n)
@@ -2164,11 +2379,11 @@
         }
     },
     function (t, e, n) {
-        var r = n(62)(n(187));
+        var r = n(86)(n(241));
         t.exports = r;
     },
     function (t, e, n) {
-        var r = n(5), i = n(11), o = n(23);
+        var r = n(7), i = n(12), o = n(33);
         t.exports = function (t) {
             return function (e, n, a) {
                 var u = Object(e);
@@ -2184,7 +2399,7 @@
         };
     },
     function (t, e, n) {
-        var r = n(19), i = n(131), o = n(132), a = n(133), u = n(134), c = n(135);
+        var r = n(29), i = n(183), o = n(184), a = n(185), u = n(186), c = n(187);
         function s(t) {
             var e = this.__data__ = new r(t);
             this.size = e.size;
@@ -2192,7 +2407,7 @@
         s.prototype.clear = i, s.prototype.delete = o, s.prototype.get = a, s.prototype.has = u, s.prototype.set = c, t.exports = s;
     },
     function (t, e, n) {
-        var r = n(10), i = n(4), o = '[object AsyncFunction]', a = '[object Function]', u = '[object GeneratorFunction]', c = '[object Proxy]';
+        var r = n(11), i = n(6), o = '[object AsyncFunction]', a = '[object Function]', u = '[object GeneratorFunction]', c = '[object Proxy]';
         t.exports = function (t) {
             if (!i(t))
                 return !1;
@@ -2204,7 +2419,7 @@
         (function (e) {
             var n = 'object' == typeof e && e && e.Object === Object && e;
             t.exports = n;
-        }.call(this, n(29)));
+        }.call(this, n(23)));
     },
     function (t, e) {
         var n = Function.prototype.toString;
@@ -2223,40 +2438,40 @@
         };
     },
     function (t, e, n) {
-        var r = n(154), i = n(7);
+        var r = n(206), i = n(9);
         t.exports = function t(e, n, o, a, u) {
             return e === n || (null == e || null == n || !i(e) && !i(n) ? e != e && n != n : r(e, n, o, a, t, u));
         };
     },
     function (t, e, n) {
-        var r = n(155), i = n(158), o = n(159), a = 1, u = 2;
+        var r = n(207), i = n(210), o = n(211), a = 1, u = 2;
         t.exports = function (t, e, n, c, s, f) {
             var l = n & a, d = t.length, p = e.length;
             if (d != p && !(l && p > d))
                 return !1;
-            var v = f.get(t);
-            if (v && f.get(e))
-                return v == e;
-            var h = -1, E = !0, _ = n & u ? new r() : void 0;
-            for (f.set(t, e), f.set(e, t); ++h < d;) {
-                var g = t[h], y = e[h];
+            var v = f.get(t), h = f.get(e);
+            if (v && h)
+                return v == e && h == t;
+            var g = -1, E = !0, m = n & u ? new r() : void 0;
+            for (f.set(t, e), f.set(e, t); ++g < d;) {
+                var y = t[g], _ = e[g];
                 if (c)
-                    var I = l ? c(y, g, h, e, t, f) : c(g, y, h, t, e, f);
+                    var I = l ? c(_, y, g, e, t, f) : c(y, _, g, t, e, f);
                 if (void 0 !== I) {
                     if (I)
                         continue;
                     E = !1;
                     break;
                 }
-                if (_) {
+                if (m) {
                     if (!i(e, function (t, e) {
-                            if (!o(_, e) && (g === t || s(g, t, n, c, f)))
-                                return _.push(e);
+                            if (!o(m, e) && (y === t || s(y, t, n, c, f)))
+                                return m.push(e);
                         })) {
                         E = !1;
                         break;
                     }
-                } else if (g !== y && !s(g, y, n, c, f)) {
+                } else if (y !== _ && !s(y, _, n, c, f)) {
                     E = !1;
                     break;
                 }
@@ -2265,14 +2480,14 @@
         };
     },
     function (t, e, n) {
-        var r = n(35), i = n(1);
+        var r = n(48), i = n(1);
         t.exports = function (t, e, n) {
             var o = e(t);
             return i(t) ? o : r(o, n(t));
         };
     },
     function (t, e, n) {
-        var r = n(166), i = n(71), o = Object.prototype.propertyIsEnumerable, a = Object.getOwnPropertySymbols, u = a ? function (t) {
+        var r = n(218), i = n(95), o = Object.prototype.propertyIsEnumerable, a = Object.getOwnPropertySymbols, u = a ? function (t) {
                 return null == t ? [] : (t = Object(t), r(a(t), function (e) {
                     return o.call(t, e);
                 }));
@@ -2285,11 +2500,11 @@
         };
     },
     function (t, e, n) {
-        var r = n(167), i = n(24), o = n(1), a = n(36), u = n(37), c = n(38), s = Object.prototype.hasOwnProperty;
+        var r = n(219), i = n(34), o = n(1), a = n(49), u = n(50), c = n(51), s = Object.prototype.hasOwnProperty;
         t.exports = function (t, e) {
             var n = o(t), f = !n && i(t), l = !n && !f && a(t), d = !n && !f && !l && c(t), p = n || f || l || d, v = p ? r(t.length, String) : [], h = v.length;
-            for (var E in t)
-                !e && !s.call(t, E) || p && ('length' == E || l && ('offset' == E || 'parent' == E) || d && ('buffer' == E || 'byteLength' == E || 'byteOffset' == E) || u(E, h)) || v.push(E);
+            for (var g in t)
+                !e && !s.call(t, g) || p && ('length' == g || l && ('offset' == g || 'parent' == g) || d && ('buffer' == g || 'byteLength' == g || 'byteOffset' == g) || u(g, h)) || v.push(g);
             return v;
         };
     },
@@ -2317,11 +2532,11 @@
         };
     },
     function (t, e, n) {
-        var r = n(6)(n(3), 'WeakMap');
+        var r = n(8)(n(5), 'WeakMap');
         t.exports = r;
     },
     function (t, e, n) {
-        var r = n(4);
+        var r = n(6);
         t.exports = function (t) {
             return t == t && !r(t);
         };
@@ -2331,25 +2546,6 @@
             return function (n) {
                 return null != n && n[t] === e && (void 0 !== e || t in Object(n));
             };
-        };
-    },
-    function (t, e, n) {
-        var r = n(79);
-        t.exports = function (t) {
-            return null == t ? '' : r(t);
-        };
-    },
-    function (t, e, n) {
-        var r = n(14), i = n(80), o = n(1), a = n(27), u = 1 / 0, c = r ? r.prototype : void 0, s = c ? c.toString : void 0;
-        t.exports = function t(e) {
-            if ('string' == typeof e)
-                return e;
-            if (o(e))
-                return i(e, t) + '';
-            if (a(e))
-                return s ? s.call(e) : '';
-            var n = e + '';
-            return '0' == n && 1 / e == -u ? '-0' : n;
         };
     },
     function (t, e) {
@@ -2372,6 +2568,13 @@
                 if (e(t[o], o, t))
                     return o;
             return -1;
+        };
+    },
+    function (t, e, n) {
+        var r = n(242);
+        t.exports = function (t) {
+            var e = r(t), n = e % 1;
+            return e == e ? n ? e - n : e : 0;
         };
     },
     function (t, e, n) {
@@ -2487,7 +2690,7 @@
         }, e.bouncePast = function (t) {
             return t < 1 / 2.75 ? 7.5625 * t * t : t < 2 / 2.75 ? 2 - (7.5625 * (t -= 1.5 / 2.75) * t + 0.75) : t < 2.5 / 2.75 ? 2 - (7.5625 * (t -= 2.25 / 2.75) * t + 0.9375) : 2 - (7.5625 * (t -= 2.625 / 2.75) * t + 0.984375);
         }, e.easeInOut = e.easeOut = e.easeIn = e.ease = void 0;
-        var i = r(n(84)), o = 1.70158, a = (0, i.default)(0.25, 0.1, 0.25, 1);
+        var i = r(n(107)), o = 1.70158, a = (0, i.default)(0.25, 0.1, 0.25, 1);
         e.ease = a;
         var u = (0, i.default)(0.42, 0, 1, 1);
         e.easeIn = u;
@@ -2523,8 +2726,8 @@
             function h(e) {
                 for (var c = 0, f = 1, v = a - 1; f !== v && l[f] <= e; ++f)
                     c += u;
-                var h = c + (e - l[--f]) / (l[f + 1] - l[f]) * u, E = p(h, t, s);
-                return E >= r ? function (t, e, r, i) {
+                var h = c + (e - l[--f]) / (l[f + 1] - l[f]) * u, g = p(h, t, s);
+                return g >= r ? function (t, e, r, i) {
                     for (var o = 0; o < n; ++o) {
                         var a = p(e, r, i);
                         if (0 === a)
@@ -2532,7 +2735,7 @@
                         e -= (d(e, r, i) - t) / a;
                     }
                     return e;
-                }(e, h, t, s) : 0 === E ? h : function (t, e, n, r, a) {
+                }(e, h, t, s) : 0 === g ? h : function (t, e, n, r, a) {
                     var u, c, s = 0;
                     do {
                         (u = d(c = e + (n - e) / 2, r, a) - t) > 0 ? n = c : e = c;
@@ -2547,7 +2750,7 @@
     },
     function (t, e, n) {
         'use strict';
-        var r = n(0)(n(86)), i = n(0), o = n(12);
+        var r = n(0)(n(109)), i = n(0), o = n(14);
         Object.defineProperty(e, '__esModule', { value: !0 }), e.optimizeFloat = c, e.createBezierEasing = function (t) {
             return u.default.apply(void 0, (0, r.default)(t));
         }, e.applyEasing = function (t, e, n) {
@@ -2559,25 +2762,25 @@
                 return c(e > 0 ? n(e) : e);
             return c(e > 0 && t && a[t] ? a[t](e) : e);
         };
-        var a = o(n(83)), u = i(n(84));
+        var a = o(n(106)), u = i(n(107));
         function c(t) {
             var e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 5, n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 10, r = Math.pow(n, e), i = Number(Math.round(t * r) / r);
             return Math.abs(i) > 0.0001 ? i : 0;
         }
     },
     function (t, e, n) {
-        var r = n(189), i = n(190), o = n(191);
+        var r = n(245), i = n(246), o = n(247);
         t.exports = function (t) {
             return r(t) || i(t) || o();
         };
     },
     function (t, e, n) {
         'use strict';
-        var r = n(0)(n(17));
+        var r = n(0)(n(27));
         Object.defineProperty(e, '__esModule', { value: !0 }), e.isPluginType = function (t) {
             return t === o.ActionTypeConsts.PLUGIN_LOTTIE;
         }, e.clearPlugin = e.renderPlugin = e.createPluginInstance = e.getPluginDestination = e.getPluginDuration = e.getPluginOrigin = e.getPluginConfig = void 0;
-        var i = n(193), o = n(2), a = n(31), u = (0, r.default)({}, o.ActionTypeConsts.PLUGIN_LOTTIE, {
+        var i = n(249), o = n(2), a = n(44), u = (0, r.default)({}, o.ActionTypeConsts.PLUGIN_LOTTIE, {
                 getConfig: i.getPluginConfig,
                 getOrigin: i.getPluginOrigin,
                 getDuration: i.getPluginDuration,
@@ -2616,48 +2819,48 @@
         e.clearPlugin = h;
     },
     function (t, e, n) {
-        var r = n(89), i = n(200)(r);
+        var r = n(112), i = n(256)(r);
         t.exports = i;
     },
     function (t, e, n) {
-        var r = n(198), i = n(23);
+        var r = n(254), i = n(33);
         t.exports = function (t, e) {
             return t && r(t, e, i);
         };
     },
     function (t, e, n) {
         'use strict';
-        var r = n(204);
+        var r = n(260);
         e.__esModule = !0, e.default = void 0;
-        var i = r(n(205)).default;
+        var i = r(n(261)).default;
         e.default = i;
     },
     function (t, e, n) {
         'use strict';
-        var r = n(0)(n(86)), i = n(12), o = n(0);
+        var r = n(0)(n(109)), i = n(14), o = n(0);
         Object.defineProperty(e, '__esModule', { value: !0 }), e.observeRequests = function (t) {
-            D({
+            P({
                 store: t,
                 select: function (t) {
                     var e = t.ixRequest;
                     return e.preview;
                 },
-                onChange: tt
-            }), D({
+                onChange: et
+            }), P({
                 store: t,
                 select: function (t) {
                     var e = t.ixRequest;
                     return e.playback;
                 },
                 onChange: rt
-            }), D({
+            }), P({
                 store: t,
                 select: function (t) {
                     var e = t.ixRequest;
                     return e.stop;
                 },
                 onChange: it
-            }), D({
+            }), P({
                 store: t,
                 select: function (t) {
                     var e = t.ixRequest;
@@ -2665,29 +2868,28 @@
                 },
                 onChange: ot
             });
-        }, e.startEngine = at, e.stopEngine = ut, e.stopAllActionGroups = ht, e.stopActionGroup = Et, e.startActionGroup = _t;
-        var a = o(n(18)), u = o(n(208)), c = o(n(61)), s = o(n(25)), f = o(n(209)), l = o(n(215)), d = o(n(227)), p = o(n(228)), v = o(n(229)), h = o(n(232)), E = o(n(233)), _ = o(n(90)), g = n(2), y = n(9), I = n(48), m = i(n(236)), T = o(n(237)), O = g.IX2EngineConstants, A = O.COLON_DELIMITER, b = O.BOUNDARY_SELECTOR, S = O.HTML_ELEMENT, w = O.RENDER_GENERAL, R = O.W_MOD_IX, N = y.IX2VanillaUtils, C = N.getAffectedElements, L = N.getElementId, x = N.getDestinationValues, D = N.observeStore, P = N.getInstanceId, M = N.renderHTMLElement, F = N.clearAllStyles, j = N.getMaxDurationItemIndex, X = N.getComputedStyle, G = N.getInstanceOrigin, V = N.reduceListToGroup, k = N.shouldNamespaceEventParameter, U = N.getNamespacedParameterId, B = N.shouldAllowMediaQuery, W = N.cleanupHTMLElement, H = N.stringifyTarget, z = N.mediaQueriesEqual, Y = y.IX2VanillaPlugins, K = Y.isPluginType, Q = Y.createPluginInstance, q = Y.getPluginDuration, $ = navigator.userAgent, Z = $.match(/iPad/i) || $.match(/iPhone/), J = 12;
-        function tt(t, e) {
+        }, e.startEngine = at, e.stopEngine = ut, e.stopAllActionGroups = ht, e.stopActionGroup = gt, e.startActionGroup = Et;
+        var a = o(n(28)), u = o(n(264)), c = o(n(85)), s = o(n(56)), f = o(n(265)), l = o(n(271)), d = o(n(283)), p = o(n(284)), v = o(n(285)), h = o(n(288)), g = o(n(113)), E = n(2), m = n(10), y = n(61), _ = i(n(291)), I = o(n(292)), b = Object.keys(E.QuickEffectIds), w = function (t) {
+                return b.includes(t);
+            }, T = E.IX2EngineConstants, O = T.COLON_DELIMITER, A = T.BOUNDARY_SELECTOR, x = T.HTML_ELEMENT, S = T.RENDER_GENERAL, R = T.W_MOD_IX, C = m.IX2VanillaUtils, N = C.getAffectedElements, L = C.getElementId, D = C.getDestinationValues, P = C.observeStore, M = C.getInstanceId, j = C.renderHTMLElement, F = C.clearAllStyles, k = C.getMaxDurationItemIndex, X = C.getComputedStyle, G = C.getInstanceOrigin, U = C.reduceListToGroup, V = C.shouldNamespaceEventParameter, W = C.getNamespacedParameterId, B = C.shouldAllowMediaQuery, H = C.cleanupHTMLElement, z = C.stringifyTarget, Y = C.mediaQueriesEqual, K = m.IX2VanillaPlugins, Q = K.isPluginType, q = K.createPluginInstance, $ = K.getPluginDuration, Z = navigator.userAgent, J = Z.match(/iPad/i) || Z.match(/iPhone/), tt = 12;
+        function et(t, e) {
             var n = t.rawData, r = function () {
                     at({
                         store: e,
                         rawData: n,
                         allowEvents: !0
-                    }), et();
+                    }), nt();
                 };
             t.defer ? setTimeout(r, 0) : r();
         }
-        function et() {
+        function nt() {
             document.dispatchEvent(new CustomEvent('IX2_PAGE_UPDATE'));
-        }
-        function nt(t) {
-            return t && (0, h.default)(t, '_EFFECT');
         }
         function rt(t, e) {
             var n = t.actionTypeId, r = t.actionListId, i = t.actionItemId, o = t.eventId, a = t.allowEvents, u = t.immediate, c = t.testManual, s = t.verbose, f = void 0 === s || s, l = t.rawData;
             if (r && i && l && u) {
                 var d = l.actionLists[r];
-                d && (l = V({
+                d && (l = U({
                     actionList: d,
                     actionItemId: i,
                     rawData: l
@@ -2698,8 +2900,8 @@
                     rawData: l,
                     allowEvents: a,
                     testManual: c
-                }), r && n === g.ActionTypeConsts.GENERAL_START_ACTION || nt(n)) {
-                Et({
+                }), r && n === E.ActionTypeConsts.GENERAL_START_ACTION || w(n)) {
+                gt({
                     store: e,
                     actionListId: r
                 }), vt({
@@ -2707,14 +2909,14 @@
                     actionListId: r,
                     eventId: o
                 });
-                var p = _t({
+                var p = Et({
                     store: e,
                     eventId: o,
                     actionListId: r,
                     immediate: u,
                     verbose: f
                 });
-                f && p && e.dispatch((0, I.actionListPlaybackChanged)({
+                f && p && e.dispatch((0, y.actionListPlaybackChanged)({
                     actionListId: r,
                     isPlaying: !u
                 }));
@@ -2722,7 +2924,7 @@
         }
         function it(t, e) {
             var n = t.actionListId;
-            n ? Et({
+            n ? gt({
                 store: e,
                 actionListId: n
             }) : ht({ store: e }), ut(e);
@@ -2730,23 +2932,23 @@
         function ot(t, e) {
             ut(e), F({
                 store: e,
-                elementApi: m
+                elementApi: _
             });
         }
         function at(t) {
             var e, n = t.store, i = t.rawData, o = t.allowEvents, a = t.testManual, u = n.getState().ixSession;
-            i && n.dispatch((0, I.rawDataImported)(i)), u.active || (n.dispatch((0, I.sessionInitialized)({ hasBoundaryNodes: Boolean(document.querySelector(b)) })), o && (function (t) {
+            i && n.dispatch((0, y.rawDataImported)(i)), u.active || (n.dispatch((0, y.sessionInitialized)({ hasBoundaryNodes: Boolean(document.querySelector(A)) })), o && (function (t) {
                 var e = t.getState().ixData.eventTypeMap;
                 ft(t), (0, v.default)(e, function (e, n) {
-                    var i = T.default[n];
+                    var i = I.default[n];
                     i ? function (t) {
                         var e = t.logic, n = t.store, i = t.events;
                         !function (t) {
-                            if (Z) {
+                            if (J) {
                                 var e = {}, n = '';
                                 for (var r in t) {
-                                    var i = t[r], o = i.eventTypeId, a = i.target, u = m.getQuerySelector(a);
-                                    e[u] || o !== g.EventTypeConsts.MOUSE_CLICK && o !== g.EventTypeConsts.MOUSE_SECOND_CLICK || (e[u] = !0, n += u + '{cursor: pointer;touch-action: manipulation;}');
+                                    var i = t[r], o = i.eventTypeId, a = i.target, u = _.getQuerySelector(a);
+                                    e[u] || o !== E.EventTypeConsts.MOUSE_CLICK && o !== E.EventTypeConsts.MOUSE_SECOND_CLICK || (e[u] = !0, n += u + '{cursor: pointer;touch-action: manipulation;}');
                                 }
                                 if (n) {
                                     var c = document.createElement('style');
@@ -2758,7 +2960,7 @@
                         if ((0, f.default)(d)) {
                             (0, v.default)(d, function (t, e) {
                                 var o = i[e], a = o.action, f = o.id, d = o.mediaQueries, p = void 0 === d ? u.mediaQueryKeys : d, v = a.config.actionListId;
-                                if (z(p, u.mediaQueryKeys) || n.dispatch((0, I.mediaQueriesDefined)()), a.actionTypeId === g.ActionTypeConsts.GENERAL_CONTINUOUS_ACTION) {
+                                if (Y(p, u.mediaQueryKeys) || n.dispatch((0, y.mediaQueriesDefined)()), a.actionTypeId === E.ActionTypeConsts.GENERAL_CONTINUOUS_ACTION) {
                                     var h = Array.isArray(o.config) ? o.config : [o.config];
                                     h.forEach(function (e) {
                                         var i = e.continuousParameterGroupId, o = (0, s.default)(l, ''.concat(v, '.continuousParameterGroups'), []), a = (0, c.default)(o, function (t) {
@@ -2766,18 +2968,18 @@
                                                 return e === i;
                                             }), u = (e.smoothing || 0) / 100, d = (e.restingState || 0) / 100;
                                         a && t.forEach(function (t, i) {
-                                            var o = f + A + i;
+                                            var o = f + O + i;
                                             !function (t) {
-                                                var e = t.store, n = t.eventStateKey, i = t.eventTarget, o = t.eventId, a = t.eventConfig, u = t.actionListId, c = t.parameterGroup, f = t.smoothing, l = t.restingValue, d = e.getState(), p = d.ixData, v = d.ixSession, h = p.events[o], E = h.eventTypeId, _ = {}, g = {}, y = [], I = c.continuousActionGroups, T = c.id;
-                                                k(E, a) && (T = U(n, T));
-                                                var O = v.hasBoundaryNodes && i ? m.getClosestElement(i, b) : null;
+                                                var e = t.store, n = t.eventStateKey, i = t.eventTarget, o = t.eventId, a = t.eventConfig, u = t.actionListId, c = t.parameterGroup, f = t.smoothing, l = t.restingValue, d = e.getState(), p = d.ixData, v = d.ixSession, h = p.events[o], g = h.eventTypeId, E = {}, m = {}, y = [], I = c.continuousActionGroups, b = c.id;
+                                                V(g, a) && (b = W(n, b));
+                                                var w = v.hasBoundaryNodes && i ? _.getClosestElement(i, A) : null;
                                                 I.forEach(function (t) {
                                                     var e = t.keyframe, n = t.actionItems;
                                                     n.forEach(function (t) {
                                                         var n = t.actionTypeId, o = t.config.target;
                                                         if (o) {
-                                                            var a = o.boundaryMode ? O : null, u = H(o) + A + n;
-                                                            if (g[u] = function () {
+                                                            var a = o.boundaryMode ? w : null, u = z(o) + O + n;
+                                                            if (m[u] = function () {
                                                                     var t, e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [], n = arguments.length > 1 ? arguments[1] : void 0, i = arguments.length > 2 ? arguments[2] : void 0, o = (0, r.default)(e);
                                                                     return o.some(function (e, r) {
                                                                         return e.keyframe === n && (t = r, !0);
@@ -2785,15 +2987,15 @@
                                                                         keyframe: n,
                                                                         actionItems: []
                                                                     })), o[t].actionItems.push(i), o;
-                                                                }(g[u], e, t), !_[u]) {
-                                                                _[u] = !0;
+                                                                }(m[u], e, t), !E[u]) {
+                                                                E[u] = !0;
                                                                 var c = t.config;
-                                                                C({
+                                                                N({
                                                                     config: c,
                                                                     event: h,
                                                                     eventTarget: i,
                                                                     elementRoot: a,
-                                                                    elementApi: m
+                                                                    elementApi: _
                                                                 }).forEach(function (t) {
                                                                     y.push({
                                                                         element: t,
@@ -2804,12 +3006,12 @@
                                                         }
                                                     });
                                                 }), y.forEach(function (t) {
-                                                    var n = t.element, r = t.key, i = g[r], a = (0, s.default)(i, '[0].actionItems[0]', {}), c = a.actionTypeId, d = K(c) ? Q(c)(n, a) : null, p = x({
+                                                    var n = t.element, r = t.key, i = m[r], a = (0, s.default)(i, '[0].actionItems[0]', {}), c = a.actionTypeId, d = Q(c) ? q(c)(n, a) : null, p = D({
                                                             element: n,
                                                             actionItem: a,
-                                                            elementApi: m
+                                                            elementApi: _
                                                         }, d);
-                                                    gt({
+                                                    mt({
                                                         store: e,
                                                         element: n,
                                                         eventId: o,
@@ -2817,7 +3019,7 @@
                                                         actionItem: a,
                                                         destination: p,
                                                         continuous: !0,
-                                                        parameterId: T,
+                                                        parameterId: b,
                                                         actionGroups: i,
                                                         smoothing: f,
                                                         restingValue: l,
@@ -2838,7 +3040,7 @@
                                         });
                                     });
                                 }
-                                (a.actionTypeId === g.ActionTypeConsts.GENERAL_START_ACTION || nt(a.actionTypeId)) && vt({
+                                (a.actionTypeId === E.ActionTypeConsts.GENERAL_START_ACTION || w(a.actionTypeId)) && vt({
                                     store: n,
                                     actionListId: v,
                                     eventId: f
@@ -2858,26 +3060,26 @@
                                                         nativeEvent: t,
                                                         eventStateKey: c
                                                     }, f);
-                                                (0, _.default)(i, f) || n.dispatch((0, I.eventStateChanged)(c, i));
+                                                (0, g.default)(i, f) || n.dispatch((0, y.eventStateChanged)(c, i));
                                             };
-                                            if (l.actionTypeId === g.ActionTypeConsts.GENERAL_CONTINUOUS_ACTION) {
+                                            if (l.actionTypeId === E.ActionTypeConsts.GENERAL_CONTINUOUS_ACTION) {
                                                 var h = Array.isArray(s.config) ? s.config : [s.config];
                                                 h.forEach(v);
                                             } else
                                                 v();
                                         }
                                     });
-                                }, h = (0, E.default)(p, J), y = function (t) {
+                                }, m = (0, h.default)(p, tt), I = function (t) {
                                     var e = t.target, r = void 0 === e ? document : e, i = t.types, o = t.throttle;
                                     i.split(' ').filter(Boolean).forEach(function (t) {
-                                        var e = o ? h : p;
-                                        r.addEventListener(t, e), n.dispatch((0, I.eventListenerAdded)(r, [
+                                        var e = o ? m : p;
+                                        r.addEventListener(t, e), n.dispatch((0, y.eventListenerAdded)(r, [
                                             t,
                                             e
                                         ]));
                                     });
                                 };
-                            Array.isArray(o) ? o.forEach(y) : 'string' == typeof o && y(e);
+                            Array.isArray(o) ? o.forEach(I) : 'string' == typeof o && I(e);
                         }
                     }({
                         logic: i,
@@ -2889,14 +3091,14 @@
                         ft(t);
                     };
                     st.forEach(function (n) {
-                        window.addEventListener(n, e), t.dispatch((0, I.eventListenerAdded)(window, [
+                        window.addEventListener(n, e), t.dispatch((0, y.eventListenerAdded)(window, [
                             n,
                             e
                         ]));
                     }), e();
                 }(t);
             }(n), -1 === (e = document.documentElement).className.indexOf(R) && (e.className += ' '.concat(R)), n.getState().ixSession.hasDefinedMediaQueries && function (t) {
-                D({
+                P({
                     store: t,
                     select: function (t) {
                         return t.ixSession.mediaQueryKey;
@@ -2904,18 +3106,18 @@
                     onChange: function () {
                         ut(t), F({
                             store: t,
-                            elementApi: m
+                            elementApi: _
                         }), at({
                             store: t,
                             allowEvents: !0
-                        }), et();
+                        }), nt();
                     }
                 });
-            }(n)), n.dispatch((0, I.sessionStarted)()), function (t, e) {
+            }(n)), n.dispatch((0, y.sessionStarted)()), function (t, e) {
                 !function n(r) {
                     var i = t.getState(), o = i.ixSession, a = i.ixParameters;
-                    o.active && (t.dispatch((0, I.animationFrameChanged)(r, a)), e ? function (t, e) {
-                        var n = D({
+                    o.active && (t.dispatch((0, y.animationFrameChanged)(r, a)), e ? function (t, e) {
+                        var n = P({
                             store: t,
                             select: function (t) {
                                 return t.ixSession.tick;
@@ -2930,7 +3132,7 @@
         }
         function ut(t) {
             var e = t.getState().ixSession;
-            e.active && (e.eventListeners.forEach(ct), t.dispatch((0, I.sessionStopped)()));
+            e.active && (e.eventListeners.forEach(ct), t.dispatch((0, y.sessionStopped)()));
         }
         function ct(t) {
             var e = t.target, n = t.listenerParams;
@@ -2944,7 +3146,7 @@
             var e = t.getState(), n = e.ixSession, r = e.ixData, i = window.innerWidth;
             if (i !== n.viewportWidth) {
                 var o = r.mediaQueries;
-                t.dispatch((0, I.viewportWidthChanged)({
+                t.dispatch((0, y.viewportWidthChanged)({
                     width: i,
                     mediaQueries: o
                 }));
@@ -2955,14 +3157,17 @@
             }, dt = function (t, e) {
                 (0, v.default)(t, function (t, n) {
                     t.forEach(function (t, r) {
-                        e(t, n, n + A + r);
+                        e(t, n, n + O + r);
                     });
                 });
             }, pt = function (t) {
-                var e = { target: t.target };
-                return C({
+                var e = {
+                    target: t.target,
+                    targets: t.targets
+                };
+                return N({
                     config: e,
-                    elementApi: m
+                    elementApi: _
                 });
             };
         function vt(t) {
@@ -2972,26 +3177,29 @@
                 if (!B(d, a.mediaQueryKey))
                     return;
                 l.forEach(function (t) {
-                    var i = t.config, o = t.actionTypeId, a = C({
-                            config: i,
+                    var i, o = t.config, a = t.actionTypeId, u = !0 === (null == o ? void 0 : null === (i = o.target) || void 0 === i ? void 0 : i.useEventTarget) ? {
+                            target: c.target,
+                            targets: c.targets
+                        } : o, s = N({
+                            config: u,
                             event: c,
-                            elementApi: m
-                        }), u = K(o);
-                    a.forEach(function (i) {
-                        var a = u ? Q(o)(i, t) : null;
-                        gt({
-                            destination: x({
+                            elementApi: _
+                        }), f = Q(a);
+                    s.forEach(function (i) {
+                        var o = f ? q(a)(i, t) : null;
+                        mt({
+                            destination: D({
                                 element: i,
                                 actionItem: t,
-                                elementApi: m
-                            }, a),
+                                elementApi: _
+                            }, o),
                             immediate: !0,
                             store: e,
                             element: i,
                             eventId: r,
                             actionItem: t,
                             actionListId: n,
-                            pluginInstance: a
+                            pluginInstance: o
                         });
                     });
                 });
@@ -3002,140 +3210,140 @@
             (0, v.default)(n, function (t) {
                 if (!t.continuous) {
                     var n = t.actionListId, r = t.verbose;
-                    yt(t, e), r && e.dispatch((0, I.actionListPlaybackChanged)({
+                    yt(t, e), r && e.dispatch((0, y.actionListPlaybackChanged)({
                         actionListId: n,
                         isPlaying: !1
                     }));
                 }
             });
         }
-        function Et(t) {
-            var e = t.store, n = t.eventId, r = t.eventTarget, i = t.eventStateKey, o = t.actionListId, a = e.getState(), u = a.ixInstances, c = a.ixSession.hasBoundaryNodes && r ? m.getClosestElement(r, b) : null;
+        function gt(t) {
+            var e = t.store, n = t.eventId, r = t.eventTarget, i = t.eventStateKey, o = t.actionListId, a = e.getState(), u = a.ixInstances, c = a.ixSession.hasBoundaryNodes && r ? _.getClosestElement(r, A) : null;
             (0, v.default)(u, function (t) {
                 var r = (0, s.default)(t, 'actionItem.config.target.boundaryMode'), a = !i || t.eventStateKey === i;
                 if (t.actionListId === o && t.eventId === n && a) {
-                    if (c && r && !m.elementContains(c, t.element))
+                    if (c && r && !_.elementContains(c, t.element))
                         return;
-                    yt(t, e), t.verbose && e.dispatch((0, I.actionListPlaybackChanged)({
+                    yt(t, e), t.verbose && e.dispatch((0, y.actionListPlaybackChanged)({
                         actionListId: o,
                         isPlaying: !1
                     }));
                 }
             });
         }
-        function _t(t) {
-            var e = t.store, n = t.eventId, r = t.eventTarget, i = t.eventStateKey, o = t.actionListId, a = t.groupIndex, u = void 0 === a ? 0 : a, c = t.immediate, f = t.verbose, l = e.getState(), d = l.ixData, p = l.ixSession, v = d.events[n] || {}, h = v.mediaQueries, E = void 0 === h ? d.mediaQueryKeys : h, _ = (0, s.default)(d, 'actionLists.'.concat(o), {}), g = _.actionItemGroups, y = _.useFirstGroupAsInitialState;
-            if (!g || !g.length)
+        function Et(t) {
+            var e, n = t.store, r = t.eventId, i = t.eventTarget, o = t.eventStateKey, a = t.actionListId, u = t.groupIndex, c = void 0 === u ? 0 : u, f = t.immediate, l = t.verbose, d = n.getState(), p = d.ixData, v = d.ixSession, h = p.events[r] || {}, g = h.mediaQueries, E = void 0 === g ? p.mediaQueryKeys : g, m = (0, s.default)(p, 'actionLists.'.concat(a), {}), y = m.actionItemGroups, I = m.useFirstGroupAsInitialState;
+            if (!y || !y.length)
                 return !1;
-            u >= g.length && (0, s.default)(v, 'config.loop') && (u = 0), 0 === u && y && u++;
-            var I = (0 === u || 1 === u && y) && nt(v.action && v.action.actionTypeId) ? v.config.delay : void 0, T = (0, s.default)(g, [
-                    u,
+            c >= y.length && (0, s.default)(h, 'config.loop') && (c = 0), 0 === c && I && c++;
+            var b = (0 === c || 1 === c && I) && w(null === (e = h.action) || void 0 === e ? void 0 : e.actionTypeId) ? h.config.delay : void 0, T = (0, s.default)(y, [
+                    c,
                     'actionItems'
                 ], []);
             if (!T.length)
                 return !1;
-            if (!B(E, p.mediaQueryKey))
+            if (!B(E, v.mediaQueryKey))
                 return !1;
-            var O = p.hasBoundaryNodes && r ? m.getClosestElement(r, b) : null, A = j(T), S = !1;
-            return T.forEach(function (t, a) {
-                var s = t.config, l = t.actionTypeId, d = K(l), p = s.target;
+            var O = v.hasBoundaryNodes && i ? _.getClosestElement(i, A) : null, x = k(T), S = !1;
+            return T.forEach(function (t, e) {
+                var u = t.config, s = t.actionTypeId, d = Q(s), p = u.target;
                 if (p) {
-                    var h = p.boundaryMode ? O : null;
-                    C({
-                        config: s,
-                        event: v,
-                        eventTarget: r,
-                        elementRoot: h,
-                        elementApi: m
-                    }).forEach(function (s, p) {
-                        var v = d ? Q(l)(s, t) : null, h = d ? q(l)(s, t) : null;
+                    var v = p.boundaryMode ? O : null;
+                    N({
+                        config: u,
+                        event: h,
+                        eventTarget: i,
+                        elementRoot: v,
+                        elementApi: _
+                    }).forEach(function (u, p) {
+                        var v = d ? q(s)(u, t) : null, h = d ? $(s)(u, t) : null;
                         S = !0;
-                        var E = A === a && 0 === p, _ = X({
-                                element: s,
+                        var g = x === e && 0 === p, E = X({
+                                element: u,
                                 actionItem: t
-                            }), g = x({
-                                element: s,
+                            }), m = D({
+                                element: u,
                                 actionItem: t,
-                                elementApi: m
+                                elementApi: _
                             }, v);
-                        gt({
-                            store: e,
-                            element: s,
+                        mt({
+                            store: n,
+                            element: u,
                             actionItem: t,
-                            eventId: n,
-                            eventTarget: r,
-                            eventStateKey: i,
-                            actionListId: o,
-                            groupIndex: u,
-                            isCarrier: E,
-                            computedStyle: _,
-                            destination: g,
-                            immediate: c,
-                            verbose: f,
+                            eventId: r,
+                            eventTarget: i,
+                            eventStateKey: o,
+                            actionListId: a,
+                            groupIndex: c,
+                            isCarrier: g,
+                            computedStyle: E,
+                            destination: m,
+                            immediate: f,
+                            verbose: l,
                             pluginInstance: v,
                             pluginDuration: h,
-                            instanceDelay: I
+                            instanceDelay: b
                         });
                     });
                 }
             }), S;
         }
-        function gt(t) {
+        function mt(t) {
             var e = t.store, n = t.computedStyle, r = (0, u.default)(t, [
                     'store',
                     'computedStyle'
-                ]), i = !r.continuous, o = r.element, c = r.actionItem, s = r.immediate, f = r.pluginInstance, l = P(), d = e.getState(), p = d.ixElements, v = d.ixSession, h = L(p, o), E = (p[h] || {}).refState, _ = m.getRefType(o), g = G(o, E, n, c, m, f);
-            e.dispatch((0, I.instanceAdded)((0, a.default)({
+                ]), i = !r.continuous, o = r.element, c = r.actionItem, s = r.immediate, f = r.pluginInstance, l = M(), d = e.getState(), p = d.ixElements, v = d.ixSession, h = L(p, o), g = (p[h] || {}).refState, E = _.getRefType(o), m = G(o, g, n, c, _, f);
+            e.dispatch((0, y.instanceAdded)((0, a.default)({
                 instanceId: l,
                 elementId: h,
-                origin: g,
-                refType: _
-            }, r))), It(document.body, 'ix2-animation-started', l), s ? function (t, e) {
+                origin: m,
+                refType: E
+            }, r))), _t(document.body, 'ix2-animation-started', l), s ? function (t, e) {
                 var n = t.getState().ixParameters;
-                t.dispatch((0, I.instanceStarted)(e, 0)), t.dispatch((0, I.animationFrameChanged)(performance.now(), n)), mt(t.getState().ixInstances[e], t);
-            }(e, l) : (D({
+                t.dispatch((0, y.instanceStarted)(e, 0)), t.dispatch((0, y.animationFrameChanged)(performance.now(), n)), It(t.getState().ixInstances[e], t);
+            }(e, l) : (P({
                 store: e,
                 select: function (t) {
                     return t.ixInstances[l];
                 },
-                onChange: mt
-            }), i && e.dispatch((0, I.instanceStarted)(l, v.tick)));
+                onChange: It
+            }), i && e.dispatch((0, y.instanceStarted)(l, v.tick)));
         }
         function yt(t, e) {
-            It(document.body, 'ix2-animation-stopping', {
+            _t(document.body, 'ix2-animation-stopping', {
                 instanceId: t.id,
                 state: e.getState()
             });
             var n = t.elementId, r = t.actionItem, i = e.getState().ixElements[n] || {}, o = i.ref;
-            i.refType === S && W(o, r, m), e.dispatch((0, I.instanceRemoved)(t.id));
+            i.refType === x && H(o, r, _), e.dispatch((0, y.instanceRemoved)(t.id));
         }
-        function It(t, e, n) {
+        function _t(t, e, n) {
             var r = document.createEvent('CustomEvent');
             r.initCustomEvent(e, !0, !0, n), t.dispatchEvent(r);
         }
-        function mt(t, e) {
-            var n = t.active, r = t.continuous, i = t.complete, o = t.elementId, a = t.actionItem, u = t.actionTypeId, c = t.renderType, s = t.current, f = t.groupIndex, l = t.eventId, d = t.eventTarget, p = t.eventStateKey, v = t.actionListId, h = t.isCarrier, E = t.styleProp, _ = t.verbose, g = t.pluginInstance, y = e.getState(), T = y.ixData, O = y.ixSession, A = (T.events[l] || {}).mediaQueries, b = void 0 === A ? T.mediaQueryKeys : A;
-            if (B(b, O.mediaQueryKey) && (r || n || i)) {
-                if (s || c === w && i) {
-                    e.dispatch((0, I.elementStateChanged)(o, u, s, a));
-                    var R = e.getState().ixElements[o] || {}, N = R.ref, C = R.refType, L = R.refState, x = L && L[u];
+        function It(t, e) {
+            var n = t.active, r = t.continuous, i = t.complete, o = t.elementId, a = t.actionItem, u = t.actionTypeId, c = t.renderType, s = t.current, f = t.groupIndex, l = t.eventId, d = t.eventTarget, p = t.eventStateKey, v = t.actionListId, h = t.isCarrier, g = t.styleProp, E = t.verbose, m = t.pluginInstance, I = e.getState(), b = I.ixData, w = I.ixSession, T = (b.events[l] || {}).mediaQueries, O = void 0 === T ? b.mediaQueryKeys : T;
+            if (B(O, w.mediaQueryKey) && (r || n || i)) {
+                if (s || c === S && i) {
+                    e.dispatch((0, y.elementStateChanged)(o, u, s, a));
+                    var A = e.getState().ixElements[o] || {}, R = A.ref, C = A.refType, N = A.refState, L = N && N[u];
                     switch (C) {
-                    case S:
-                        M(N, L, x, l, a, E, m, c, g);
+                    case x:
+                        j(R, N, L, l, a, g, _, c, m);
                     }
                 }
                 if (i) {
                     if (h) {
-                        var D = _t({
+                        var D = Et({
                             store: e,
                             eventId: l,
                             eventTarget: d,
                             eventStateKey: p,
                             actionListId: v,
                             groupIndex: f + 1,
-                            verbose: _
+                            verbose: E
                         });
-                        _ && !D && e.dispatch((0, I.actionListPlaybackChanged)({
+                        E && !D && e.dispatch((0, y.actionListPlaybackChanged)({
                             actionListId: v,
                             isPlaying: !1
                         }));
@@ -3146,7 +3354,7 @@
         }
     },
     function (t, e, n) {
-        var r = n(93);
+        var r = n(116);
         t.exports = function (t, e, n) {
             '__proto__' == e && r ? r(t, e, {
                 configurable: !0,
@@ -3157,7 +3365,7 @@
         };
     },
     function (t, e, n) {
-        var r = n(6), i = function () {
+        var r = n(8), i = function () {
                 try {
                     var t = r(Object, 'defineProperty');
                     return t({}, '', {}), t;
@@ -3166,13 +3374,8 @@
             }();
         t.exports = i;
     },
-    function (t, e) {
-        t.exports = function (t, e, n) {
-            return t == t && (void 0 !== n && (t = t <= n ? t : n), void 0 !== e && (t = t >= e ? t : e)), t;
-        };
-    },
     function (t, e, n) {
-        var r = n(4), i = Object.create, o = function () {
+        var r = n(6), i = Object.create, o = function () {
                 function t() {
                 }
                 return function (e) {
@@ -3188,13 +3391,13 @@
         t.exports = o;
     },
     function (t, e, n) {
-        var r = n(250), i = n(251), o = r ? function (t) {
+        var r = n(305), i = n(306), o = r ? function (t) {
                 return r.get(t);
             } : i;
         t.exports = o;
     },
     function (t, e, n) {
-        var r = n(252), i = Object.prototype.hasOwnProperty;
+        var r = n(307), i = Object.prototype.hasOwnProperty;
         t.exports = function (t) {
             for (var e = t.name + '', n = r[e], o = i.call(r, e) ? n.length : 0; o--;) {
                 var a = n[o], u = a.func;
@@ -3205,11 +3408,11 @@
         };
     },
     function (t, e, n) {
-        n(99), n(53), n(102), n(258), n(259), n(260), t.exports = n(261);
+        n(121), n(13), n(124), n(314), n(315), n(316), n(317), n(318), n(323), n(324), n(325), t.exports = n(326);
     },
     function (t, e, n) {
         'use strict';
-        var r = n(8);
+        var r = n(3);
         r.define('brand', t.exports = function (t) {
             var e, n = {}, i = document, o = t('html'), a = t('body'), u = '.w-webflow-badge', c = window.location, s = /PhantomJS/i.test(navigator.userAgent), f = 'fullscreenchange webkitfullscreenchange mozfullscreenchange msfullscreenchange';
             function l() {
@@ -3231,7 +3434,7 @@
     },
     function (t, e, n) {
         'use strict';
-        var r = window.$, i = n(52) && r.tram;
+        var r = window.$, i = n(65) && r.tram;
         /*!
  * Webflow._ (aka) Underscore.js 1.6.0 (custom build)
  * _.each
@@ -3308,7 +3511,7 @@
             }, t.defer = function (e) {
                 return t.delay.apply(t, [
                     e,
-                    '1'
+                    1
                 ].concat(a.call(arguments, 1)));
             }, t.throttle = function (t) {
                 var e, n, r;
@@ -3356,25 +3559,25 @@
                 interpolate: /<%=([\s\S]+?)%>/g,
                 escape: /<%-([\s\S]+?)%>/g
             };
-            var E = /(.)^/, _ = {
+            var g = /(.)^/, E = {
                     '\'': '\'',
                     '\\': '\\',
                     '\r': 'r',
                     '\n': 'n',
                     ' ': 'u2028',
                     ' ': 'u2029'
-                }, g = /\\|'|\r|\n| | /g, y = function (t) {
-                    return '\\' + _[t];
+                }, m = /\\|'|\r|\n| | /g, y = function (t) {
+                    return '\\' + E[t];
                 };
             return t.template = function (e, n, r) {
                 !n && r && (n = r), n = t.defaults({}, n, t.templateSettings);
                 var i = RegExp([
-                        (n.escape || E).source,
-                        (n.interpolate || E).source,
-                        (n.evaluate || E).source
+                        (n.escape || g).source,
+                        (n.interpolate || g).source,
+                        (n.evaluate || g).source
                     ].join('|') + '|$', 'g'), o = 0, a = '__p+=\'';
                 e.replace(i, function (t, n, r, i, u) {
-                    return a += e.slice(o, u).replace(g, y), o = u + t.length, n ? a += '\'+\n((__t=(' + n + '))==null?\'\':_.escape(__t))+\n\'' : r ? a += '\'+\n((__t=(' + r + '))==null?\'\':__t)+\n\'' : i && (a += '\';\n' + i + '\n__p+=\''), t;
+                    return a += e.slice(o, u).replace(m, y), o = u + t.length, n ? a += '\'+\n((__t=(' + n + '))==null?\'\':_.escape(__t))+\n\'' : r ? a += '\'+\n((__t=(' + r + '))==null?\'\':__t)+\n\'' : i && (a += '\';\n' + i + '\n__p+=\''), t;
                 }), a += '\';\n', n.variable || (a = 'with(obj||{}){\n' + a + '}\n'), a = 'var __t,__p=\'\',__j=Array.prototype.join,print=function(){__p+=__j.call(arguments,\'\');};\n' + a + 'return __p;\n';
                 try {
                     var u = new Function(n.variable || 'obj', '_', a);
@@ -3424,14 +3627,14 @@
     },
     function (t, e, n) {
         'use strict';
-        var r = n(8), i = n(103);
+        var r = n(3), i = n(125);
         i.setEnv(r.env), r.define('ix2', t.exports = function () {
             return i;
         });
     },
     function (t, e, n) {
         'use strict';
-        var r = n(12), i = n(0);
+        var r = n(14), i = n(0);
         Object.defineProperty(e, '__esModule', { value: !0 }), e.setEnv = function (t) {
             t() && (0, u.observeRequests)(s);
         }, e.init = function (t) {
@@ -3440,8 +3643,8 @@
                 rawData: t,
                 allowEvents: !0
             });
-        }, e.destroy = f, e.actions = e.store = void 0;
-        var o = n(54), a = i(n(115)), u = n(91), c = r(n(48));
+        }, e.destroy = f, e.actions = e.store = void 0, n(126);
+        var o = n(78), a = i(n(167)), u = n(114), c = r(n(61));
         e.actions = c;
         var s = (0, o.createStore)(a.default);
         function f() {
@@ -3450,9 +3653,270 @@
         e.store = s;
     },
     function (t, e, n) {
+        t.exports = n(127);
+    },
+    function (t, e, n) {
+        n(128);
+        var r = n(153);
+        t.exports = r('Array', 'includes');
+    },
+    function (t, e, n) {
+        'use strict';
+        var r = n(129), i = n(76).includes, o = n(146);
+        r({
+            target: 'Array',
+            proto: !0
+        }, {
+            includes: function (t) {
+                return i(this, t, arguments.length > 1 ? arguments[1] : void 0);
+            }
+        }), o('includes');
+    },
+    function (t, e, n) {
+        var r = n(4), i = n(66).f, o = n(18), a = n(134), u = n(39), c = n(138), s = n(145);
+        t.exports = function (t, e) {
+            var n, f, l, d, p, v = t.target, h = t.global, g = t.stat;
+            if (n = h ? r : g ? r[v] || u(v, {}) : (r[v] || {}).prototype)
+                for (f in e) {
+                    if (d = e[f], l = t.noTargetGet ? (p = i(n, f)) && p.value : n[f], !s(h ? f : v + (g ? '.' : '#') + f, t.forced) && void 0 !== l) {
+                        if (typeof d == typeof l)
+                            continue;
+                        c(d, l);
+                    }
+                    (t.sham || l && l.sham) && o(d, 'sham', !0), a(n, f, d, t);
+                }
+        };
+    },
+    function (t, e, n) {
+        'use strict';
+        var r = {}.propertyIsEnumerable, i = Object.getOwnPropertyDescriptor, o = i && !r.call({ 1: 2 }, 1);
+        e.f = o ? function (t) {
+            var e = i(this, t);
+            return !!e && e.enumerable;
+        } : r;
+    },
+    function (t, e, n) {
+        var r = n(16), i = n(132), o = ''.split;
+        t.exports = r(function () {
+            return !Object('z').propertyIsEnumerable(0);
+        }) ? function (t) {
+            return 'String' == i(t) ? o.call(t, '') : Object(t);
+        } : Object;
+    },
+    function (t, e) {
+        var n = {}.toString;
+        t.exports = function (t) {
+            return n.call(t).slice(8, -1);
+        };
+    },
+    function (t, e) {
+        t.exports = function (t) {
+            if (null == t)
+                throw TypeError('Can\'t call method on ' + t);
+            return t;
+        };
+    },
+    function (t, e, n) {
+        var r = n(4), i = n(26), o = n(18), a = n(17), u = n(39), c = n(71), s = n(136), f = s.get, l = s.enforce, d = String(c).split('toString');
+        i('inspectSource', function (t) {
+            return c.call(t);
+        }), (t.exports = function (t, e, n, i) {
+            var c = !!i && !!i.unsafe, s = !!i && !!i.enumerable, f = !!i && !!i.noTargetGet;
+            'function' == typeof n && ('string' != typeof e || a(n, 'name') || o(n, 'name', e), l(n).source = d.join('string' == typeof e ? e : '')), t !== r ? (c ? !f && t[e] && (s = !0) : delete t[e], s ? t[e] = n : o(t, e, n)) : s ? t[e] = n : u(e, n);
+        })(Function.prototype, 'toString', function () {
+            return 'function' == typeof this && f(this).source || c.call(this);
+        });
+    },
+    function (t, e) {
+        t.exports = !1;
+    },
+    function (t, e, n) {
+        var r, i, o, a = n(137), u = n(4), c = n(24), s = n(18), f = n(17), l = n(72), d = n(40), p = u.WeakMap;
+        if (a) {
+            var v = new p(), h = v.get, g = v.has, E = v.set;
+            r = function (t, e) {
+                return E.call(v, t, e), e;
+            }, i = function (t) {
+                return h.call(v, t) || {};
+            }, o = function (t) {
+                return g.call(v, t);
+            };
+        } else {
+            var m = l('state');
+            d[m] = !0, r = function (t, e) {
+                return s(t, m, e), e;
+            }, i = function (t) {
+                return f(t, m) ? t[m] : {};
+            }, o = function (t) {
+                return f(t, m);
+            };
+        }
+        t.exports = {
+            set: r,
+            get: i,
+            has: o,
+            enforce: function (t) {
+                return o(t) ? i(t) : r(t, {});
+            },
+            getterFor: function (t) {
+                return function (e) {
+                    var n;
+                    if (!c(e) || (n = i(e)).type !== t)
+                        throw TypeError('Incompatible receiver, ' + t + ' required');
+                    return n;
+                };
+            }
+        };
+    },
+    function (t, e, n) {
+        var r = n(4), i = n(71), o = r.WeakMap;
+        t.exports = 'function' == typeof o && /native code/.test(i.call(o));
+    },
+    function (t, e, n) {
+        var r = n(17), i = n(139), o = n(66), a = n(38);
+        t.exports = function (t, e) {
+            for (var n = i(e), u = a.f, c = o.f, s = 0; s < n.length; s++) {
+                var f = n[s];
+                r(t, f) || u(t, f, c(e, f));
+            }
+        };
+    },
+    function (t, e, n) {
+        var r = n(74), i = n(141), o = n(144), a = n(25);
+        t.exports = r('Reflect', 'ownKeys') || function (t) {
+            var e = i.f(a(t)), n = o.f;
+            return n ? e.concat(n(t)) : e;
+        };
+    },
+    function (t, e, n) {
+        t.exports = n(4);
+    },
+    function (t, e, n) {
+        var r = n(75), i = n(41).concat('length', 'prototype');
+        e.f = Object.getOwnPropertyNames || function (t) {
+            return r(t, i);
+        };
+    },
+    function (t, e, n) {
+        var r = n(77), i = Math.min;
+        t.exports = function (t) {
+            return t > 0 ? i(r(t), 9007199254740991) : 0;
+        };
+    },
+    function (t, e, n) {
+        var r = n(77), i = Math.max, o = Math.min;
+        t.exports = function (t, e) {
+            var n = r(t);
+            return n < 0 ? i(n + e, 0) : o(n, e);
+        };
+    },
+    function (t, e) {
+        e.f = Object.getOwnPropertySymbols;
+    },
+    function (t, e, n) {
+        var r = n(16), i = /#|\.prototype\./, o = function (t, e) {
+                var n = u[a(t)];
+                return n == s || n != c && ('function' == typeof e ? r(e) : !!e);
+            }, a = o.normalize = function (t) {
+                return String(t).replace(i, '.').toLowerCase();
+            }, u = o.data = {}, c = o.NATIVE = 'N', s = o.POLYFILL = 'P';
+        t.exports = o;
+    },
+    function (t, e, n) {
+        var r = n(147), i = n(149), o = n(18), a = r('unscopables'), u = Array.prototype;
+        null == u[a] && o(u, a, i(null)), t.exports = function (t) {
+            u[a][t] = !0;
+        };
+    },
+    function (t, e, n) {
+        var r = n(4), i = n(26), o = n(73), a = n(148), u = r.Symbol, c = i('wks');
+        t.exports = function (t) {
+            return c[t] || (c[t] = a && u[t] || (a ? u : o)('Symbol.' + t));
+        };
+    },
+    function (t, e, n) {
+        var r = n(16);
+        t.exports = !!Object.getOwnPropertySymbols && !r(function () {
+            return !String(Symbol());
+        });
+    },
+    function (t, e, n) {
+        var r = n(25), i = n(150), o = n(41), a = n(40), u = n(152), c = n(70), s = n(72)('IE_PROTO'), f = function () {
+            }, l = function () {
+                var t, e = c('iframe'), n = o.length;
+                for (e.style.display = 'none', u.appendChild(e), e.src = String('javascript:'), (t = e.contentWindow.document).open(), t.write('<script>document.F=Object</script>'), t.close(), l = t.F; n--;)
+                    delete l.prototype[o[n]];
+                return l();
+            };
+        t.exports = Object.create || function (t, e) {
+            var n;
+            return null !== t ? (f.prototype = r(t), n = new f(), f.prototype = null, n[s] = t) : n = l(), void 0 === e ? n : i(n, e);
+        }, a[s] = !0;
+    },
+    function (t, e, n) {
+        var r = n(15), i = n(38), o = n(25), a = n(151);
+        t.exports = r ? Object.defineProperties : function (t, e) {
+            o(t);
+            for (var n, r = a(e), u = r.length, c = 0; u > c;)
+                i.f(t, n = r[c++], e[n]);
+            return t;
+        };
+    },
+    function (t, e, n) {
+        var r = n(75), i = n(41);
+        t.exports = Object.keys || function (t) {
+            return r(t, i);
+        };
+    },
+    function (t, e, n) {
+        var r = n(74);
+        t.exports = r('document', 'documentElement');
+    },
+    function (t, e, n) {
+        var r = n(4), i = n(154), o = Function.call;
+        t.exports = function (t, e, n) {
+            return i(o, r[t].prototype[e], n);
+        };
+    },
+    function (t, e, n) {
+        var r = n(155);
+        t.exports = function (t, e, n) {
+            if (r(t), void 0 === e)
+                return t;
+            switch (n) {
+            case 0:
+                return function () {
+                    return t.call(e);
+                };
+            case 1:
+                return function (n) {
+                    return t.call(e, n);
+                };
+            case 2:
+                return function (n, r) {
+                    return t.call(e, n, r);
+                };
+            case 3:
+                return function (n, r, i) {
+                    return t.call(e, n, r, i);
+                };
+            }
+            return function () {
+                return t.apply(e, arguments);
+            };
+        };
+    },
+    function (t, e) {
+        t.exports = function (t) {
+            if ('function' != typeof t)
+                throw TypeError(String(t) + ' is not a function');
+            return t;
+        };
+    },
+    function (t, e, n) {
         'use strict';
         n.r(e);
-        var r = n(56), i = n(107), o = n(108), a = '[object Null]', u = '[object Undefined]', c = r.default ? r.default.toStringTag : void 0;
+        var r = n(80), i = n(159), o = n(160), a = '[object Null]', u = '[object Undefined]', c = r.default ? r.default.toStringTag : void 0;
         e.default = function (t) {
             return null == t ? void 0 === t ? u : a : c && c in Object(t) ? Object(i.default)(t) : Object(o.default)(t);
         };
@@ -3460,7 +3924,7 @@
     function (t, e, n) {
         'use strict';
         n.r(e);
-        var r = n(106), i = 'object' == typeof self && self && self.Object === Object && self, o = r.default || i || Function('return this')();
+        var r = n(158), i = 'object' == typeof self && self && self.Object === Object && self, o = r.default || i || Function('return this')();
         e.default = o;
     },
     function (t, e, n) {
@@ -3468,12 +3932,12 @@
         n.r(e), function (t) {
             var n = 'object' == typeof t && t && t.Object === Object && t;
             e.default = n;
-        }.call(this, n(29));
+        }.call(this, n(23));
     },
     function (t, e, n) {
         'use strict';
         n.r(e);
-        var r = n(56), i = Object.prototype, o = i.hasOwnProperty, a = i.toString, u = r.default ? r.default.toStringTag : void 0;
+        var r = n(80), i = Object.prototype, o = i.hasOwnProperty, a = i.toString, u = r.default ? r.default.toStringTag : void 0;
         e.default = function (t) {
             var e = o.call(t, u), n = t[u];
             try {
@@ -3496,7 +3960,7 @@
     function (t, e, n) {
         'use strict';
         n.r(e);
-        var r = n(110), i = Object(r.default)(Object.getPrototypeOf, Object);
+        var r = n(162), i = Object(r.default)(Object.getPrototypeOf, Object);
         e.default = i;
     },
     function (t, e, n) {
@@ -3516,11 +3980,11 @@
     function (t, e, n) {
         'use strict';
         n.r(e), function (t, r) {
-            var i, o = n(114);
+            var i, o = n(166);
             i = 'undefined' != typeof self ? self : 'undefined' != typeof window ? window : void 0 !== t ? t : r;
             var a = Object(o.default)(i);
             e.default = a;
-        }.call(this, n(29), n(113)(t));
+        }.call(this, n(23), n(165)(t));
     },
     function (t, e) {
         t.exports = function (t) {
@@ -3554,7 +4018,7 @@
     function (t, e, n) {
         'use strict';
         Object.defineProperty(e, '__esModule', { value: !0 }), e.default = void 0;
-        var r = n(54), i = n(116), o = n(122), a = n(123), u = n(9), c = n(206), s = n(207), f = u.IX2ElementsReducer.ixElements, l = (0, r.combineReducers)({
+        var r = n(78), i = n(168), o = n(174), a = n(175), u = n(10), c = n(262), s = n(263), f = u.IX2ElementsReducer.ixElements, l = (0, r.combineReducers)({
                 ixData: i.ixData,
                 ixRequest: o.ixRequest,
                 ixSession: a.ixSession,
@@ -3796,9 +4260,9 @@
     },
     function (t, e, n) {
         'use strict';
-        var r, i = n(0)(n(17)), o = n(0);
+        var r, i = n(0)(n(27)), o = n(0);
         Object.defineProperty(e, '__esModule', { value: !0 }), e.ixRequest = void 0;
-        var a = o(n(18)), u = n(2), c = n(13), s = u.IX2EngineActionTypes, f = s.IX2_PREVIEW_REQUESTED, l = s.IX2_PLAYBACK_REQUESTED, d = s.IX2_STOP_REQUESTED, p = s.IX2_CLEAR_REQUESTED, v = {
+        var a = o(n(28)), u = n(2), c = n(19), s = u.IX2EngineActionTypes, f = s.IX2_PREVIEW_REQUESTED, l = s.IX2_PLAYBACK_REQUESTED, d = s.IX2_STOP_REQUESTED, p = s.IX2_CLEAR_REQUESTED, v = {
                 preview: {},
                 playback: {},
                 stop: {},
@@ -3816,19 +4280,19 @@
     function (t, e, n) {
         'use strict';
         Object.defineProperty(e, '__esModule', { value: !0 }), e.ixSession = void 0;
-        var r = n(2), i = n(13), o = r.IX2EngineActionTypes, a = o.IX2_SESSION_INITIALIZED, u = o.IX2_SESSION_STARTED, c = o.IX2_TEST_FRAME_RENDERED, s = o.IX2_SESSION_STOPPED, f = o.IX2_EVENT_LISTENER_ADDED, l = o.IX2_EVENT_STATE_CHANGED, d = o.IX2_ANIMATION_FRAME_CHANGED, p = o.IX2_ACTION_LIST_PLAYBACK_CHANGED, v = o.IX2_VIEWPORT_WIDTH_CHANGED, h = o.IX2_MEDIA_QUERIES_DEFINED, E = {
+        var r = n(2), i = n(19), o = r.IX2EngineActionTypes, a = o.IX2_SESSION_INITIALIZED, u = o.IX2_SESSION_STARTED, c = o.IX2_TEST_FRAME_RENDERED, s = o.IX2_SESSION_STOPPED, f = o.IX2_EVENT_LISTENER_ADDED, l = o.IX2_EVENT_STATE_CHANGED, d = o.IX2_ANIMATION_FRAME_CHANGED, p = o.IX2_ACTION_LIST_PLAYBACK_CHANGED, v = o.IX2_VIEWPORT_WIDTH_CHANGED, h = o.IX2_MEDIA_QUERIES_DEFINED, g = {
                 active: !1,
-                tick: '0',
+                tick: 0,
                 eventListeners: [],
                 eventState: {},
                 playbackState: {},
-                viewportWidth: '0',
+                viewportWidth: 0,
                 mediaQueryKey: null,
                 hasBoundaryNodes: !1,
                 hasDefinedMediaQueries: !1
             };
         e.ixSession = function () {
-            var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : E, e = arguments.length > 1 ? arguments[1] : void 0;
+            var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : g, e = arguments.length > 1 ? arguments[1] : void 0;
             switch (e.type) {
             case a:
                 var n = e.payload.hasBoundaryNodes;
@@ -3839,36 +4303,36 @@
                 var r = e.payload.step, o = void 0 === r ? 20 : r;
                 return (0, i.set)(t, 'tick', t.tick + o);
             case s:
-                return E;
+                return g;
             case d:
-                var _ = e.payload.now;
-                return (0, i.set)(t, 'tick', _);
+                var E = e.payload.now;
+                return (0, i.set)(t, 'tick', E);
             case f:
-                var g = (0, i.addLast)(t.eventListeners, e.payload);
-                return (0, i.set)(t, 'eventListeners', g);
+                var m = (0, i.addLast)(t.eventListeners, e.payload);
+                return (0, i.set)(t, 'eventListeners', m);
             case l:
-                var y = e.payload, I = y.stateKey, m = y.newState;
+                var y = e.payload, _ = y.stateKey, I = y.newState;
                 return (0, i.setIn)(t, [
                     'eventState',
-                    I
-                ], m);
+                    _
+                ], I);
             case p:
-                var T = e.payload, O = T.actionListId, A = T.isPlaying;
+                var b = e.payload, w = b.actionListId, T = b.isPlaying;
                 return (0, i.setIn)(t, [
                     'playbackState',
-                    O
-                ], A);
+                    w
+                ], T);
             case v:
-                for (var b = e.payload, S = b.width, w = b.mediaQueries, R = w.length, N = null, C = 0; C < R; C++) {
-                    var L = w[C], x = L.key, D = L.min, P = L.max;
-                    if (S >= D && S <= P) {
-                        N = x;
+                for (var O = e.payload, A = O.width, x = O.mediaQueries, S = x.length, R = null, C = 0; C < S; C++) {
+                    var N = x[C], L = N.key, D = N.min, P = N.max;
+                    if (A >= D && A <= P) {
+                        R = L;
                         break;
                     }
                 }
                 return (0, i.merge)(t, {
-                    viewportWidth: S,
-                    mediaQueryKey: N
+                    viewportWidth: A,
+                    mediaQueryKey: R
                 });
             case h:
                 return (0, i.set)(t, 'hasDefinedMediaQueries', !0);
@@ -3878,7 +4342,7 @@
         };
     },
     function (t, e, n) {
-        var r = n(125), i = n(177), o = n(77);
+        var r = n(177), i = n(229), o = n(101);
         t.exports = function (t) {
             var e = i(t);
             return 1 == e.length && e[0][2] ? o(e[0][0], e[0][1]) : function (n) {
@@ -3887,7 +4351,7 @@
         };
     },
     function (t, e, n) {
-        var r = n(63), i = n(67), o = 1, a = 2;
+        var r = n(87), i = n(91), o = 1, a = 2;
         t.exports = function (t, e, n, u) {
             var c = n.length, s = c, f = !u;
             if (null == t)
@@ -3905,8 +4369,8 @@
                 } else {
                     var h = new r();
                     if (u)
-                        var E = u(p, v, d, t, e, h);
-                    if (!(void 0 === E ? i(v, p, o | a, u, h) : E))
+                        var g = u(p, v, d, t, e, h);
+                    if (!(void 0 === g ? i(v, p, o | a, u, h) : g))
                         return !1;
                 }
             }
@@ -3919,27 +4383,27 @@
         };
     },
     function (t, e, n) {
-        var r = n(20), i = Array.prototype.splice;
+        var r = n(30), i = Array.prototype.splice;
         t.exports = function (t) {
             var e = this.__data__, n = r(e, t);
             return !(n < 0 || (n == e.length - 1 ? e.pop() : i.call(e, n, 1), --this.size, 0));
         };
     },
     function (t, e, n) {
-        var r = n(20);
+        var r = n(30);
         t.exports = function (t) {
             var e = this.__data__, n = r(e, t);
             return n < 0 ? void 0 : e[n][1];
         };
     },
     function (t, e, n) {
-        var r = n(20);
+        var r = n(30);
         t.exports = function (t) {
             return r(this.__data__, t) > -1;
         };
     },
     function (t, e, n) {
-        var r = n(20);
+        var r = n(30);
         t.exports = function (t, e) {
             var n = this.__data__, i = r(n, t);
             return i < 0 ? (++this.size, n.push([
@@ -3949,7 +4413,7 @@
         };
     },
     function (t, e, n) {
-        var r = n(19);
+        var r = n(29);
         t.exports = function () {
             this.__data__ = new r(), this.size = 0;
         };
@@ -3971,7 +4435,7 @@
         };
     },
     function (t, e, n) {
-        var r = n(19), i = n(33), o = n(34), a = 200;
+        var r = n(29), i = n(46), o = n(47), a = 200;
         t.exports = function (t, e) {
             var n = this.__data__;
             if (n instanceof r) {
@@ -3987,13 +4451,13 @@
         };
     },
     function (t, e, n) {
-        var r = n(64), i = n(139), o = n(4), a = n(66), u = /^\[object .+?Constructor\]$/, c = Function.prototype, s = Object.prototype, f = c.toString, l = s.hasOwnProperty, d = RegExp('^' + f.call(l).replace(/[\\^$.*+?()[\]{}|]/g, '\\$&').replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, '$1.*?') + '$');
+        var r = n(88), i = n(191), o = n(6), a = n(90), u = /^\[object .+?Constructor\]$/, c = Function.prototype, s = Object.prototype, f = c.toString, l = s.hasOwnProperty, d = RegExp('^' + f.call(l).replace(/[\\^$.*+?()[\]{}|]/g, '\\$&').replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, '$1.*?') + '$');
         t.exports = function (t) {
             return !(!o(t) || i(t)) && (r(t) ? d : u).test(a(t));
         };
     },
     function (t, e, n) {
-        var r = n(14), i = Object.prototype, o = i.hasOwnProperty, a = i.toString, u = r ? r.toStringTag : void 0;
+        var r = n(20), i = Object.prototype, o = i.hasOwnProperty, a = i.toString, u = r ? r.toStringTag : void 0;
         t.exports = function (t) {
             var e = o.call(t, u), n = t[u];
             try {
@@ -4012,13 +4476,13 @@
         };
     },
     function (t, e, n) {
-        var r, i = n(140), o = (r = /[^.]+$/.exec(i && i.keys && i.keys.IE_PROTO || '')) ? 'Symbol(src)_1.' + r : '';
+        var r, i = n(192), o = (r = /[^.]+$/.exec(i && i.keys && i.keys.IE_PROTO || '')) ? 'Symbol(src)_1.' + r : '';
         t.exports = function (t) {
             return !!o && o in t;
         };
     },
     function (t, e, n) {
-        var r = n(3)['__core-js_shared__'];
+        var r = n(5)['__core-js_shared__'];
         t.exports = r;
     },
     function (t, e) {
@@ -4027,7 +4491,7 @@
         };
     },
     function (t, e, n) {
-        var r = n(143), i = n(19), o = n(33);
+        var r = n(195), i = n(29), o = n(46);
         t.exports = function () {
             this.size = 0, this.__data__ = {
                 hash: new r(),
@@ -4037,7 +4501,7 @@
         };
     },
     function (t, e, n) {
-        var r = n(144), i = n(145), o = n(146), a = n(147), u = n(148);
+        var r = n(196), i = n(197), o = n(198), a = n(199), u = n(200);
         function c(t) {
             var e = -1, n = null == t ? 0 : t.length;
             for (this.clear(); ++e < n;) {
@@ -4048,7 +4512,7 @@
         c.prototype.clear = r, c.prototype.delete = i, c.prototype.get = o, c.prototype.has = a, c.prototype.set = u, t.exports = c;
     },
     function (t, e, n) {
-        var r = n(21);
+        var r = n(31);
         t.exports = function () {
             this.__data__ = r ? r(null) : {}, this.size = 0;
         };
@@ -4060,7 +4524,7 @@
         };
     },
     function (t, e, n) {
-        var r = n(21), i = '__lodash_hash_undefined__', o = Object.prototype.hasOwnProperty;
+        var r = n(31), i = '__lodash_hash_undefined__', o = Object.prototype.hasOwnProperty;
         t.exports = function (t) {
             var e = this.__data__;
             if (r) {
@@ -4071,21 +4535,21 @@
         };
     },
     function (t, e, n) {
-        var r = n(21), i = Object.prototype.hasOwnProperty;
+        var r = n(31), i = Object.prototype.hasOwnProperty;
         t.exports = function (t) {
             var e = this.__data__;
             return r ? void 0 !== e[t] : i.call(e, t);
         };
     },
     function (t, e, n) {
-        var r = n(21), i = '__lodash_hash_undefined__';
+        var r = n(31), i = '__lodash_hash_undefined__';
         t.exports = function (t, e) {
             var n = this.__data__;
             return this.size += this.has(t) ? 0 : 1, n[t] = r && void 0 === e ? i : e, this;
         };
     },
     function (t, e, n) {
-        var r = n(22);
+        var r = n(32);
         t.exports = function (t) {
             var e = r(this, t).delete(t);
             return this.size -= e ? 1 : 0, e;
@@ -4098,47 +4562,47 @@
         };
     },
     function (t, e, n) {
-        var r = n(22);
+        var r = n(32);
         t.exports = function (t) {
             return r(this, t).get(t);
         };
     },
     function (t, e, n) {
-        var r = n(22);
+        var r = n(32);
         t.exports = function (t) {
             return r(this, t).has(t);
         };
     },
     function (t, e, n) {
-        var r = n(22);
+        var r = n(32);
         t.exports = function (t, e) {
             var n = r(this, t), i = n.size;
             return n.set(t, e), this.size += n.size == i ? 0 : 1, this;
         };
     },
     function (t, e, n) {
-        var r = n(63), i = n(68), o = n(160), a = n(164), u = n(42), c = n(1), s = n(36), f = n(38), l = 1, d = '[object Arguments]', p = '[object Array]', v = '[object Object]', h = Object.prototype.hasOwnProperty;
-        t.exports = function (t, e, n, E, _, g) {
-            var y = c(t), I = c(e), m = y ? p : u(t), T = I ? p : u(e), O = (m = m == d ? v : m) == v, A = (T = T == d ? v : T) == v, b = m == T;
-            if (b && s(t)) {
+        var r = n(87), i = n(92), o = n(212), a = n(216), u = n(55), c = n(1), s = n(49), f = n(51), l = 1, d = '[object Arguments]', p = '[object Array]', v = '[object Object]', h = Object.prototype.hasOwnProperty;
+        t.exports = function (t, e, n, g, E, m) {
+            var y = c(t), _ = c(e), I = y ? p : u(t), b = _ ? p : u(e), w = (I = I == d ? v : I) == v, T = (b = b == d ? v : b) == v, O = I == b;
+            if (O && s(t)) {
                 if (!s(e))
                     return !1;
-                y = !0, O = !1;
+                y = !0, w = !1;
             }
-            if (b && !O)
-                return g || (g = new r()), y || f(t) ? i(t, e, n, E, _, g) : o(t, e, m, n, E, _, g);
+            if (O && !w)
+                return m || (m = new r()), y || f(t) ? i(t, e, n, g, E, m) : o(t, e, I, n, g, E, m);
             if (!(n & l)) {
-                var S = O && h.call(t, '__wrapped__'), w = A && h.call(e, '__wrapped__');
-                if (S || w) {
-                    var R = S ? t.value() : t, N = w ? e.value() : e;
-                    return g || (g = new r()), _(R, N, n, E, g);
+                var A = w && h.call(t, '__wrapped__'), x = T && h.call(e, '__wrapped__');
+                if (A || x) {
+                    var S = A ? t.value() : t, R = x ? e.value() : e;
+                    return m || (m = new r()), E(S, R, n, g, m);
                 }
             }
-            return !!b && (g || (g = new r()), a(t, e, n, E, _, g));
+            return !!O && (m || (m = new r()), a(t, e, n, g, E, m));
         };
     },
     function (t, e, n) {
-        var r = n(34), i = n(156), o = n(157);
+        var r = n(47), i = n(208), o = n(209);
         function a(t) {
             var e = -1, n = null == t ? 0 : t.length;
             for (this.__data__ = new r(); ++e < n;)
@@ -4171,45 +4635,45 @@
         };
     },
     function (t, e, n) {
-        var r = n(14), i = n(161), o = n(32), a = n(68), u = n(162), c = n(163), s = 1, f = 2, l = '[object Boolean]', d = '[object Date]', p = '[object Error]', v = '[object Map]', h = '[object Number]', E = '[object RegExp]', _ = '[object Set]', g = '[object String]', y = '[object Symbol]', I = '[object ArrayBuffer]', m = '[object DataView]', T = r ? r.prototype : void 0, O = T ? T.valueOf : void 0;
-        t.exports = function (t, e, n, r, T, A, b) {
+        var r = n(20), i = n(213), o = n(45), a = n(92), u = n(214), c = n(215), s = 1, f = 2, l = '[object Boolean]', d = '[object Date]', p = '[object Error]', v = '[object Map]', h = '[object Number]', g = '[object RegExp]', E = '[object Set]', m = '[object String]', y = '[object Symbol]', _ = '[object ArrayBuffer]', I = '[object DataView]', b = r ? r.prototype : void 0, w = b ? b.valueOf : void 0;
+        t.exports = function (t, e, n, r, b, T, O) {
             switch (n) {
-            case m:
+            case I:
                 if (t.byteLength != e.byteLength || t.byteOffset != e.byteOffset)
                     return !1;
                 t = t.buffer, e = e.buffer;
-            case I:
-                return !(t.byteLength != e.byteLength || !A(new i(t), new i(e)));
+            case _:
+                return !(t.byteLength != e.byteLength || !T(new i(t), new i(e)));
             case l:
             case d:
             case h:
                 return o(+t, +e);
             case p:
                 return t.name == e.name && t.message == e.message;
-            case E:
             case g:
+            case m:
                 return t == e + '';
             case v:
-                var S = u;
-            case _:
-                var w = r & s;
-                if (S || (S = c), t.size != e.size && !w)
+                var A = u;
+            case E:
+                var x = r & s;
+                if (A || (A = c), t.size != e.size && !x)
                     return !1;
-                var R = b.get(t);
-                if (R)
-                    return R == e;
-                r |= f, b.set(t, e);
-                var N = a(S(t), S(e), r, T, A, b);
-                return b.delete(t), N;
+                var S = O.get(t);
+                if (S)
+                    return S == e;
+                r |= f, O.set(t, e);
+                var R = a(A(t), A(e), r, b, T, O);
+                return O.delete(t), R;
             case y:
-                if (O)
-                    return O.call(t) == O.call(e);
+                if (w)
+                    return w.call(t) == w.call(e);
             }
             return !1;
         };
     },
     function (t, e, n) {
-        var r = n(3).Uint8Array;
+        var r = n(5).Uint8Array;
         t.exports = r;
     },
     function (t, e) {
@@ -4232,7 +4696,7 @@
         };
     },
     function (t, e, n) {
-        var r = n(165), i = 1, o = Object.prototype.hasOwnProperty;
+        var r = n(217), i = 1, o = Object.prototype.hasOwnProperty;
         t.exports = function (t, e, n, a, u, c) {
             var s = n & i, f = r(t), l = f.length;
             if (l != r(e).length && !s)
@@ -4242,30 +4706,30 @@
                 if (!(s ? p in e : o.call(e, p)))
                     return !1;
             }
-            var v = c.get(t);
-            if (v && c.get(e))
-                return v == e;
-            var h = !0;
+            var v = c.get(t), h = c.get(e);
+            if (v && h)
+                return v == e && h == t;
+            var g = !0;
             c.set(t, e), c.set(e, t);
             for (var E = s; ++d < l;) {
-                var _ = t[p = f[d]], g = e[p];
+                var m = t[p = f[d]], y = e[p];
                 if (a)
-                    var y = s ? a(g, _, p, e, t, c) : a(_, g, p, t, e, c);
-                if (!(void 0 === y ? _ === g || u(_, g, n, a, c) : y)) {
-                    h = !1;
+                    var _ = s ? a(y, m, p, e, t, c) : a(m, y, p, t, e, c);
+                if (!(void 0 === _ ? m === y || u(m, y, n, a, c) : _)) {
+                    g = !1;
                     break;
                 }
                 E || (E = 'constructor' == p);
             }
-            if (h && !E) {
-                var I = t.constructor, m = e.constructor;
-                I != m && 'constructor' in t && 'constructor' in e && !('function' == typeof I && I instanceof I && 'function' == typeof m && m instanceof m) && (h = !1);
+            if (g && !E) {
+                var I = t.constructor, b = e.constructor;
+                I != b && 'constructor' in t && 'constructor' in e && !('function' == typeof I && I instanceof I && 'function' == typeof b && b instanceof b) && (g = !1);
             }
-            return c.delete(t), c.delete(e), h;
+            return c.delete(t), c.delete(e), g;
         };
     },
     function (t, e, n) {
-        var r = n(69), i = n(70), o = n(23);
+        var r = n(93), i = n(94), o = n(33);
         t.exports = function (t) {
             return r(t, o, i);
         };
@@ -4287,7 +4751,7 @@
         };
     },
     function (t, e, n) {
-        var r = n(10), i = n(7), o = '[object Arguments]';
+        var r = n(11), i = n(9), o = '[object Arguments]';
         t.exports = function (t) {
             return i(t) && r(t) == o;
         };
@@ -4298,7 +4762,7 @@
         };
     },
     function (t, e, n) {
-        var r = n(10), i = n(39), o = n(7), a = {};
+        var r = n(11), i = n(52), o = n(9), a = {};
         a['[object Float32Array]'] = a['[object Float64Array]'] = a['[object Int8Array]'] = a['[object Int16Array]'] = a['[object Int32Array]'] = a['[object Uint8Array]'] = a['[object Uint8ClampedArray]'] = a['[object Uint16Array]'] = a['[object Uint32Array]'] = !0, a['[object Arguments]'] = a['[object Array]'] = a['[object ArrayBuffer]'] = a['[object Boolean]'] = a['[object DataView]'] = a['[object Date]'] = a['[object Error]'] = a['[object Function]'] = a['[object Map]'] = a['[object Number]'] = a['[object Object]'] = a['[object RegExp]'] = a['[object Set]'] = a['[object String]'] = a['[object WeakMap]'] = !1, t.exports = function (t) {
             return o(t) && i(t.length) && !!a[r(t)];
         };
@@ -4312,7 +4776,7 @@
     },
     function (t, e, n) {
         (function (t) {
-            var r = n(65), i = e && !e.nodeType && e, o = i && 'object' == typeof t && t && !t.nodeType && t, a = o && o.exports === i && r.process, u = function () {
+            var r = n(89), i = e && !e.nodeType && e, o = i && 'object' == typeof t && t && !t.nodeType && t, a = o && o.exports === i && r.process, u = function () {
                     try {
                         var t = o && o.require && o.require('util').types;
                         return t || a && a.binding && a.binding('util');
@@ -4320,26 +4784,26 @@
                     }
                 }();
             t.exports = u;
-        }.call(this, n(73)(t)));
+        }.call(this, n(97)(t)));
     },
     function (t, e, n) {
-        var r = n(74)(Object.keys, Object);
+        var r = n(98)(Object.keys, Object);
         t.exports = r;
     },
     function (t, e, n) {
-        var r = n(6)(n(3), 'DataView');
+        var r = n(8)(n(5), 'DataView');
         t.exports = r;
     },
     function (t, e, n) {
-        var r = n(6)(n(3), 'Promise');
+        var r = n(8)(n(5), 'Promise');
         t.exports = r;
     },
     function (t, e, n) {
-        var r = n(6)(n(3), 'Set');
+        var r = n(8)(n(5), 'Set');
         t.exports = r;
     },
     function (t, e, n) {
-        var r = n(76), i = n(23);
+        var r = n(100), i = n(33);
         t.exports = function (t) {
             for (var e = i(t), n = e.length; n--;) {
                 var o = e[n], a = t[o];
@@ -4353,7 +4817,7 @@
         };
     },
     function (t, e, n) {
-        var r = n(67), i = n(25), o = n(182), a = n(44), u = n(76), c = n(77), s = n(15), f = 1, l = 2;
+        var r = n(91), i = n(56), o = n(236), a = n(58), u = n(100), c = n(101), s = n(21), f = 1, l = 2;
         t.exports = function (t, e) {
             return a(t) && u(e) ? c(s(t), e) : function (n) {
                 var a = i(n, t);
@@ -4362,7 +4826,7 @@
         };
     },
     function (t, e, n) {
-        var r = n(180), i = /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|$))/g, o = /\\(\\)?/g, a = r(function (t) {
+        var r = n(232), i = /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|$))/g, o = /\\(\\)?/g, a = r(function (t) {
                 var e = [];
                 return 46 === t.charCodeAt(0) && e.push(''), t.replace(i, function (t, n, r, i) {
                     e.push(r ? i.replace(o, '$1') : n || t);
@@ -4371,7 +4835,7 @@
         t.exports = a;
     },
     function (t, e, n) {
-        var r = n(181), i = 500;
+        var r = n(233), i = 500;
         t.exports = function (t) {
             var e = r(t, function (t) {
                     return n.size === i && n.clear(), t;
@@ -4380,7 +4844,7 @@
         };
     },
     function (t, e, n) {
-        var r = n(34), i = 'Expected a function';
+        var r = n(47), i = 'Expected a function';
         function o(t, e) {
             if ('function' != typeof t || null != e && 'function' != typeof e)
                 throw new TypeError(i);
@@ -4396,7 +4860,26 @@
         o.Cache = r, t.exports = o;
     },
     function (t, e, n) {
-        var r = n(183), i = n(184);
+        var r = n(235);
+        t.exports = function (t) {
+            return null == t ? '' : r(t);
+        };
+    },
+    function (t, e, n) {
+        var r = n(20), i = n(102), o = n(1), a = n(36), u = 1 / 0, c = r ? r.prototype : void 0, s = c ? c.toString : void 0;
+        t.exports = function t(e) {
+            if ('string' == typeof e)
+                return e;
+            if (o(e))
+                return i(e, t) + '';
+            if (a(e))
+                return s ? s.call(e) : '';
+            var n = e + '';
+            return '0' == n && 1 / e == -u ? '-0' : n;
+        };
+    },
+    function (t, e, n) {
+        var r = n(237), i = n(238);
         t.exports = function (t, e) {
             return null != t && i(t, e, r);
         };
@@ -4407,7 +4890,7 @@
         };
     },
     function (t, e, n) {
-        var r = n(26), i = n(24), o = n(1), a = n(37), u = n(39), c = n(15);
+        var r = n(35), i = n(34), o = n(1), a = n(50), u = n(52), c = n(21);
         t.exports = function (t, e, n) {
             for (var s = -1, f = (e = r(e, t)).length, l = !1; ++s < f;) {
                 var d = c(e[s]);
@@ -4419,13 +4902,13 @@
         };
     },
     function (t, e, n) {
-        var r = n(81), i = n(186), o = n(44), a = n(15);
+        var r = n(103), i = n(240), o = n(58), a = n(21);
         t.exports = function (t) {
             return o(t) ? r(a(t)) : i(t);
         };
     },
     function (t, e, n) {
-        var r = n(43);
+        var r = n(57);
         t.exports = function (t) {
             return function (e) {
                 return r(e, t);
@@ -4433,7 +4916,7 @@
         };
     },
     function (t, e, n) {
-        var r = n(82), i = n(5), o = n(46), a = Math.max;
+        var r = n(104), i = n(7), o = n(105), a = Math.max;
         t.exports = function (t, e, n) {
             var u = null == t ? 0 : t.length;
             if (!u)
@@ -4443,9 +4926,22 @@
         };
     },
     function (t, e, n) {
-        var r = n(47), i = 1 / 0, o = 1.7976931348623157e+308;
+        var r = n(60), i = 1 / 0, o = 1.7976931348623157e+308;
         t.exports = function (t) {
             return t ? (t = r(t)) === i || t === -i ? (t < 0 ? -1 : 1) * o : t == t ? t : 0 : 0 === t ? t : 0;
+        };
+    },
+    function (t, e, n) {
+        var r = n(244), i = /^\s+/;
+        t.exports = function (t) {
+            return t ? t.slice(0, r(t) + 1).replace(i, '') : t;
+        };
+    },
+    function (t, e) {
+        var n = /\s/;
+        t.exports = function (t) {
+            for (var e = t.length; e-- && n.test(t.charAt(e)););
+            return e;
         };
     },
     function (t, e) {
@@ -4470,9 +4966,9 @@
     },
     function (t, e, n) {
         'use strict';
-        Object.defineProperty(e, '__esModule', { value: !0 }), e.createElementState = m, e.mergeActionState = T, e.ixElements = void 0;
-        var r = n(13), i = n(2), o = i.IX2EngineConstants, a = (o.HTML_ELEMENT, o.PLAIN_OBJECT), u = (o.ABSTRACT_NODE, o.CONFIG_X_VALUE), c = o.CONFIG_Y_VALUE, s = o.CONFIG_Z_VALUE, f = o.CONFIG_VALUE, l = o.CONFIG_X_UNIT, d = o.CONFIG_Y_UNIT, p = o.CONFIG_Z_UNIT, v = o.CONFIG_UNIT, h = i.IX2EngineActionTypes, E = h.IX2_SESSION_STOPPED, _ = h.IX2_INSTANCE_ADDED, g = h.IX2_ELEMENT_STATE_CHANGED, y = {}, I = 'refState';
-        function m(t, e, n, i, o) {
+        Object.defineProperty(e, '__esModule', { value: !0 }), e.createElementState = I, e.mergeActionState = b, e.ixElements = void 0;
+        var r = n(19), i = n(2), o = i.IX2EngineConstants, a = (o.HTML_ELEMENT, o.PLAIN_OBJECT), u = (o.ABSTRACT_NODE, o.CONFIG_X_VALUE), c = o.CONFIG_Y_VALUE, s = o.CONFIG_Z_VALUE, f = o.CONFIG_VALUE, l = o.CONFIG_X_UNIT, d = o.CONFIG_Y_UNIT, p = o.CONFIG_Z_UNIT, v = o.CONFIG_UNIT, h = i.IX2EngineActionTypes, g = h.IX2_SESSION_STOPPED, E = h.IX2_INSTANCE_ADDED, m = h.IX2_ELEMENT_STATE_CHANGED, y = {}, _ = 'refState';
+        function I(t, e, n, i, o) {
             var u = n === a ? (0, r.getIn)(o, [
                 'config',
                 'target',
@@ -4485,16 +4981,16 @@
                 refType: n
             });
         }
-        function T(t, e, n, i, o) {
+        function b(t, e, n, i, o) {
             var a = function (t) {
                     var e = t.config;
-                    return O.reduce(function (t, n) {
+                    return w.reduce(function (t, n) {
                         var r = n[0], i = n[1], o = e[r], a = e[i];
                         return null != o && null != a && (t[i] = a), t;
                     }, {});
                 }(o), u = [
                     e,
-                    I,
+                    _,
                     n
                 ];
             return (0, r.mergeIn)(t, u, i, a);
@@ -4502,22 +4998,22 @@
         e.ixElements = function () {
             var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : y, e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
             switch (e.type) {
-            case E:
+            case g:
                 return y;
-            case _:
+            case E:
                 var n = e.payload, i = n.elementId, o = n.element, a = n.origin, u = n.actionItem, c = n.refType, s = u.actionTypeId, f = t;
                 return (0, r.getIn)(f, [
                     i,
                     o
-                ]) !== o && (f = m(f, o, c, i, u)), T(f, i, s, a, u);
-            case g:
+                ]) !== o && (f = I(f, o, c, i, u)), b(f, i, s, a, u);
+            case m:
                 var l = e.payload;
-                return T(t, l.elementId, l.actionTypeId, l.current, l.actionItem);
+                return b(t, l.elementId, l.actionTypeId, l.current, l.actionItem);
             default:
                 return t;
             }
         };
-        var O = [
+        var w = [
             [
                 u,
                 l
@@ -4549,7 +5045,7 @@
             return n > 0 ? 1000 * n : 1000 * parseFloat(t.getAttribute('data-default-duration'));
         };
         e.getPluginOrigin = function (t) {
-            return t || { value: '0' };
+            return t || { value: 0 };
         };
         e.getPluginDestination = function (t) {
             return { value: t.value };
@@ -4570,16 +5066,16 @@
     },
     function (t, e, n) {
         'use strict';
-        var r, i, o, a = n(0), u = a(n(16)), c = a(n(17)), s = n(0);
+        var r, i, o, a = n(0), u = a(n(22)), c = a(n(27)), s = n(0);
         Object.defineProperty(e, '__esModule', { value: !0 }), e.getInstanceId = function () {
-            return 'i' + ht++;
+            return 'i' + vt++;
         }, e.getElementId = function (t, e) {
             for (var n in t) {
                 var r = t[n];
                 if (r && r.ref === e)
                     return r.id;
             }
-            return 'e' + Et++;
+            return 'e' + ht++;
         }, e.reifyState = function () {
             var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, e = t.events, n = t.actionLists, r = t.site, i = (0, l.default)(e, function (t, e) {
                     var n = e.eventTypeId;
@@ -4598,55 +5094,55 @@
                 }
             };
         }, e.observeStore = function (t) {
-            var e = t.store, n = t.select, r = t.onChange, i = t.comparator, o = void 0 === i ? _t : i, a = e.getState, u = (0, e.subscribe)(function () {
+            var e = t.store, n = t.select, r = t.onChange, i = t.comparator, o = void 0 === i ? gt : i, a = e.getState, u = (0, e.subscribe)(function () {
                     var t = n(a());
                     if (null == t)
                         return void u();
                     o(t, c) || r(c = t, e);
                 }), c = n(a());
             return u;
-        }, e.getAffectedElements = yt, e.getComputedStyle = function (t) {
+        }, e.getAffectedElements = mt, e.getComputedStyle = function (t) {
             var e = t.element, n = t.actionItem;
-            if (!y.IS_BROWSER_ENV)
+            if (!m.IS_BROWSER_ENV)
                 return {};
             switch (n.actionTypeId) {
+            case it:
             case ot:
             case at:
             case ut:
             case ct:
-            case st:
                 return window.getComputedStyle(e);
             default:
                 return {};
             }
         }, e.getInstanceOrigin = function (t) {
             var e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}, r = arguments.length > 3 ? arguments[3] : void 0, i = (arguments.length > 4 ? arguments[4] : void 0).getStyle, o = r.actionTypeId, a = r.config;
-            if ((0, g.isPluginType)(o))
-                return (0, g.getPluginOrigin)(o)(e[o]);
+            if ((0, E.isPluginType)(o))
+                return (0, E.getPluginOrigin)(o)(e[o]);
             switch (o) {
+            case Z:
             case J:
             case tt:
             case et:
-            case nt:
-                return e[o] || At[o];
-            case it:
-                return mt(e[o], r.config.filters);
+                return e[o] || wt[o];
             case rt:
-                return { value: (0, f.default)(parseFloat(i(t, L)), 1) };
-            case ot:
-                var u, c, s = i(t, D), l = i(t, P);
-                return u = a.widthUnit === W ? It.test(s) ? parseFloat(s) : parseFloat(n.width) : (0, f.default)(parseFloat(s), parseFloat(n.width)), c = a.heightUnit === W ? It.test(l) ? parseFloat(l) : parseFloat(n.height) : (0, f.default)(parseFloat(l), parseFloat(n.height)), {
+                return _t(e[o], r.config.filters);
+            case nt:
+                return { value: (0, f.default)(parseFloat(i(t, C)), 1) };
+            case it:
+                var u, c, s = i(t, L), l = i(t, D);
+                return u = a.widthUnit === W ? yt.test(s) ? parseFloat(s) : parseFloat(n.width) : (0, f.default)(parseFloat(s), parseFloat(n.width)), c = a.heightUnit === W ? yt.test(l) ? parseFloat(l) : parseFloat(n.height) : (0, f.default)(parseFloat(l), parseFloat(n.height)), {
                     widthValue: u,
                     heightValue: c
                 };
+            case ot:
             case at:
             case ut:
-            case ct:
                 return function (t) {
-                    var e = t.element, n = t.actionTypeId, r = t.computedStyle, i = t.getStyle, o = dt[n], a = i(e, o), u = Rt.test(a) ? a : r[o], c = function (t, e) {
+                    var e = t.element, n = t.actionTypeId, r = t.computedStyle, i = t.getStyle, o = lt[n], a = i(e, o), u = xt.test(a) ? a : r[o], c = function (t, e) {
                             var n = t.exec(e);
                             return n ? n[1] : '';
-                        }(Nt, u).split(H);
+                        }(St, u).split(B);
                     return {
                         rValue: (0, f.default)(parseInt(c[0], 10), 255),
                         gValue: (0, f.default)(parseInt(c[1], 10), 255),
@@ -4659,169 +5155,169 @@
                     computedStyle: n,
                     getStyle: i
                 });
-            case st:
+            case ct:
                 return { value: (0, f.default)(i(t, U), n.display) };
-            case ft:
-                return e[o] || { value: '0' };
+            case st:
+                return e[o] || { value: 0 };
             default:
                 return;
             }
         }, e.getDestinationValues = function (t) {
             var e = t.element, n = t.actionItem, r = t.elementApi, i = n.actionTypeId;
-            if ((0, g.isPluginType)(i))
-                return (0, g.getPluginDestination)(i)(n.config);
+            if ((0, E.isPluginType)(i))
+                return (0, E.getPluginDestination)(i)(n.config);
             switch (i) {
+            case Z:
             case J:
             case tt:
             case et:
-            case nt:
                 var o = n.config, a = o.xValue, u = o.yValue, c = o.zValue;
                 return {
                     xValue: a,
                     yValue: u,
                     zValue: c
                 };
-            case ot:
-                var s = r.getStyle, f = r.setStyle, l = r.getProperty, d = n.config, p = d.widthUnit, v = d.heightUnit, h = n.config, E = h.widthValue, _ = h.heightValue;
-                if (!y.IS_BROWSER_ENV)
+            case it:
+                var s = r.getStyle, f = r.setStyle, l = r.getProperty, d = n.config, p = d.widthUnit, v = d.heightUnit, h = n.config, g = h.widthValue, y = h.heightValue;
+                if (!m.IS_BROWSER_ENV)
                     return {
-                        widthValue: E,
-                        heightValue: _
+                        widthValue: g,
+                        heightValue: y
                     };
                 if (p === W) {
-                    var I = s(e, D);
-                    f(e, D, ''), E = l(e, 'offsetWidth'), f(e, D, I);
+                    var _ = s(e, L);
+                    f(e, L, ''), g = l(e, 'offsetWidth'), f(e, L, _);
                 }
                 if (v === W) {
-                    var m = s(e, P);
-                    f(e, P, ''), _ = l(e, 'offsetHeight'), f(e, P, m);
+                    var I = s(e, D);
+                    f(e, D, ''), y = l(e, 'offsetHeight'), f(e, D, I);
                 }
                 return {
-                    widthValue: E,
-                    heightValue: _
+                    widthValue: g,
+                    heightValue: y
                 };
+            case ot:
             case at:
             case ut:
-            case ct:
-                var T = n.config, O = T.rValue, A = T.gValue, b = T.bValue, S = T.aValue;
+                var b = n.config, w = b.rValue, T = b.gValue, O = b.bValue, A = b.aValue;
                 return {
-                    rValue: O,
-                    gValue: A,
-                    bValue: b,
-                    aValue: S
+                    rValue: w,
+                    gValue: T,
+                    bValue: O,
+                    aValue: A
                 };
-            case it:
-                return n.config.filters.reduce(Tt, {});
+            case rt:
+                return n.config.filters.reduce(It, {});
             default:
-                var w = n.config.value;
-                return { value: w };
+                var x = n.config.value;
+                return { value: x };
             }
-        }, e.getRenderType = Ot, e.getStyleProp = function (t, e) {
-            return t === q ? e.replace('STYLE_', '').toLowerCase() : null;
+        }, e.getRenderType = bt, e.getStyleProp = function (t, e) {
+            return t === Q ? e.replace('STYLE_', '').toLowerCase() : null;
         }, e.renderHTMLElement = function (t, e, n, r, i, o, a, u, c) {
             switch (u) {
-            case K:
+            case Y:
                 return function (t, e, n, r, i) {
-                    var o = wt.map(function (t) {
-                            var n = At[t], r = e[t] || {}, i = r.xValue, o = void 0 === i ? n.xValue : i, a = r.yValue, u = void 0 === a ? n.yValue : a, c = r.zValue, s = void 0 === c ? n.zValue : c, f = r.xUnit, l = void 0 === f ? '' : f, d = r.yUnit, p = void 0 === d ? '' : d, v = r.zUnit, h = void 0 === v ? '' : v;
+                    var o = At.map(function (t) {
+                            var n = wt[t], r = e[t] || {}, i = r.xValue, o = void 0 === i ? n.xValue : i, a = r.yValue, u = void 0 === a ? n.yValue : a, c = r.zValue, s = void 0 === c ? n.zValue : c, f = r.xUnit, l = void 0 === f ? '' : f, d = r.yUnit, p = void 0 === d ? '' : d, v = r.zUnit, h = void 0 === v ? '' : v;
                             switch (t) {
+                            case Z:
+                                return ''.concat(b, '(').concat(o).concat(l, ', ').concat(u).concat(p, ', ').concat(s).concat(h, ')');
                             case J:
-                                return ''.concat(O, '(').concat(o).concat(l, ', ').concat(u).concat(p, ', ').concat(s).concat(h, ')');
+                                return ''.concat(w, '(').concat(o).concat(l, ', ').concat(u).concat(p, ', ').concat(s).concat(h, ')');
                             case tt:
-                                return ''.concat(A, '(').concat(o).concat(l, ', ').concat(u).concat(p, ', ').concat(s).concat(h, ')');
+                                return ''.concat(T, '(').concat(o).concat(l, ') ').concat(O, '(').concat(u).concat(p, ') ').concat(A, '(').concat(s).concat(h, ')');
                             case et:
-                                return ''.concat(b, '(').concat(o).concat(l, ') ').concat(S, '(').concat(u).concat(p, ') ').concat(w, '(').concat(s).concat(h, ')');
-                            case nt:
-                                return ''.concat(R, '(').concat(o).concat(l, ', ').concat(u).concat(p, ')');
+                                return ''.concat(x, '(').concat(o).concat(l, ', ').concat(u).concat(p, ')');
                             default:
                                 return '';
                             }
                         }).join(' '), a = i.setStyle;
-                    Ct(t, y.TRANSFORM_PREFIXED, i), a(t, y.TRANSFORM_PREFIXED, o), u = r, c = n, s = u.actionTypeId, f = c.xValue, l = c.yValue, d = c.zValue, (s === J && void 0 !== d || s === tt && void 0 !== d || s === et && (void 0 !== f || void 0 !== l)) && a(t, y.TRANSFORM_STYLE_PREFIXED, N);
+                    Rt(t, m.TRANSFORM_PREFIXED, i), a(t, m.TRANSFORM_PREFIXED, o), u = r, c = n, s = u.actionTypeId, f = c.xValue, l = c.yValue, d = c.zValue, (s === Z && void 0 !== d || s === J && void 0 !== d || s === tt && (void 0 !== f || void 0 !== l)) && a(t, m.TRANSFORM_STYLE_PREFIXED, S);
                     var u, c, s, f, l, d;
                 }(t, e, n, i, a);
-            case q:
+            case Q:
                 return function (t, e, n, r, i, o) {
                     var a = o.setStyle, u = r.actionTypeId, c = r.config;
                     switch (u) {
-                    case ot:
-                        var s = r.config, f = s.widthUnit, d = void 0 === f ? '' : f, p = s.heightUnit, v = void 0 === p ? '' : p, h = n.widthValue, E = n.heightValue;
-                        void 0 !== h && (d === W && (d = 'px'), Ct(t, D, o), a(t, D, h + d)), void 0 !== E && (v === W && (v = 'px'), Ct(t, P, o), a(t, P, E + v));
-                        break;
                     case it:
+                        var s = r.config, f = s.widthUnit, d = void 0 === f ? '' : f, p = s.heightUnit, v = void 0 === p ? '' : p, h = n.widthValue, g = n.heightValue;
+                        void 0 !== h && (d === W && (d = 'px'), Rt(t, L, o), a(t, L, h + d)), void 0 !== g && (v === W && (v = 'px'), Rt(t, D, o), a(t, D, g + v));
+                        break;
+                    case rt:
                         !function (t, e, n, r) {
                             var i = (0, l.default)(e, function (t, e, r) {
-                                    return ''.concat(t, ' ').concat(r, '(').concat(e).concat(St(r, n), ')');
+                                    return ''.concat(t, ' ').concat(r, '(').concat(e).concat(Ot(r, n), ')');
                                 }, ''), o = r.setStyle;
-                            Ct(t, x, r), o(t, x, i);
+                            Rt(t, N, r), o(t, N, i);
                         }(t, n, c, o);
                         break;
+                    case ot:
                     case at:
                     case ut:
-                    case ct:
-                        var _ = dt[u], g = Math.round(n.rValue), y = Math.round(n.gValue), I = Math.round(n.bValue), m = n.aValue;
-                        Ct(t, _, o), a(t, _, m >= 1 ? 'rgb('.concat(g, ',').concat(y, ',').concat(I, ')') : 'rgba('.concat(g, ',').concat(y, ',').concat(I, ',').concat(m, ')'));
+                        var E = lt[u], m = Math.round(n.rValue), y = Math.round(n.gValue), _ = Math.round(n.bValue), I = n.aValue;
+                        Rt(t, E, o), a(t, E, I >= 1 ? 'rgb('.concat(m, ',').concat(y, ',').concat(_, ')') : 'rgba('.concat(m, ',').concat(y, ',').concat(_, ',').concat(I, ')'));
                         break;
                     default:
-                        var T = c.unit, O = void 0 === T ? '' : T;
-                        Ct(t, i, o), a(t, i, n.value + O);
+                        var b = c.unit, w = void 0 === b ? '' : b;
+                        Rt(t, i, o), a(t, i, n.value + w);
                     }
                 }(t, 0, n, i, o, a);
-            case Q:
+            case K:
                 return function (t, e, n) {
                     var r = n.setStyle;
                     switch (e.actionTypeId) {
-                    case st:
+                    case ct:
                         var i = e.config.value;
-                        return void (i === C && y.IS_BROWSER_ENV ? r(t, U, y.FLEX_PREFIXED) : r(t, U, i));
+                        return void (i === R && m.IS_BROWSER_ENV ? r(t, U, m.FLEX_PREFIXED) : r(t, U, i));
                     }
                 }(t, i, a);
-            case $:
+            case q:
                 var s = i.actionTypeId;
-                if ((0, g.isPluginType)(s))
-                    return (0, g.renderPlugin)(s)(c, e, i);
+                if ((0, E.isPluginType)(s))
+                    return (0, E.renderPlugin)(s)(c, e, i);
             }
         }, e.clearAllStyles = function (t) {
             var e = t.store, n = t.elementApi, r = e.getState().ixData, i = r.events, o = void 0 === i ? {} : i, a = r.actionLists, u = void 0 === a ? {} : a;
             Object.keys(o).forEach(function (t) {
                 var e = o[t], r = e.action.config, i = r.actionListId, a = u[i];
-                a && xt({
+                a && Nt({
                     actionList: a,
                     event: e,
                     elementApi: n
                 });
             }), Object.keys(u).forEach(function (t) {
-                xt({
+                Nt({
                     actionList: u[t],
                     elementApi: n
                 });
             });
         }, e.cleanupHTMLElement = function (t, e, n) {
             var r = n.setStyle, i = n.getStyle, o = e.actionTypeId;
-            if (o === ot) {
+            if (o === it) {
                 var a = e.config;
-                a.widthUnit === W && r(t, D, ''), a.heightUnit === W && r(t, P, '');
+                a.widthUnit === W && r(t, L, ''), a.heightUnit === W && r(t, D, '');
             }
-            i(t, B) && Pt({
-                effect: Lt,
+            i(t, V) && Dt({
+                effect: Ct,
                 actionTypeId: o,
                 elementApi: n
             })(t);
-        }, e.getMaxDurationItemIndex = Ft, e.getActionListProgress = function (t, e) {
+        }, e.getMaxDurationItemIndex = Mt, e.getActionListProgress = function (t, e) {
             var n = t.actionItemGroups, r = t.useFirstGroupAsInitialState, i = e.actionItem, o = e.verboseTimeElapsed, a = void 0 === o ? 0 : o, u = 0, c = 0;
             return n.forEach(function (t, e) {
                 if (!r || 0 !== e) {
-                    var n = t.actionItems, o = n[Ft(n)], s = o.config, f = o.actionTypeId;
+                    var n = t.actionItems, o = n[Mt(n)], s = o.config, f = o.actionTypeId;
                     i.id === o.id && (c = u + a);
-                    var l = Ot(f) === Q ? 0 : s.duration;
+                    var l = bt(f) === K ? 0 : s.duration;
                     u += s.delay + l;
                 }
-            }), u > 0 ? (0, _.optimizeFloat)(c / u) : 0;
+            }), u > 0 ? (0, g.optimizeFloat)(c / u) : 0;
         }, e.reduceListToGroup = function (t) {
             var e = t.actionList, n = t.actionItemId, r = t.rawData, i = e.actionItemGroups, o = e.continuousParameterGroups, a = [], u = function (t) {
-                    return a.push((0, v.mergeIn)(t, ['config'], {
-                        delay: '0',
-                        duration: '0'
+                    return a.push((0, p.mergeIn)(t, ['config'], {
+                        delay: 0,
+                        duration: 0
                     })), t.id === n;
                 };
             return i && i.some(function (t) {
@@ -4830,35 +5326,35 @@
                 return t.continuousActionGroups.some(function (t) {
                     return t.actionItems.some(u);
                 });
-            }), (0, v.setIn)(r, ['actionLists'], (0, c.default)({}, e.id, {
+            }), (0, p.setIn)(r, ['actionLists'], (0, c.default)({}, e.id, {
                 id: e.id,
                 actionItemGroups: [{ actionItems: a }]
             }));
         }, e.shouldNamespaceEventParameter = function (t, e) {
             var n = e.basedOn;
-            return t === E.EventTypeConsts.SCROLLING_IN_VIEW && (n === E.EventBasedOn.ELEMENT || null == n) || t === E.EventTypeConsts.MOUSE_MOVE && n === E.EventBasedOn.ELEMENT;
+            return t === h.EventTypeConsts.SCROLLING_IN_VIEW && (n === h.EventBasedOn.ELEMENT || null == n) || t === h.EventTypeConsts.MOUSE_MOVE && n === h.EventBasedOn.ELEMENT;
         }, e.getNamespacedParameterId = function (t, e) {
-            return t + z + e;
+            return t + H + e;
         }, e.shouldAllowMediaQuery = function (t, e) {
             if (null == e)
                 return !0;
             return -1 !== t.indexOf(e);
         }, e.mediaQueriesEqual = function (t, e) {
-            return (0, h.default)(t && t.sort(), e && e.sort());
+            return (0, v.default)(t && t.sort(), e && e.sort());
         }, e.stringifyTarget = function (t) {
             if ('string' == typeof t)
                 return t;
             var e = t.id, n = void 0 === e ? '' : e, r = t.selector, i = void 0 === r ? '' : r, o = t.useEventTarget;
-            return n + Y + i + Y + (void 0 === o ? '' : o);
+            return n + z + i + z + (void 0 === o ? '' : o);
         }, e.getItemConfigByKey = void 0;
-        var f = s(n(195)), l = s(n(196)), d = s(n(202)), p = s(n(25)), v = n(13), h = s(n(90)), E = n(2), _ = n(85), g = n(87), y = n(31), I = E.IX2EngineConstants, m = I.BACKGROUND, T = I.TRANSFORM, O = I.TRANSLATE_3D, A = I.SCALE_3D, b = I.ROTATE_X, S = I.ROTATE_Y, w = I.ROTATE_Z, R = I.SKEW, N = I.PRESERVE_3D, C = I.FLEX, L = I.OPACITY, x = I.FILTER, D = I.WIDTH, P = I.HEIGHT, M = I.BACKGROUND_COLOR, F = I.BORDER_COLOR, j = I.COLOR, X = I.CHILDREN, G = I.IMMEDIATE_CHILDREN, V = I.SIBLINGS, k = I.PARENT, U = I.DISPLAY, B = I.WILL_CHANGE, W = I.AUTO, H = I.COMMA_DELIMITER, z = I.COLON_DELIMITER, Y = I.BAR_DELIMITER, K = I.RENDER_TRANSFORM, Q = I.RENDER_GENERAL, q = I.RENDER_STYLE, $ = I.RENDER_PLUGIN, Z = E.ActionTypeConsts, J = Z.TRANSFORM_MOVE, tt = Z.TRANSFORM_SCALE, et = Z.TRANSFORM_ROTATE, nt = Z.TRANSFORM_SKEW, rt = Z.STYLE_OPACITY, it = Z.STYLE_FILTER, ot = Z.STYLE_SIZE, at = Z.STYLE_BACKGROUND_COLOR, ut = Z.STYLE_BORDER, ct = Z.STYLE_TEXT_COLOR, st = Z.GENERAL_DISPLAY, ft = 'OBJECT_VALUE', lt = function (t) {
+        var f = s(n(251)), l = s(n(252)), d = s(n(258)), p = n(19), v = s(n(113)), h = n(2), g = n(108), E = n(110), m = n(44), y = h.IX2EngineConstants, _ = y.BACKGROUND, I = y.TRANSFORM, b = y.TRANSLATE_3D, w = y.SCALE_3D, T = y.ROTATE_X, O = y.ROTATE_Y, A = y.ROTATE_Z, x = y.SKEW, S = y.PRESERVE_3D, R = y.FLEX, C = y.OPACITY, N = y.FILTER, L = y.WIDTH, D = y.HEIGHT, P = y.BACKGROUND_COLOR, M = y.BORDER_COLOR, j = y.COLOR, F = y.CHILDREN, k = y.IMMEDIATE_CHILDREN, X = y.SIBLINGS, G = y.PARENT, U = y.DISPLAY, V = y.WILL_CHANGE, W = y.AUTO, B = y.COMMA_DELIMITER, H = y.COLON_DELIMITER, z = y.BAR_DELIMITER, Y = y.RENDER_TRANSFORM, K = y.RENDER_GENERAL, Q = y.RENDER_STYLE, q = y.RENDER_PLUGIN, $ = h.ActionTypeConsts, Z = $.TRANSFORM_MOVE, J = $.TRANSFORM_SCALE, tt = $.TRANSFORM_ROTATE, et = $.TRANSFORM_SKEW, nt = $.STYLE_OPACITY, rt = $.STYLE_FILTER, it = $.STYLE_SIZE, ot = $.STYLE_BACKGROUND_COLOR, at = $.STYLE_BORDER, ut = $.STYLE_TEXT_COLOR, ct = $.GENERAL_DISPLAY, st = 'OBJECT_VALUE', ft = function (t) {
                 return t.trim();
-            }, dt = Object.freeze((r = {}, (0, c.default)(r, at, M), (0, c.default)(r, ut, F), (0, c.default)(r, ct, j), r)), pt = Object.freeze((i = {}, (0, c.default)(i, y.TRANSFORM_PREFIXED, T), (0, c.default)(i, M, m), (0, c.default)(i, L, L), (0, c.default)(i, x, x), (0, c.default)(i, D, D), (0, c.default)(i, P, P), i)), vt = {}, ht = 1;
-        var Et = 1;
-        var _t = function (t, e) {
+            }, lt = Object.freeze((r = {}, (0, c.default)(r, ot, P), (0, c.default)(r, at, M), (0, c.default)(r, ut, j), r)), dt = Object.freeze((i = {}, (0, c.default)(i, m.TRANSFORM_PREFIXED, I), (0, c.default)(i, P, _), (0, c.default)(i, C, C), (0, c.default)(i, N, N), (0, c.default)(i, L, L), (0, c.default)(i, D, D), i)), pt = {}, vt = 1;
+        var ht = 1;
+        var gt = function (t, e) {
             return t === e;
         };
-        function gt(t) {
+        function Et(t) {
             var e = (0, u.default)(t);
             return 'string' === e ? { id: t } : null != t && 'object' === e ? {
                 id: t.id,
@@ -4869,69 +5365,80 @@
                 useEventTarget: t.useEventTarget
             } : {};
         }
-        function yt(t) {
-            var e = t.config, n = t.event, r = t.eventTarget, i = t.elementRoot, o = t.elementApi;
-            if (!o)
+        function mt(t) {
+            var e, n, r, i = t.config, o = t.event, a = t.eventTarget, u = t.elementRoot, c = t.elementApi;
+            if (!c)
                 throw new Error('IX2 missing elementApi');
-            var a = o.getValidDocument, u = o.getQuerySelector, c = o.queryDocument, s = o.getChildElements, f = o.getSiblingElements, l = o.matchSelector, d = o.elementContains, v = o.isSiblingNode, h = e.target;
-            if (!h)
+            var s = i.targets;
+            if (Array.isArray(s) && s.length > 0)
+                return s.reduce(function (t, e) {
+                    return t.concat(mt({
+                        config: { target: e },
+                        event: o,
+                        eventTarget: a,
+                        elementRoot: u,
+                        elementApi: c
+                    }));
+                }, []);
+            var f = c.getValidDocument, l = c.getQuerySelector, d = c.queryDocument, p = c.getChildElements, v = c.getSiblingElements, g = c.matchSelector, E = c.elementContains, y = c.isSiblingNode, _ = i.target;
+            if (!_)
                 return [];
-            var _ = gt(h), g = _.id, I = _.objectId, m = _.selector, T = _.selectorGuids, O = _.appliesTo, A = _.useEventTarget;
-            if (I)
-                return [vt[I] || (vt[I] = {})];
-            if (O === E.EventAppliesTo.PAGE) {
-                var b = a(g);
-                return b ? [b] : [];
+            var I = Et(_), b = I.id, w = I.objectId, T = I.selector, O = I.selectorGuids, A = I.appliesTo, x = I.useEventTarget;
+            if (w)
+                return [pt[w] || (pt[w] = {})];
+            if (A === h.EventAppliesTo.PAGE) {
+                var S = f(b);
+                return S ? [S] : [];
             }
-            var S, w, R, N = (0, p.default)(n, 'action.config.affectedElements', {})[g || m] || {}, C = Boolean(N.id || N.selector), L = n && u(gt(n.target));
-            if (C ? (S = N.limitAffectedElements, w = L, R = u(N)) : w = R = u({
-                    id: g,
-                    selector: m,
-                    selectorGuids: T
-                }), n && A) {
-                var x = r && (R || !0 === A) ? [r] : c(L);
-                if (R) {
-                    if (A === k)
-                        return c(R).filter(function (t) {
-                            return x.some(function (e) {
-                                return d(t, e);
+            var R, C, N, L = (null !== (e = null == o ? void 0 : null === (n = o.action) || void 0 === n ? void 0 : null === (r = n.config) || void 0 === r ? void 0 : r.affectedElements) && void 0 !== e ? e : {})[b || T] || {}, D = Boolean(L.id || L.selector), P = o && l(Et(o.target));
+            if (D ? (R = L.limitAffectedElements, C = P, N = l(L)) : C = N = l({
+                    id: b,
+                    selector: T,
+                    selectorGuids: O
+                }), o && x) {
+                var M = a && (N || !0 === x) ? [a] : d(P);
+                if (N) {
+                    if (x === G)
+                        return d(N).filter(function (t) {
+                            return M.some(function (e) {
+                                return E(t, e);
                             });
                         });
-                    if (A === X)
-                        return c(R).filter(function (t) {
-                            return x.some(function (e) {
-                                return d(e, t);
+                    if (x === F)
+                        return d(N).filter(function (t) {
+                            return M.some(function (e) {
+                                return E(e, t);
                             });
                         });
-                    if (A === V)
-                        return c(R).filter(function (t) {
-                            return x.some(function (e) {
-                                return v(e, t);
+                    if (x === X)
+                        return d(N).filter(function (t) {
+                            return M.some(function (e) {
+                                return y(e, t);
                             });
                         });
                 }
-                return x;
+                return M;
             }
-            return null == w || null == R ? [] : y.IS_BROWSER_ENV && i ? c(R).filter(function (t) {
-                return i.contains(t);
-            }) : S === X ? c(w, R) : S === G ? s(c(w)).filter(l(R)) : S === V ? f(c(w)).filter(l(R)) : c(R);
+            return null == C || null == N ? [] : m.IS_BROWSER_ENV && u ? d(N).filter(function (t) {
+                return u.contains(t);
+            }) : R === F ? d(C, N) : R === k ? p(d(C)).filter(g(N)) : R === X ? v(d(C)).filter(g(N)) : d(N);
         }
-        var It = /px/, mt = function (t, e) {
+        var yt = /px/, _t = function (t, e) {
                 return e.reduce(function (t, e) {
-                    return null == t[e.type] && (t[e.type] = bt[e.type]), t;
+                    return null == t[e.type] && (t[e.type] = Tt[e.type]), t;
                 }, t || {});
             };
-        var Tt = function (t, e) {
+        var It = function (t, e) {
             return e && (t[e.type] = e.value || 0), t;
         };
-        function Ot(t) {
-            return /^TRANSFORM_/.test(t) ? K : /^STYLE_/.test(t) ? q : /^GENERAL_/.test(t) ? Q : /^PLUGIN_/.test(t) ? $ : void 0;
+        function bt(t) {
+            return /^TRANSFORM_/.test(t) ? Y : /^STYLE_/.test(t) ? Q : /^GENERAL_/.test(t) ? K : /^PLUGIN_/.test(t) ? q : void 0;
         }
         e.getItemConfigByKey = function (t, e, n) {
-            if ((0, g.isPluginType)(t))
-                return (0, g.getPluginConfig)(t)(n, e);
+            if ((0, E.isPluginType)(t))
+                return (0, E.getPluginConfig)(t)(n, e);
             switch (t) {
-            case it:
+            case rt:
                 var r = (0, d.default)(n.filters, function (t) {
                     return t.type === e;
                 });
@@ -4940,31 +5447,31 @@
                 return n[e];
             }
         };
-        var At = (o = {}, (0, c.default)(o, J, Object.freeze({
-                xValue: '0',
-                yValue: '0',
-                zValue: '0'
-            })), (0, c.default)(o, tt, Object.freeze({
+        var wt = (o = {}, (0, c.default)(o, Z, Object.freeze({
+                xValue: 0,
+                yValue: 0,
+                zValue: 0
+            })), (0, c.default)(o, J, Object.freeze({
                 xValue: 1,
                 yValue: 1,
                 zValue: 1
+            })), (0, c.default)(o, tt, Object.freeze({
+                xValue: 0,
+                yValue: 0,
+                zValue: 0
             })), (0, c.default)(o, et, Object.freeze({
-                xValue: '0',
-                yValue: '0',
-                zValue: '0'
-            })), (0, c.default)(o, nt, Object.freeze({
-                xValue: '0',
-                yValue: '0'
-            })), o), bt = Object.freeze({
-                blur: '0',
-                'hue-rotate': '0',
-                invert: '0',
-                grayscale: '0',
+                xValue: 0,
+                yValue: 0
+            })), o), Tt = Object.freeze({
+                blur: 0,
+                'hue-rotate': 0,
+                invert: 0,
+                grayscale: 0,
                 saturate: 100,
-                sepia: '0',
+                sepia: 0,
                 contrast: 100,
                 brightness: 100
-            }), St = function (t, e) {
+            }), Ot = function (t, e) {
                 var n = (0, d.default)(e.filters, function (e) {
                     return e.type === t;
                 });
@@ -4978,43 +5485,43 @@
                 default:
                     return '%';
                 }
-            }, wt = Object.keys(At);
-        var Rt = /^rgb/, Nt = RegExp('rgba?'.concat('\\(([^)]+)\\)'));
-        function Ct(t, e, n) {
-            if (y.IS_BROWSER_ENV) {
-                var r = pt[e];
+            }, At = Object.keys(wt);
+        var xt = /^rgb/, St = RegExp('rgba?'.concat('\\(([^)]+)\\)'));
+        function Rt(t, e, n) {
+            if (m.IS_BROWSER_ENV) {
+                var r = dt[e];
                 if (r) {
-                    var i = n.getStyle, o = n.setStyle, a = i(t, B);
+                    var i = n.getStyle, o = n.setStyle, a = i(t, V);
                     if (a) {
-                        var u = a.split(H).map(lt);
-                        -1 === u.indexOf(r) && o(t, B, u.concat(r).join(H));
+                        var u = a.split(B).map(ft);
+                        -1 === u.indexOf(r) && o(t, V, u.concat(r).join(B));
                     } else
-                        o(t, B, r);
+                        o(t, V, r);
                 }
             }
         }
-        function Lt(t, e, n) {
-            if (y.IS_BROWSER_ENV) {
-                var r = pt[e];
+        function Ct(t, e, n) {
+            if (m.IS_BROWSER_ENV) {
+                var r = dt[e];
                 if (r) {
-                    var i = n.getStyle, o = n.setStyle, a = i(t, B);
-                    a && -1 !== a.indexOf(r) && o(t, B, a.split(H).map(lt).filter(function (t) {
+                    var i = n.getStyle, o = n.setStyle, a = i(t, V);
+                    a && -1 !== a.indexOf(r) && o(t, V, a.split(B).map(ft).filter(function (t) {
                         return t !== r;
-                    }).join(H));
+                    }).join(B));
                 }
             }
         }
-        function xt(t) {
+        function Nt(t) {
             var e = t.actionList, n = void 0 === e ? {} : e, r = t.event, i = t.elementApi, o = n.actionItemGroups, a = n.continuousParameterGroups;
             o && o.forEach(function (t) {
-                Dt({
+                Lt({
                     actionGroup: t,
                     event: r,
                     elementApi: i
                 });
             }), a && a.forEach(function (t) {
                 t.continuousActionGroups.forEach(function (t) {
-                    Dt({
+                    Lt({
                         actionGroup: t,
                         event: r,
                         elementApi: i
@@ -5022,55 +5529,55 @@
                 });
             });
         }
-        function Dt(t) {
+        function Lt(t) {
             var e = t.actionGroup, n = t.event, r = t.elementApi;
             e.actionItems.forEach(function (t) {
                 var e, i = t.actionTypeId, o = t.config;
-                e = (0, g.isPluginType)(i) ? (0, g.clearPlugin)(i) : Pt({
-                    effect: Mt,
+                e = (0, E.isPluginType)(i) ? (0, E.clearPlugin)(i) : Dt({
+                    effect: Pt,
                     actionTypeId: i,
                     elementApi: r
-                }), yt({
+                }), mt({
                     config: o,
                     event: n,
                     elementApi: r
                 }).forEach(e);
             });
         }
-        var Pt = function (t) {
+        var Dt = function (t) {
             var e = t.effect, n = t.actionTypeId, r = t.elementApi;
             return function (t) {
                 switch (n) {
+                case Z:
                 case J:
                 case tt:
                 case et:
-                case nt:
-                    e(t, y.TRANSFORM_PREFIXED, r);
-                    break;
-                case it:
-                    e(t, x, r);
+                    e(t, m.TRANSFORM_PREFIXED, r);
                     break;
                 case rt:
-                    e(t, L, r);
+                    e(t, N, r);
+                    break;
+                case nt:
+                    e(t, C, r);
+                    break;
+                case it:
+                    e(t, L, r), e(t, D, r);
                     break;
                 case ot:
-                    e(t, D, r), e(t, P, r);
-                    break;
                 case at:
                 case ut:
-                case ct:
-                    e(t, dt[n], r);
+                    e(t, lt[n], r);
                     break;
-                case st:
+                case ct:
                     e(t, U, r);
                 }
             };
         };
-        function Mt(t, e, n) {
+        function Pt(t, e, n) {
             var r = n.setStyle;
-            Lt(t, e, n), r(t, e, ''), e === y.TRANSFORM_PREFIXED && r(t, y.TRANSFORM_STYLE_PREFIXED, '');
+            Ct(t, e, n), r(t, e, ''), e === m.TRANSFORM_PREFIXED && r(t, m.TRANSFORM_STYLE_PREFIXED, '');
         }
-        function Ft(t) {
+        function Mt(t) {
             var e = 0, n = 0;
             return t.forEach(function (t, r) {
                 var i = t.config, o = i.delay + i.duration;
@@ -5084,7 +5591,7 @@
         };
     },
     function (t, e, n) {
-        var r = n(197), i = n(88), o = n(5), a = n(201), u = n(1);
+        var r = n(253), i = n(111), o = n(7), a = n(257), u = n(1);
         t.exports = function (t, e, n) {
             var c = u(t) ? r : a, s = arguments.length < 3;
             return c(t, o(e, 4), n, s, i);
@@ -5099,7 +5606,7 @@
         };
     },
     function (t, e, n) {
-        var r = n(199)();
+        var r = n(255)();
         t.exports = r;
     },
     function (t, e) {
@@ -5115,7 +5622,7 @@
         };
     },
     function (t, e, n) {
-        var r = n(11);
+        var r = n(12);
         t.exports = function (t, e) {
             return function (n, i) {
                 if (null == n)
@@ -5135,11 +5642,11 @@
         };
     },
     function (t, e, n) {
-        var r = n(62)(n(203));
+        var r = n(86)(n(259));
         t.exports = r;
     },
     function (t, e, n) {
-        var r = n(82), i = n(5), o = n(46), a = Math.max, u = Math.min;
+        var r = n(104), i = n(7), o = n(105), a = Math.max, u = Math.min;
         t.exports = function (t, e, n) {
             var c = null == t ? 0 : t.length;
             if (!c)
@@ -5176,52 +5683,52 @@
     function (t, e, n) {
         'use strict';
         Object.defineProperty(e, '__esModule', { value: !0 }), e.ixInstances = void 0;
-        var r = n(2), i = n(9), o = n(13), a = r.IX2EngineActionTypes, u = a.IX2_RAW_DATA_IMPORTED, c = a.IX2_SESSION_STOPPED, s = a.IX2_INSTANCE_ADDED, f = a.IX2_INSTANCE_STARTED, l = a.IX2_INSTANCE_REMOVED, d = a.IX2_ANIMATION_FRAME_CHANGED, p = i.IX2EasingUtils, v = p.optimizeFloat, h = p.applyEasing, E = p.createBezierEasing, _ = r.IX2EngineConstants.RENDER_GENERAL, g = i.IX2VanillaUtils, y = g.getItemConfigByKey, I = g.getRenderType, m = g.getStyleProp, T = function (t, e) {
+        var r = n(2), i = n(10), o = n(19), a = r.IX2EngineActionTypes, u = a.IX2_RAW_DATA_IMPORTED, c = a.IX2_SESSION_STOPPED, s = a.IX2_INSTANCE_ADDED, f = a.IX2_INSTANCE_STARTED, l = a.IX2_INSTANCE_REMOVED, d = a.IX2_ANIMATION_FRAME_CHANGED, p = i.IX2EasingUtils, v = p.optimizeFloat, h = p.applyEasing, g = p.createBezierEasing, E = r.IX2EngineConstants.RENDER_GENERAL, m = i.IX2VanillaUtils, y = m.getItemConfigByKey, _ = m.getRenderType, I = m.getStyleProp, b = function (t, e) {
                 var n = t.position, r = t.parameterId, i = t.actionGroups, a = t.destinationKeys, u = t.smoothing, c = t.restingValue, s = t.actionTypeId, f = t.customEasingFn, l = e.payload.parameters, d = Math.max(1 - u, 0.01), p = l[r];
                 null == p && (d = 1, p = c);
-                var E, _, g, I, m = Math.max(p, 0) || 0, T = v(m - n), O = v(n + T * d), A = 100 * O;
-                if (O === n && t.current)
+                var g, E, m, _, I = Math.max(p, 0) || 0, b = v(I - n), w = v(n + b * d), T = 100 * w;
+                if (w === n && t.current)
                     return t;
-                for (var b = 0, S = i.length; b < S; b++) {
-                    var w = i[b], R = w.keyframe, N = w.actionItems;
-                    if (0 === b && (E = N[0]), A >= R) {
-                        E = N[0];
-                        var C = i[b + 1], L = C && A !== R;
-                        _ = L ? C.actionItems[0] : null, L && (g = R / 100, I = (C.keyframe - R) / 100);
+                for (var O = 0, A = i.length; O < A; O++) {
+                    var x = i[O], S = x.keyframe, R = x.actionItems;
+                    if (0 === O && (g = R[0]), T >= S) {
+                        g = R[0];
+                        var C = i[O + 1], N = C && T !== S;
+                        E = N ? C.actionItems[0] : null, N && (m = S / 100, _ = (C.keyframe - S) / 100);
                     }
                 }
-                var x = {};
-                if (E && !_)
+                var L = {};
+                if (g && !E)
                     for (var D = 0, P = a.length; D < P; D++) {
                         var M = a[D];
-                        x[M] = y(s, M, E.config);
+                        L[M] = y(s, M, g.config);
                     }
-                else if (E && _ && void 0 !== g && void 0 !== I)
-                    for (var F = (O - g) / I, j = E.config.easing, X = h(j, F, f), G = 0, V = a.length; G < V; G++) {
-                        var k = a[G], U = y(s, k, E.config), B = (y(s, k, _.config) - U) * X + U;
-                        x[k] = B;
+                else if (g && E && void 0 !== m && void 0 !== _)
+                    for (var j = (w - m) / _, F = g.config.easing, k = h(F, j, f), X = 0, G = a.length; X < G; X++) {
+                        var U = a[X], V = y(s, U, g.config), W = (y(s, U, E.config) - V) * k + V;
+                        L[U] = W;
                     }
                 return (0, o.merge)(t, {
-                    position: O,
-                    current: x
+                    position: w,
+                    current: L
                 });
-            }, O = function (t, e) {
-                var n = t, r = n.active, i = n.origin, a = n.start, u = n.immediate, c = n.renderType, s = n.verbose, f = n.actionItem, l = n.destination, d = n.destinationKeys, p = n.pluginDuration, E = n.instanceDelay, g = n.customEasingFn, y = f.config.easing, I = f.config, m = I.duration, T = I.delay;
-                null != p && (m = p), T = null != E ? E : T, c === _ ? m = 0 : u && (m = T = 0);
-                var O = e.payload.now;
+            }, w = function (t, e) {
+                var n = t, r = n.active, i = n.origin, a = n.start, u = n.immediate, c = n.renderType, s = n.verbose, f = n.actionItem, l = n.destination, d = n.destinationKeys, p = n.pluginDuration, g = n.instanceDelay, m = n.customEasingFn, y = f.config.easing, _ = f.config, I = _.duration, b = _.delay;
+                null != p && (I = p), b = null != g ? g : b, c === E ? I = 0 : u && (I = b = 0);
+                var w = e.payload.now;
                 if (r && i) {
-                    var A = O - (a + T);
+                    var T = w - (a + b);
                     if (s) {
-                        var b = O - a, S = m + T, w = v(Math.min(Math.max(0, b / S), 1));
-                        t = (0, o.set)(t, 'verboseTimeElapsed', S * w);
+                        var O = w - a, A = I + b, x = v(Math.min(Math.max(0, O / A), 1));
+                        t = (0, o.set)(t, 'verboseTimeElapsed', A * x);
                     }
-                    if (A < 0)
+                    if (T < 0)
                         return t;
-                    var R = v(Math.min(Math.max(0, A / m), 1)), N = h(y, R, g), C = {}, L = null;
-                    return d.length && (L = d.reduce(function (t, e) {
-                        var n = l[e], r = parseFloat(i[e]) || 0, o = (parseFloat(n) - r) * N + r;
+                    var S = v(Math.min(Math.max(0, T / I), 1)), R = h(y, S, m), C = {}, N = null;
+                    return d.length && (N = d.reduce(function (t, e) {
+                        var n = l[e], r = parseFloat(i[e]) || 0, o = (parseFloat(n) - r) * R + r;
                         return t[e] = o, t;
-                    }, {})), C.current = L, C.position = R, 1 === R && (C.active = !1, C.complete = !0), (0, o.merge)(t, C);
+                    }, {})), C.current = N, C.position = S, 1 === S && (C.active = !1, C.complete = !0), (0, o.merge)(t, C);
                 }
                 return t;
             };
@@ -5233,60 +5740,60 @@
             case c:
                 return Object.freeze({});
             case s:
-                var n = e.payload, r = n.instanceId, i = n.elementId, a = n.actionItem, p = n.eventId, v = n.eventTarget, h = n.eventStateKey, _ = n.actionListId, g = n.groupIndex, y = n.isCarrier, A = n.origin, b = n.destination, S = n.immediate, w = n.verbose, R = n.continuous, N = n.parameterId, C = n.actionGroups, L = n.smoothing, x = n.restingValue, D = n.pluginInstance, P = n.pluginDuration, M = n.instanceDelay, F = a.actionTypeId, j = I(F), X = m(j, F), G = Object.keys(b).filter(function (t) {
-                        return null != b[t];
-                    }), V = a.config.easing;
+                var n = e.payload, r = n.instanceId, i = n.elementId, a = n.actionItem, p = n.eventId, v = n.eventTarget, h = n.eventStateKey, E = n.actionListId, m = n.groupIndex, y = n.isCarrier, T = n.origin, O = n.destination, A = n.immediate, x = n.verbose, S = n.continuous, R = n.parameterId, C = n.actionGroups, N = n.smoothing, L = n.restingValue, D = n.pluginInstance, P = n.pluginDuration, M = n.instanceDelay, j = a.actionTypeId, F = _(j), k = I(F, j), X = Object.keys(O).filter(function (t) {
+                        return null != O[t];
+                    }), G = a.config.easing;
                 return (0, o.set)(t, r, {
                     id: r,
                     elementId: i,
                     active: !1,
-                    position: '0',
-                    start: '0',
-                    origin: A,
-                    destination: b,
-                    destinationKeys: G,
-                    immediate: S,
-                    verbose: w,
+                    position: 0,
+                    start: 0,
+                    origin: T,
+                    destination: O,
+                    destinationKeys: X,
+                    immediate: A,
+                    verbose: x,
                     current: null,
                     actionItem: a,
-                    actionTypeId: F,
+                    actionTypeId: j,
                     eventId: p,
                     eventTarget: v,
                     eventStateKey: h,
-                    actionListId: _,
-                    groupIndex: g,
-                    renderType: j,
+                    actionListId: E,
+                    groupIndex: m,
+                    renderType: F,
                     isCarrier: y,
-                    styleProp: X,
-                    continuous: R,
-                    parameterId: N,
+                    styleProp: k,
+                    continuous: S,
+                    parameterId: R,
                     actionGroups: C,
-                    smoothing: L,
-                    restingValue: x,
+                    smoothing: N,
+                    restingValue: L,
                     pluginInstance: D,
                     pluginDuration: P,
                     instanceDelay: M,
-                    customEasingFn: Array.isArray(V) && 4 === V.length ? E(V) : void 0
+                    customEasingFn: Array.isArray(G) && 4 === G.length ? g(G) : void 0
                 });
             case f:
-                var k = e.payload, U = k.instanceId, B = k.time;
-                return (0, o.mergeIn)(t, [U], {
+                var U = e.payload, V = U.instanceId, W = U.time;
+                return (0, o.mergeIn)(t, [V], {
                     active: !0,
                     complete: !1,
-                    start: B
+                    start: W
                 });
             case l:
-                var W = e.payload.instanceId;
-                if (!t[W])
+                var B = e.payload.instanceId;
+                if (!t[B])
                     return t;
                 for (var H = {}, z = Object.keys(t), Y = z.length, K = 0; K < Y; K++) {
                     var Q = z[K];
-                    Q !== W && (H[Q] = t[Q]);
+                    Q !== B && (H[Q] = t[Q]);
                 }
                 return H;
             case d:
                 for (var q = t, $ = Object.keys(t), Z = $.length, J = 0; J < Z; J++) {
-                    var tt = $[J], et = t[tt], nt = et.continuous ? T : O;
+                    var tt = $[J], et = t[tt], nt = et.continuous ? b : w;
                     q = (0, o.set)(q, tt, nt(et, e));
                 }
                 return q;
@@ -5325,7 +5832,7 @@
         };
     },
     function (t, e, n) {
-        var r = n(40), i = n(42), o = n(11), a = n(210), u = n(211), c = '[object Map]', s = '[object Set]';
+        var r = n(53), i = n(55), o = n(12), a = n(266), u = n(267), c = '[object Map]', s = '[object Set]';
         t.exports = function (t) {
             if (null == t)
                 return 0;
@@ -5336,19 +5843,19 @@
         };
     },
     function (t, e, n) {
-        var r = n(10), i = n(1), o = n(7), a = '[object String]';
+        var r = n(11), i = n(1), o = n(9), a = '[object String]';
         t.exports = function (t) {
             return 'string' == typeof t || !i(t) && o(t) && r(t) == a;
         };
     },
     function (t, e, n) {
-        var r = n(212), i = n(213), o = n(214);
+        var r = n(268), i = n(269), o = n(270);
         t.exports = function (t) {
             return i(t) ? o(t) : r(t);
         };
     },
     function (t, e, n) {
-        var r = n(81)('length');
+        var r = n(103)('length');
         t.exports = r;
     },
     function (t, e) {
@@ -5376,7 +5883,7 @@
         };
     },
     function (t, e, n) {
-        var r = n(5), i = n(216), o = n(217);
+        var r = n(7), i = n(272), o = n(273);
         t.exports = function (t, e) {
             return o(t, i(r(e)));
         };
@@ -5403,7 +5910,7 @@
         };
     },
     function (t, e, n) {
-        var r = n(80), i = n(5), o = n(218), a = n(221);
+        var r = n(102), i = n(7), o = n(274), a = n(277);
         t.exports = function (t, e) {
             if (null == t)
                 return {};
@@ -5416,7 +5923,7 @@
         };
     },
     function (t, e, n) {
-        var r = n(43), i = n(219), o = n(26);
+        var r = n(57), i = n(275), o = n(35);
         t.exports = function (t, e, n) {
             for (var a = -1, u = e.length, c = {}; ++a < u;) {
                 var s = e[a], f = r(t, s);
@@ -5426,12 +5933,14 @@
         };
     },
     function (t, e, n) {
-        var r = n(220), i = n(26), o = n(37), a = n(4), u = n(15);
+        var r = n(276), i = n(35), o = n(50), a = n(6), u = n(21);
         t.exports = function (t, e, n, c) {
             if (!a(t))
                 return t;
             for (var s = -1, f = (e = i(e, t)).length, l = f - 1, d = t; null != d && ++s < f;) {
                 var p = u(e[s]), v = n;
+                if ('__proto__' === p || 'constructor' === p || 'prototype' === p)
+                    return t;
                 if (s != l) {
                     var h = d[p];
                     void 0 === (v = c ? c(h, p, d) : void 0) && (v = a(h) ? h : o(e[s + 1]) ? [] : {});
@@ -5442,20 +5951,20 @@
         };
     },
     function (t, e, n) {
-        var r = n(92), i = n(32), o = Object.prototype.hasOwnProperty;
+        var r = n(115), i = n(45), o = Object.prototype.hasOwnProperty;
         t.exports = function (t, e, n) {
             var a = t[e];
             o.call(t, e) && i(a, n) && (void 0 !== n || e in t) || r(t, e, n);
         };
     },
     function (t, e, n) {
-        var r = n(69), i = n(222), o = n(224);
+        var r = n(93), i = n(278), o = n(280);
         t.exports = function (t) {
             return r(t, o, i);
         };
     },
     function (t, e, n) {
-        var r = n(35), i = n(223), o = n(70), a = n(71), u = Object.getOwnPropertySymbols ? function (t) {
+        var r = n(48), i = n(279), o = n(94), a = n(95), u = Object.getOwnPropertySymbols ? function (t) {
                 for (var e = []; t;)
                     r(e, o(t)), t = i(t);
                 return e;
@@ -5463,17 +5972,17 @@
         t.exports = u;
     },
     function (t, e, n) {
-        var r = n(74)(Object.getPrototypeOf, Object);
+        var r = n(98)(Object.getPrototypeOf, Object);
         t.exports = r;
     },
     function (t, e, n) {
-        var r = n(72), i = n(225), o = n(11);
+        var r = n(96), i = n(281), o = n(12);
         t.exports = function (t) {
             return o(t) ? r(t, !0) : i(t);
         };
     },
     function (t, e, n) {
-        var r = n(4), i = n(41), o = n(226), a = Object.prototype.hasOwnProperty;
+        var r = n(6), i = n(54), o = n(282), a = Object.prototype.hasOwnProperty;
         t.exports = function (t) {
             if (!r(t))
                 return o(t);
@@ -5493,7 +6002,7 @@
         };
     },
     function (t, e, n) {
-        var r = n(40), i = n(42), o = n(24), a = n(1), u = n(11), c = n(36), s = n(41), f = n(38), l = '[object Map]', d = '[object Set]', p = Object.prototype.hasOwnProperty;
+        var r = n(53), i = n(55), o = n(34), a = n(1), u = n(12), c = n(49), s = n(54), f = n(51), l = '[object Map]', d = '[object Set]', p = Object.prototype.hasOwnProperty;
         t.exports = function (t) {
             if (null == t)
                 return !0;
@@ -5511,7 +6020,7 @@
         };
     },
     function (t, e, n) {
-        var r = n(92), i = n(89), o = n(5);
+        var r = n(115), i = n(112), o = n(7);
         t.exports = function (t, e) {
             var n = {};
             return e = o(e, 3), i(t, function (t, i, o) {
@@ -5520,7 +6029,7 @@
         };
     },
     function (t, e, n) {
-        var r = n(230), i = n(88), o = n(231), a = n(1);
+        var r = n(286), i = n(111), o = n(287), a = n(1);
         t.exports = function (t, e) {
             return (a(t) ? r : i)(t, o(e));
         };
@@ -5532,21 +6041,13 @@
         };
     },
     function (t, e, n) {
-        var r = n(45);
+        var r = n(59);
         t.exports = function (t) {
             return 'function' == typeof t ? t : r;
         };
     },
     function (t, e, n) {
-        var r = n(94), i = n(79), o = n(46), a = n(78);
-        t.exports = function (t, e, n) {
-            t = a(t), e = i(e);
-            var u = t.length, c = n = void 0 === n ? u : r(o(n), 0, u);
-            return (n -= e.length) >= 0 && t.slice(n, c) == e;
-        };
-    },
-    function (t, e, n) {
-        var r = n(234), i = n(4), o = 'Expected a function';
+        var r = n(289), i = n(6), o = 'Expected a function';
         t.exports = function (t, e, n) {
             var a = !0, u = !0;
             if ('function' != typeof t)
@@ -5559,59 +6060,59 @@
         };
     },
     function (t, e, n) {
-        var r = n(4), i = n(235), o = n(47), a = 'Expected a function', u = Math.max, c = Math.min;
+        var r = n(6), i = n(290), o = n(60), a = 'Expected a function', u = Math.max, c = Math.min;
         t.exports = function (t, e, n) {
-            var s, f, l, d, p, v, h = 0, E = !1, _ = !1, g = !0;
+            var s, f, l, d, p, v, h = 0, g = !1, E = !1, m = !0;
             if ('function' != typeof t)
                 throw new TypeError(a);
             function y(e) {
                 var n = s, r = f;
                 return s = f = void 0, h = e, d = t.apply(r, n);
             }
-            function I(t) {
+            function _(t) {
                 var n = t - v;
-                return void 0 === v || n >= e || n < 0 || _ && t - h >= l;
+                return void 0 === v || n >= e || n < 0 || E && t - h >= l;
             }
-            function m() {
+            function I() {
                 var t = i();
-                if (I(t))
-                    return T(t);
-                p = setTimeout(m, function (t) {
+                if (_(t))
+                    return b(t);
+                p = setTimeout(I, function (t) {
                     var n = e - (t - v);
-                    return _ ? c(n, l - (t - h)) : n;
+                    return E ? c(n, l - (t - h)) : n;
                 }(t));
             }
-            function T(t) {
-                return p = void 0, g && s ? y(t) : (s = f = void 0, d);
+            function b(t) {
+                return p = void 0, m && s ? y(t) : (s = f = void 0, d);
             }
-            function O() {
-                var t = i(), n = I(t);
+            function w() {
+                var t = i(), n = _(t);
                 if (s = arguments, f = this, v = t, n) {
                     if (void 0 === p)
                         return function (t) {
-                            return h = t, p = setTimeout(m, e), E ? y(t) : d;
+                            return h = t, p = setTimeout(I, e), g ? y(t) : d;
                         }(v);
-                    if (_)
-                        return clearTimeout(p), p = setTimeout(m, e), y(v);
+                    if (E)
+                        return clearTimeout(p), p = setTimeout(I, e), y(v);
                 }
-                return void 0 === p && (p = setTimeout(m, e)), d;
+                return void 0 === p && (p = setTimeout(I, e)), d;
             }
-            return e = o(e) || 0, r(n) && (E = !!n.leading, l = (_ = 'maxWait' in n) ? u(o(n.maxWait) || 0, e) : l, g = 'trailing' in n ? !!n.trailing : g), O.cancel = function () {
+            return e = o(e) || 0, r(n) && (g = !!n.leading, l = (E = 'maxWait' in n) ? u(o(n.maxWait) || 0, e) : l, m = 'trailing' in n ? !!n.trailing : m), w.cancel = function () {
                 void 0 !== p && clearTimeout(p), h = 0, s = v = f = p = void 0;
-            }, O.flush = function () {
-                return void 0 === p ? d : T(i());
-            }, O;
+            }, w.flush = function () {
+                return void 0 === p ? d : b(i());
+            }, w;
         };
     },
     function (t, e, n) {
-        var r = n(3);
+        var r = n(5);
         t.exports = function () {
             return r.Date.now();
         };
     },
     function (t, e, n) {
         'use strict';
-        var r = n(0)(n(16));
+        var r = n(0)(n(22));
         Object.defineProperty(e, '__esModule', { value: !0 }), e.setStyle = function (t, e, n) {
             t.style[e] = n;
         }, e.getStyle = function (t, e) {
@@ -5631,7 +6132,7 @@
                     if (r = i[1], o !== document.documentElement.getAttribute(l))
                         return null;
                 }
-                return '[data-w-id^="'.concat(r, '"]');
+                return '[data-w-id="'.concat(r, '"], [data-w-id^="').concat(r, '_instance"]');
             }
             return n;
         }, e.getValidDocument = function (t) {
@@ -5667,7 +6168,7 @@
                 return t instanceof Element ? s : f;
             return null;
         }, e.getClosestElement = void 0;
-        var i = n(9), o = n(2), a = i.IX2BrowserSupport.ELEMENT_MATCHES, u = o.IX2EngineConstants, c = u.IX2_ID_DELIMITER, s = u.HTML_ELEMENT, f = u.PLAIN_OBJECT, l = u.WF_PAGE;
+        var i = n(10), o = n(2), a = i.IX2BrowserSupport.ELEMENT_MATCHES, u = o.IX2EngineConstants, c = u.IX2_ID_DELIMITER, s = u.HTML_ELEMENT, f = u.PLAIN_OBJECT, l = u.WF_PAGE;
         var d = Element.prototype.closest ? function (t, e) {
             return document.documentElement.contains(t) ? t.closest(e) : null;
         } : function (t, e) {
@@ -5685,9 +6186,9 @@
     },
     function (t, e, n) {
         'use strict';
-        var r, i = n(0), o = i(n(17)), a = i(n(16)), u = n(0);
+        var r, i = n(0), o = i(n(27)), a = i(n(22)), u = n(0);
         Object.defineProperty(e, '__esModule', { value: !0 }), e.default = void 0;
-        var c, s, f, l = u(n(18)), d = u(n(238)), p = u(n(25)), v = u(n(257)), h = n(2), E = n(91), _ = n(48), g = n(9), y = h.EventTypeConsts, I = y.MOUSE_CLICK, m = y.MOUSE_SECOND_CLICK, T = y.MOUSE_DOWN, O = y.MOUSE_UP, A = y.MOUSE_OVER, b = y.MOUSE_OUT, S = y.DROPDOWN_CLOSE, w = y.DROPDOWN_OPEN, R = y.SLIDER_ACTIVE, N = y.SLIDER_INACTIVE, C = y.TAB_ACTIVE, L = y.TAB_INACTIVE, x = y.NAVBAR_CLOSE, D = y.NAVBAR_OPEN, P = y.MOUSE_MOVE, M = y.PAGE_SCROLL_DOWN, F = y.SCROLL_INTO_VIEW, j = y.SCROLL_OUT_OF_VIEW, X = y.PAGE_SCROLL_UP, G = y.SCROLLING_IN_VIEW, V = y.PAGE_FINISH, k = y.ECOMMERCE_CART_CLOSE, U = y.ECOMMERCE_CART_OPEN, B = y.PAGE_START, W = y.PAGE_SCROLL, H = 'COMPONENT_ACTIVE', z = 'COMPONENT_INACTIVE', Y = h.IX2EngineConstants.COLON_DELIMITER, K = g.IX2VanillaUtils.getNamespacedParameterId, Q = function (t) {
+        var c, s, f, l = u(n(28)), d = u(n(293)), p = u(n(56)), v = u(n(312)), h = n(2), g = n(114), E = n(61), m = n(10), y = h.EventTypeConsts, _ = y.MOUSE_CLICK, I = y.MOUSE_SECOND_CLICK, b = y.MOUSE_DOWN, w = y.MOUSE_UP, T = y.MOUSE_OVER, O = y.MOUSE_OUT, A = y.DROPDOWN_CLOSE, x = y.DROPDOWN_OPEN, S = y.SLIDER_ACTIVE, R = y.SLIDER_INACTIVE, C = y.TAB_ACTIVE, N = y.TAB_INACTIVE, L = y.NAVBAR_CLOSE, D = y.NAVBAR_OPEN, P = y.MOUSE_MOVE, M = y.PAGE_SCROLL_DOWN, j = y.SCROLL_INTO_VIEW, F = y.SCROLL_OUT_OF_VIEW, k = y.PAGE_SCROLL_UP, X = y.SCROLLING_IN_VIEW, G = y.PAGE_FINISH, U = y.ECOMMERCE_CART_CLOSE, V = y.ECOMMERCE_CART_OPEN, W = y.PAGE_START, B = y.PAGE_SCROLL, H = 'COMPONENT_ACTIVE', z = 'COMPONENT_INACTIVE', Y = h.IX2EngineConstants.COLON_DELIMITER, K = m.IX2VanillaUtils.getNamespacedParameterId, Q = function (t) {
                 return function (e) {
                     return !('object' !== (0, a.default)(e) || !t(e)) || e;
                 };
@@ -5708,19 +6209,19 @@
                 return null;
             }, tt = function (t, e) {
                 var n = t.store, r = t.event, i = t.element, o = t.eventStateKey, a = r.action, u = r.id, c = a.config, s = c.actionListId, f = c.autoStopEventId, l = J(n, f);
-                return l && (0, E.stopActionGroup)({
+                return l && (0, g.stopActionGroup)({
                     store: n,
                     eventId: f,
                     eventTarget: i,
                     eventStateKey: f + Y + o.split(Y)[1],
                     actionListId: (0, p.default)(l, 'action.config.actionListId')
-                }), (0, E.stopActionGroup)({
+                }), (0, g.stopActionGroup)({
                     store: n,
                     eventId: u,
                     eventTarget: i,
                     eventStateKey: o,
                     actionListId: s
-                }), (0, E.startActionGroup)({
+                }), (0, g.startActionGroup)({
                     store: n,
                     eventId: u,
                     eventTarget: i,
@@ -5748,8 +6249,8 @@
                     throttle: !0
                 }
             ], ot = { types: it }, at = {
-                PAGE_START: B,
-                PAGE_FINISH: V
+                PAGE_START: W,
+                PAGE_FINISH: G
             }, ut = (c = void 0 !== window.pageXOffset, s = 'CSS1Compat' === document.compatMode ? document.documentElement : document.body, function () {
                 return {
                     scrollLeft: c ? window.pageXOffset : s.scrollLeft,
@@ -5771,7 +6272,7 @@
             }, st = function (t) {
                 var e, n, r = t.element, i = t.event.config, o = ut(), a = o.clientWidth, u = o.clientHeight, c = i.scrollOffsetValue, s = 'PX' === i.scrollOffsetUnit ? c : u * (c || 0) / 100;
                 return e = r.getBoundingClientRect(), n = {
-                    left: '0',
+                    left: 0,
                     top: s,
                     right: a,
                     bottom: u - s
@@ -5794,19 +6295,19 @@
                     var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, r = ut(), i = r.stiffScrollTop, o = r.scrollHeight, a = r.innerHeight, u = e.event, c = u.config, s = u.eventTypeId, f = c.scrollOffsetValue, d = 'PX' === c.scrollOffsetUnit, p = o - a, v = Number((i / p).toFixed(2));
                     if (n && n.percentTop === v)
                         return n;
-                    var h, E, _ = (d ? f : a * (f || 0) / 100) / p, g = 0;
-                    n && (h = v > n.percentTop, g = (E = n.scrollingDown !== h) ? v : n.anchorTop);
-                    var y = s === M ? v >= g + _ : v <= g - _, I = (0, l.default)({}, n, {
+                    var h, g, E = (d ? f : a * (f || 0) / 100) / p, m = 0;
+                    n && (h = v > n.percentTop, m = (g = n.scrollingDown !== h) ? v : n.anchorTop);
+                    var y = s === M ? v >= m + E : v <= m - E, _ = (0, l.default)({}, n, {
                             percentTop: v,
                             inBounds: y,
-                            anchorTop: g,
+                            anchorTop: m,
                             scrollingDown: h
                         });
-                    return n && y && (E || I.inBounds !== n.inBounds) && t(e, I) || I;
+                    return n && y && (g || _.inBounds !== n.inBounds) && t(e, _) || _;
                 };
             }, pt = function (t) {
                 return function (e) {
-                    var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { clickCount: '0' }, r = { clickCount: n.clickCount % 2 + 1 };
+                    var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { clickCount: 0 }, r = { clickCount: n.clickCount % 2 + 1 };
                     return r.clickCount !== n.clickCount && t(e, r) || r;
                 };
             }, vt = function () {
@@ -5823,37 +6324,37 @@
                         return e.isActive ? e : nt.handler(t, e);
                     }))
                 });
-            }, Et = (0, l.default)({}, ot, {
+            }, gt = (0, l.default)({}, ot, {
                 handler: (f = function (t, e) {
                     var n = e.elementVisible, r = t.event;
-                    return !t.store.getState().ixData.events[r.action.config.autoStopEventId] && e.triggered ? e : r.eventTypeId === F === n ? (tt(t), (0, l.default)({}, e, { triggered: !0 })) : e;
+                    return !t.store.getState().ixData.events[r.action.config.autoStopEventId] && e.triggered ? e : r.eventTypeId === j === n ? (tt(t), (0, l.default)({}, e, { triggered: !0 })) : e;
                 }, function (t, e) {
                     var n = (0, l.default)({}, e, { elementVisible: st(t) });
                     return (e ? n.elementVisible !== e.elementVisible : n.elementVisible) && f(t, n) || n;
                 })
-            }), _t = (r = {}, (0, o.default)(r, R, vt()), (0, o.default)(r, N, ht()), (0, o.default)(r, w, vt()), (0, o.default)(r, S, ht()), (0, o.default)(r, D, vt(!1)), (0, o.default)(r, x, ht(!1)), (0, o.default)(r, C, vt()), (0, o.default)(r, L, ht()), (0, o.default)(r, U, {
+            }), Et = (r = {}, (0, o.default)(r, S, vt()), (0, o.default)(r, R, ht()), (0, o.default)(r, x, vt()), (0, o.default)(r, A, ht()), (0, o.default)(r, D, vt(!1)), (0, o.default)(r, L, ht(!1)), (0, o.default)(r, C, vt()), (0, o.default)(r, N, ht()), (0, o.default)(r, V, {
                 types: 'ecommerce-cart-open',
                 handler: et(Z, tt)
-            }), (0, o.default)(r, k, {
+            }), (0, o.default)(r, U, {
                 types: 'ecommerce-cart-close',
                 handler: et(Z, tt)
-            }), (0, o.default)(r, I, {
+            }), (0, o.default)(r, _, {
                 types: 'click',
                 handler: et(Z, pt(function (t, e) {
                     var n, r, i, o = e.clickCount;
                     r = (n = t).store, i = n.event.action.config.autoStopEventId, Boolean(J(r, i)) ? 1 === o && tt(t) : tt(t);
                 }))
-            }), (0, o.default)(r, m, {
+            }), (0, o.default)(r, I, {
                 types: 'click',
                 handler: et(Z, pt(function (t, e) {
                     2 === e.clickCount && tt(t);
                 }))
-            }), (0, o.default)(r, T, (0, l.default)({}, nt, { types: 'mousedown' })), (0, o.default)(r, O, (0, l.default)({}, nt, { types: 'mouseup' })), (0, o.default)(r, A, {
+            }), (0, o.default)(r, b, (0, l.default)({}, nt, { types: 'mousedown' })), (0, o.default)(r, w, (0, l.default)({}, nt, { types: 'mouseup' })), (0, o.default)(r, T, {
                 types: 'mouseover mouseout',
                 handler: et(Z, lt(function (t, e) {
                     e.elementHovered && tt(t);
                 }))
-            }), (0, o.default)(r, b, {
+            }), (0, o.default)(r, O, {
                 types: 'mouseover mouseout',
                 handler: et(Z, lt(function (t, e) {
                     e.elementHovered || tt(t);
@@ -5862,74 +6363,74 @@
                 types: 'mousemove mouseout scroll',
                 handler: function (t) {
                     var e = t.store, n = t.element, r = t.eventConfig, i = t.nativeEvent, o = t.eventStateKey, a = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
-                            clientX: '0',
-                            clientY: '0',
-                            pageX: '0',
-                            pageY: '0'
-                        }, u = r.basedOn, c = r.selectedAxis, s = r.continuousParameterGroupId, f = r.reverse, l = r.restingState, d = void 0 === l ? 0 : l, p = i.clientX, v = void 0 === p ? a.clientX : p, E = i.clientY, g = void 0 === E ? a.clientY : E, y = i.pageX, I = void 0 === y ? a.pageX : y, m = i.pageY, T = void 0 === m ? a.pageY : m, O = 'X_AXIS' === c, A = 'mouseout' === i.type, b = d / 100, S = s, w = !1;
+                            clientX: 0,
+                            clientY: 0,
+                            pageX: 0,
+                            pageY: 0
+                        }, u = r.basedOn, c = r.selectedAxis, s = r.continuousParameterGroupId, f = r.reverse, l = r.restingState, d = void 0 === l ? 0 : l, p = i.clientX, v = void 0 === p ? a.clientX : p, g = i.clientY, m = void 0 === g ? a.clientY : g, y = i.pageX, _ = void 0 === y ? a.pageX : y, I = i.pageY, b = void 0 === I ? a.pageY : I, w = 'X_AXIS' === c, T = 'mouseout' === i.type, O = d / 100, A = s, x = !1;
                     switch (u) {
                     case h.EventBasedOn.VIEWPORT:
-                        b = O ? Math.min(v, window.innerWidth) / window.innerWidth : Math.min(g, window.innerHeight) / window.innerHeight;
+                        O = w ? Math.min(v, window.innerWidth) / window.innerWidth : Math.min(m, window.innerHeight) / window.innerHeight;
                         break;
                     case h.EventBasedOn.PAGE:
-                        var R = ut(), N = R.scrollLeft, C = R.scrollTop, L = R.scrollWidth, x = R.scrollHeight;
-                        b = O ? Math.min(N + I, L) / L : Math.min(C + T, x) / x;
+                        var S = ut(), R = S.scrollLeft, C = S.scrollTop, N = S.scrollWidth, L = S.scrollHeight;
+                        O = w ? Math.min(R + _, N) / N : Math.min(C + b, L) / L;
                         break;
                     case h.EventBasedOn.ELEMENT:
                     default:
-                        S = K(o, s);
+                        A = K(o, s);
                         var D = 0 === i.type.indexOf('mouse');
                         if (D && !0 !== Z({
                                 element: n,
                                 nativeEvent: i
                             }))
                             break;
-                        var P = n.getBoundingClientRect(), M = P.left, F = P.top, j = P.width, X = P.height;
+                        var P = n.getBoundingClientRect(), M = P.left, j = P.top, F = P.width, k = P.height;
                         if (!D && !function (t, e) {
                                 return t.left > e.left && t.left < e.right && t.top > e.top && t.top < e.bottom;
                             }({
                                 left: v,
-                                top: g
+                                top: m
                             }, P))
                             break;
-                        w = !0, b = O ? (v - M) / j : (g - F) / X;
+                        x = !0, O = w ? (v - M) / F : (m - j) / k;
                     }
-                    return A && (b > 0.95 || b < 0.05) && (b = Math.round(b)), (u !== h.EventBasedOn.ELEMENT || w || w !== a.elementHovered) && (b = f ? 1 - b : b, e.dispatch((0, _.parameterChanged)(S, b))), {
-                        elementHovered: w,
+                    return T && (O > 0.95 || O < 0.05) && (O = Math.round(O)), (u !== h.EventBasedOn.ELEMENT || x || x !== a.elementHovered) && (O = f ? 1 - O : O, e.dispatch((0, E.parameterChanged)(A, O))), {
+                        elementHovered: x,
                         clientX: v,
-                        clientY: g,
-                        pageX: I,
-                        pageY: T
+                        clientY: m,
+                        pageX: _,
+                        pageY: b
                     };
                 }
-            }), (0, o.default)(r, W, {
+            }), (0, o.default)(r, B, {
                 types: it,
                 handler: function (t) {
                     var e = t.store, n = t.eventConfig, r = n.continuousParameterGroupId, i = n.reverse, o = ut(), a = o.scrollTop / (o.scrollHeight - o.clientHeight);
-                    a = i ? 1 - a : a, e.dispatch((0, _.parameterChanged)(r, a));
+                    a = i ? 1 - a : a, e.dispatch((0, E.parameterChanged)(r, a));
                 }
-            }), (0, o.default)(r, G, {
+            }), (0, o.default)(r, X, {
                 types: it,
                 handler: function (t) {
-                    var e = t.element, n = t.store, r = t.eventConfig, i = t.eventStateKey, o = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { scrollPercent: '0' }, a = ut(), u = a.scrollLeft, c = a.scrollTop, s = a.scrollWidth, f = a.scrollHeight, l = a.clientHeight, d = r.basedOn, p = r.selectedAxis, v = r.continuousParameterGroupId, E = r.startsEntering, g = r.startsExiting, y = r.addEndOffset, I = r.addStartOffset, m = r.addOffsetValue, T = void 0 === m ? 0 : m, O = r.endOffsetValue, A = void 0 === O ? 0 : O, b = 'X_AXIS' === p;
+                    var e = t.element, n = t.store, r = t.eventConfig, i = t.eventStateKey, o = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { scrollPercent: 0 }, a = ut(), u = a.scrollLeft, c = a.scrollTop, s = a.scrollWidth, f = a.scrollHeight, l = a.clientHeight, d = r.basedOn, p = r.selectedAxis, v = r.continuousParameterGroupId, g = r.startsEntering, m = r.startsExiting, y = r.addEndOffset, _ = r.addStartOffset, I = r.addOffsetValue, b = void 0 === I ? 0 : I, w = r.endOffsetValue, T = void 0 === w ? 0 : w, O = 'X_AXIS' === p;
                     if (d === h.EventBasedOn.VIEWPORT) {
-                        var S = b ? u / s : c / f;
-                        return S !== o.scrollPercent && n.dispatch((0, _.parameterChanged)(v, S)), { scrollPercent: S };
+                        var A = O ? u / s : c / f;
+                        return A !== o.scrollPercent && n.dispatch((0, E.parameterChanged)(v, A)), { scrollPercent: A };
                     }
-                    var w = K(i, v), R = e.getBoundingClientRect(), N = (I ? T : 0) / 100, C = (y ? A : 0) / 100;
-                    N = E ? N : 1 - N, C = g ? C : 1 - C;
-                    var L = R.top + Math.min(R.height * N, l), x = R.top + R.height * C - L, D = Math.min(l + x, f), P = Math.min(Math.max(0, l - L), D) / D;
-                    return P !== o.scrollPercent && n.dispatch((0, _.parameterChanged)(w, P)), { scrollPercent: P };
+                    var x = K(i, v), S = e.getBoundingClientRect(), R = (_ ? b : 0) / 100, C = (y ? T : 0) / 100;
+                    R = g ? R : 1 - R, C = m ? C : 1 - C;
+                    var N = S.top + Math.min(S.height * R, l), L = S.top + S.height * C - N, D = Math.min(l + L, f), P = Math.min(Math.max(0, l - N), D) / D;
+                    return P !== o.scrollPercent && n.dispatch((0, E.parameterChanged)(x, P)), { scrollPercent: P };
                 }
-            }), (0, o.default)(r, F, Et), (0, o.default)(r, j, Et), (0, o.default)(r, M, (0, l.default)({}, ot, {
+            }), (0, o.default)(r, j, gt), (0, o.default)(r, F, gt), (0, o.default)(r, M, (0, l.default)({}, ot, {
                 handler: dt(function (t, e) {
                     e.scrollingDown && tt(t);
                 })
-            })), (0, o.default)(r, X, (0, l.default)({}, ot, {
+            })), (0, o.default)(r, k, (0, l.default)({}, ot, {
                 handler: dt(function (t, e) {
                     e.scrollingDown || tt(t);
                 })
-            })), (0, o.default)(r, V, {
+            })), (0, o.default)(r, G, {
                 types: 'readystatechange IX2_PAGE_UPDATE',
                 handler: et(q, function (t) {
                     return function (e, n) {
@@ -5937,7 +6438,7 @@
                         return !r.finished || n && n.finshed || t(e), r;
                     };
                 }(tt))
-            }), (0, o.default)(r, B, {
+            }), (0, o.default)(r, W, {
                 types: 'readystatechange IX2_PAGE_UPDATE',
                 handler: et(q, function (t) {
                     return function (e, n) {
@@ -5945,14 +6446,14 @@
                     };
                 }(tt))
             }), r);
-        e.default = _t;
+        e.default = Et;
     },
     function (t, e, n) {
-        var r = n(239)();
+        var r = n(294)();
         t.exports = r;
     },
     function (t, e, n) {
-        var r = n(49), i = n(240), o = n(96), a = n(97), u = n(1), c = n(253), s = 'Expected a function', f = 8, l = 32, d = 128, p = 256;
+        var r = n(62), i = n(295), o = n(118), a = n(119), u = n(1), c = n(308), s = 'Expected a function', f = 8, l = 32, d = 128, p = 256;
         t.exports = function (t) {
             return i(function (e) {
                 var n = e.length, i = n, v = r.prototype.thru;
@@ -5960,18 +6461,18 @@
                     var h = e[i];
                     if ('function' != typeof h)
                         throw new TypeError(s);
-                    if (v && !E && 'wrapper' == a(h))
-                        var E = new r([], !0);
+                    if (v && !g && 'wrapper' == a(h))
+                        var g = new r([], !0);
                 }
-                for (i = E ? i : n; ++i < n;) {
+                for (i = g ? i : n; ++i < n;) {
                     h = e[i];
-                    var _ = a(h), g = 'wrapper' == _ ? o(h) : void 0;
-                    E = g && c(g[0]) && g[1] == (d | f | l | p) && !g[4].length && 1 == g[9] ? E[a(g[0])].apply(E, g[3]) : 1 == h.length && c(h) ? E[_]() : E.thru(h);
+                    var E = a(h), m = 'wrapper' == E ? o(h) : void 0;
+                    g = m && c(m[0]) && m[1] == (d | f | l | p) && !m[4].length && 1 == m[9] ? g[a(m[0])].apply(g, m[3]) : 1 == h.length && c(h) ? g[E]() : g.thru(h);
                 }
                 return function () {
                     var t = arguments, r = t[0];
-                    if (E && 1 == t.length && u(r))
-                        return E.plant(r).value();
+                    if (g && 1 == t.length && u(r))
+                        return g.plant(r).value();
                     for (var i = 0, o = n ? e[i].apply(this, t) : r; ++i < n;)
                         o = e[i].call(this, o);
                     return o;
@@ -5980,19 +6481,19 @@
         };
     },
     function (t, e, n) {
-        var r = n(241), i = n(244), o = n(246);
+        var r = n(296), i = n(299), o = n(301);
         t.exports = function (t) {
             return o(i(t, void 0, r), t + '');
         };
     },
     function (t, e, n) {
-        var r = n(242);
+        var r = n(297);
         t.exports = function (t) {
             return null != t && t.length ? r(t, 1) : [];
         };
     },
     function (t, e, n) {
-        var r = n(35), i = n(243);
+        var r = n(48), i = n(298);
         t.exports = function t(e, n, o, a, u) {
             var c = -1, s = e.length;
             for (o || (o = i), u || (u = []); ++c < s;) {
@@ -6003,13 +6504,13 @@
         };
     },
     function (t, e, n) {
-        var r = n(14), i = n(24), o = n(1), a = r ? r.isConcatSpreadable : void 0;
+        var r = n(20), i = n(34), o = n(1), a = r ? r.isConcatSpreadable : void 0;
         t.exports = function (t) {
             return o(t) || i(t) || !!(a && t && t[a]);
         };
     },
     function (t, e, n) {
-        var r = n(245), i = Math.max;
+        var r = n(300), i = Math.max;
         t.exports = function (t, e, n) {
             return e = i(void 0 === e ? t.length - 1 : e, 0), function () {
                 for (var o = arguments, a = -1, u = i(o.length - e, 0), c = Array(u); ++a < u;)
@@ -6037,11 +6538,11 @@
         };
     },
     function (t, e, n) {
-        var r = n(247), i = n(249)(r);
+        var r = n(302), i = n(304)(r);
         t.exports = i;
     },
     function (t, e, n) {
-        var r = n(248), i = n(93), o = n(45), a = i ? function (t, e) {
+        var r = n(303), i = n(116), o = n(59), a = i ? function (t, e) {
                 return i(t, 'toString', {
                     configurable: !0,
                     enumerable: !1,
@@ -6074,7 +6575,7 @@
         };
     },
     function (t, e, n) {
-        var r = n(75), i = r && new r();
+        var r = n(99), i = r && new r();
         t.exports = i;
     },
     function (t, e) {
@@ -6085,7 +6586,7 @@
         t.exports = {};
     },
     function (t, e, n) {
-        var r = n(51), i = n(96), o = n(97), a = n(254);
+        var r = n(64), i = n(118), o = n(119), a = n(309);
         t.exports = function (t) {
             var e = o(t), n = a[e];
             if ('function' != typeof n || !(e in r.prototype))
@@ -6097,7 +6598,7 @@
         };
     },
     function (t, e, n) {
-        var r = n(51), i = n(49), o = n(50), a = n(1), u = n(7), c = n(255), s = Object.prototype.hasOwnProperty;
+        var r = n(64), i = n(62), o = n(63), a = n(1), u = n(9), c = n(310), s = Object.prototype.hasOwnProperty;
         function f(t) {
             if (u(t) && !a(t) && !(t instanceof r)) {
                 if (t instanceof i)
@@ -6110,7 +6611,7 @@
         f.prototype = o.prototype, f.prototype.constructor = f, t.exports = f;
     },
     function (t, e, n) {
-        var r = n(51), i = n(49), o = n(256);
+        var r = n(64), i = n(62), o = n(311);
         t.exports = function (t) {
             if (t instanceof r)
                 return t.clone();
@@ -6127,14 +6628,19 @@
         };
     },
     function (t, e, n) {
-        var r = n(94), i = n(47);
+        var r = n(313), i = n(60);
         t.exports = function (t, e, n) {
             return void 0 === n && (n = e, e = void 0), void 0 !== n && (n = (n = i(n)) == n ? n : 0), void 0 !== e && (e = (e = i(e)) == e ? e : 0), r(i(t), e, n);
         };
     },
+    function (t, e) {
+        t.exports = function (t, e, n) {
+            return t == t && (void 0 !== n && (t = t <= n ? t : n), void 0 !== e && (t = t >= e ? t : e)), t;
+        };
+    },
     function (t, e, n) {
         'use strict';
-        var r = n(8);
+        var r = n(3);
         r.define('links', t.exports = function (t, e) {
             var n, i, o, a = {}, u = t(window), c = r.env(), s = window.location, f = document.createElement('a'), l = 'w--current', d = /index\.(html|php)$/, p = /\/$/;
             function v(e) {
@@ -6152,7 +6658,7 @@
                         });
                     } else if ('#' !== r && '' !== r) {
                         var c = f.href === s.href || r === o || d.test(r) && p.test(o);
-                        E(a, l, c);
+                        g(a, l, c);
                     }
                 }
             }
@@ -6160,10 +6666,10 @@
                 var t = u.scrollTop(), n = u.height();
                 e.each(i, function (e) {
                     var r = e.link, i = e.sec, o = i.offset().top, a = i.outerHeight(), u = 0.5 * n, c = i.is(':visible') && o + a - u >= t && o + u <= t + n;
-                    e.active !== c && (e.active = c, E(r, l, c));
+                    e.active !== c && (e.active = c, g(r, l, c));
                 });
             }
-            function E(t, e, n) {
+            function g(t, e, n) {
                 var r = t.hasClass(e);
                 n && r || (n || r) && (n ? t.addClass(e) : t.removeClass(e));
             }
@@ -6177,68 +6683,70 @@
     },
     function (t, e, n) {
         'use strict';
-        var r = n(8);
+        var r = n(3);
         r.define('scroll', t.exports = function (t) {
-            var e, n = {
-                    CLICK_EMPTY: 'click.wf-empty-link',
-                    CLICK_SCROLL: 'click.wf-scroll'
-                }, i = t(document), o = window, a = o.location, u = function () {
+            var e = {
+                    WF_CLICK_EMPTY: 'click.wf-empty-link',
+                    WF_CLICK_SCROLL: 'click.wf-scroll'
+                }, n = window.location, i = function () {
                     try {
-                        return Boolean(o.frameElement);
+                        return Boolean(window.frameElement);
                     } catch (t) {
                         return !0;
                     }
-                }() ? null : o.history, c = /^[a-zA-Z0-9][\w:.-]*$/, s = 'a[href="#"]', f = 'a[href*="#"]:not(.w-tab-link):not(' + s + ')';
-            function l(n) {
-                if (!(r.env('design') || window.$.mobile && t(n.currentTarget).hasClass('ui-link'))) {
-                    var i = this.href.split('#'), s = i[0] === e ? i[1] : null;
-                    s && function (e, n) {
-                        if (!c.test(e))
-                            return;
-                        var i = t('#' + e);
-                        if (!i.length)
-                            return;
-                        n && (n.preventDefault(), n.stopPropagation());
-                        if (a.hash !== e && u && u.pushState && (!r.env.chrome || 'file:' !== a.protocol)) {
-                            var s = u.state && u.state.hash;
-                            s !== e && u.pushState({ hash: e }, '', '#' + e);
-                        }
-                        var f = r.env('editor') ? '.w-editor-body' : 'body', l = t('header, ' + f + ' > .header, ' + f + ' > .w-nav:not([data-no-scroll])'), d = 'fixed' === l.css('position') ? l.outerHeight() : 0;
-                        o.setTimeout(function () {
-                            !function (e, n) {
-                                var r = t(o).scrollTop(), i = e.offset().top - n;
-                                if ('mid' === e.data('scroll')) {
-                                    var a = t(o).height() - n, u = e.outerHeight();
-                                    u < a && (i -= Math.round((a - u) / 2));
-                                }
-                                var c = 1;
-                                t('body').add(e).each(function () {
-                                    var e = parseFloat(t(this).attr('data-scroll-time'), 10);
-                                    !isNaN(e) && (0 === e || e > 0) && (c = e);
-                                }), Date.now || (Date.now = function () {
-                                    return new Date().getTime();
-                                });
-                                var s = Date.now(), f = o.requestAnimationFrame || o.mozRequestAnimationFrame || o.webkitRequestAnimationFrame || function (t) {
-                                        o.setTimeout(t, 15);
-                                    }, l = (472.143 * Math.log(Math.abs(r - i) + 125) - 2000) * c;
-                                !function t() {
-                                    var e = Date.now() - s;
-                                    o.scroll(0, function (t, e, n, r) {
-                                        if (n > r)
-                                            return e;
-                                        return t + (e - t) * (i = n / r, i < 0.5 ? 4 * i * i * i : (i - 1) * (2 * i - 2) * (2 * i - 2) + 1);
+                }() ? null : window.history, o = t(window), a = t(document), u = t(document.body), c = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || function (t) {
+                    window.setTimeout(t, 15);
+                }, s = r.env('editor') ? '.w-editor-body' : 'body', f = 'header, ' + s + ' > .header, ' + s + ' > .w-nav:not([data-no-scroll])', l = 'a[href="#"]', d = 'a[href*="#"]:not(.w-tab-link):not(' + l + ')';
+            var p = /^#[a-zA-Z0-9][\w:.-]*$/;
+            var v = 'function' == typeof window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)');
+            function h(e) {
+                var a = e.currentTarget;
+                if (!(r.env('design') || window.$.mobile && /(?:^|\s)ui-link(?:$|\s)/.test(a.className))) {
+                    var s, l = (s = a, p.test(s.hash) && s.host + s.pathname === n.host + n.pathname ? a.hash : '');
+                    if ('' !== l) {
+                        var d = t(l);
+                        d.length && (e && (e.preventDefault(), e.stopPropagation()), function (t) {
+                            if (n.hash !== t && i && i.pushState && (!r.env.chrome || 'file:' !== n.protocol)) {
+                                var e = i.state && i.state.hash;
+                                e !== t && i.pushState({ hash: t }, '', t);
+                            }
+                        }(l), window.setTimeout(function () {
+                            !function (e) {
+                                var n = o.scrollTop(), r = function (e) {
+                                        var n = t(f), r = 'fixed' === n.css('position') ? n.outerHeight() : 0, i = e.offset().top - r;
+                                        if ('mid' === e.data('scroll')) {
+                                            var a = o.height() - r, u = e.outerHeight();
+                                            u < a && (i -= Math.round((a - u) / 2));
+                                        }
+                                        return i;
+                                    }(e);
+                                if (n === r)
+                                    return;
+                                var i = function (t, e, n) {
+                                        if ('none' === document.body.getAttribute('data-wf-scroll-motion') || v.matches)
+                                            return 0;
+                                        var r = 1;
+                                        return u.add(t).each(function (t, e) {
+                                            var n = parseFloat(e.getAttribute('data-scroll-time'));
+                                            !isNaN(n) && n >= 0 && (r = n);
+                                        }), (472.143 * Math.log(Math.abs(e - n) + 125) - 2000) * r;
+                                    }(e, n, r), a = Date.now();
+                                c(function t() {
+                                    var e = Date.now() - a;
+                                    window.scroll(0, function (t, e, n, r) {
+                                        return n > r ? e : t + (e - t) * ((i = n / r) < 0.5 ? 4 * i * i * i : (i - 1) * (2 * i - 2) * (2 * i - 2) + 1);
                                         var i;
-                                    }(r, i, e, l)), e <= l && f(t);
-                                }();
-                            }(i, d);
-                        }, n ? 0 : 300);
-                    }(s, n);
+                                    }(n, r, e, i)), e <= i && c(t);
+                                });
+                            }(d);
+                        }, e ? 0 : 300));
+                    }
                 }
             }
             return {
                 ready: function () {
-                    var t = n.CLICK_EMPTY, r = n.CLICK_SCROLL;
-                    e = a.href.split('#')[0], i.on(r, f, l), i.on(t, s, function (t) {
+                    var t = e.WF_CLICK_EMPTY, n = e.WF_CLICK_SCROLL;
+                    a.on(n, d, h), a.on(t, l, function (t) {
                         t.preventDefault();
                     });
                 }
@@ -6247,7 +6755,7 @@
     },
     function (t, e, n) {
         'use strict';
-        n(8).define('touch', t.exports = function (t) {
+        n(3).define('touch', t.exports = function (t) {
             var e = {}, n = window.getSelection;
             function r(e) {
                 var r, i, o = !1, a = !1, u = Math.min(Math.round(0.04 * window.innerWidth), 40);
@@ -6287,7 +6795,618 @@
     },
     function (t, e, n) {
         'use strict';
-        var r = n(8), i = n(53), o = {
+        var r = n(3), i = n(13), o = {
+                ARROW_LEFT: 37,
+                ARROW_UP: 38,
+                ARROW_RIGHT: 39,
+                ARROW_DOWN: 40,
+                ESCAPE: 27,
+                SPACE: 32,
+                ENTER: 13,
+                HOME: 36,
+                END: 35
+            }, a = !0, u = /^#[a-zA-Z0-9\-_]+$/;
+        r.define('dropdown', t.exports = function (t, e) {
+            var n, c, s = e.debounce, f = {}, l = r.env(), d = !1, p = r.env.touch, v = '.w-dropdown', h = 'w--open', g = i.triggers, E = 900, m = 'focusout' + v, y = 'keydown' + v, _ = 'mouseenter' + v, I = 'mousemove' + v, b = 'mouseleave' + v, w = (p ? 'click' : 'mouseup') + v, T = 'w-close' + v, O = 'setting' + v, A = t(document);
+            function x() {
+                n = l && r.env('design'), (c = A.find(v)).each(S);
+            }
+            function S(e, i) {
+                var c = t(i), f = t.data(i, v);
+                f || (f = t.data(i, v, {
+                    open: !1,
+                    el: c,
+                    config: {},
+                    selectedIdx: -1
+                })), f.toggle = f.el.children('.w-dropdown-toggle'), f.list = f.el.children('.w-dropdown-list'), f.links = f.list.find('a:not(.w-dropdown .w-dropdown a)'), f.complete = function (t) {
+                    return function () {
+                        t.list.removeClass(h), t.toggle.removeClass(h), t.manageZ && t.el.css('z-index', '');
+                    };
+                }(f), f.mouseLeave = function (t) {
+                    return function () {
+                        t.hovering = !1, t.links.is(':focus') || L(t);
+                    };
+                }(f), f.mouseUpOutside = function (e) {
+                    e.mouseUpOutside && A.off(w, e.mouseUpOutside);
+                    return s(function (n) {
+                        if (e.open) {
+                            var i = t(n.target);
+                            if (!i.closest('.w-dropdown-toggle').length) {
+                                var o = -1 === t.inArray(e.el[0], i.parents(v)), a = r.env('editor');
+                                if (o) {
+                                    if (a) {
+                                        var u = 1 === i.parents().length && 1 === i.parents('svg').length, c = i.parents('.w-editor-bem-EditorHoverControls').length;
+                                        if (u || c)
+                                            return;
+                                    }
+                                    L(e);
+                                }
+                            }
+                        }
+                    });
+                }(f), f.mouseMoveOutside = function (e) {
+                    return s(function (n) {
+                        if (e.open) {
+                            var r = t(n.target), i = -1 === t.inArray(e.el[0], r.parents(v));
+                            if (i) {
+                                var o = r.parents('.w-editor-bem-EditorHoverControls').length, a = r.parents('.w-editor-bem-RTToolbar').length, u = t('.w-editor-bem-EditorOverlay'), c = u.find('.w-editor-edit-outline').length || u.find('.w-editor-bem-RTToolbar').length;
+                                if (o || a || c)
+                                    return;
+                                e.hovering = !1, L(e);
+                            }
+                        }
+                    });
+                }(f), R(f);
+                var p = f.toggle.attr('id'), g = f.list.attr('id');
+                p || (p = 'w-dropdown-toggle-' + e), g || (g = 'w-dropdown-list-' + e), f.toggle.attr('id', p), f.toggle.attr('aria-controls', g), f.toggle.attr('aria-haspopup', 'menu'), f.toggle.attr('aria-expanded', 'false'), f.toggle.find('.w-icon-dropdown-toggle').attr('aria-hidden', 'true'), 'BUTTON' !== f.toggle.prop('tagName') && (f.toggle.attr('role', 'button'), f.toggle.attr('tabindex') || f.toggle.attr('tabindex', '0')), f.list.attr('id', g), f.list.attr('aria-labelledby', p), f.links.each(function (t, e) {
+                    e.hasAttribute('tabindex') || e.setAttribute('tabindex', '0'), u.test(e.hash) && e.addEventListener('click', L.bind(null, f));
+                }), f.el.off(v), f.toggle.off(v), f.nav && f.nav.off(v);
+                var E = C(f, a);
+                n && f.el.on(O, function (t) {
+                    return function (e, n) {
+                        n = n || {}, R(t), !0 === n.open && N(t), !1 === n.open && L(t, { immediate: !0 });
+                    };
+                }(f)), n || (l && (f.hovering = !1, L(f)), f.config.hover && f.toggle.on(_, function (t) {
+                    return function () {
+                        t.hovering = !0, N(t);
+                    };
+                }(f)), f.el.on(T, E), f.el.on(y, function (t) {
+                    return function (e) {
+                        if (!n && !d && t.open)
+                            switch (t.selectedIdx = t.links.index(document.activeElement), e.keyCode) {
+                            case o.HOME:
+                                if (!t.open)
+                                    return;
+                                return t.selectedIdx = 0, D(t), e.preventDefault();
+                            case o.END:
+                                if (!t.open)
+                                    return;
+                                return t.selectedIdx = t.links.length - 1, D(t), e.preventDefault();
+                            case o.ESCAPE:
+                                return L(t), t.toggle.focus(), e.stopPropagation();
+                            case o.ARROW_RIGHT:
+                            case o.ARROW_DOWN:
+                                return t.selectedIdx = Math.min(t.links.length - 1, t.selectedIdx + 1), D(t), e.preventDefault();
+                            case o.ARROW_LEFT:
+                            case o.ARROW_UP:
+                                return t.selectedIdx = Math.max(-1, t.selectedIdx - 1), D(t), e.preventDefault();
+                            }
+                    };
+                }(f)), f.el.on(m, function (t) {
+                    return s(function (e) {
+                        var n = e.relatedTarget, r = e.target, i = t.el[0], o = i.contains(n) || i.contains(r);
+                        return o || L(t), e.stopPropagation();
+                    });
+                }(f)), f.toggle.on(w, E), f.toggle.on(y, function (t) {
+                    var e = C(t, a);
+                    return function (r) {
+                        if (!n && !d) {
+                            if (!t.open)
+                                switch (r.keyCode) {
+                                case o.ARROW_UP:
+                                case o.ARROW_DOWN:
+                                    return r.stopPropagation();
+                                }
+                            switch (r.keyCode) {
+                            case o.SPACE:
+                            case o.ENTER:
+                                return e(), r.stopPropagation(), r.preventDefault();
+                            }
+                        }
+                    };
+                }(f)), f.nav = f.el.closest('.w-nav'), f.nav.on(T, E));
+            }
+            function R(t) {
+                var e = Number(t.el.css('z-index'));
+                t.manageZ = e === E || e === E + 1, t.config = {
+                    hover: (!0 === t.el.attr('data-hover') || '1' === t.el.attr('data-hover')) && !p,
+                    delay: Number(t.el.attr('data-delay')) || 0
+                };
+            }
+            function C(t, e) {
+                return s(function (n) {
+                    if (t.open || n && 'w-close' === n.type)
+                        return L(t, { forceClose: e });
+                    N(t);
+                });
+            }
+            function N(e) {
+                if (!e.open) {
+                    !function (e) {
+                        var n = e.el[0];
+                        c.each(function (e, r) {
+                            var i = t(r);
+                            i.is(n) || i.has(n).length || i.triggerHandler(T);
+                        });
+                    }(e), e.open = !0, e.list.addClass(h), e.toggle.addClass(h), e.toggle.attr('aria-expanded', 'true'), g.intro(0, e.el[0]), r.redraw.up(), e.manageZ && e.el.css('z-index', E + 1);
+                    var i = r.env('editor');
+                    n || A.on(w, e.mouseUpOutside), e.hovering && !i && e.el.on(b, e.mouseLeave), e.hovering && i && A.on(I, e.mouseMoveOutside), window.clearTimeout(e.delayId);
+                }
+            }
+            function L(t) {
+                var e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, n = e.immediate, r = e.forceClose;
+                if (t.open && (!t.config.hover || !t.hovering || r)) {
+                    t.toggle.attr('aria-expanded', 'false'), t.open = !1;
+                    var i = t.config;
+                    if (g.outro(0, t.el[0]), A.off(w, t.mouseUpOutside), A.off(I, t.mouseMoveOutside), t.el.off(b, t.mouseLeave), window.clearTimeout(t.delayId), !i.delay || n)
+                        return t.complete();
+                    t.delayId = window.setTimeout(t.complete, i.delay);
+                }
+            }
+            function D(t) {
+                t.links[t.selectedIdx] && t.links[t.selectedIdx].focus();
+            }
+            return f.ready = x, f.design = function () {
+                d && A.find(v).each(function (e, n) {
+                    t(n).triggerHandler(T);
+                }), d = !1, x();
+            }, f.preview = function () {
+                d = !0, x();
+            }, f;
+        });
+    },
+    function (t, e, n) {
+        'use strict';
+        var r = n(0)(n(319)), i = n(3);
+        i.define('forms', t.exports = function (t, e) {
+            var n, o, a, u, c, s = {}, f = t(document), l = window.location, d = window.XDomainRequest && !window.atob, p = '.w-form', v = /e(-)?mail/i, h = /^\S+@\S+$/, g = window.alert, E = i.env(), m = /list-manage[1-9]?.com/i, y = e.debounce(function () {
+                    g('Oops! This page has improperly configured forms. Please contact your website administrator to fix this issue.');
+                }, 100);
+            function _(e, n) {
+                var r = t(n), i = t.data(n, p);
+                i || (i = t.data(n, p, { form: r })), I(i);
+                var a = r.closest('div.w-form');
+                i.done = a.find('> .w-form-done'), i.fail = a.find('> .w-form-fail'), i.fileUploads = a.find('.w-file-upload'), i.fileUploads.each(function (e) {
+                    !function (e, n) {
+                        if (!n.fileUploads || !n.fileUploads[e])
+                            return;
+                        var r, i = t(n.fileUploads[e]), o = i.find('> .w-file-upload-default'), a = i.find('> .w-file-upload-uploading'), u = i.find('> .w-file-upload-success'), s = i.find('> .w-file-upload-error'), f = o.find('.w-file-upload-input'), l = o.find('.w-file-upload-label'), d = l.children(), p = s.find('.w-file-upload-error-msg'), v = u.find('.w-file-upload-file'), h = u.find('.w-file-remove-link'), g = v.find('.w-file-upload-file-name'), m = p.attr('data-w-size-error'), y = p.attr('data-w-type-error'), _ = p.attr('data-w-generic-error');
+                        if (E)
+                            f.on('click', function (t) {
+                                t.preventDefault();
+                            }), l.on('click', function (t) {
+                                t.preventDefault();
+                            }), d.on('click', function (t) {
+                                t.preventDefault();
+                            });
+                        else {
+                            h.on('click', function () {
+                                f.removeAttr('data-value'), f.val(''), g.html(''), o.toggle(!0), u.toggle(!1);
+                            }), f.on('change', function (i) {
+                                (r = i.target && i.target.files && i.target.files[0]) && (o.toggle(!1), s.toggle(!1), a.toggle(!0), g.text(r.name), x() || b(n), n.fileUploads[e].uploading = !0, function (e, n) {
+                                    var r = {
+                                        name: e.name,
+                                        size: e.size
+                                    };
+                                    t.ajax({
+                                        type: 'POST',
+                                        url: c,
+                                        data: r,
+                                        dataType: 'json',
+                                        crossDomain: !0
+                                    }).done(function (t) {
+                                        n(null, t);
+                                    }).fail(function (t) {
+                                        n(t);
+                                    });
+                                }(r, O));
+                            });
+                            var w = l.outerHeight();
+                            f.height(w), f.width(1);
+                        }
+                        function T(t) {
+                            var r = t.responseJSON && t.responseJSON.msg, i = _;
+                            'string' == typeof r && 0 === r.indexOf('InvalidFileTypeError') ? i = y : 'string' == typeof r && 0 === r.indexOf('MaxFileSizeError') && (i = m), p.text(i), f.removeAttr('data-value'), f.val(''), a.toggle(!1), o.toggle(!0), s.toggle(!0), n.fileUploads[e].uploading = !1, x() || I(n);
+                        }
+                        function O(e, n) {
+                            if (e)
+                                return T(e);
+                            var i = n.fileName, o = n.postData, a = n.fileId, u = n.s3Url;
+                            f.attr('data-value', a), function (e, n, r, i, o) {
+                                var a = new FormData();
+                                for (var u in n)
+                                    a.append(u, n[u]);
+                                a.append('file', r, i), t.ajax({
+                                    type: 'POST',
+                                    url: e,
+                                    data: a,
+                                    processData: !1,
+                                    contentType: !1
+                                }).done(function () {
+                                    o(null);
+                                }).fail(function (t) {
+                                    o(t);
+                                });
+                            }(u, o, r, i, A);
+                        }
+                        function A(t) {
+                            if (t)
+                                return T(t);
+                            a.toggle(!1), u.css('display', 'inline-block'), n.fileUploads[e].uploading = !1, x() || I(n);
+                        }
+                        function x() {
+                            var t = n.fileUploads && n.fileUploads.toArray() || [];
+                            return t.some(function (t) {
+                                return t.uploading;
+                            });
+                        }
+                    }(e, i);
+                });
+                var u = i.action = r.attr('action');
+                i.handler = null, i.redirect = r.attr('data-redirect'), m.test(u) ? i.handler = O : u || (o ? i.handler = 'function' == typeof hostedSubmitWebflow ? hostedSubmitWebflow : T : y());
+            }
+            function I(t) {
+                var e = t.btn = t.form.find(':input[type="submit"]');
+                t.wait = t.btn.attr('data-wait') || null, t.success = !1, e.prop('disabled', !1), t.label && e.val(t.label);
+            }
+            function b(t) {
+                var e = t.btn, n = t.wait;
+                e.prop('disabled', !0), n && (t.label = e.val(), e.val(n));
+            }
+            function w(e, n) {
+                var r = null;
+                return n = n || {}, e.find(':input:not([type="submit"]):not([type="file"])').each(function (i, o) {
+                    var a = t(o), u = a.attr('type'), c = a.attr('data-name') || a.attr('name') || 'Field ' + (i + 1), s = a.val();
+                    if ('checkbox' === u)
+                        s = a.is(':checked');
+                    else if ('radio' === u) {
+                        if (null === n[c] || 'string' == typeof n[c])
+                            return;
+                        s = e.find('input[name="' + a.attr('name') + '"]:checked').val() || null;
+                    }
+                    'string' == typeof s && (s = t.trim(s)), n[c] = s, r = r || function (t, e, n, r) {
+                        var i = null;
+                        'password' === e ? i = 'Passwords cannot be submitted.' : t.attr('required') ? r ? v.test(t.attr('type')) && (h.test(r) || (i = 'Please enter a valid email address for: ' + n)) : i = 'Please fill out the required field: ' + n : 'g-recaptcha-response' !== n || r || (i = 'Please confirm you’re not a robot.');
+                        return i;
+                    }(a, u, c, s);
+                }), r;
+            }
+            function T(t) {
+                x(t), A(t);
+            }
+            function O(n) {
+                I(n);
+                var r = n.form, i = {};
+                if (!/^https/.test(l.href) || /^https/.test(n.action)) {
+                    x(n);
+                    var o, a = w(r, i);
+                    if (a)
+                        return g(a);
+                    b(n), e.each(i, function (t, e) {
+                        v.test(e) && (i.EMAIL = t), /^((full[ _-]?)?name)$/i.test(e) && (o = t), /^(first[ _-]?name)$/i.test(e) && (i.FNAME = t), /^(last[ _-]?name)$/i.test(e) && (i.LNAME = t);
+                    }), o && !i.FNAME && (o = o.split(' '), i.FNAME = o[0], i.LNAME = i.LNAME || o[1]);
+                    var u = n.action.replace('/post?', '/post-json?') + '&c=?', c = u.indexOf('u=') + 2;
+                    c = u.substring(c, u.indexOf('&', c));
+                    var s = u.indexOf('id=') + 3;
+                    s = u.substring(s, u.indexOf('&', s)), i['b_' + c + '_' + s] = '', t.ajax({
+                        url: u,
+                        data: i,
+                        dataType: 'jsonp'
+                    }).done(function (t) {
+                        n.success = 'success' === t.result || /already/.test(t.msg), n.success || console.info('MailChimp error: ' + t.msg), A(n);
+                    }).fail(function () {
+                        A(n);
+                    });
+                } else
+                    r.attr('method', 'post');
+            }
+            function A(t) {
+                var e = t.form, n = t.redirect, r = t.success;
+                r && n ? i.location(n) : (t.done.toggle(r), t.fail.toggle(!r), e.toggle(!r), I(t));
+            }
+            function x(t) {
+                t.evt && t.evt.preventDefault(), t.evt = null;
+            }
+            return s.ready = s.design = s.preview = function () {
+                !function () {
+                    o = t('html').attr('data-wf-site'), u = 'https://webflow.com/api/v1/form/' + o, d && u.indexOf('https://webflow.com') >= 0 && (u = u.replace('https://webflow.com', 'http://formdata.webflow.com'));
+                    if (c = ''.concat(u, '/signFile'), !(n = t(p + ' form')).length)
+                        return;
+                    n.each(_);
+                }(), E || a || function () {
+                    a = !0, f.on('submit', p + ' form', function (e) {
+                        var n = t.data(this, p);
+                        n.handler && (n.evt = e, n.handler(n));
+                    });
+                    var e = [
+                        [
+                            'checkbox',
+                            '.w-checkbox-input'
+                        ],
+                        [
+                            'radio',
+                            '.w-radio-input'
+                        ]
+                    ];
+                    f.on('change', p + ' form input[type="checkbox"]:not(.w-checkbox-input)', function (e) {
+                        t(e.target).siblings('.w-checkbox-input').toggleClass('w--redirected-checked');
+                    }), f.on('change', p + ' form input[type="radio"]', function (e) {
+                        t('input[name="'.concat(e.target.name, '"]:not(').concat('.w-checkbox-input', ')')).map(function (e, n) {
+                            return t(n).siblings('.w-radio-input').removeClass('w--redirected-checked');
+                        });
+                        var n = t(e.target);
+                        n.hasClass('w-radio-input') || n.siblings('.w-radio-input').addClass('w--redirected-checked');
+                    }), e.forEach(function (e) {
+                        var n = (0, r.default)(e, 2), i = n[0], o = n[1];
+                        f.on('focus', p + ' form input[type="'.concat(i, '"]:not(') + o + ')', function (e) {
+                            t(e.target).siblings(o).addClass('w--redirected-focus');
+                        }), f.on('blur', p + ' form input[type="'.concat(i, '"]:not(') + o + ')', function (e) {
+                            t(e.target).siblings(o).removeClass('w--redirected-focus');
+                        });
+                    });
+                }();
+            }, s;
+        });
+    },
+    function (t, e, n) {
+        var r = n(320), i = n(321), o = n(322);
+        t.exports = function (t, e) {
+            return r(t) || i(t, e) || o();
+        };
+    },
+    function (t, e) {
+        t.exports = function (t) {
+            if (Array.isArray(t))
+                return t;
+        };
+    },
+    function (t, e) {
+        t.exports = function (t, e) {
+            var n = [], r = !0, i = !1, o = void 0;
+            try {
+                for (var a, u = t[Symbol.iterator](); !(r = (a = u.next()).done) && (n.push(a.value), !e || n.length !== e); r = !0);
+            } catch (t) {
+                i = !0, o = t;
+            } finally {
+                try {
+                    r || null == u.return || u.return();
+                } finally {
+                    if (i)
+                        throw o;
+                }
+            }
+            return n;
+        };
+    },
+    function (t, e) {
+        t.exports = function () {
+            throw new TypeError('Invalid attempt to destructure non-iterable instance');
+        };
+    },
+    function (t, e, n) {
+        'use strict';
+        var r = n(3), i = 'w-condition-invisible', o = '.' + i;
+        function a(t) {
+            return Boolean(t.$el && t.$el.closest(o).length);
+        }
+        function u(t, e) {
+            for (var n = t; n >= 0; n--)
+                if (!a(e[n]))
+                    return n;
+            return -1;
+        }
+        function c(t, e) {
+            for (var n = t; n <= e.length - 1; n++)
+                if (!a(e[n]))
+                    return n;
+            return -1;
+        }
+        function s(t, e, n, r) {
+            var o, s, f, l = n.tram, d = Array.isArray, p = 'w-lightbox-', v = /(^|\s+)/g, h = [];
+            function g(t, e) {
+                return h = d(t) ? t : [t], s || g.build(), function (t) {
+                    return t.filter(function (t) {
+                        return !a(t);
+                    });
+                }(h).length > 1 && (s.items = s.empty, h.forEach(function (t) {
+                    var e = P('thumbnail'), n = P('item').append(e);
+                    a(t) && n.addClass(i), s.items = s.items.add(n), x(t.thumbnailUrl || t.url, function (t) {
+                        t.prop('width') > t.prop('height') ? N(t, 'wide') : N(t, 'tall'), e.append(N(t, 'thumbnail-image'));
+                    });
+                }), s.strip.empty().append(s.items), N(s.content, 'group')), l(L(s.lightbox, 'hide').trigger('focus')).add('opacity .3s').start({ opacity: 1 }), N(s.html, 'noscroll'), g.show(e || 0);
+            }
+            function E(t) {
+                return function (e) {
+                    this === e.target && (e.stopPropagation(), e.preventDefault(), t());
+                };
+            }
+            g.build = function () {
+                return g.destroy(), (s = {
+                    html: n(e.documentElement),
+                    empty: n()
+                }).arrowLeft = P('control left inactive'), s.arrowRight = P('control right inactive'), s.close = P('control close'), s.spinner = P('spinner'), s.strip = P('strip'), f = new S(s.spinner, R('hide')), s.content = P('content').append(s.spinner, s.arrowLeft, s.arrowRight, s.close), s.container = P('container').append(s.content, s.strip), s.lightbox = P('backdrop hide').append(s.container), s.strip.on('click', C('item'), I), s.content.on('swipe', b).on('click', C('left'), m).on('click', C('right'), y).on('click', C('close'), _).on('click', C('image, caption'), y), s.container.on('click', C('view'), _).on('dragstart', C('img'), T), s.lightbox.on('keydown', O).on('focusin', w), n(r).append(s.lightbox.prop('tabIndex', 0)), g;
+            }, g.destroy = function () {
+                s && (L(s.html, 'noscroll'), s.lightbox.remove(), s = void 0);
+            }, g.show = function (t) {
+                if (t !== o) {
+                    var e = h[t];
+                    if (!e)
+                        return g.hide();
+                    if (a(e)) {
+                        if (t < o) {
+                            var r = u(t - 1, h);
+                            t = r > -1 ? r : t;
+                        } else {
+                            var i = c(t + 1, h);
+                            t = i > -1 ? i : t;
+                        }
+                        e = h[t];
+                    }
+                    var d, p, v = o;
+                    return o = t, f.show(), x(e.html && (d = e.width, p = e.height, 'data:image/svg+xml;charset=utf-8,' + encodeURI('<svg xmlns="http://www.w3.org/2000/svg" width="' + d + '" height="' + p + '"/>')) || e.url, function (r) {
+                        if (t === o) {
+                            var i, a, d = P('figure', 'figure').append(N(r, 'image')), p = P('frame').append(d), g = P('view').append(p);
+                            e.html && ((a = (i = n(e.html)).is('iframe')) && i.on('load', E), d.append(N(i, 'embed'))), e.caption && d.append(P('caption', 'figcaption').text(e.caption)), s.spinner.before(g), a || E();
+                        }
+                        function E() {
+                            var e;
+                            if (f.hide(), t === o) {
+                                if (D(s.arrowLeft, 'inactive', function (t, e) {
+                                        return -1 === u(t - 1, e);
+                                    }(t, h)), D(s.arrowRight, 'inactive', function (t, e) {
+                                        return -1 === c(t + 1, e);
+                                    }(t, h)), s.view ? (l(s.view).add('opacity .3s').start({ opacity: 0 }).then((e = s.view, function () {
+                                        e.remove();
+                                    })), l(g).add('opacity .3s').add('transform .3s').set({ x: t > v ? '80px' : '-80px' }).start({
+                                        opacity: 1,
+                                        x: 0
+                                    })) : g.css('opacity', 1), s.view = g, s.items) {
+                                    L(s.items, 'active');
+                                    var n = s.items.eq(t);
+                                    N(n, 'active'), function (t) {
+                                        var e, n = t.get(0), r = s.strip.get(0), i = n.offsetLeft, o = n.clientWidth, a = r.scrollLeft, u = r.clientWidth, c = r.scrollWidth - u;
+                                        i < a ? e = Math.max(0, i + o - u) : i + o > u + a && (e = Math.min(i, c));
+                                        null != e && l(s.strip).add('scroll-left 500ms').start({ 'scroll-left': e });
+                                    }(n);
+                                }
+                            } else
+                                g.remove();
+                        }
+                    }), g;
+                }
+            }, g.hide = function () {
+                return l(s.lightbox).add('opacity .3s').start({ opacity: 0 }).then(A), g;
+            }, g.prev = function () {
+                var t = u(o - 1, h);
+                t > -1 && g.show(t);
+            }, g.next = function () {
+                var t = c(o + 1, h);
+                t > -1 && g.show(t);
+            };
+            var m = E(g.prev), y = E(g.next), _ = E(g.hide), I = function (t) {
+                    var e = n(this).index();
+                    t.preventDefault(), g.show(e);
+                }, b = function (t, e) {
+                    t.preventDefault(), 'left' === e.direction ? g.next() : 'right' === e.direction && g.prev();
+                }, w = function () {
+                    this.focus();
+                };
+            function T(t) {
+                t.preventDefault();
+            }
+            function O(t) {
+                var e = t.keyCode;
+                27 === e ? g.hide() : 37 === e ? g.prev() : 39 === e && g.next();
+            }
+            function A() {
+                s && (s.strip.scrollLeft(0).empty(), L(s.html, 'noscroll'), N(s.lightbox, 'hide'), s.view && s.view.remove(), L(s.content, 'group'), N(s.arrowLeft, 'inactive'), N(s.arrowRight, 'inactive'), o = s.view = void 0);
+            }
+            function x(t, e) {
+                var n = P('img', 'img');
+                return n.one('load', function () {
+                    e(n);
+                }), n.attr('src', t), n;
+            }
+            function S(t, e, n) {
+                this.$element = t, this.className = e, this.delay = n || 200, this.hide();
+            }
+            function R(t, e) {
+                return t.replace(v, (e ? ' .' : ' ') + p);
+            }
+            function C(t) {
+                return R(t, !0);
+            }
+            function N(t, e) {
+                return t.addClass(R(e));
+            }
+            function L(t, e) {
+                return t.removeClass(R(e));
+            }
+            function D(t, e, n) {
+                return t.toggleClass(R(e), n);
+            }
+            function P(t, r) {
+                return N(n(e.createElement(r || 'div')), t);
+            }
+            return S.prototype.show = function () {
+                var t = this;
+                t.timeoutId || (t.timeoutId = setTimeout(function () {
+                    t.$element.removeClass(t.className), delete t.timeoutId;
+                }, t.delay));
+            }, S.prototype.hide = function () {
+                if (this.timeoutId)
+                    return clearTimeout(this.timeoutId), void delete this.timeoutId;
+                this.$element.addClass(this.className);
+            }, function () {
+                var n = t.navigator.userAgent, r = n.match(/(iPhone|iPad|iPod);[^OS]*OS (\d)/);
+                if (n.indexOf('Android ') > -1 && -1 === n.indexOf('Chrome') || r && !(r[2] > 7)) {
+                    var i = e.createElement('style');
+                    e.head.appendChild(i), t.addEventListener('resize', o, !0), o();
+                }
+                function o() {
+                    var e = t.innerHeight, n = t.innerWidth, r = '.w-lightbox-content, .w-lightbox-view, .w-lightbox-view:before {height:' + e + 'px}.w-lightbox-view {width:' + n + 'px}.w-lightbox-group, .w-lightbox-group .w-lightbox-view, .w-lightbox-group .w-lightbox-view:before {height:' + 0.86 * e + 'px}.w-lightbox-image {max-width:' + n + 'px;max-height:' + e + 'px}.w-lightbox-group .w-lightbox-image {max-height:' + 0.86 * e + 'px}.w-lightbox-strip {padding: 0 ' + 0.01 * e + 'px}.w-lightbox-item {width:' + 0.1 * e + 'px;padding:' + 0.02 * e + 'px ' + 0.01 * e + 'px}.w-lightbox-thumbnail {height:' + 0.1 * e + 'px}@media (min-width: 768px) {.w-lightbox-content, .w-lightbox-view, .w-lightbox-view:before {height:' + 0.96 * e + 'px}.w-lightbox-content {margin-top:' + 0.02 * e + 'px}.w-lightbox-group, .w-lightbox-group .w-lightbox-view, .w-lightbox-group .w-lightbox-view:before {height:' + 0.84 * e + 'px}.w-lightbox-image {max-width:' + 0.96 * n + 'px;max-height:' + 0.96 * e + 'px}.w-lightbox-group .w-lightbox-image {max-width:' + 0.823 * n + 'px;max-height:' + 0.84 * e + 'px}}';
+                    i.textContent = r;
+                }
+            }(), g;
+        }
+        r.define('lightbox', t.exports = function (t) {
+            var e, n, i = {}, o = r.env(), a = s(window, document, t, o ? '#lightbox-mountpoint' : 'body'), u = t(document), c = '.w-lightbox';
+            function f(t) {
+                var e, r, i = t.el.children('.w-json').html();
+                if (i) {
+                    try {
+                        i = JSON.parse(i);
+                    } catch (t) {
+                        console.error('Malformed lightbox JSON configuration.', t);
+                    }
+                    !function (t) {
+                        t.images && (t.images.forEach(function (t) {
+                            t.type = 'image';
+                        }), t.items = t.images);
+                        t.embed && (t.embed.type = 'video', t.items = [t.embed]);
+                        t.groupId && (t.group = t.groupId);
+                    }(i), i.items.forEach(function (e) {
+                        e.$el = t.el;
+                    }), (e = i.group) ? ((r = n[e]) || (r = n[e] = []), t.items = r, i.items.length && (t.index = r.length, r.push.apply(r, i.items))) : (t.items = i.items, t.index = 0);
+                } else
+                    t.items = [];
+            }
+            return i.ready = i.design = i.preview = function () {
+                e = o && r.env('design'), a.destroy(), n = {}, u.find(c).webflowLightBox();
+            }, jQuery.fn.extend({
+                webflowLightBox: function () {
+                    t.each(this, function (n, r) {
+                        var i = t.data(r, c);
+                        i || (i = t.data(r, c, {
+                            el: t(r),
+                            mode: 'images',
+                            images: [],
+                            embed: ''
+                        })), i.el.off(c), f(i), e ? i.el.on('setting' + c, f.bind(null, i)) : i.el.on('click' + c, function (t) {
+                            return function () {
+                                t.items.length && a(t.items, t.index || 0);
+                            };
+                        }(i)).on('click' + c, function (t) {
+                            t.preventDefault();
+                        });
+                    });
+                }
+            }), i;
+        });
+    },
+    function (t, e, n) {
+        'use strict';
+        var r = n(3), i = n(13), o = {
                 ARROW_LEFT: 37,
                 ARROW_UP: 38,
                 ARROW_RIGHT: 39,
@@ -6299,48 +7418,48 @@
                 END: 35
             };
         r.define('navbar', t.exports = function (t, e) {
-            var n, a, u, c, s = {}, f = t.tram, l = t(window), d = t(document), p = e.debounce, v = r.env(), h = '<div class="w-nav-overlay" data-wf-ignore />', E = '.w-nav', _ = 'w--open', g = 'w--nav-dropdown-open', y = 'w--nav-dropdown-toggle-open', I = 'w--nav-dropdown-list-open', m = 'w--nav-link-open', T = i.triggers, O = t();
-            function A() {
-                r.resize.off(b);
+            var n, a, u, c, s = {}, f = t.tram, l = t(window), d = t(document), p = e.debounce, v = r.env(), h = '<div class="w-nav-overlay" data-wf-ignore />', g = '.w-nav', E = 'w--open', m = 'w--nav-dropdown-open', y = 'w--nav-dropdown-toggle-open', _ = 'w--nav-dropdown-list-open', I = 'w--nav-link-open', b = i.triggers, w = t();
+            function T() {
+                r.resize.off(O);
             }
-            function b() {
+            function O() {
                 a.each(M);
             }
-            function S(n, r) {
-                var i = t(r), a = t.data(r, E);
-                a || (a = t.data(r, E, {
+            function A(n, r) {
+                var i = t(r), a = t.data(r, g);
+                a || (a = t.data(r, g, {
                     open: !1,
                     el: i,
                     config: {},
                     selectedIdx: -1
                 })), a.menu = i.find('.w-nav-menu'), a.links = a.menu.find('.w-nav-link'), a.dropdowns = a.menu.find('.w-dropdown'), a.dropdownToggle = a.menu.find('.w-dropdown-toggle'), a.dropdownList = a.menu.find('.w-dropdown-list'), a.button = i.find('.w-nav-button'), a.container = i.find('.w-container'), a.overlayContainerId = 'w-nav-overlay-' + n, a.outside = function (e) {
-                    e.outside && d.off('click' + E, e.outside);
+                    e.outside && d.off('click' + g, e.outside);
                     return function (n) {
                         var r = t(n.target);
                         c && r.closest('.w-editor-bem-EditorOverlay').length || P(e, r);
                     };
                 }(a);
                 var s = i.find('.w-nav-brand');
-                s && '/' === s.attr('href') && null == s.attr('aria-label') && s.attr('aria-label', 'home'), a.button.attr('style', '-webkit-user-select: text;'), null == a.button.attr('aria-label') && a.button.attr('aria-label', 'menu'), a.button.attr('role', 'button'), a.button.attr('tabindex', '0'), a.button.attr('aria-controls', a.overlayContainerId), a.button.attr('aria-haspopup', 'menu'), a.button.attr('aria-expanded', 'false'), a.el.off(E), a.button.off(E), a.menu.off(E), N(a), u ? (R(a), a.el.on('setting' + E, function (t) {
+                s && '/' === s.attr('href') && null == s.attr('aria-label') && s.attr('aria-label', 'home'), a.button.attr('style', '-webkit-user-select: text;'), null == a.button.attr('aria-label') && a.button.attr('aria-label', 'menu'), a.button.attr('role', 'button'), a.button.attr('tabindex', '0'), a.button.attr('aria-controls', a.overlayContainerId), a.button.attr('aria-haspopup', 'menu'), a.button.attr('aria-expanded', 'false'), a.el.off(g), a.button.off(g), a.menu.off(g), R(a), u ? (S(a), a.el.on('setting' + g, function (t) {
                     return function (n, r) {
                         r = r || {};
                         var i = l.width();
-                        N(t), !0 === r.open && G(t, !0), !1 === r.open && k(t, !0), t.open && e.defer(function () {
-                            i !== l.width() && L(t);
+                        R(t), !0 === r.open && X(t, !0), !1 === r.open && U(t, !0), t.open && e.defer(function () {
+                            i !== l.width() && N(t);
                         });
                     };
                 }(a))) : (!function (e) {
                     if (e.overlay)
                         return;
-                    e.overlay = t(h).appendTo(e.el), e.overlay.attr('id', e.overlayContainerId), e.parent = e.menu.parent(), k(e, !0);
-                }(a), a.button.on('click' + E, x(a)), a.menu.on('click' + E, 'a', D(a)), a.button.on('keydown' + E, function (t) {
+                    e.overlay = t(h).appendTo(e.el), e.overlay.attr('id', e.overlayContainerId), e.parent = e.menu.parent(), U(e, !0);
+                }(a), a.button.on('click' + g, L(a)), a.menu.on('click' + g, 'a', D(a)), a.button.on('keydown' + g, function (t) {
                     return function (e) {
                         switch (e.keyCode) {
                         case o.SPACE:
                         case o.ENTER:
-                            return x(t)(), e.preventDefault(), e.stopPropagation();
+                            return L(t)(), e.preventDefault(), e.stopPropagation();
                         case o.ESCAPE:
-                            return k(t), e.preventDefault(), e.stopPropagation();
+                            return U(t), e.preventDefault(), e.stopPropagation();
                         case o.ARROW_RIGHT:
                         case o.ARROW_DOWN:
                         case o.HOME:
@@ -6348,7 +7467,7 @@
                             return t.open ? (e.keyCode === o.END ? t.selectedIdx = t.links.length - 1 : t.selectedIdx = 0, C(t), e.preventDefault(), e.stopPropagation()) : (e.preventDefault(), e.stopPropagation());
                         }
                     };
-                }(a)), a.el.on('keydown' + E, function (t) {
+                }(a)), a.el.on('keydown' + g, function (t) {
                     return function (e) {
                         if (t.open)
                             switch (t.selectedIdx = t.links.index(document.activeElement), e.keyCode) {
@@ -6356,7 +7475,7 @@
                             case o.END:
                                 return e.keyCode === o.END ? t.selectedIdx = t.links.length - 1 : t.selectedIdx = 0, C(t), e.preventDefault(), e.stopPropagation();
                             case o.ESCAPE:
-                                return k(t), t.button.focus(), e.preventDefault(), e.stopPropagation();
+                                return U(t), t.button.focus(), e.preventDefault(), e.stopPropagation();
                             case o.ARROW_LEFT:
                             case o.ARROW_UP:
                                 return t.selectedIdx = Math.max(-1, t.selectedIdx - 1), C(t), e.preventDefault(), e.stopPropagation();
@@ -6367,16 +7486,16 @@
                     };
                 }(a))), M(n, r);
             }
-            function w(e, n) {
-                var r = t.data(n, E);
-                r && (R(r), t.removeData(n, E));
+            function x(e, n) {
+                var r = t.data(n, g);
+                r && (S(r), t.removeData(n, g));
+            }
+            function S(t) {
+                t.overlay && (U(t, !0), t.overlay.remove(), t.overlay = null);
             }
             function R(t) {
-                t.overlay && (k(t, !0), t.overlay.remove(), t.overlay = null);
-            }
-            function N(t) {
                 var n = {}, r = t.config || {}, i = n.animation = t.el.attr('data-animation') || 'default';
-                n.animOver = /^over/.test(i), n.animDirect = /left$/.test(i) ? -1 : 1, r.animation !== i && t.open && e.defer(L, t), n.easing = t.el.attr('data-easing') || 'ease', n.easing2 = t.el.attr('data-easing2') || 'ease';
+                n.animOver = /^over/.test(i), n.animDirect = /left$/.test(i) ? -1 : 1, r.animation !== i && t.open && e.defer(N, t), n.easing = t.el.attr('data-easing') || 'ease', n.easing2 = t.el.attr('data-easing2') || 'ease';
                 var o = t.el.attr('data-duration');
                 n.duration = null != o ? Number(o) : 400, n.docHeight = t.el.attr('data-doc-height'), t.config = n;
             }
@@ -6386,86 +7505,86 @@
                     e.focus(), D(e);
                 }
             }
-            function L(t) {
-                t.open && (k(t, !0), G(t, !0));
+            function N(t) {
+                t.open && (U(t, !0), X(t, !0));
             }
-            function x(t) {
+            function L(t) {
                 return p(function () {
-                    t.open ? k(t) : G(t);
+                    t.open ? U(t) : X(t);
                 });
             }
             function D(e) {
                 return function (n) {
                     var i = t(this).attr('href');
-                    r.validClick(n.currentTarget) ? i && 0 === i.indexOf('#') && e.open && k(e) : n.preventDefault();
+                    r.validClick(n.currentTarget) ? i && 0 === i.indexOf('#') && e.open && U(e) : n.preventDefault();
                 };
             }
             s.ready = s.design = s.preview = function () {
-                if (u = v && r.env('design'), c = r.env('editor'), n = t(document.body), !(a = d.find(E)).length)
+                if (u = v && r.env('design'), c = r.env('editor'), n = t(document.body), !(a = d.find(g)).length)
                     return;
-                a.each(S), A(), r.resize.on(b);
+                a.each(A), T(), r.resize.on(O);
             }, s.destroy = function () {
-                O = t(), A(), a && a.length && a.each(w);
+                w = t(), T(), a && a.length && a.each(x);
             };
             var P = p(function (t, e) {
                 if (t.open) {
                     var n = e.closest('.w-nav-menu');
-                    t.menu.is(n) || k(t);
+                    t.menu.is(n) || U(t);
                 }
             });
             function M(e, n) {
-                var r = t.data(n, E), i = r.collapsed = 'none' !== r.button.css('display');
-                if (!r.open || i || u || k(r, !0), r.container.length) {
+                var r = t.data(n, g), i = r.collapsed = 'none' !== r.button.css('display');
+                if (!r.open || i || u || U(r, !0), r.container.length) {
                     var o = function (e) {
-                        var n = e.container.css(F);
+                        var n = e.container.css(j);
                         'none' === n && (n = '');
                         return function (e, r) {
-                            (r = t(r)).css(F, ''), 'none' === r.css(F) && r.css(F, n);
+                            (r = t(r)).css(j, ''), 'none' === r.css(j) && r.css(j, n);
                         };
                     }(r);
                     r.links.each(o), r.dropdowns.each(o);
                 }
-                r.open && V(r);
+                r.open && G(r);
             }
-            var F = 'max-width';
-            function j(t, e) {
+            var j = 'max-width';
+            function F(t, e) {
                 e.setAttribute('data-nav-menu-open', '');
             }
-            function X(t, e) {
+            function k(t, e) {
                 e.removeAttribute('data-nav-menu-open');
             }
-            function G(t, e) {
+            function X(t, e) {
                 if (!t.open) {
-                    t.open = !0, t.menu.each(j), t.links.addClass(m), t.dropdowns.addClass(g), t.dropdownToggle.addClass(y), t.dropdownList.addClass(I), t.button.addClass(_);
+                    t.open = !0, t.menu.each(F), t.links.addClass(I), t.dropdowns.addClass(m), t.dropdownToggle.addClass(y), t.dropdownList.addClass(_), t.button.addClass(E);
                     var n = t.config;
-                    'none' !== n.animation && f.support.transform || (e = !0);
-                    var i = V(t), o = t.menu.outerHeight(!0), a = t.menu.outerWidth(!0), c = t.el.height(), s = t.el[0];
-                    if (M(0, s), T.intro(0, s), r.redraw.up(), u || d.on('click' + E, t.outside), e)
+                    ('none' === n.animation || !f.support.transform || n.duration <= 0) && (e = !0);
+                    var i = G(t), o = t.menu.outerHeight(!0), a = t.menu.outerWidth(!0), c = t.el.height(), s = t.el[0];
+                    if (M(0, s), b.intro(0, s), r.redraw.up(), u || d.on('click' + g, t.outside), e)
                         v();
                     else {
                         var l = 'transform ' + n.duration + 'ms ' + n.easing;
-                        if (t.overlay && (O = t.menu.prev(), t.overlay.show().append(t.menu)), n.animOver)
+                        if (t.overlay && (w = t.menu.prev(), t.overlay.show().append(t.menu)), n.animOver)
                             return f(t.menu).add(l).set({
                                 x: n.animDirect * a,
                                 height: i
-                            }).start({ x: '0' }).then(v), void (t.overlay && t.overlay.width(a));
+                            }).start({ x: 0 }).then(v), void (t.overlay && t.overlay.width(a));
                         var p = c + o;
-                        f(t.menu).add(l).set({ y: -p }).start({ y: '0' }).then(v);
+                        f(t.menu).add(l).set({ y: -p }).start({ y: 0 }).then(v);
                     }
                 }
                 function v() {
                     t.button.attr('aria-expanded', 'true');
                 }
             }
-            function V(t) {
+            function G(t) {
                 var e = t.config, r = e.docHeight ? d.height() : n.height();
                 return e.animOver ? t.menu.height(r) : 'fixed' !== t.el.css('position') && (r -= t.el.outerHeight(!0)), t.overlay && t.overlay.height(r), r;
             }
-            function k(t, e) {
+            function U(t, e) {
                 if (t.open) {
-                    t.open = !1, t.button.removeClass(_);
+                    t.open = !1, t.button.removeClass(E);
                     var n = t.config;
-                    if (('none' === n.animation || !f.support.transform || n.duration <= 0) && (e = !0), T.outro(0, t.el[0]), d.off('click' + E, t.outside), e)
+                    if (('none' === n.animation || !f.support.transform || n.duration <= 0) && (e = !0), b.outro(0, t.el[0]), d.off('click' + g, t.outside), e)
                         return f(t.menu).stop(), void c();
                     var r = 'transform ' + n.duration + 'ms ' + n.easing2, i = t.menu.outerHeight(!0), o = t.menu.outerWidth(!0), a = t.el.height();
                     if (n.animOver)
@@ -6477,12 +7596,410 @@
                 }
                 function c() {
                     t.menu.height(''), f(t.menu).set({
-                        x: '0',
-                        y: '0'
-                    }), t.menu.each(X), t.links.removeClass(m), t.dropdowns.removeClass(g), t.dropdownToggle.removeClass(y), t.dropdownList.removeClass(I), t.overlay && t.overlay.children().length && (O.length ? t.menu.insertAfter(O) : t.menu.prependTo(t.parent), t.overlay.attr('style', '').hide()), t.el.triggerHandler('w-close'), t.button.attr('aria-expanded', 'false');
+                        x: 0,
+                        y: 0
+                    }), t.menu.each(k), t.links.removeClass(I), t.dropdowns.removeClass(m), t.dropdownToggle.removeClass(y), t.dropdownList.removeClass(_), t.overlay && t.overlay.children().length && (w.length ? t.menu.insertAfter(w) : t.menu.prependTo(t.parent), t.overlay.attr('style', '').hide()), t.el.triggerHandler('w-close'), t.button.attr('aria-expanded', 'false');
                 }
             }
             return s;
+        });
+    },
+    function (t, e, n) {
+        'use strict';
+        var r = n(3), i = n(13), o = {
+                ARROW_LEFT: 37,
+                ARROW_UP: 38,
+                ARROW_RIGHT: 39,
+                ARROW_DOWN: 40,
+                SPACE: 32,
+                ENTER: 13,
+                HOME: 36,
+                END: 35
+            }, a = 'a[href], area[href], [role="button"], input, select, textarea, button, iframe, object, embed, *[tabindex], *[contenteditable]';
+        r.define('slider', t.exports = function (t, e) {
+            var n, u, c, s, f = {}, l = t.tram, d = t(document), p = r.env(), v = '.w-slider', h = '<div class="w-slider-dot" data-wf-ignore />', g = '<div aria-live="off" aria-atomic="true" class="w-slider-aria-label" data-wf-ignore />', E = 'w-slider-force-show', m = i.triggers;
+            function y() {
+                (n = d.find(v)).length && (n.each(b), s = null, c || (_(), r.resize.on(I), r.redraw.on(f.redraw)));
+            }
+            function _() {
+                r.resize.off(I), r.redraw.off(f.redraw);
+            }
+            function I() {
+                n.filter(':visible').each(P);
+            }
+            function b(e, n) {
+                var r = t(n), i = t.data(n, v);
+                i || (i = t.data(n, v, {
+                    index: 0,
+                    depth: 1,
+                    hasFocus: {
+                        keyboard: !1,
+                        mouse: !1
+                    },
+                    el: r,
+                    config: {}
+                })), i.mask = r.children('.w-slider-mask'), i.left = r.children('.w-slider-arrow-left'), i.right = r.children('.w-slider-arrow-right'), i.nav = r.children('.w-slider-nav'), i.slides = i.mask.children('.w-slide'), i.slides.each(m.reset), s && (i.maskWidth = 0), void 0 === r.attr('role') && r.attr('role', 'region'), void 0 === r.attr('aria-label') && r.attr('aria-label', 'carousel');
+                var o = i.mask.attr('id');
+                if (o || (o = 'w-slider-mask-' + e, i.mask.attr('id', o)), i.ariaLiveLabel = t(g).appendTo(i.mask), i.left.attr('role', 'button'), i.left.attr('tabindex', '0'), i.left.attr('aria-controls', o), void 0 === i.left.attr('aria-label') && i.left.attr('aria-label', 'previous slide'), i.right.attr('role', 'button'), i.right.attr('tabindex', '0'), i.right.attr('aria-controls', o), void 0 === i.right.attr('aria-label') && i.right.attr('aria-label', 'next slide'), !l.support.transform)
+                    return i.left.hide(), i.right.hide(), i.nav.hide(), void (c = !0);
+                i.el.off(v), i.left.off(v), i.right.off(v), i.nav.off(v), w(i), u ? (i.el.on('setting' + v, N(i)), C(i), i.hasTimer = !1) : (i.el.on('swipe' + v, N(i)), i.left.on('click' + v, x(i)), i.right.on('click' + v, S(i)), i.left.on('keydown' + v, A(i, x)), i.right.on('keydown' + v, A(i, S)), i.nav.on('keydown' + v, '> div', N(i)), i.config.autoplay && !i.hasTimer && (i.hasTimer = !0, i.timerCount = 1, R(i)), i.el.on('mouseenter' + v, O(i, !0, 'mouse')), i.el.on('focusin' + v, O(i, !0, 'keyboard')), i.el.on('mouseleave' + v, O(i, !1, 'mouse')), i.el.on('focusout' + v, O(i, !1, 'keyboard'))), i.nav.on('click' + v, '> div', N(i)), p || i.mask.contents().filter(function () {
+                    return 3 === this.nodeType;
+                }).remove();
+                var a = r.filter(':hidden');
+                a.addClass(E);
+                var f = r.parents(':hidden');
+                f.addClass(E), P(e, n), a.removeClass(E), f.removeClass(E);
+            }
+            function w(t) {
+                var e = { crossOver: 0 };
+                e.animation = t.el.attr('data-animation') || 'slide', 'outin' === e.animation && (e.animation = 'cross', e.crossOver = 0.5), e.easing = t.el.attr('data-easing') || 'ease';
+                var n = t.el.attr('data-duration');
+                if (e.duration = null != n ? parseInt(n, 10) : 500, T(t.el.attr('data-infinite')) && (e.infinite = !0), T(t.el.attr('data-disable-swipe')) && (e.disableSwipe = !0), T(t.el.attr('data-hide-arrows')) ? e.hideArrows = !0 : t.config.hideArrows && (t.left.show(), t.right.show()), T(t.el.attr('data-autoplay'))) {
+                    e.autoplay = !0, e.delay = parseInt(t.el.attr('data-delay'), 10) || 2000, e.timerMax = parseInt(t.el.attr('data-autoplay-limit'), 10);
+                    var r = 'mousedown' + v + ' touchstart' + v;
+                    u || t.el.off(r).one(r, function () {
+                        C(t);
+                    });
+                }
+                var i = t.right.width();
+                e.edge = i ? i + 40 : 100, t.config = e;
+            }
+            function T(t) {
+                return '1' === t || 'true' === t;
+            }
+            function O(e, n, r) {
+                return function (i) {
+                    if (n)
+                        e.hasFocus[r] = n;
+                    else {
+                        if (t.contains(e.el.get(0), i.relatedTarget))
+                            return;
+                        if (e.hasFocus[r] = n, e.hasFocus.mouse && 'keyboard' === r || e.hasFocus.keyboard && 'mouse' === r)
+                            return;
+                    }
+                    n ? (e.ariaLiveLabel.attr('aria-live', 'polite'), e.hasTimer && C(e)) : (e.ariaLiveLabel.attr('aria-live', 'off'), e.hasTimer && R(e));
+                };
+            }
+            function A(t, e) {
+                return function (n) {
+                    switch (n.keyCode) {
+                    case o.SPACE:
+                    case o.ENTER:
+                        return e(t)(), n.preventDefault(), n.stopPropagation();
+                    }
+                };
+            }
+            function x(t) {
+                return function () {
+                    D(t, {
+                        index: t.index - 1,
+                        vector: -1
+                    });
+                };
+            }
+            function S(t) {
+                return function () {
+                    D(t, {
+                        index: t.index + 1,
+                        vector: 1
+                    });
+                };
+            }
+            function R(t) {
+                C(t);
+                var e = t.config, n = e.timerMax;
+                n && t.timerCount++ > n || (t.timerId = window.setTimeout(function () {
+                    null == t.timerId || u || (S(t)(), R(t));
+                }, e.delay));
+            }
+            function C(t) {
+                window.clearTimeout(t.timerId), t.timerId = null;
+            }
+            function N(n) {
+                return function (i, a) {
+                    a = a || {};
+                    var c = n.config;
+                    if (u && 'setting' === i.type) {
+                        if ('prev' === a.select)
+                            return x(n)();
+                        if ('next' === a.select)
+                            return S(n)();
+                        if (w(n), M(n), null == a.select)
+                            return;
+                        !function (n, r) {
+                            var i = null;
+                            r === n.slides.length && (y(), M(n)), e.each(n.anchors, function (e, n) {
+                                t(e.els).each(function (e, o) {
+                                    t(o).index() === r && (i = n);
+                                });
+                            }), null != i && D(n, {
+                                index: i,
+                                immediate: !0
+                            });
+                        }(n, a.select);
+                    } else {
+                        if ('swipe' === i.type) {
+                            if (c.disableSwipe)
+                                return;
+                            if (r.env('editor'))
+                                return;
+                            return 'left' === a.direction ? S(n)() : 'right' === a.direction ? x(n)() : void 0;
+                        }
+                        if (n.nav.has(i.target).length) {
+                            var s = t(i.target).index();
+                            if ('click' === i.type && D(n, { index: s }), 'keydown' === i.type)
+                                switch (i.keyCode) {
+                                case o.ENTER:
+                                case o.SPACE:
+                                    D(n, { index: s }), i.preventDefault();
+                                    break;
+                                case o.ARROW_LEFT:
+                                case o.ARROW_UP:
+                                    L(n.nav, Math.max(s - 1, 0)), i.preventDefault();
+                                    break;
+                                case o.ARROW_RIGHT:
+                                case o.ARROW_DOWN:
+                                    L(n.nav, Math.min(s + 1, n.pages)), i.preventDefault();
+                                    break;
+                                case o.HOME:
+                                    L(n.nav, 0), i.preventDefault();
+                                    break;
+                                case o.END:
+                                    L(n.nav, n.pages), i.preventDefault();
+                                    break;
+                                default:
+                                    return;
+                                }
+                        }
+                    }
+                };
+            }
+            function L(t, e) {
+                var n = t.children().eq(e).focus();
+                t.children().not(n);
+            }
+            function D(e, n) {
+                n = n || {};
+                var r = e.config, i = e.anchors;
+                e.previous = e.index;
+                var o = n.index, c = {};
+                o < 0 ? (o = i.length - 1, r.infinite && (c.x = -e.endX, c.from = 0, c.to = i[0].width)) : o >= i.length && (o = 0, r.infinite && (c.x = i[i.length - 1].width, c.from = -i[i.length - 1].x, c.to = c.from - c.x)), e.index = o;
+                var f = e.nav.children().eq(o).addClass('w-active').attr('aria-pressed', 'true').attr('tabindex', '0');
+                e.nav.children().not(f).removeClass('w-active').attr('aria-pressed', 'false').attr('tabindex', '-1'), r.hideArrows && (e.index === i.length - 1 ? e.right.hide() : e.right.show(), 0 === e.index ? e.left.hide() : e.left.show());
+                var d = e.offsetX || 0, p = e.offsetX = -i[e.index].x, v = {
+                        x: p,
+                        opacity: 1,
+                        visibility: ''
+                    }, h = t(i[e.index].els), g = t(i[e.previous] && i[e.previous].els), E = e.slides.not(h), y = r.animation, _ = r.easing, I = Math.round(r.duration), b = n.vector || (e.index > e.previous ? 1 : -1), w = 'opacity ' + I + 'ms ' + _, T = 'transform ' + I + 'ms ' + _;
+                if (h.find(a).removeAttr('tabindex'), h.removeAttr('aria-hidden'), h.find('*').removeAttr('aria-hidden'), E.find(a).attr('tabindex', '-1'), E.attr('aria-hidden', 'true'), E.find('*').attr('aria-hidden', 'true'), u || (h.each(m.intro), E.each(m.outro)), n.immediate && !s)
+                    return l(h).set(v), void x();
+                if (e.index !== e.previous) {
+                    if (e.ariaLiveLabel.text('Slide '.concat(o + 1, ' of ').concat(i.length, '.')), 'cross' === y) {
+                        var O = Math.round(I - I * r.crossOver), A = Math.round(I - O);
+                        return w = 'opacity ' + O + 'ms ' + _, l(g).set({ visibility: '' }).add(w).start({ opacity: 0 }), void l(h).set({
+                            visibility: '',
+                            x: p,
+                            opacity: 0,
+                            zIndex: e.depth++
+                        }).add(w).wait(A).then({ opacity: 1 }).then(x);
+                    }
+                    if ('fade' === y)
+                        return l(g).set({ visibility: '' }).stop(), void l(h).set({
+                            visibility: '',
+                            x: p,
+                            opacity: 0,
+                            zIndex: e.depth++
+                        }).add(w).start({ opacity: 1 }).then(x);
+                    if ('over' === y)
+                        return v = { x: e.endX }, l(g).set({ visibility: '' }).stop(), void l(h).set({
+                            visibility: '',
+                            zIndex: e.depth++,
+                            x: p + i[e.index].width * b
+                        }).add(T).start({ x: p }).then(x);
+                    r.infinite && c.x ? (l(e.slides.not(g)).set({
+                        visibility: '',
+                        x: c.x
+                    }).add(T).start({ x: p }), l(g).set({
+                        visibility: '',
+                        x: c.from
+                    }).add(T).start({ x: c.to }), e.shifted = g) : (r.infinite && e.shifted && (l(e.shifted).set({
+                        visibility: '',
+                        x: d
+                    }), e.shifted = null), l(e.slides).set({ visibility: '' }).add(T).start({ x: p }));
+                }
+                function x() {
+                    h = t(i[e.index].els), E = e.slides.not(h), 'slide' !== y && (v.visibility = 'hidden'), l(E).set(v);
+                }
+            }
+            function P(e, n) {
+                var r = t.data(n, v);
+                if (r)
+                    return function (t) {
+                        var e = t.mask.width();
+                        if (t.maskWidth !== e)
+                            return t.maskWidth = e, !0;
+                        return !1;
+                    }(r) ? M(r) : void (u && function (e) {
+                        var n = 0;
+                        if (e.slides.each(function (e, r) {
+                                n += t(r).outerWidth(!0);
+                            }), e.slidesWidth !== n)
+                            return e.slidesWidth = n, !0;
+                        return !1;
+                    }(r) && M(r));
+            }
+            function M(e) {
+                var n = 1, r = 0, i = 0, o = 0, a = e.maskWidth, c = a - e.config.edge;
+                c < 0 && (c = 0), e.anchors = [{
+                        els: [],
+                        x: 0,
+                        width: 0
+                    }], e.slides.each(function (u, s) {
+                    i - r > c && (n++, r += a, e.anchors[n - 1] = {
+                        els: [],
+                        x: i,
+                        width: 0
+                    }), o = t(s).outerWidth(!0), i += o, e.anchors[n - 1].width += o, e.anchors[n - 1].els.push(s);
+                    var f = u + 1 + ' of ' + e.slides.length;
+                    t(s).attr('aria-label', f), t(s).attr('role', 'group');
+                }), e.endX = i, u && (e.pages = null), e.nav.length && e.pages !== n && (e.pages = n, function (e) {
+                    var n, r = [], i = e.el.attr('data-nav-spacing');
+                    i && (i = parseFloat(i) + 'px');
+                    for (var o = 0, a = e.pages; o < a; o++)
+                        (n = t(h)).attr('aria-label', 'Show slide ' + (o + 1) + ' of ' + a).attr('aria-pressed', 'false').attr('role', 'button').attr('tabindex', '-1'), e.nav.hasClass('w-num') && n.text(o + 1), null != i && n.css({
+                            'margin-left': i,
+                            'margin-right': i
+                        }), r.push(n);
+                    e.nav.empty().append(r);
+                }(e));
+                var s = e.index;
+                s >= n && (s = n - 1), D(e, {
+                    immediate: !0,
+                    index: s
+                });
+            }
+            return f.ready = function () {
+                u = r.env('design'), y();
+            }, f.design = function () {
+                u = !0, y();
+            }, f.preview = function () {
+                u = !1, y();
+            }, f.redraw = function () {
+                s = !0, y();
+            }, f.destroy = _, f;
+        });
+    },
+    function (t, e, n) {
+        'use strict';
+        var r = n(3), i = n(13);
+        r.define('tabs', t.exports = function (t) {
+            var e, n, o = {}, a = t.tram, u = t(document), c = r.env, s = c.safari, f = c(), l = 'data-w-tab', d = 'data-w-pane', p = '.w-tabs', v = 'w--current', h = 'w--tab-active', g = i.triggers, E = !1;
+            function m() {
+                n = f && r.env('design'), (e = u.find(p)).length && (e.each(I), r.env('preview') && !E && e.each(_), y(), r.redraw.on(o.redraw));
+            }
+            function y() {
+                r.redraw.off(o.redraw);
+            }
+            function _(e, n) {
+                var r = t.data(n, p);
+                r && (r.links && r.links.each(g.reset), r.panes && r.panes.each(g.reset));
+            }
+            function I(e, r) {
+                var i = p.substr(1) + '-' + e, o = t(r), a = t.data(r, p);
+                if (a || (a = t.data(r, p, {
+                        el: o,
+                        config: {}
+                    })), a.current = null, a.tabIdentifier = i + '-' + l, a.paneIdentifier = i + '-' + d, a.menu = o.children('.w-tab-menu'), a.links = a.menu.children('.w-tab-link'), a.content = o.children('.w-tab-content'), a.panes = a.content.children('.w-tab-pane'), a.el.off(p), a.links.off(p), a.menu.attr('role', 'tablist'), a.links.attr('tabindex', '-1'), function (t) {
+                        var e = {};
+                        e.easing = t.el.attr('data-easing') || 'ease';
+                        var n = parseInt(t.el.attr('data-duration-in'), 10);
+                        n = e.intro = n == n ? n : 0;
+                        var r = parseInt(t.el.attr('data-duration-out'), 10);
+                        r = e.outro = r == r ? r : 0, e.immediate = !n && !r, t.config = e;
+                    }(a), !n) {
+                    a.links.on('click' + p, function (t) {
+                        return function (e) {
+                            e.preventDefault();
+                            var n = e.currentTarget.getAttribute(l);
+                            n && b(t, { tab: n });
+                        };
+                    }(a)), a.links.on('keydown' + p, function (t) {
+                        return function (e) {
+                            var n = function (t) {
+                                    var e = t.current;
+                                    return Array.prototype.findIndex.call(t.links, function (t) {
+                                        return t.getAttribute(l) === e;
+                                    }, null);
+                                }(t), r = e.key, i = {
+                                    ArrowLeft: n - 1,
+                                    ArrowUp: n - 1,
+                                    ArrowRight: n + 1,
+                                    ArrowDown: n + 1,
+                                    End: t.links.length - 1,
+                                    Home: 0
+                                };
+                            if (r in i) {
+                                e.preventDefault();
+                                var o = i[r];
+                                -1 === o && (o = t.links.length - 1), o === t.links.length && (o = 0);
+                                var a = t.links[o], u = a.getAttribute(l);
+                                u && b(t, { tab: u });
+                            }
+                        };
+                    }(a));
+                    var u = a.links.filter('.' + v).attr(l);
+                    u && b(a, {
+                        tab: u,
+                        immediate: !0
+                    });
+                }
+            }
+            function b(e, n) {
+                n = n || {};
+                var i = e.config, o = i.easing, u = n.tab;
+                if (u !== e.current) {
+                    var c;
+                    e.current = u, e.links.each(function (r, o) {
+                        var a = t(o);
+                        if (n.immediate || i.immediate) {
+                            var s = e.panes[r];
+                            o.id || (o.id = e.tabIdentifier + '-' + r), s.id || (s.id = e.paneIdentifier + '-' + r), o.href = '#' + s.id, o.setAttribute('role', 'tab'), o.setAttribute('aria-controls', s.id), o.setAttribute('aria-selected', 'false'), s.setAttribute('role', 'tabpanel'), s.setAttribute('aria-labelledby', o.id);
+                        }
+                        o.getAttribute(l) === u ? (c = o, a.addClass(v).removeAttr('tabindex').attr({ 'aria-selected': 'true' }).each(g.intro)) : a.hasClass(v) && a.removeClass(v).attr({
+                            tabindex: '-1',
+                            'aria-selected': 'false'
+                        }).each(g.outro);
+                    });
+                    var f = [], d = [];
+                    e.panes.each(function (e, n) {
+                        var r = t(n);
+                        n.getAttribute(l) === u ? f.push(n) : r.hasClass(h) && d.push(n);
+                    });
+                    var p = t(f), m = t(d);
+                    if (n.immediate || i.immediate)
+                        return p.addClass(h).each(g.intro), m.removeClass(h), void (E || r.redraw.up());
+                    var y = window.scrollX, _ = window.scrollY;
+                    c.focus(), window.scrollTo(y, _), m.length && i.outro ? (m.each(g.outro), a(m).add('opacity ' + i.outro + 'ms ' + o, { fallback: s }).start({ opacity: 0 }).then(function () {
+                        return w(i, m, p);
+                    })) : w(i, m, p);
+                }
+            }
+            function w(t, e, n) {
+                if (e.removeClass(h).css({
+                        opacity: '',
+                        transition: '',
+                        transform: '',
+                        width: '',
+                        height: ''
+                    }), n.addClass(h).each(g.intro), r.redraw.up(), !t.intro)
+                    return a(n).set({ opacity: 1 });
+                a(n).set({ opacity: 0 }).redraw().add('opacity ' + t.intro + 'ms ' + t.easing, { fallback: s }).start({ opacity: 1 });
+            }
+            return o.ready = o.design = o.preview = m, o.redraw = function () {
+                E = !0, m(), E = !1;
+            }, o.destroy = function () {
+                (e = u.find(p)).length && (e.each(_), y());
+            }, o;
         });
     }
 ]);
@@ -6492,17 +8009,61 @@
  */
 Webflow.require('ix2').init({
     'events': {
+        'e-4': {
+            'id': 'e-4',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLLING_IN_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_CONTINUOUS_ACTION',
+                'config': {
+                    'actionListId': 'a',
+                    'affectedElements': {},
+                    'duration': 0
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd947f7c459091e|96b852a1-dab7-7f50-07bf-660df9357de3',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd947f7c459091e|96b852a1-dab7-7f50-07bf-660df9357de3',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': [{
+                    'continuousParameterGroupId': 'a-p',
+                    'smoothing': 50,
+                    'startsEntering': true,
+                    'addStartOffset': false,
+                    'addOffsetValue': 50,
+                    'startsExiting': false,
+                    'addEndOffset': false,
+                    'endOffsetValue': 50
+                }],
+            'createdOn': 1587980155590
+        },
         'e-5': {
             'id': 'e-5',
-            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'MOUSE_CLICK',
             'action': {
                 'id': '',
                 'actionTypeId': 'GENERAL_START_ACTION',
                 'config': {
-                    'delay': '0',
+                    'delay': 0,
                     'easing': '',
-                    'duration': '0',
-                    'actionListId': 'a-3',
+                    'duration': 0,
+                    'actionListId': 'a-4',
                     'affectedElements': {},
                     'playInReverse': false,
                     'autoStopEventId': 'e-6'
@@ -6515,164 +8076,17 @@ Webflow.require('ix2').init({
                 'tiny'
             ],
             'target': {
-                'selector': '.icon',
-                'originalId': '5f06dfca22397e1ad58be3d8|53f862d0-d3ec-886a-a96c-db4f3a670a54',
-                'appliesTo': 'CLASS'
-            },
-            'config': {
-                'loop': false,
-                'playInReverse': false,
-                'scrollOffsetValue': '0',
-                'scrollOffsetUnit': '%',
-                'delay': null,
-                'direction': null,
-                'effectIn': null
-            },
-            'createdOn': 1585919427604
-        },
-        'e-7': {
-            'id': 'e-7',
-            'eventTypeId': 'SCROLL_INTO_VIEW',
-            'action': {
-                'id': '',
-                'actionTypeId': 'GENERAL_START_ACTION',
-                'config': {
-                    'delay': '0',
-                    'easing': '',
-                    'duration': '0',
-                    'actionListId': 'a-8',
-                    'affectedElements': {},
-                    'playInReverse': false,
-                    'autoStopEventId': 'e-8'
-                }
-            },
-            'mediaQueries': [
-                'main',
-                'medium',
-                'small',
-                'tiny'
-            ],
-            'target': {
+                'id': '5f74cf571cd947d2c059091f|5ac96a7f-53ce-20bb-7064-908064b0422f',
                 'appliesTo': 'ELEMENT',
-                'styleBlockIds': [],
-                'id': '5f06dfca22397e1ad58be3d8|4b54b195-a09a-2ffc-4de7-3d3da00c9d38'
+                'styleBlockIds': []
             },
+            'targets': [{
+                    'id': '5f74cf571cd947d2c059091f|5ac96a7f-53ce-20bb-7064-908064b0422f',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
             'config': {
                 'loop': false,
-                'playInReverse': false,
-                'scrollOffsetValue': '0',
-                'scrollOffsetUnit': '%',
-                'delay': null,
-                'direction': null,
-                'effectIn': null
-            },
-            'createdOn': 1585919843444
-        },
-        'e-9': {
-            'id': 'e-9',
-            'eventTypeId': 'SCROLL_INTO_VIEW',
-            'action': {
-                'id': '',
-                'actionTypeId': 'GENERAL_START_ACTION',
-                'config': {
-                    'delay': '0',
-                    'easing': '',
-                    'duration': '0',
-                    'actionListId': 'a-6',
-                    'affectedElements': {},
-                    'playInReverse': false,
-                    'autoStopEventId': 'e-10'
-                }
-            },
-            'mediaQueries': [
-                'main',
-                'medium',
-                'small',
-                'tiny'
-            ],
-            'target': {
-                'appliesTo': 'ELEMENT',
-                'styleBlockIds': [],
-                'id': '5f06dfca22397e1ad58be3d8|b588b974-b8a9-e74a-dfd5-1dd7b08ec2b4'
-            },
-            'config': {
-                'loop': false,
-                'playInReverse': false,
-                'scrollOffsetValue': '0',
-                'scrollOffsetUnit': '%',
-                'delay': null,
-                'direction': null,
-                'effectIn': null
-            },
-            'createdOn': 1585919935470
-        },
-        'e-12': {
-            'id': 'e-12',
-            'eventTypeId': 'SCROLL_OUT_OF_VIEW',
-            'action': {
-                'id': '',
-                'actionTypeId': 'GENERAL_START_ACTION',
-                'config': {
-                    'delay': '0',
-                    'easing': '',
-                    'duration': '0',
-                    'actionListId': 'a-4',
-                    'affectedElements': {},
-                    'playInReverse': false,
-                    'autoStopEventId': 'e-11'
-                }
-            },
-            'mediaQueries': [
-                'main',
-                'medium',
-                'small',
-                'tiny'
-            ],
-            'target': {
-                'appliesTo': 'ELEMENT',
-                'styleBlockIds': [],
-                'id': '5f06dfca22397e1ad58be3d8|434e67bf-bd87-7bec-c3da-7ba13d5b9bd5'
-            },
-            'config': {
-                'loop': false,
-                'playInReverse': false,
-                'scrollOffsetValue': '0',
-                'scrollOffsetUnit': '%',
-                'delay': null,
-                'direction': null,
-                'effectIn': null
-            },
-            'createdOn': 1585919977422
-        },
-        'e-13': {
-            'id': 'e-13',
-            'eventTypeId': 'PAGE_START',
-            'action': {
-                'id': '',
-                'actionTypeId': 'GENERAL_START_ACTION',
-                'config': {
-                    'delay': '0',
-                    'easing': '',
-                    'duration': '0',
-                    'actionListId': 'a-9',
-                    'affectedElements': {},
-                    'playInReverse': false,
-                    'autoStopEventId': 'e-14'
-                }
-            },
-            'mediaQueries': [
-                'main',
-                'medium',
-                'small',
-                'tiny'
-            ],
-            'target': {
-                'appliesTo': 'PAGE',
-                'styleBlockIds': [],
-                'id': '5f06dfca22397ed4048be3d9'
-            },
-            'config': {
-                'loop': true,
                 'playInReverse': false,
                 'scrollOffsetValue': null,
                 'scrollOffsetUnit': null,
@@ -6680,19 +8094,66 @@ Webflow.require('ix2').init({
                 'direction': null,
                 'effectIn': null
             },
-            'createdOn': 1586425030759
+            'createdOn': 1588082272039
         },
-        'e-15': {
-            'id': 'e-15',
-            'eventTypeId': 'PAGE_START',
+        'e-6': {
+            'id': 'e-6',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'MOUSE_SECOND_CLICK',
             'action': {
                 'id': '',
                 'actionTypeId': 'GENERAL_START_ACTION',
                 'config': {
-                    'delay': '0',
+                    'delay': 0,
                     'easing': '',
-                    'duration': '0',
-                    'actionListId': 'a-9',
+                    'duration': 0,
+                    'actionListId': 'a-5',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-5'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd947d2c059091f|5ac96a7f-53ce-20bb-7064-908064b0422f',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd947d2c059091f|5ac96a7f-53ce-20bb-7064-908064b0422f',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': null,
+                'scrollOffsetUnit': null,
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1588082272039
+        },
+        'e-15': {
+            'id': 'e-15',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-8',
                     'affectedElements': {},
                     'playInReverse': false,
                     'autoStopEventId': 'e-16'
@@ -6705,12 +8166,62 @@ Webflow.require('ix2').init({
                 'tiny'
             ],
             'target': {
-                'appliesTo': 'PAGE',
-                'styleBlockIds': [],
-                'id': '5f06dfca22397ed4048be3d9'
+                'id': '5f74cf571cd94749c7590918|3c497dcf-c232-af82-0855-deb578a1dc0c',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
             },
+            'targets': [{
+                    'id': '5f74cf571cd94749c7590918|3c497dcf-c232-af82-0855-deb578a1dc0c',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
             'config': {
-                'loop': true,
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1588252790155
+        },
+        'e-17': {
+            'id': 'e-17',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'PAGE_START',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-9',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-18'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd94749c7590918',
+                'appliesTo': 'PAGE',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd94749c7590918',
+                    'appliesTo': 'PAGE',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
                 'playInReverse': false,
                 'scrollOffsetValue': null,
                 'scrollOffsetUnit': null,
@@ -6718,19 +8229,21 @@ Webflow.require('ix2').init({
                 'direction': null,
                 'effectIn': null
             },
-            'createdOn': 1586425963104
+            'createdOn': 1588577419122
         },
         'e-18': {
             'id': 'e-18',
+            'name': '',
+            'animationType': 'custom',
             'eventTypeId': 'PAGE_FINISH',
             'action': {
                 'id': '',
                 'actionTypeId': 'GENERAL_START_ACTION',
                 'config': {
-                    'delay': '0',
+                    'delay': 0,
                     'easing': '',
-                    'duration': '0',
-                    'actionListId': 'a-11',
+                    'duration': 0,
+                    'actionListId': 'a-9',
                     'affectedElements': {},
                     'playInReverse': false,
                     'autoStopEventId': 'e-17'
@@ -6743,10 +8256,15 @@ Webflow.require('ix2').init({
                 'tiny'
             ],
             'target': {
+                'id': '5f74cf571cd94749c7590918',
                 'appliesTo': 'PAGE',
-                'styleBlockIds': [],
-                'id': '5f06dfca22397ed4048be3d9'
+                'styleBlockIds': []
             },
+            'targets': [{
+                    'id': '5f74cf571cd94749c7590918',
+                    'appliesTo': 'PAGE',
+                    'styleBlockIds': []
+                }],
             'config': {
                 'loop': false,
                 'playInReverse': false,
@@ -6756,22 +8274,24 @@ Webflow.require('ix2').init({
                 'direction': null,
                 'effectIn': null
             },
-            'createdOn': 1586426678869
+            'createdOn': 1588577419122
         },
-        'e-19': {
-            'id': 'e-19',
-            'eventTypeId': 'PAGE_START',
+        'e-20': {
+            'id': 'e-20',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'PAGE_FINISH',
             'action': {
                 'id': '',
                 'actionTypeId': 'GENERAL_START_ACTION',
                 'config': {
-                    'delay': '0',
+                    'delay': 0,
                     'easing': '',
-                    'duration': '0',
-                    'actionListId': 'a-10',
+                    'duration': 0,
+                    'actionListId': 'a-50',
                     'affectedElements': {},
                     'playInReverse': false,
-                    'autoStopEventId': 'e-20'
+                    'autoStopEventId': 'e-19'
                 }
             },
             'mediaQueries': [
@@ -6781,12 +8301,17 @@ Webflow.require('ix2').init({
                 'tiny'
             ],
             'target': {
+                'id': '5f74cf571cd94749c7590918',
                 'appliesTo': 'PAGE',
-                'styleBlockIds': [],
-                'id': '5f06dfca22397ed4048be3d9'
+                'styleBlockIds': []
             },
+            'targets': [{
+                    'id': '5f74cf571cd94749c7590918',
+                    'appliesTo': 'PAGE',
+                    'styleBlockIds': []
+                }],
             'config': {
-                'loop': true,
+                'loop': false,
                 'playInReverse': false,
                 'scrollOffsetValue': null,
                 'scrollOffsetUnit': null,
@@ -6794,57 +8319,21 @@ Webflow.require('ix2').init({
                 'direction': null,
                 'effectIn': null
             },
-            'createdOn': 1586426959537
-        },
-        'e-23': {
-            'id': 'e-23',
-            'eventTypeId': 'PAGE_START',
-            'action': {
-                'id': '',
-                'actionTypeId': 'GENERAL_START_ACTION',
-                'config': {
-                    'delay': '0',
-                    'easing': '',
-                    'duration': '0',
-                    'actionListId': 'a-12',
-                    'affectedElements': {},
-                    'playInReverse': false,
-                    'autoStopEventId': 'e-24'
-                }
-            },
-            'mediaQueries': [
-                'main',
-                'medium',
-                'small',
-                'tiny'
-            ],
-            'target': {
-                'appliesTo': 'PAGE',
-                'styleBlockIds': [],
-                'id': '5f06dfca22397ea6ca8be3da'
-            },
-            'config': {
-                'loop': true,
-                'playInReverse': false,
-                'scrollOffsetValue': null,
-                'scrollOffsetUnit': null,
-                'delay': null,
-                'direction': null,
-                'effectIn': null
-            },
-            'createdOn': 1586862024029
+            'createdOn': 1588579392120
         },
         'e-25': {
             'id': 'e-25',
-            'eventTypeId': 'PAGE_START',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
             'action': {
                 'id': '',
                 'actionTypeId': 'GENERAL_START_ACTION',
                 'config': {
-                    'delay': '0',
+                    'delay': 0,
                     'easing': '',
-                    'duration': '0',
-                    'actionListId': 'a-13',
+                    'duration': 0,
+                    'actionListId': 'a-11',
                     'affectedElements': {},
                     'playInReverse': false,
                     'autoStopEventId': 'e-26'
@@ -6857,32 +8346,39 @@ Webflow.require('ix2').init({
                 'tiny'
             ],
             'target': {
-                'appliesTo': 'PAGE',
-                'styleBlockIds': [],
-                'id': '5f06dfca22397ea6ca8be3da'
+                'id': '5f74cf571cd94749c7590918|9aba268f-582f-e532-4312-de0d478bf130',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
             },
+            'targets': [{
+                    'id': '5f74cf571cd94749c7590918|9aba268f-582f-e532-4312-de0d478bf130',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
             'config': {
                 'loop': false,
                 'playInReverse': false,
-                'scrollOffsetValue': null,
-                'scrollOffsetUnit': null,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
                 'delay': null,
                 'direction': null,
                 'effectIn': null
             },
-            'createdOn': 1586863203869
+            'createdOn': 1588584454372
         },
         'e-27': {
             'id': 'e-27',
+            'name': '',
+            'animationType': 'custom',
             'eventTypeId': 'SCROLL_INTO_VIEW',
             'action': {
                 'id': '',
                 'actionTypeId': 'GENERAL_START_ACTION',
                 'config': {
-                    'delay': '0',
+                    'delay': 0,
                     'easing': '',
-                    'duration': '0',
-                    'actionListId': 'a-8',
+                    'duration': 0,
+                    'actionListId': 'a-11',
                     'affectedElements': {},
                     'playInReverse': false,
                     'autoStopEventId': 'e-28'
@@ -6895,32 +8391,39 @@ Webflow.require('ix2').init({
                 'tiny'
             ],
             'target': {
+                'id': '5f74cf571cd94749c7590918|598d2ae9-7619-b9d9-5dc6-2b30e229df76',
                 'appliesTo': 'ELEMENT',
-                'styleBlockIds': [],
-                'id': '5f06dfca22397ebc368be3db|4b54b195-a09a-2ffc-4de7-3d3da00c9d38'
+                'styleBlockIds': []
             },
+            'targets': [{
+                    'id': '5f74cf571cd94749c7590918|598d2ae9-7619-b9d9-5dc6-2b30e229df76',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
             'config': {
                 'loop': false,
                 'playInReverse': false,
-                'scrollOffsetValue': '0',
+                'scrollOffsetValue': 0,
                 'scrollOffsetUnit': '%',
                 'delay': null,
                 'direction': null,
                 'effectIn': null
             },
-            'createdOn': 1587126419755
+            'createdOn': 1588584955145
         },
         'e-29': {
             'id': 'e-29',
+            'name': '',
+            'animationType': 'custom',
             'eventTypeId': 'SCROLL_INTO_VIEW',
             'action': {
                 'id': '',
                 'actionTypeId': 'GENERAL_START_ACTION',
                 'config': {
-                    'delay': '0',
+                    'delay': 0,
                     'easing': '',
-                    'duration': '0',
-                    'actionListId': 'a-6',
+                    'duration': 0,
+                    'actionListId': 'a-11',
                     'affectedElements': {},
                     'playInReverse': false,
                     'autoStopEventId': 'e-30'
@@ -6933,35 +8436,42 @@ Webflow.require('ix2').init({
                 'tiny'
             ],
             'target': {
+                'id': '5f74cf571cd94749c7590918|418e21f0-be1f-b643-8af8-7967a89c93ff',
                 'appliesTo': 'ELEMENT',
-                'styleBlockIds': [],
-                'id': '5f06dfca22397ebc368be3db|b588b974-b8a9-e74a-dfd5-1dd7b08ec2b4'
+                'styleBlockIds': []
             },
+            'targets': [{
+                    'id': '5f74cf571cd94749c7590918|418e21f0-be1f-b643-8af8-7967a89c93ff',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
             'config': {
                 'loop': false,
                 'playInReverse': false,
-                'scrollOffsetValue': '0',
+                'scrollOffsetValue': 0,
                 'scrollOffsetUnit': '%',
                 'delay': null,
                 'direction': null,
                 'effectIn': null
             },
-            'createdOn': 1587126419755
+            'createdOn': 1588584991471
         },
-        'e-32': {
-            'id': 'e-32',
-            'eventTypeId': 'SCROLL_OUT_OF_VIEW',
+        'e-31': {
+            'id': 'e-31',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
             'action': {
                 'id': '',
                 'actionTypeId': 'GENERAL_START_ACTION',
                 'config': {
-                    'delay': '0',
+                    'delay': 0,
                     'easing': '',
-                    'duration': '0',
-                    'actionListId': 'a-4',
+                    'duration': 0,
+                    'actionListId': 'a-11',
                     'affectedElements': {},
                     'playInReverse': false,
-                    'autoStopEventId': 'e-31'
+                    'autoStopEventId': 'e-32'
                 }
             },
             'mediaQueries': [
@@ -6971,32 +8481,39 @@ Webflow.require('ix2').init({
                 'tiny'
             ],
             'target': {
+                'id': '5f74cf571cd94749c7590918|7e0327b6-5f40-0d5e-f21f-cabe484aa6a0',
                 'appliesTo': 'ELEMENT',
-                'styleBlockIds': [],
-                'id': '5f06dfca22397ebc368be3db|434e67bf-bd87-7bec-c3da-7ba13d5b9bd5'
+                'styleBlockIds': []
             },
+            'targets': [{
+                    'id': '5f74cf571cd94749c7590918|7e0327b6-5f40-0d5e-f21f-cabe484aa6a0',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
             'config': {
                 'loop': false,
                 'playInReverse': false,
-                'scrollOffsetValue': '0',
+                'scrollOffsetValue': 0,
                 'scrollOffsetUnit': '%',
                 'delay': null,
                 'direction': null,
                 'effectIn': null
             },
-            'createdOn': 1587126419755
+            'createdOn': 1588585011192
         },
         'e-33': {
             'id': 'e-33',
-            'eventTypeId': 'PAGE_START',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
             'action': {
                 'id': '',
                 'actionTypeId': 'GENERAL_START_ACTION',
                 'config': {
-                    'delay': '0',
+                    'delay': 0,
                     'easing': '',
-                    'duration': '0',
-                    'actionListId': 'a-14',
+                    'duration': 0,
+                    'actionListId': 'a-11',
                     'affectedElements': {},
                     'playInReverse': false,
                     'autoStopEventId': 'e-34'
@@ -7009,32 +8526,39 @@ Webflow.require('ix2').init({
                 'tiny'
             ],
             'target': {
-                'appliesTo': 'PAGE',
-                'styleBlockIds': [],
-                'id': '5f06dfca22397e4b278be3dc'
+                'id': '5f74cf571cd94749c7590918|52548975-bd06-18ac-4b67-8d4e6232e9c9',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
             },
+            'targets': [{
+                    'id': '5f74cf571cd94749c7590918|52548975-bd06-18ac-4b67-8d4e6232e9c9',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
             'config': {
-                'loop': true,
+                'loop': false,
                 'playInReverse': false,
-                'scrollOffsetValue': null,
-                'scrollOffsetUnit': null,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
                 'delay': null,
                 'direction': null,
                 'effectIn': null
             },
-            'createdOn': 1587126532799
+            'createdOn': 1588585022510
         },
         'e-35': {
             'id': 'e-35',
-            'eventTypeId': 'PAGE_START',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
             'action': {
                 'id': '',
                 'actionTypeId': 'GENERAL_START_ACTION',
                 'config': {
-                    'delay': '0',
+                    'delay': 0,
                     'easing': '',
-                    'duration': '0',
-                    'actionListId': 'a-14',
+                    'duration': 0,
+                    'actionListId': 'a-11',
                     'affectedElements': {},
                     'playInReverse': false,
                     'autoStopEventId': 'e-36'
@@ -7047,35 +8571,42 @@ Webflow.require('ix2').init({
                 'tiny'
             ],
             'target': {
-                'appliesTo': 'PAGE',
-                'styleBlockIds': [],
-                'id': '5f06dfca22397e4b278be3dc'
+                'id': '5f74cf571cd94749c7590918|0e12174c-45df-ea5a-8a47-a98fce31b6a4',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
             },
+            'targets': [{
+                    'id': '5f74cf571cd94749c7590918|0e12174c-45df-ea5a-8a47-a98fce31b6a4',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
             'config': {
-                'loop': true,
+                'loop': false,
                 'playInReverse': false,
-                'scrollOffsetValue': null,
-                'scrollOffsetUnit': null,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
                 'delay': null,
                 'direction': null,
                 'effectIn': null
             },
-            'createdOn': 1587126532799
+            'createdOn': 1588585044785
         },
-        'e-38': {
-            'id': 'e-38',
-            'eventTypeId': 'PAGE_FINISH',
+        'e-37': {
+            'id': 'e-37',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'PAGE_START',
             'action': {
                 'id': '',
                 'actionTypeId': 'GENERAL_START_ACTION',
                 'config': {
-                    'delay': '0',
+                    'delay': 0,
                     'easing': '',
-                    'duration': '0',
-                    'actionListId': 'a-15',
+                    'duration': 0,
+                    'actionListId': 'a-12',
                     'affectedElements': {},
                     'playInReverse': false,
-                    'autoStopEventId': 'e-37'
+                    'autoStopEventId': 'e-38'
                 }
             },
             'mediaQueries': [
@@ -7085,10 +8616,15 @@ Webflow.require('ix2').init({
                 'tiny'
             ],
             'target': {
+                'id': '5f74cf571cd9476f8b59091d',
                 'appliesTo': 'PAGE',
-                'styleBlockIds': [],
-                'id': '5f06dfca22397e4b278be3dc'
+                'styleBlockIds': []
             },
+            'targets': [{
+                    'id': '5f74cf571cd9476f8b59091d',
+                    'appliesTo': 'PAGE',
+                    'styleBlockIds': []
+                }],
             'config': {
                 'loop': false,
                 'playInReverse': false,
@@ -7098,19 +8634,21 @@ Webflow.require('ix2').init({
                 'direction': null,
                 'effectIn': null
             },
-            'createdOn': 1587126532799
+            'createdOn': 1588585464005
         },
         'e-39': {
             'id': 'e-39',
-            'eventTypeId': 'PAGE_START',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
             'action': {
                 'id': '',
                 'actionTypeId': 'GENERAL_START_ACTION',
                 'config': {
-                    'delay': '0',
+                    'delay': 0,
                     'easing': '',
-                    'duration': '0',
-                    'actionListId': 'a-16',
+                    'duration': 0,
+                    'actionListId': 'a-11',
                     'affectedElements': {},
                     'playInReverse': false,
                     'autoStopEventId': 'e-40'
@@ -7123,32 +8661,84 @@ Webflow.require('ix2').init({
                 'tiny'
             ],
             'target': {
-                'appliesTo': 'PAGE',
-                'styleBlockIds': [],
-                'id': '5f06dfca22397e4b278be3dc'
+                'id': '5f74cf571cd9476f8b59091d|f9e4e7da-4913-243d-3307-a547e71a4528',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
             },
+            'targets': [{
+                    'id': '5f74cf571cd9476f8b59091d|f9e4e7da-4913-243d-3307-a547e71a4528',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
             'config': {
-                'loop': true,
+                'loop': false,
                 'playInReverse': false,
-                'scrollOffsetValue': null,
-                'scrollOffsetUnit': null,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
                 'delay': null,
                 'direction': null,
                 'effectIn': null
             },
-            'createdOn': 1587126532799
+            'createdOn': 1588585746554
         },
-        'e-43': {
-            'id': 'e-43',
-            'eventTypeId': 'PAGE_START',
+        'e-41': {
+            'id': 'e-41',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
             'action': {
                 'id': '',
                 'actionTypeId': 'GENERAL_START_ACTION',
                 'config': {
-                    'delay': '0',
+                    'delay': 0,
                     'easing': '',
-                    'duration': '0',
-                    'actionListId': 'a-17',
+                    'duration': 0,
+                    'actionListId': 'a-11',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-42'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd9476f8b59091d|875fbcf6-a250-22bf-7f8b-d6b63807e8f5',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd9476f8b59091d|875fbcf6-a250-22bf-7f8b-d6b63807e8f5',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1588585759163
+        },
+        'e-43': {
+            'id': 'e-43',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-11',
                     'affectedElements': {},
                     'playInReverse': false,
                     'autoStopEventId': 'e-44'
@@ -7161,32 +8751,39 @@ Webflow.require('ix2').init({
                 'tiny'
             ],
             'target': {
-                'appliesTo': 'PAGE',
-                'styleBlockIds': [],
-                'id': '5f06dfca22397efd808be3dd'
+                'id': '5f74cf571cd9476f8b59091d|20b2a0d1-8d7e-1614-af35-da06a239ce24',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
             },
+            'targets': [{
+                    'id': '5f74cf571cd9476f8b59091d|20b2a0d1-8d7e-1614-af35-da06a239ce24',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
             'config': {
-                'loop': true,
+                'loop': false,
                 'playInReverse': false,
-                'scrollOffsetValue': null,
-                'scrollOffsetUnit': null,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
                 'delay': null,
                 'direction': null,
                 'effectIn': null
             },
-            'createdOn': 1587126771719
+            'createdOn': 1588585817574
         },
         'e-45': {
             'id': 'e-45',
-            'eventTypeId': 'PAGE_START',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
             'action': {
                 'id': '',
                 'actionTypeId': 'GENERAL_START_ACTION',
                 'config': {
-                    'delay': '0',
+                    'delay': 0,
                     'easing': '',
-                    'duration': '0',
-                    'actionListId': 'a-18',
+                    'duration': 0,
+                    'actionListId': 'a-11',
                     'affectedElements': {},
                     'playInReverse': false,
                     'autoStopEventId': 'e-46'
@@ -7199,10 +8796,60 @@ Webflow.require('ix2').init({
                 'tiny'
             ],
             'target': {
-                'appliesTo': 'PAGE',
-                'styleBlockIds': [],
-                'id': '5f06dfca22397efd808be3dd'
+                'id': '5f74cf571cd9476f8b59091d|4c522869-2fb9-2a67-5ab0-a1569b1ba17c',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
             },
+            'targets': [{
+                    'id': '5f74cf571cd9476f8b59091d|4c522869-2fb9-2a67-5ab0-a1569b1ba17c',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1588585830839
+        },
+        'e-47': {
+            'id': 'e-47',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'PAGE_START',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-13',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-48'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd947f7c459091e',
+                'appliesTo': 'PAGE',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd947f7c459091e',
+                    'appliesTo': 'PAGE',
+                    'styleBlockIds': []
+                }],
             'config': {
                 'loop': false,
                 'playInReverse': false,
@@ -7212,374 +8859,5673 @@ Webflow.require('ix2').init({
                 'direction': null,
                 'effectIn': null
             },
-            'createdOn': 1587126771719
+            'createdOn': 1588586389137
+        },
+        'e-49': {
+            'id': 'e-49',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-11',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-50'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd947f7c459091e|ff350dd1-72e5-df6f-0c8c-0b9cb1eb885c',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd947f7c459091e|ff350dd1-72e5-df6f-0c8c-0b9cb1eb885c',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1588586541576
+        },
+        'e-51': {
+            'id': 'e-51',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-11',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-52'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd947f7c459091e|5ff35b65-e176-0621-fc14-9d0852928ce2',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd947f7c459091e|5ff35b65-e176-0621-fc14-9d0852928ce2',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1588586555592
+        },
+        'e-53': {
+            'id': 'e-53',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-11',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-54'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd947f7c459091e|d7e0a132-c561-1259-1ca9-4fd0927e2442',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd947f7c459091e|d7e0a132-c561-1259-1ca9-4fd0927e2442',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1588586578182
+        },
+        'e-57': {
+            'id': 'e-57',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-11',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-58'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd947f7c459091e|669c8314-5531-aba6-cf42-b055cf34871c',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd947f7c459091e|669c8314-5531-aba6-cf42-b055cf34871c',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1588586610110
+        },
+        'e-59': {
+            'id': 'e-59',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-11',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-60'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd947f7c459091e|9289cf45-28a2-6f0d-5639-6fba3b057a90',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd947f7c459091e|9289cf45-28a2-6f0d-5639-6fba3b057a90',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1588586620349
+        },
+        'e-61': {
+            'id': 'e-61',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'PAGE_START',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-14',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-62'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd947d2c059091f',
+                'appliesTo': 'PAGE',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd947d2c059091f',
+                    'appliesTo': 'PAGE',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': null,
+                'scrollOffsetUnit': null,
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1588587098982
+        },
+        'e-65': {
+            'id': 'e-65',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'PAGE_SCROLL_UP',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-11',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-66'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd947d2c059091f',
+                'appliesTo': 'PAGE',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd947d2c059091f',
+                    'appliesTo': 'PAGE',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1588587505748
+        },
+        'e-77': {
+            'id': 'e-77',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-11',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-78'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd947f7c459091e|0d09f7b1-114a-3cd8-7dc6-508341dd1df0',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd947f7c459091e|0d09f7b1-114a-3cd8-7dc6-508341dd1df0',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1589190423453
+        },
+        'e-79': {
+            'id': 'e-79',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-17',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-80'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd9476cfb590922|18929c05-9767-a619-1328-1c67d6db2a8b',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd9476cfb590922|18929c05-9767-a619-1328-1c67d6db2a8b',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1585919935470
+        },
+        'e-87': {
+            'id': 'e-87',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-8',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-88'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd94759ff590926|3c497dcf-c232-af82-0855-deb578a1dc0c',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd94759ff590926|3c497dcf-c232-af82-0855-deb578a1dc0c',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1589278480505
+        },
+        'e-89': {
+            'id': 'e-89',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'PAGE_START',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-23',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-90'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd94759ff590926',
+                'appliesTo': 'PAGE',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd94759ff590926',
+                    'appliesTo': 'PAGE',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': null,
+                'scrollOffsetUnit': null,
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1589278480505
+        },
+        'e-90': {
+            'id': 'e-90',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'PAGE_FINISH',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-23',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-89'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd94759ff590926',
+                'appliesTo': 'PAGE',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd94759ff590926',
+                    'appliesTo': 'PAGE',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': null,
+                'scrollOffsetUnit': null,
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1589278480505
+        },
+        'e-92': {
+            'id': 'e-92',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'PAGE_FINISH',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-24',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-91'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd94759ff590926',
+                'appliesTo': 'PAGE',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd94759ff590926',
+                    'appliesTo': 'PAGE',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': null,
+                'scrollOffsetUnit': null,
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1589278480505
+        },
+        'e-93': {
+            'id': 'e-93',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-11',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-94'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd94759ff590926|9aba268f-582f-e532-4312-de0d478bf130',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd94759ff590926|9aba268f-582f-e532-4312-de0d478bf130',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1589278480505
+        },
+        'e-95': {
+            'id': 'e-95',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-11',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-96'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd94759ff590926|598d2ae9-7619-b9d9-5dc6-2b30e229df76',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd94759ff590926|598d2ae9-7619-b9d9-5dc6-2b30e229df76',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1589278480505
+        },
+        'e-97': {
+            'id': 'e-97',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-11',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-98'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd94759ff590926|418e21f0-be1f-b643-8af8-7967a89c93ff',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd94759ff590926|418e21f0-be1f-b643-8af8-7967a89c93ff',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1589278480505
+        },
+        'e-99': {
+            'id': 'e-99',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-11',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-100'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd94759ff590926|7e0327b6-5f40-0d5e-f21f-cabe484aa6a0',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd94759ff590926|7e0327b6-5f40-0d5e-f21f-cabe484aa6a0',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1589278480505
+        },
+        'e-101': {
+            'id': 'e-101',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-11',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-102'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd94759ff590926|52548975-bd06-18ac-4b67-8d4e6232e9c9',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd94759ff590926|52548975-bd06-18ac-4b67-8d4e6232e9c9',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1589278480505
+        },
+        'e-103': {
+            'id': 'e-103',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-11',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-104'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd94759ff590926|0e12174c-45df-ea5a-8a47-a98fce31b6a4',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd94759ff590926|0e12174c-45df-ea5a-8a47-a98fce31b6a4',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1589278480505
+        },
+        'e-107': {
+            'id': 'e-107',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'PAGE_START',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-27',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-108'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd947aa01590927',
+                'appliesTo': 'PAGE',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd947aa01590927',
+                    'appliesTo': 'PAGE',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': null,
+                'scrollOffsetUnit': null,
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1589278529214
+        },
+        'e-109': {
+            'id': 'e-109',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-11',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-110'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd947aa01590927|f9e4e7da-4913-243d-3307-a547e71a4528',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd947aa01590927|f9e4e7da-4913-243d-3307-a547e71a4528',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1589278529214
+        },
+        'e-111': {
+            'id': 'e-111',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-11',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-112'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd947aa01590927|875fbcf6-a250-22bf-7f8b-d6b63807e8f5',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd947aa01590927|875fbcf6-a250-22bf-7f8b-d6b63807e8f5',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1589278529214
+        },
+        'e-113': {
+            'id': 'e-113',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-11',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-114'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd947aa01590927|20b2a0d1-8d7e-1614-af35-da06a239ce24',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd947aa01590927|20b2a0d1-8d7e-1614-af35-da06a239ce24',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1589278529214
+        },
+        'e-115': {
+            'id': 'e-115',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-11',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-116'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd947aa01590927|4c522869-2fb9-2a67-5ab0-a1569b1ba17c',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd947aa01590927|4c522869-2fb9-2a67-5ab0-a1569b1ba17c',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1589278529214
+        },
+        'e-117': {
+            'id': 'e-117',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLLING_IN_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_CONTINUOUS_ACTION',
+                'config': {
+                    'actionListId': 'a-28',
+                    'affectedElements': {},
+                    'duration': 0
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd947862f590928|96b852a1-dab7-7f50-07bf-660df9357de3',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd947862f590928|96b852a1-dab7-7f50-07bf-660df9357de3',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': [{
+                    'continuousParameterGroupId': 'a-28-p',
+                    'smoothing': 50,
+                    'startsEntering': true,
+                    'addStartOffset': false,
+                    'addOffsetValue': 50,
+                    'startsExiting': false,
+                    'addEndOffset': false,
+                    'endOffsetValue': 50
+                }],
+            'createdOn': 1589278546952
+        },
+        'e-120': {
+            'id': 'e-120',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'PAGE_START',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-31',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-121'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd947862f590928',
+                'appliesTo': 'PAGE',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd947862f590928',
+                    'appliesTo': 'PAGE',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': null,
+                'scrollOffsetUnit': null,
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1589278546952
+        },
+        'e-122': {
+            'id': 'e-122',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-11',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-123'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd947862f590928|ff350dd1-72e5-df6f-0c8c-0b9cb1eb885c',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd947862f590928|ff350dd1-72e5-df6f-0c8c-0b9cb1eb885c',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1589278546952
+        },
+        'e-124': {
+            'id': 'e-124',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-11',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-125'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd947862f590928|5ff35b65-e176-0621-fc14-9d0852928ce2',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd947862f590928|5ff35b65-e176-0621-fc14-9d0852928ce2',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1589278546952
+        },
+        'e-126': {
+            'id': 'e-126',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-11',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-127'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd947862f590928|d7e0a132-c561-1259-1ca9-4fd0927e2442',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd947862f590928|d7e0a132-c561-1259-1ca9-4fd0927e2442',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1589278546952
+        },
+        'e-128': {
+            'id': 'e-128',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-11',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-129'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd947862f590928|669c8314-5531-aba6-cf42-b055cf34871c',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd947862f590928|669c8314-5531-aba6-cf42-b055cf34871c',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1589278546952
+        },
+        'e-130': {
+            'id': 'e-130',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-11',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-131'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd947862f590928|9289cf45-28a2-6f0d-5639-6fba3b057a90',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd947862f590928|9289cf45-28a2-6f0d-5639-6fba3b057a90',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1589278546952
+        },
+        'e-132': {
+            'id': 'e-132',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-11',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-133'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd947862f590928|0d09f7b1-114a-3cd8-7dc6-508341dd1df0',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd947862f590928|0d09f7b1-114a-3cd8-7dc6-508341dd1df0',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1589278546952
+        },
+        'e-134': {
+            'id': 'e-134',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'MOUSE_CLICK',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-4',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-135'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd94730a8590929|5ac96a7f-53ce-20bb-7064-908064b0422f',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd94730a8590929|5ac96a7f-53ce-20bb-7064-908064b0422f',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': null,
+                'scrollOffsetUnit': null,
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1589278563831
+        },
+        'e-135': {
+            'id': 'e-135',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'MOUSE_SECOND_CLICK',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-5',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-134'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd94730a8590929|5ac96a7f-53ce-20bb-7064-908064b0422f',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd94730a8590929|5ac96a7f-53ce-20bb-7064-908064b0422f',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': null,
+                'scrollOffsetUnit': null,
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1589278563831
+        },
+        'e-138': {
+            'id': 'e-138',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'PAGE_START',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-34',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-139'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd94730a8590929',
+                'appliesTo': 'PAGE',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd94730a8590929',
+                    'appliesTo': 'PAGE',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': null,
+                'scrollOffsetUnit': null,
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1589278563831
+        },
+        'e-142': {
+            'id': 'e-142',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'PAGE_SCROLL_UP',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-11',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-143'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd94730a8590929',
+                'appliesTo': 'PAGE',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd94730a8590929',
+                    'appliesTo': 'PAGE',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1589278563831
+        },
+        'e-144': {
+            'id': 'e-144',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-17',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-145'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd947dfaa59092a|18929c05-9767-a619-1328-1c67d6db2a8b',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd947dfaa59092a|18929c05-9767-a619-1328-1c67d6db2a8b',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1589278593031
+        },
+        'e-150': {
+            'id': 'e-150',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-8',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-151'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd947116459092c|3c497dcf-c232-af82-0855-deb578a1dc0c',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd947116459092c|3c497dcf-c232-af82-0855-deb578a1dc0c',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1589553494994
+        },
+        'e-152': {
+            'id': 'e-152',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'PAGE_START',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-39',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-153'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd947116459092c',
+                'appliesTo': 'PAGE',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd947116459092c',
+                    'appliesTo': 'PAGE',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': null,
+                'scrollOffsetUnit': null,
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1589553494994
+        },
+        'e-153': {
+            'id': 'e-153',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'PAGE_FINISH',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-39',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-152'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd947116459092c',
+                'appliesTo': 'PAGE',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd947116459092c',
+                    'appliesTo': 'PAGE',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': null,
+                'scrollOffsetUnit': null,
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1589553494994
+        },
+        'e-155': {
+            'id': 'e-155',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'PAGE_FINISH',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-40',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-154'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd947116459092c',
+                'appliesTo': 'PAGE',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd947116459092c',
+                    'appliesTo': 'PAGE',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': null,
+                'scrollOffsetUnit': null,
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1589553494994
+        },
+        'e-156': {
+            'id': 'e-156',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-11',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-157'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd947116459092c|9aba268f-582f-e532-4312-de0d478bf130',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd947116459092c|9aba268f-582f-e532-4312-de0d478bf130',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1589553494994
+        },
+        'e-158': {
+            'id': 'e-158',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-11',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-159'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd947116459092c|598d2ae9-7619-b9d9-5dc6-2b30e229df76',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd947116459092c|598d2ae9-7619-b9d9-5dc6-2b30e229df76',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1589553494994
+        },
+        'e-160': {
+            'id': 'e-160',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-11',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-161'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd947116459092c|418e21f0-be1f-b643-8af8-7967a89c93ff',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd947116459092c|418e21f0-be1f-b643-8af8-7967a89c93ff',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1589553494994
+        },
+        'e-162': {
+            'id': 'e-162',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-11',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-163'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd947116459092c|7e0327b6-5f40-0d5e-f21f-cabe484aa6a0',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd947116459092c|7e0327b6-5f40-0d5e-f21f-cabe484aa6a0',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1589553494994
+        },
+        'e-164': {
+            'id': 'e-164',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-11',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-165'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd947116459092c|52548975-bd06-18ac-4b67-8d4e6232e9c9',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd947116459092c|52548975-bd06-18ac-4b67-8d4e6232e9c9',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1589553494994
+        },
+        'e-166': {
+            'id': 'e-166',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-11',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-167'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd947116459092c|0e12174c-45df-ea5a-8a47-a98fce31b6a4',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd947116459092c|0e12174c-45df-ea5a-8a47-a98fce31b6a4',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1589553494994
+        },
+        'e-170': {
+            'id': 'e-170',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'PAGE_START',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-43',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-171'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd94780b659092d',
+                'appliesTo': 'PAGE',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd94780b659092d',
+                    'appliesTo': 'PAGE',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': null,
+                'scrollOffsetUnit': null,
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1589553503320
+        },
+        'e-172': {
+            'id': 'e-172',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-11',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-173'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd94780b659092d|f9e4e7da-4913-243d-3307-a547e71a4528',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd94780b659092d|f9e4e7da-4913-243d-3307-a547e71a4528',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1589553503320
+        },
+        'e-174': {
+            'id': 'e-174',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-11',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-175'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd94780b659092d|875fbcf6-a250-22bf-7f8b-d6b63807e8f5',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd94780b659092d|875fbcf6-a250-22bf-7f8b-d6b63807e8f5',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1589553503320
+        },
+        'e-176': {
+            'id': 'e-176',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-11',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-177'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd94780b659092d|20b2a0d1-8d7e-1614-af35-da06a239ce24',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd94780b659092d|20b2a0d1-8d7e-1614-af35-da06a239ce24',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1589553503320
+        },
+        'e-178': {
+            'id': 'e-178',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-11',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-179'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd94780b659092d|4c522869-2fb9-2a67-5ab0-a1569b1ba17c',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd94780b659092d|4c522869-2fb9-2a67-5ab0-a1569b1ba17c',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1589553503320
+        },
+        'e-180': {
+            'id': 'e-180',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLLING_IN_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_CONTINUOUS_ACTION',
+                'config': {
+                    'actionListId': 'a-44',
+                    'affectedElements': {},
+                    'duration': 0
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd9472d0659092e|96b852a1-dab7-7f50-07bf-660df9357de3',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd9472d0659092e|96b852a1-dab7-7f50-07bf-660df9357de3',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': [{
+                    'continuousParameterGroupId': 'a-44-p',
+                    'smoothing': 50,
+                    'startsEntering': true,
+                    'addStartOffset': false,
+                    'addOffsetValue': 50,
+                    'startsExiting': false,
+                    'addEndOffset': false,
+                    'endOffsetValue': 50
+                }],
+            'createdOn': 1589553515111
+        },
+        'e-183': {
+            'id': 'e-183',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'PAGE_START',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-47',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-184'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd9472d0659092e',
+                'appliesTo': 'PAGE',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd9472d0659092e',
+                    'appliesTo': 'PAGE',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': null,
+                'scrollOffsetUnit': null,
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1589553515111
+        },
+        'e-185': {
+            'id': 'e-185',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-11',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-186'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd9472d0659092e|ff350dd1-72e5-df6f-0c8c-0b9cb1eb885c',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd9472d0659092e|ff350dd1-72e5-df6f-0c8c-0b9cb1eb885c',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1589553515111
+        },
+        'e-187': {
+            'id': 'e-187',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-11',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-188'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd9472d0659092e|5ff35b65-e176-0621-fc14-9d0852928ce2',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd9472d0659092e|5ff35b65-e176-0621-fc14-9d0852928ce2',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1589553515111
+        },
+        'e-189': {
+            'id': 'e-189',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-11',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-190'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd9472d0659092e|d7e0a132-c561-1259-1ca9-4fd0927e2442',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd9472d0659092e|d7e0a132-c561-1259-1ca9-4fd0927e2442',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1589553515111
+        },
+        'e-191': {
+            'id': 'e-191',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-11',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-192'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd9472d0659092e|669c8314-5531-aba6-cf42-b055cf34871c',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd9472d0659092e|669c8314-5531-aba6-cf42-b055cf34871c',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1589553515111
+        },
+        'e-193': {
+            'id': 'e-193',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-11',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-194'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd9472d0659092e|9289cf45-28a2-6f0d-5639-6fba3b057a90',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd9472d0659092e|9289cf45-28a2-6f0d-5639-6fba3b057a90',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1589553515111
+        },
+        'e-195': {
+            'id': 'e-195',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-11',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-196'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd9472d0659092e|0d09f7b1-114a-3cd8-7dc6-508341dd1df0',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd9472d0659092e|0d09f7b1-114a-3cd8-7dc6-508341dd1df0',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1589553515111
+        },
+        'e-197': {
+            'id': 'e-197',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'MOUSE_CLICK',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-4',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-198'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd947317559092f|5ac96a7f-53ce-20bb-7064-908064b0422f',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd947317559092f|5ac96a7f-53ce-20bb-7064-908064b0422f',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': null,
+                'scrollOffsetUnit': null,
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1589553524465
+        },
+        'e-198': {
+            'id': 'e-198',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'MOUSE_SECOND_CLICK',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-5',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-197'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd947317559092f|5ac96a7f-53ce-20bb-7064-908064b0422f',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd947317559092f|5ac96a7f-53ce-20bb-7064-908064b0422f',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': null,
+                'scrollOffsetUnit': null,
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1589553524465
+        },
+        'e-201': {
+            'id': 'e-201',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'PAGE_START',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-50',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-202'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd947317559092f',
+                'appliesTo': 'PAGE',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd947317559092f',
+                    'appliesTo': 'PAGE',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': null,
+                'scrollOffsetUnit': null,
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1589553524465
+        },
+        'e-205': {
+            'id': 'e-205',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'PAGE_SCROLL_UP',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-11',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-206'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd947317559092f',
+                'appliesTo': 'PAGE',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd947317559092f',
+                    'appliesTo': 'PAGE',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1589553524465
+        },
+        'e-207': {
+            'id': 'e-207',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-17',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-208'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd9478033590930|18929c05-9767-a619-1328-1c67d6db2a8b',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd9478033590930|18929c05-9767-a619-1328-1c67d6db2a8b',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1589553586295
+        },
+        'e-209': {
+            'id': 'e-209',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-11',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-210'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd9476623590932|889d63e0-176d-a8ed-c43c-958b3b4fa5da',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd9476623590932|889d63e0-176d-a8ed-c43c-958b3b4fa5da',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1592571097896
+        },
+        'e-211': {
+            'id': 'e-211',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'MOUSE_CLICK',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-51',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-212'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd9476623590932|d477ed63-75dd-7e73-6a29-c85b200ee172',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd9476623590932|d477ed63-75dd-7e73-6a29-c85b200ee172',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': null,
+                'scrollOffsetUnit': null,
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1582561726328
+        },
+        'e-212': {
+            'id': 'e-212',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'MOUSE_SECOND_CLICK',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-52',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-211'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd9476623590932|d477ed63-75dd-7e73-6a29-c85b200ee172',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd9476623590932|d477ed63-75dd-7e73-6a29-c85b200ee172',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': null,
+                'scrollOffsetUnit': null,
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1582561726329
+        },
+        'e-215': {
+            'id': 'e-215',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-11',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-216'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd947f7c459091e|8dcc622a-5953-fcf7-1aee-a5f485b99a89',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd947f7c459091e|8dcc622a-5953-fcf7-1aee-a5f485b99a89',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1598271905714
+        },
+        'e-219': {
+            'id': 'e-219',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-11',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-220'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd947862f590928|94696738-04dc-fb0a-2be2-b91be3dd1fef',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd947862f590928|94696738-04dc-fb0a-2be2-b91be3dd1fef',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1598531001922
+        },
+        'e-221': {
+            'id': 'e-221',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-11',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-222'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd947f7c459091e|3ad75dbe-03eb-e8d2-f710-5125adf0aea9',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd947f7c459091e|3ad75dbe-03eb-e8d2-f710-5125adf0aea9',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1598532965679
+        },
+        'e-223': {
+            'id': 'e-223',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-11',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-224'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd947862f590928|86907001-f110-da0b-2c5c-771911f8ab9f',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd947862f590928|86907001-f110-da0b-2c5c-771911f8ab9f',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1598533421964
+        },
+        'e-225': {
+            'id': 'e-225',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-11',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-226'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd9472d0659092e|f1716757-7212-6035-068b-d6e39bfe9727',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd9472d0659092e|f1716757-7212-6035-068b-d6e39bfe9727',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1598534141753
+        },
+        'e-227': {
+            'id': 'e-227',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-11',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-228'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd9472d0659092e|f5994745-982d-b397-6efe-a9659aba642d',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd9472d0659092e|f5994745-982d-b397-6efe-a9659aba642d',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1598534150169
+        },
+        'e-233': {
+            'id': 'e-233',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-53',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-234'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd9471ba9590933|d83060ee-74ee-f995-08b7-8810082cbf49',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd9471ba9590933|d83060ee-74ee-f995-08b7-8810082cbf49',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1601634417031
+        },
+        'e-235': {
+            'id': 'e-235',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'PAGE_START',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-54',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-236'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd9471ba9590933',
+                'appliesTo': 'PAGE',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd9471ba9590933',
+                    'appliesTo': 'PAGE',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': null,
+                'scrollOffsetUnit': null,
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1601635287710
+        },
+        'e-237': {
+            'id': 'e-237',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-55',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-238'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd9471ba9590933|27fca0d5-e55c-96f5-f459-00ce96219d29',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd9471ba9590933|27fca0d5-e55c-96f5-f459-00ce96219d29',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1601637707524
+        },
+        'e-239': {
+            'id': 'e-239',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-55',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-240'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd9471ba9590933|e341aa11-0dda-e95a-06a9-406c1c490c7f',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd9471ba9590933|e341aa11-0dda-e95a-06a9-406c1c490c7f',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1601637929515
+        },
+        'e-241': {
+            'id': 'e-241',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-55',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-242'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd9471ba9590933|bc5dbc76-8d58-edf6-d210-d53c7e805590',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd9471ba9590933|bc5dbc76-8d58-edf6-d210-d53c7e805590',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1601637947409
+        },
+        'e-243': {
+            'id': 'e-243',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-55',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-244'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd9471ba9590933|d578ffde-5c95-90ea-ebd7-87c445a9c14a',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd9471ba9590933|d578ffde-5c95-90ea-ebd7-87c445a9c14a',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1601637983153
+        },
+        'e-245': {
+            'id': 'e-245',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-55',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-246'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd9471ba9590933|23388966-b8c5-8776-a5d6-5f80b92f177b',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd9471ba9590933|23388966-b8c5-8776-a5d6-5f80b92f177b',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1601637996032
+        },
+        'e-253': {
+            'id': 'e-253',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-59',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-254'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f7c4f5f0144894b18694db7|d83060ee-74ee-f995-08b7-8810082cbf49',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f7c4f5f0144894b18694db7|d83060ee-74ee-f995-08b7-8810082cbf49',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1601982303668
+        },
+        'e-255': {
+            'id': 'e-255',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'PAGE_START',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-60',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-256'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f7c4f5f0144894b18694db7',
+                'appliesTo': 'PAGE',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f7c4f5f0144894b18694db7',
+                    'appliesTo': 'PAGE',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': null,
+                'scrollOffsetUnit': null,
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1601982303668
+        },
+        'e-257': {
+            'id': 'e-257',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-55',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-258'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f7c4f5f0144894b18694db7|27fca0d5-e55c-96f5-f459-00ce96219d29',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f7c4f5f0144894b18694db7|27fca0d5-e55c-96f5-f459-00ce96219d29',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1601982303668
+        },
+        'e-259': {
+            'id': 'e-259',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-55',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-260'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f7c4f5f0144894b18694db7|e341aa11-0dda-e95a-06a9-406c1c490c7f',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f7c4f5f0144894b18694db7|e341aa11-0dda-e95a-06a9-406c1c490c7f',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1601982303668
+        },
+        'e-261': {
+            'id': 'e-261',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-55',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-262'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f7c4f5f0144894b18694db7|bc5dbc76-8d58-edf6-d210-d53c7e805590',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f7c4f5f0144894b18694db7|bc5dbc76-8d58-edf6-d210-d53c7e805590',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1601982303668
+        },
+        'e-263': {
+            'id': 'e-263',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-55',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-264'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f7c4f5f0144894b18694db7|d578ffde-5c95-90ea-ebd7-87c445a9c14a',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f7c4f5f0144894b18694db7|d578ffde-5c95-90ea-ebd7-87c445a9c14a',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1601982303668
+        },
+        'e-265': {
+            'id': 'e-265',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-55',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-266'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f7c4f5f0144894b18694db7|23388966-b8c5-8776-a5d6-5f80b92f177b',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f7c4f5f0144894b18694db7|23388966-b8c5-8776-a5d6-5f80b92f177b',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1601982303668
+        },
+        'e-267': {
+            'id': 'e-267',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-56',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-268'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f7c4f5f0144894b18694db7|cab0ebfd-b96e-bf4f-8f2b-9cced60810a7',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f7c4f5f0144894b18694db7|cab0ebfd-b96e-bf4f-8f2b-9cced60810a7',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1601982303668
+        },
+        'e-273': {
+            'id': 'e-273',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-61',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-274'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f7c52468f0ea77ea559c1ff|d83060ee-74ee-f995-08b7-8810082cbf49',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f7c52468f0ea77ea559c1ff|d83060ee-74ee-f995-08b7-8810082cbf49',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1601983047086
+        },
+        'e-275': {
+            'id': 'e-275',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'PAGE_START',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-62',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-276'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f7c52468f0ea77ea559c1ff',
+                'appliesTo': 'PAGE',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f7c52468f0ea77ea559c1ff',
+                    'appliesTo': 'PAGE',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': null,
+                'scrollOffsetUnit': null,
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1601983047086
+        },
+        'e-277': {
+            'id': 'e-277',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-55',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-278'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f7c52468f0ea77ea559c1ff|27fca0d5-e55c-96f5-f459-00ce96219d29',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f7c52468f0ea77ea559c1ff|27fca0d5-e55c-96f5-f459-00ce96219d29',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1601983047086
+        },
+        'e-279': {
+            'id': 'e-279',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-55',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-280'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f7c52468f0ea77ea559c1ff|e341aa11-0dda-e95a-06a9-406c1c490c7f',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f7c52468f0ea77ea559c1ff|e341aa11-0dda-e95a-06a9-406c1c490c7f',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1601983047086
+        },
+        'e-281': {
+            'id': 'e-281',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-55',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-282'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f7c52468f0ea77ea559c1ff|bc5dbc76-8d58-edf6-d210-d53c7e805590',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f7c52468f0ea77ea559c1ff|bc5dbc76-8d58-edf6-d210-d53c7e805590',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1601983047086
+        },
+        'e-283': {
+            'id': 'e-283',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-55',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-284'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f7c52468f0ea77ea559c1ff|d578ffde-5c95-90ea-ebd7-87c445a9c14a',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f7c52468f0ea77ea559c1ff|d578ffde-5c95-90ea-ebd7-87c445a9c14a',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1601983047086
+        },
+        'e-285': {
+            'id': 'e-285',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-55',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-286'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f7c52468f0ea77ea559c1ff|23388966-b8c5-8776-a5d6-5f80b92f177b',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f7c52468f0ea77ea559c1ff|23388966-b8c5-8776-a5d6-5f80b92f177b',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1601983047086
+        },
+        'e-287': {
+            'id': 'e-287',
+            'name': '',
+            'animationType': 'custom',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-56',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-288'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f7c52468f0ea77ea559c1ff|cab0ebfd-b96e-bf4f-8f2b-9cced60810a7',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f7c52468f0ea77ea559c1ff|cab0ebfd-b96e-bf4f-8f2b-9cced60810a7',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1601983047086
+        },
+        'e-291': {
+            'id': 'e-291',
+            'name': '',
+            'animationType': 'preset',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-11',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-292'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd947f7c459091e|fea3d69b-9003-10cf-3b70-7d4b98a1a85d',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd947f7c459091e|fea3d69b-9003-10cf-3b70-7d4b98a1a85d',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1614262671302
+        },
+        'e-293': {
+            'id': 'e-293',
+            'name': '',
+            'animationType': 'preset',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-11',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-294'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd947862f590928|b104f5dc-e51a-7f4d-62cb-fee5ad4b3eac',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd947862f590928|b104f5dc-e51a-7f4d-62cb-fee5ad4b3eac',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1614263192380
+        },
+        'e-295': {
+            'id': 'e-295',
+            'name': '',
+            'animationType': 'preset',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-11',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-296'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '5f74cf571cd9472d0659092e|063ab594-6942-9a12-d151-88ca6b51e812',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '5f74cf571cd9472d0659092e|063ab594-6942-9a12-d151-88ca6b51e812',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1614263424326
+        },
+        'e-299': {
+            'id': 'e-299',
+            'name': '',
+            'animationType': 'preset',
+            'eventTypeId': 'PAGE_START',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-63',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-300'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '60cb1a382097985add321c16',
+                'appliesTo': 'PAGE',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '60cb1a382097985add321c16',
+                    'appliesTo': 'PAGE',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': null,
+                'scrollOffsetUnit': null,
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1623923256870
+        },
+        'e-300': {
+            'id': 'e-300',
+            'name': '',
+            'animationType': 'preset',
+            'eventTypeId': 'PAGE_FINISH',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-63',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-299'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '60cb1a382097985add321c16',
+                'appliesTo': 'PAGE',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '60cb1a382097985add321c16',
+                    'appliesTo': 'PAGE',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': null,
+                'scrollOffsetUnit': null,
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1623923256870
+        },
+        'e-302': {
+            'id': 'e-302',
+            'name': '',
+            'animationType': 'preset',
+            'eventTypeId': 'PAGE_FINISH',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-64',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-301'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '60cb1a382097985add321c16',
+                'appliesTo': 'PAGE',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '60cb1a382097985add321c16',
+                    'appliesTo': 'PAGE',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': null,
+                'scrollOffsetUnit': null,
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1623923256870
+        },
+        'e-305': {
+            'id': 'e-305',
+            'name': '',
+            'animationType': 'preset',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-11',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-306'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '60cb1a382097985add321c16|598d2ae9-7619-b9d9-5dc6-2b30e229df76',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '60cb1a382097985add321c16|598d2ae9-7619-b9d9-5dc6-2b30e229df76',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1623923256870
+        },
+        'e-307': {
+            'id': 'e-307',
+            'name': '',
+            'animationType': 'preset',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-11',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-308'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '60cb1a382097985add321c16|418e21f0-be1f-b643-8af8-7967a89c93ff',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '60cb1a382097985add321c16|418e21f0-be1f-b643-8af8-7967a89c93ff',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1623923256870
+        },
+        'e-309': {
+            'id': 'e-309',
+            'name': '',
+            'animationType': 'preset',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-11',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-310'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '60cb1a382097985add321c16|7e0327b6-5f40-0d5e-f21f-cabe484aa6a0',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '60cb1a382097985add321c16|7e0327b6-5f40-0d5e-f21f-cabe484aa6a0',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1623923256870
+        },
+        'e-311': {
+            'id': 'e-311',
+            'name': '',
+            'animationType': 'preset',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-11',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-312'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '60cb1a382097985add321c16|52548975-bd06-18ac-4b67-8d4e6232e9c9',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '60cb1a382097985add321c16|52548975-bd06-18ac-4b67-8d4e6232e9c9',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1623923256870
+        },
+        'e-313': {
+            'id': 'e-313',
+            'name': '',
+            'animationType': 'preset',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-11',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-314'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '60cb1a382097985add321c16|0e12174c-45df-ea5a-8a47-a98fce31b6a4',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '60cb1a382097985add321c16|0e12174c-45df-ea5a-8a47-a98fce31b6a4',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1623923256870
+        },
+        'e-315': {
+            'id': 'e-315',
+            'name': '',
+            'animationType': 'preset',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-11',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-316'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '60cb1a382097985add321c16|4ba3c529-5cd1-08d9-e98e-766ee934f795',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '60cb1a382097985add321c16|4ba3c529-5cd1-08d9-e98e-766ee934f795',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1623927239592
+        },
+        'e-317': {
+            'id': 'e-317',
+            'name': '',
+            'animationType': 'preset',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-11',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-318'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '60cb1a382097985add321c16|ad338097-2fa0-95f0-a38f-923e1e0907dc',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '60cb1a382097985add321c16|ad338097-2fa0-95f0-a38f-923e1e0907dc',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1623936986940
+        },
+        'e-319': {
+            'id': 'e-319',
+            'name': '',
+            'animationType': 'preset',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-11',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-320'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '60cb1a382097985add321c16|b3380e49-f27a-1337-2593-be620fa34f77',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '60cb1a382097985add321c16|b3380e49-f27a-1337-2593-be620fa34f77',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1623938461118
+        },
+        'e-321': {
+            'id': 'e-321',
+            'name': '',
+            'animationType': 'preset',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-11',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-322'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '60cb1a382097985add321c16|faebb1be-9598-36db-a5ed-e142623dbcda',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '60cb1a382097985add321c16|faebb1be-9598-36db-a5ed-e142623dbcda',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1623939306793
+        },
+        'e-323': {
+            'id': 'e-323',
+            'name': '',
+            'animationType': 'preset',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-11',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-324'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '60cb1a382097985add321c16|3657b40f-f2ba-3f5f-9952-1ff34a61f073',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '60cb1a382097985add321c16|3657b40f-f2ba-3f5f-9952-1ff34a61f073',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1623939634345
+        },
+        'e-325': {
+            'id': 'e-325',
+            'name': '',
+            'animationType': 'preset',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-11',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-326'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '60cb1a382097985add321c16|31b31f96-20d1-4f15-12a8-77fa3e299b5d',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '60cb1a382097985add321c16|31b31f96-20d1-4f15-12a8-77fa3e299b5d',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1624004182880
+        },
+        'e-327': {
+            'id': 'e-327',
+            'name': '',
+            'animationType': 'preset',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-11',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-328'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '60cb1a382097985add321c16|4a0c9c14-87b0-b00c-c8ed-4acb5c04b13a',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '60cb1a382097985add321c16|4a0c9c14-87b0-b00c-c8ed-4acb5c04b13a',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1624004477805
+        },
+        'e-329': {
+            'id': 'e-329',
+            'name': '',
+            'animationType': 'preset',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-11',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-330'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '60cb1a382097985add321c16|429e2db9-f617-e360-c847-175234f0f008',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '60cb1a382097985add321c16|429e2db9-f617-e360-c847-175234f0f008',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1624004624717
+        },
+        'e-331': {
+            'id': 'e-331',
+            'name': '',
+            'animationType': 'preset',
+            'eventTypeId': 'SCROLL_INTO_VIEW',
+            'action': {
+                'id': '',
+                'actionTypeId': 'GENERAL_START_ACTION',
+                'config': {
+                    'delay': 0,
+                    'easing': '',
+                    'duration': 0,
+                    'actionListId': 'a-11',
+                    'affectedElements': {},
+                    'playInReverse': false,
+                    'autoStopEventId': 'e-332'
+                }
+            },
+            'mediaQueries': [
+                'main',
+                'medium',
+                'small',
+                'tiny'
+            ],
+            'target': {
+                'id': '60cb1a382097985add321c16|3ac6a8fb-4243-b97b-ca8b-a157c2b28fe4',
+                'appliesTo': 'ELEMENT',
+                'styleBlockIds': []
+            },
+            'targets': [{
+                    'id': '60cb1a382097985add321c16|3ac6a8fb-4243-b97b-ca8b-a157c2b28fe4',
+                    'appliesTo': 'ELEMENT',
+                    'styleBlockIds': []
+                }],
+            'config': {
+                'loop': false,
+                'playInReverse': false,
+                'scrollOffsetValue': 0,
+                'scrollOffsetUnit': '%',
+                'delay': null,
+                'direction': null,
+                'effectIn': null
+            },
+            'createdOn': 1624004974595
         }
     },
     'actionLists': {
-        'a-3': {
-            'id': 'a-3',
-            'title': 'Move up on scroll',
+        'a': {
+            'id': 'a',
+            'title': 'New Scroll Animation',
+            'continuousParameterGroups': [{
+                    'id': 'a-p',
+                    'type': 'SCROLL_PROGRESS',
+                    'parameterLabel': 'Scroll',
+                    'continuousActionGroups': []
+                }],
+            'createdOn': 1587743374946
+        },
+        'a-4': {
+            'id': 'a-4',
+            'title': 'accordion open',
             'actionItemGroups': [
                 {
-                    'actionItems': [
-                        {
-                            'id': 'a-3-n',
-                            'actionTypeId': 'TRANSFORM_MOVE',
+                    'actionItems': [{
+                            'id': 'a-4-n',
+                            'actionTypeId': 'STYLE_SIZE',
                             'config': {
-                                'delay': '0',
+                                'delay': 0,
                                 'easing': '',
                                 'duration': 500,
                                 'target': {
-                                    'selector': '.icon',
-                                    'selectorGuids': ['96b9a722-6da7-150b-4091-ad354832c2c2']
+                                    'selector': '.accordion-item-content',
+                                    'selectorGuids': ['7d0ad6a4-f222-d243-e090-cabc8cb46839']
                                 },
-                                'yValue': 50,
-                                'xUnit': 'PX',
-                                'yUnit': 'PX',
-                                'zUnit': 'PX'
+                                'heightValue': 0,
+                                'widthUnit': 'PX',
+                                'heightUnit': 'PX',
+                                'locked': false
                             }
-                        },
-                        {
-                            'id': 'a-3-n-2',
-                            'actionTypeId': 'STYLE_OPACITY',
-                            'config': {
-                                'delay': '0',
-                                'easing': '',
-                                'duration': 500,
-                                'target': {
-                                    'selector': '.icon',
-                                    'selectorGuids': ['96b9a722-6da7-150b-4091-ad354832c2c2']
-                                },
-                                'value': '0',
-                                'unit': ''
-                            }
-                        }
-                    ]
+                        }]
                 },
                 {
-                    'actionItems': [
-                        {
-                            'id': 'a-3-n-3',
-                            'actionTypeId': 'TRANSFORM_MOVE',
+                    'actionItems': [{
+                            'id': 'a-4-n-2',
+                            'actionTypeId': 'STYLE_SIZE',
                             'config': {
-                                'delay': '0',
-                                'easing': 'inOutQuint',
-                                'duration': 1000,
+                                'delay': 0,
+                                'easing': 'inOutCubic',
+                                'duration': 500,
                                 'target': {
-                                    'selector': '.icon',
-                                    'selectorGuids': ['96b9a722-6da7-150b-4091-ad354832c2c2']
+                                    'selector': '.accordion-item-content',
+                                    'selectorGuids': ['7d0ad6a4-f222-d243-e090-cabc8cb46839']
                                 },
-                                'yValue': '0',
-                                'xUnit': 'PX',
-                                'yUnit': 'PX',
-                                'zUnit': 'PX'
+                                'widthUnit': 'PX',
+                                'heightUnit': 'AUTO',
+                                'locked': false
                             }
-                        },
-                        {
-                            'id': 'a-3-n-4',
-                            'actionTypeId': 'STYLE_OPACITY',
-                            'config': {
-                                'delay': '0',
-                                'easing': 'inOutQuint',
-                                'duration': 1000,
-                                'target': {
-                                    'selector': '.icon',
-                                    'selectorGuids': ['96b9a722-6da7-150b-4091-ad354832c2c2']
-                                },
-                                'value': 1,
-                                'unit': ''
-                            }
-                        }
-                    ]
+                        }]
                 }
             ],
-            'createdOn': 1585917952828,
-            'useFirstGroupAsInitialState': true
+            'useFirstGroupAsInitialState': true,
+            'createdOn': 1588082276472
+        },
+        'a-5': {
+            'id': 'a-5',
+            'title': 'Accordion close',
+            'actionItemGroups': [{
+                    'actionItems': [{
+                            'id': 'a-5-n',
+                            'actionTypeId': 'STYLE_SIZE',
+                            'config': {
+                                'delay': 0,
+                                'easing': 'outSine',
+                                'duration': 500,
+                                'target': {
+                                    'selector': '.accordion-item-content',
+                                    'selectorGuids': ['7d0ad6a4-f222-d243-e090-cabc8cb46839']
+                                },
+                                'heightValue': 0,
+                                'widthUnit': 'PX',
+                                'heightUnit': 'PX',
+                                'locked': false
+                            }
+                        }]
+                }],
+            'useFirstGroupAsInitialState': false,
+            'createdOn': 1588082538397
         },
         'a-8': {
             'id': 'a-8',
             'title': 'New Timed Animation',
             'actionItemGroups': [
                 {
-                    'actionItems': [
-                        {
-                            'id': 'a-8-n',
-                            'actionTypeId': 'TRANSFORM_MOVE',
-                            'config': {
-                                'delay': '0',
-                                'easing': '',
-                                'duration': 500,
-                                'target': {
-                                    'useEventTarget': true,
-                                    'id': '5f06dfca22397e1ad58be3d8|4b54b195-a09a-2ffc-4de7-3d3da00c9d38'
-                                },
-                                'yValue': 50,
-                                'xUnit': 'PX',
-                                'yUnit': 'PX',
-                                'zUnit': 'PX'
-                            }
-                        },
-                        {
+                    'actionItems': [{
                             'id': 'a-8-n-2',
-                            'actionTypeId': 'STYLE_OPACITY',
+                            'actionTypeId': 'TRANSFORM_SCALE',
                             'config': {
-                                'delay': '0',
-                                'easing': '',
-                                'duration': 500,
+                                'delay': 0,
+                                'easing': 'ease',
+                                'duration': 2000,
                                 'target': {
                                     'useEventTarget': true,
-                                    'id': '5f06dfca22397e1ad58be3d8|4b54b195-a09a-2ffc-4de7-3d3da00c9d38'
+                                    'id': '5f74cf571cd94749c7590918|3c497dcf-c232-af82-0855-deb578a1dc0c'
                                 },
-                                'value': '0',
-                                'unit': ''
+                                'xValue': 1,
+                                'yValue': 1,
+                                'locked': true
                             }
-                        }
-                    ]
+                        }]
                 },
                 {
-                    'actionItems': [
-                        {
-                            'id': 'a-8-n-3',
-                            'actionTypeId': 'TRANSFORM_MOVE',
-                            'config': {
-                                'delay': '0',
-                                'easing': 'inOutQuad',
-                                'duration': 1000,
-                                'target': {
-                                    'useEventTarget': true,
-                                    'id': '5f06dfca22397e1ad58be3d8|4b54b195-a09a-2ffc-4de7-3d3da00c9d38'
-                                },
-                                'yValue': '0',
-                                'xUnit': 'PX',
-                                'yUnit': 'PX',
-                                'zUnit': 'PX'
-                            }
-                        },
-                        {
+                    'actionItems': [{
                             'id': 'a-8-n-4',
-                            'actionTypeId': 'STYLE_OPACITY',
+                            'actionTypeId': 'TRANSFORM_SCALE',
                             'config': {
-                                'delay': '0',
-                                'easing': 'inOutQuad',
-                                'duration': 1000,
+                                'delay': 0,
+                                'easing': 'inCubic',
+                                'duration': 1500,
                                 'target': {
                                     'useEventTarget': true,
-                                    'id': '5f06dfca22397e1ad58be3d8|4b54b195-a09a-2ffc-4de7-3d3da00c9d38'
+                                    'id': '5f74cf571cd94749c7590918|3c497dcf-c232-af82-0855-deb578a1dc0c'
                                 },
-                                'value': 1,
-                                'unit': ''
+                                'xValue': '1.1',
+                                'yValue': '1.1',
+                                'locked': true
                             }
-                        }
-                    ]
+                        }]
                 }
             ],
-            'createdOn': 1585919852265,
-            'useFirstGroupAsInitialState': true
-        },
-        'a-6': {
-            'id': 'a-6',
-            'title': 'New Timed Animation',
-            'actionItemGroups': [
-                {
-                    'actionItems': [
-                        {
-                            'id': 'a-6-n',
-                            'actionTypeId': 'TRANSFORM_MOVE',
-                            'config': {
-                                'delay': '0',
-                                'easing': '',
-                                'duration': 500,
-                                'target': {
-                                    'useEventTarget': true,
-                                    'id': '5f06dfca22397e1ad58be3d8|af99dd38-e9d3-4e87-2673-2b3aa9075f38'
-                                },
-                                'yValue': 50,
-                                'xUnit': 'PX',
-                                'yUnit': 'PX',
-                                'zUnit': 'PX'
-                            }
-                        },
-                        {
-                            'id': 'a-6-n-2',
-                            'actionTypeId': 'STYLE_OPACITY',
-                            'config': {
-                                'delay': '0',
-                                'easing': '',
-                                'duration': 500,
-                                'target': {
-                                    'useEventTarget': true,
-                                    'id': '5f06dfca22397e1ad58be3d8|af99dd38-e9d3-4e87-2673-2b3aa9075f38'
-                                },
-                                'value': '0',
-                                'unit': ''
-                            }
-                        }
-                    ]
-                },
-                {
-                    'actionItems': [
-                        {
-                            'id': 'a-6-n-3',
-                            'actionTypeId': 'TRANSFORM_MOVE',
-                            'config': {
-                                'delay': '0',
-                                'easing': 'inOutQuad',
-                                'duration': 1000,
-                                'target': {
-                                    'useEventTarget': true,
-                                    'id': '5f06dfca22397e1ad58be3d8|af99dd38-e9d3-4e87-2673-2b3aa9075f38'
-                                },
-                                'yValue': '0',
-                                'xUnit': 'PX',
-                                'yUnit': 'PX',
-                                'zUnit': 'PX'
-                            }
-                        },
-                        {
-                            'id': 'a-6-n-4',
-                            'actionTypeId': 'STYLE_OPACITY',
-                            'config': {
-                                'delay': '0',
-                                'easing': 'inOutQuad',
-                                'duration': 1000,
-                                'target': {
-                                    'useEventTarget': true,
-                                    'id': '5f06dfca22397e1ad58be3d8|af99dd38-e9d3-4e87-2673-2b3aa9075f38'
-                                },
-                                'value': 1,
-                                'unit': ''
-                            }
-                        }
-                    ]
-                }
-            ],
-            'createdOn': 1585919548475,
-            'useFirstGroupAsInitialState': true
-        },
-        'a-4': {
-            'id': 'a-4',
-            'title': 'New Timed Animation',
-            'actionItemGroups': [
-                {
-                    'actionItems': [
-                        {
-                            'id': 'a-4-n',
-                            'actionTypeId': 'TRANSFORM_MOVE',
-                            'config': {
-                                'delay': '0',
-                                'easing': '',
-                                'duration': 1000,
-                                'target': {
-                                    'useEventTarget': true,
-                                    'id': '5f06dfca22397e1ad58be3d8|af99dd38-e9d3-4e87-2673-2b3aa9075f38'
-                                },
-                                'yValue': 50,
-                                'xUnit': 'PX',
-                                'yUnit': 'PX',
-                                'zUnit': 'PX'
-                            }
-                        },
-                        {
-                            'id': 'a-4-n-2',
-                            'actionTypeId': 'STYLE_OPACITY',
-                            'config': {
-                                'delay': '0',
-                                'easing': '',
-                                'duration': 1000,
-                                'target': {
-                                    'useEventTarget': true,
-                                    'id': '5f06dfca22397e1ad58be3d8|af99dd38-e9d3-4e87-2673-2b3aa9075f38'
-                                },
-                                'value': '0',
-                                'unit': ''
-                            }
-                        }
-                    ]
-                },
-                {
-                    'actionItems': [
-                        {
-                            'id': 'a-4-n-3',
-                            'actionTypeId': 'TRANSFORM_MOVE',
-                            'config': {
-                                'delay': '0',
-                                'easing': '',
-                                'duration': 500,
-                                'target': {
-                                    'useEventTarget': true,
-                                    'id': '5f06dfca22397e1ad58be3d8|af99dd38-e9d3-4e87-2673-2b3aa9075f38'
-                                },
-                                'yValue': '0',
-                                'xUnit': 'PX',
-                                'yUnit': 'PX',
-                                'zUnit': 'PX'
-                            }
-                        },
-                        {
-                            'id': 'a-4-n-4',
-                            'actionTypeId': 'STYLE_OPACITY',
-                            'config': {
-                                'delay': '0',
-                                'easing': '',
-                                'duration': 500,
-                                'target': {
-                                    'useEventTarget': true,
-                                    'id': '5f06dfca22397e1ad58be3d8|af99dd38-e9d3-4e87-2673-2b3aa9075f38'
-                                },
-                                'value': 1,
-                                'unit': ''
-                            }
-                        }
-                    ]
-                }
-            ],
-            'createdOn': 1585918817378,
-            'useFirstGroupAsInitialState': false
+            'useFirstGroupAsInitialState': true,
+            'createdOn': 1588252802398
         },
         'a-9': {
             'id': 'a-9',
-            'title': 'Rotating',
+            'title': 'Hero',
             'actionItemGroups': [
                 {
-                    'actionItems': [{
+                    'actionItems': [
+                        {
                             'id': 'a-9-n',
-                            'actionTypeId': 'TRANSFORM_ROTATE',
+                            'actionTypeId': 'TRANSFORM_MOVE',
                             'config': {
-                                'delay': '0',
+                                'delay': 0,
                                 'easing': '',
                                 'duration': 500,
-                                'target': { 'id': '5f06dfca22397ed4048be3d9|9e7e841c-ca12-90d9-2752-96bf1cd6302f' },
-                                'xValue': '0',
-                                'zValue': '0',
-                                'xUnit': 'DEG',
-                                'yUnit': 'DEG',
-                                'zUnit': 'DEG'
+                                'target': { 'id': '5f74cf571cd94749c7590918|0f54c0b9-99a3-59d4-b9d1-162f6bbdd1c1' },
+                                'yValue': 48,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
                             }
-                        }]
+                        },
+                        {
+                            'id': 'a-9-n-2',
+                            'actionTypeId': 'STYLE_OPACITY',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd94749c7590918|0f54c0b9-99a3-59d4-b9d1-162f6bbdd1c1' },
+                                'value': 0,
+                                'unit': ''
+                            }
+                        },
+                        {
+                            'id': 'a-9-n-6',
+                            'actionTypeId': 'STYLE_OPACITY',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd94749c7590918|bf64f584-bce8-b336-b654-96deda198024' },
+                                'value': 0,
+                                'unit': ''
+                            }
+                        },
+                        {
+                            'id': 'a-9-n-5',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd94749c7590918|bf64f584-bce8-b336-b654-96deda198024' },
+                                'yValue': 48,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        },
+                        {
+                            'id': 'a-9-n-7',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd94749c7590918|96e85f0a-5045-f748-e220-082ca734d163' },
+                                'yValue': 48,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        },
+                        {
+                            'id': 'a-9-n-8',
+                            'actionTypeId': 'STYLE_OPACITY',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd94749c7590918|96e85f0a-5045-f748-e220-082ca734d163' },
+                                'value': 0,
+                                'unit': ''
+                            }
+                        }
+                    ]
                 },
                 {
-                    'actionItems': [{
-                            'id': 'a-9-n-2',
-                            'actionTypeId': 'TRANSFORM_ROTATE',
+                    'actionItems': [
+                        {
+                            'id': 'a-9-n-3',
+                            'actionTypeId': 'TRANSFORM_MOVE',
                             'config': {
-                                'delay': '0',
+                                'delay': 0,
                                 'easing': '',
-                                'duration': 20000,
-                                'target': { 'id': '5f06dfca22397ed4048be3d9|9e7e841c-ca12-90d9-2752-96bf1cd6302f' },
-                                'zValue': 180,
-                                'xUnit': 'DEG',
-                                'yUnit': 'DEG',
-                                'zUnit': 'DEG'
+                                'duration': 300,
+                                'target': { 'id': '5f74cf571cd94749c7590918|0f54c0b9-99a3-59d4-b9d1-162f6bbdd1c1' },
+                                'yValue': 0,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
                             }
-                        }]
+                        },
+                        {
+                            'id': 'a-9-n-4',
+                            'actionTypeId': 'STYLE_OPACITY',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 300,
+                                'target': { 'id': '5f74cf571cd94749c7590918|0f54c0b9-99a3-59d4-b9d1-162f6bbdd1c1' },
+                                'value': 1,
+                                'unit': ''
+                            }
+                        }
+                    ]
+                },
+                {
+                    'actionItems': [
+                        {
+                            'id': 'a-9-n-9',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd94749c7590918|bf64f584-bce8-b336-b654-96deda198024' },
+                                'yValue': 0,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        },
+                        {
+                            'id': 'a-9-n-10',
+                            'actionTypeId': 'STYLE_OPACITY',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 700,
+                                'target': { 'id': '5f74cf571cd94749c7590918|bf64f584-bce8-b336-b654-96deda198024' },
+                                'value': 1,
+                                'unit': ''
+                            }
+                        }
+                    ]
+                },
+                {
+                    'actionItems': [
+                        {
+                            'id': 'a-9-n-12',
+                            'actionTypeId': 'STYLE_OPACITY',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 700,
+                                'target': { 'id': '5f74cf571cd94749c7590918|96e85f0a-5045-f748-e220-082ca734d163' },
+                                'value': 1,
+                                'unit': ''
+                            }
+                        },
+                        {
+                            'id': 'a-9-n-11',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd94749c7590918|96e85f0a-5045-f748-e220-082ca734d163' },
+                                'yValue': 0,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        }
+                    ]
                 }
             ],
-            'createdOn': 1586425039580,
-            'useFirstGroupAsInitialState': true
+            'useFirstGroupAsInitialState': true,
+            'createdOn': 1588577437030
+        },
+        'a-50': {
+            'id': 'a-50',
+            'title': 'Abouthero 3',
+            'actionItemGroups': [
+                {
+                    'actionItems': [
+                        {
+                            'id': 'a-50-n',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd947317559092f|a34b68ce-633f-397b-fe72-c5c8e57fe672' },
+                                'yValue': 100,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        },
+                        {
+                            'id': 'a-50-n-2',
+                            'actionTypeId': 'STYLE_OPACITY',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd947317559092f|a34b68ce-633f-397b-fe72-c5c8e57fe672' },
+                                'value': 0,
+                                'unit': ''
+                            }
+                        },
+                        {
+                            'id': 'a-50-n-3',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd947317559092f|1fb8355d-fddd-c4e3-23e2-fdb42ff4139b' },
+                                'xValue': 500,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        }
+                    ]
+                },
+                {
+                    'actionItems': [
+                        {
+                            'id': 'a-50-n-4',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd947317559092f|a34b68ce-633f-397b-fe72-c5c8e57fe672' },
+                                'yValue': 0,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        },
+                        {
+                            'id': 'a-50-n-5',
+                            'actionTypeId': 'STYLE_OPACITY',
+                            'config': {
+                                'delay': 0,
+                                'easing': 'inQuad',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd947317559092f|a34b68ce-633f-397b-fe72-c5c8e57fe672' },
+                                'value': 1,
+                                'unit': ''
+                            }
+                        },
+                        {
+                            'id': 'a-50-n-6',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd947317559092f|1fb8355d-fddd-c4e3-23e2-fdb42ff4139b' },
+                                'xValue': 1,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        }
+                    ]
+                }
+            ],
+            'useFirstGroupAsInitialState': true,
+            'createdOn': 1588587104618
         },
         'a-11': {
             'id': 'a-11',
-            'title': 'Slides to right',
+            'title': 'scroll',
             'actionItemGroups': [
                 {
                     'actionItems': [
@@ -7587,11 +14533,14 @@ Webflow.require('ix2').init({
                             'id': 'a-11-n',
                             'actionTypeId': 'TRANSFORM_MOVE',
                             'config': {
-                                'delay': '0',
-                                'easing': 'inBack',
+                                'delay': 0,
+                                'easing': '',
                                 'duration': 500,
-                                'target': { 'id': '5f06dfca22397ed4048be3d9|b56e79c4-7f75-4d90-505d-6f6caeaf13ed' },
-                                'xValue': -317,
+                                'target': {
+                                    'useEventTarget': true,
+                                    'id': '5f74cf571cd94749c7590918|9aba268f-582f-e532-4312-de0d478bf130'
+                                },
+                                'yValue': 91,
                                 'xUnit': 'PX',
                                 'yUnit': 'PX',
                                 'zUnit': 'PX'
@@ -7601,63 +14550,14 @@ Webflow.require('ix2').init({
                             'id': 'a-11-n-3',
                             'actionTypeId': 'STYLE_OPACITY',
                             'config': {
-                                'delay': '0',
+                                'delay': 0,
                                 'easing': '',
                                 'duration': 500,
-                                'target': { 'id': '5f06dfca22397ed4048be3d9|b56e79c4-7f75-4d90-505d-6f6caeaf13ed' },
-                                'value': '0',
-                                'unit': ''
-                            }
-                        },
-                        {
-                            'id': 'a-11-n-5',
-                            'actionTypeId': 'TRANSFORM_MOVE',
-                            'config': {
-                                'delay': '0',
-                                'easing': '',
-                                'duration': 500,
-                                'target': { 'id': '5f06dfca22397ed4048be3d9|49fa369b-14a3-93ef-e874-df4e40dc5b4d' },
-                                'xValue': -317,
-                                'xUnit': 'PX',
-                                'yUnit': 'PX',
-                                'zUnit': 'PX'
-                            }
-                        },
-                        {
-                            'id': 'a-11-n-6',
-                            'actionTypeId': 'STYLE_OPACITY',
-                            'config': {
-                                'delay': '0',
-                                'easing': '',
-                                'duration': 500,
-                                'target': { 'id': '5f06dfca22397ed4048be3d9|49fa369b-14a3-93ef-e874-df4e40dc5b4d' },
-                                'value': '0',
-                                'unit': ''
-                            }
-                        },
-                        {
-                            'id': 'a-11-n-9',
-                            'actionTypeId': 'TRANSFORM_MOVE',
-                            'config': {
-                                'delay': '0',
-                                'easing': '',
-                                'duration': 500,
-                                'target': { 'id': '5f06dfca22397ed4048be3d9|84725a51-3fbc-1f84-230c-63888400f7a4' },
-                                'xValue': -317,
-                                'xUnit': 'PX',
-                                'yUnit': 'PX',
-                                'zUnit': 'PX'
-                            }
-                        },
-                        {
-                            'id': 'a-11-n-10',
-                            'actionTypeId': 'STYLE_OPACITY',
-                            'config': {
-                                'delay': '0',
-                                'easing': '',
-                                'duration': 500,
-                                'target': { 'id': '5f06dfca22397ed4048be3d9|84725a51-3fbc-1f84-230c-63888400f7a4' },
-                                'value': '0',
+                                'target': {
+                                    'useEventTarget': true,
+                                    'id': '5f74cf571cd94749c7590918|9aba268f-582f-e532-4312-de0d478bf130'
+                                },
+                                'value': 0,
                                 'unit': ''
                             }
                         }
@@ -7669,11 +14569,14 @@ Webflow.require('ix2').init({
                             'id': 'a-11-n-2',
                             'actionTypeId': 'TRANSFORM_MOVE',
                             'config': {
-                                'delay': '0',
-                                'easing': 'easeIn',
-                                'duration': 500,
-                                'target': { 'id': '5f06dfca22397ed4048be3d9|b56e79c4-7f75-4d90-505d-6f6caeaf13ed' },
-                                'xValue': '0',
+                                'delay': 0,
+                                'easing': 'inQuad',
+                                'duration': 700,
+                                'target': {
+                                    'useEventTarget': true,
+                                    'id': '5f74cf571cd94749c7590918|9aba268f-582f-e532-4312-de0d478bf130'
+                                },
+                                'yValue': 0,
                                 'xUnit': 'PX',
                                 'yUnit': 'PX',
                                 'zUnit': 'PX'
@@ -7683,70 +14586,13 @@ Webflow.require('ix2').init({
                             'id': 'a-11-n-4',
                             'actionTypeId': 'STYLE_OPACITY',
                             'config': {
-                                'delay': '0',
-                                'easing': '',
-                                'duration': 500,
-                                'target': { 'id': '5f06dfca22397ed4048be3d9|b56e79c4-7f75-4d90-505d-6f6caeaf13ed' },
-                                'value': 1,
-                                'unit': ''
-                            }
-                        }
-                    ]
-                },
-                {
-                    'actionItems': [
-                        {
-                            'id': 'a-11-n-7',
-                            'actionTypeId': 'TRANSFORM_MOVE',
-                            'config': {
-                                'delay': '0',
-                                'easing': 'easeIn',
-                                'duration': 500,
-                                'target': { 'id': '5f06dfca22397ed4048be3d9|49fa369b-14a3-93ef-e874-df4e40dc5b4d' },
-                                'xValue': '0',
-                                'xUnit': 'PX',
-                                'yUnit': 'PX',
-                                'zUnit': 'PX'
-                            }
-                        },
-                        {
-                            'id': 'a-11-n-8',
-                            'actionTypeId': 'STYLE_OPACITY',
-                            'config': {
-                                'delay': '0',
-                                'easing': '',
-                                'duration': 500,
-                                'target': { 'id': '5f06dfca22397ed4048be3d9|49fa369b-14a3-93ef-e874-df4e40dc5b4d' },
-                                'value': 1,
-                                'unit': ''
-                            }
-                        }
-                    ]
-                },
-                {
-                    'actionItems': [
-                        {
-                            'id': 'a-11-n-11',
-                            'actionTypeId': 'TRANSFORM_MOVE',
-                            'config': {
-                                'delay': '0',
-                                'easing': 'easeIn',
-                                'duration': 500,
-                                'target': { 'id': '5f06dfca22397ed4048be3d9|84725a51-3fbc-1f84-230c-63888400f7a4' },
-                                'xValue': '0',
-                                'xUnit': 'PX',
-                                'yUnit': 'PX',
-                                'zUnit': 'PX'
-                            }
-                        },
-                        {
-                            'id': 'a-11-n-12',
-                            'actionTypeId': 'STYLE_OPACITY',
-                            'config': {
-                                'delay': '0',
-                                'easing': '',
-                                'duration': 500,
-                                'target': { 'id': '5f06dfca22397ed4048be3d9|84725a51-3fbc-1f84-230c-63888400f7a4' },
+                                'delay': 0,
+                                'easing': 'inQuad',
+                                'duration': 700,
+                                'target': {
+                                    'useEventTarget': true,
+                                    'id': '5f74cf571cd94749c7590918|9aba268f-582f-e532-4312-de0d478bf130'
+                                },
                                 'value': 1,
                                 'unit': ''
                             }
@@ -7754,69 +14600,12 @@ Webflow.require('ix2').init({
                     ]
                 }
             ],
-            'createdOn': 1586426695170,
-            'useFirstGroupAsInitialState': true
-        },
-        'a-10': {
-            'id': 'a-10',
-            'title': 'Floating',
-            'actionItemGroups': [
-                {
-                    'actionItems': [{
-                            'id': 'a-10-n',
-                            'actionTypeId': 'TRANSFORM_MOVE',
-                            'config': {
-                                'delay': '0',
-                                'easing': '',
-                                'duration': 500,
-                                'target': { 'id': '5f06dfca22397ed4048be3d9|5d982744-cc96-f493-39b2-b51c1068486d' },
-                                'xValue': '0',
-                                'yValue': -7,
-                                'xUnit': 'PX',
-                                'yUnit': 'PX',
-                                'zUnit': 'PX'
-                            }
-                        }]
-                },
-                {
-                    'actionItems': [{
-                            'id': 'a-10-n-3',
-                            'actionTypeId': 'TRANSFORM_MOVE',
-                            'config': {
-                                'delay': '0',
-                                'easing': '',
-                                'duration': 1500,
-                                'target': { 'id': '5f06dfca22397ed4048be3d9|5d982744-cc96-f493-39b2-b51c1068486d' },
-                                'yValue': '0',
-                                'xUnit': 'PX',
-                                'yUnit': 'PX',
-                                'zUnit': 'PX'
-                            }
-                        }]
-                },
-                {
-                    'actionItems': [{
-                            'id': 'a-10-n-5',
-                            'actionTypeId': 'TRANSFORM_MOVE',
-                            'config': {
-                                'delay': '0',
-                                'easing': '',
-                                'duration': 1500,
-                                'target': { 'id': '5f06dfca22397ed4048be3d9|5d982744-cc96-f493-39b2-b51c1068486d' },
-                                'yValue': -7,
-                                'xUnit': 'PX',
-                                'yUnit': 'PX',
-                                'zUnit': 'PX'
-                            }
-                        }]
-                }
-            ],
-            'createdOn': 1586425976851,
-            'useFirstGroupAsInitialState': true
+            'useFirstGroupAsInitialState': true,
+            'createdOn': 1588584803483
         },
         'a-12': {
             'id': 'a-12',
-            'title': 'windowhero',
+            'title': 'New Timed Animation',
             'actionItemGroups': [
                 {
                     'actionItems': [
@@ -7824,116 +14613,26 @@ Webflow.require('ix2').init({
                             'id': 'a-12-n',
                             'actionTypeId': 'TRANSFORM_MOVE',
                             'config': {
-                                'delay': '0',
+                                'delay': 0,
                                 'easing': '',
                                 'duration': 500,
-                                'target': { 'id': '5f06dfca22397ea6ca8be3da|7461fed4-58cc-9fe8-6319-9af5e9e034ca' },
-                                'yValue': '0',
+                                'target': { 'id': '5f74cf571cd9476f8b59091d|872cd539-b6c6-5db6-db1b-97de4fa7f11e' },
+                                'yValue': 100,
                                 'xUnit': 'PX',
                                 'yUnit': 'PX',
                                 'zUnit': 'PX'
                             }
                         },
-                        {
-                            'id': 'a-12-n-4',
-                            'actionTypeId': 'TRANSFORM_MOVE',
-                            'config': {
-                                'delay': '0',
-                                'easing': '',
-                                'duration': 500,
-                                'target': { 'id': '5f06dfca22397ea6ca8be3da|ced7da79-0ad7-f812-0d1c-732b2a898cb2' },
-                                'yValue': '0',
-                                'xUnit': 'PX',
-                                'yUnit': 'PX',
-                                'zUnit': 'PX'
-                            }
-                        },
-                        {
-                            'id': 'a-12-n-7',
-                            'actionTypeId': 'TRANSFORM_MOVE',
-                            'config': {
-                                'delay': '0',
-                                'easing': '',
-                                'duration': 500,
-                                'target': { 'id': '5f06dfca22397ea6ca8be3da|a8310ec5-97d4-2120-6370-4155688e9a21' },
-                                'yValue': '0',
-                                'xUnit': 'PX',
-                                'yUnit': 'PX',
-                                'zUnit': 'PX'
-                            }
-                        },
-                        {
-                            'id': 'a-12-n-10',
-                            'actionTypeId': 'TRANSFORM_MOVE',
-                            'config': {
-                                'delay': '0',
-                                'easing': '',
-                                'duration': 500,
-                                'target': { 'id': '5f06dfca22397ea6ca8be3da|bbaa6ec4-f4d2-fdc0-8539-fca17922f0a7' },
-                                'yValue': '0',
-                                'xUnit': 'PX',
-                                'yUnit': 'PX',
-                                'zUnit': 'PX'
-                            }
-                        }
-                    ]
-                },
-                {
-                    'actionItems': [
                         {
                             'id': 'a-12-n-2',
-                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'actionTypeId': 'STYLE_OPACITY',
                             'config': {
-                                'delay': '0',
+                                'delay': 0,
                                 'easing': '',
-                                'duration': 1000,
-                                'target': { 'id': '5f06dfca22397ea6ca8be3da|7461fed4-58cc-9fe8-6319-9af5e9e034ca' },
-                                'yValue': 5,
-                                'xUnit': 'PX',
-                                'yUnit': 'PX',
-                                'zUnit': 'PX'
-                            }
-                        },
-                        {
-                            'id': 'a-12-n-5',
-                            'actionTypeId': 'TRANSFORM_MOVE',
-                            'config': {
-                                'delay': 300,
-                                'easing': '',
-                                'duration': 1000,
-                                'target': { 'id': '5f06dfca22397ea6ca8be3da|ced7da79-0ad7-f812-0d1c-732b2a898cb2' },
-                                'yValue': 5,
-                                'xUnit': 'PX',
-                                'yUnit': 'PX',
-                                'zUnit': 'PX'
-                            }
-                        },
-                        {
-                            'id': 'a-12-n-8',
-                            'actionTypeId': 'TRANSFORM_MOVE',
-                            'config': {
-                                'delay': 600,
-                                'easing': '',
-                                'duration': 1000,
-                                'target': { 'id': '5f06dfca22397ea6ca8be3da|a8310ec5-97d4-2120-6370-4155688e9a21' },
-                                'yValue': 5,
-                                'xUnit': 'PX',
-                                'yUnit': 'PX',
-                                'zUnit': 'PX'
-                            }
-                        },
-                        {
-                            'id': 'a-12-n-11',
-                            'actionTypeId': 'TRANSFORM_MOVE',
-                            'config': {
-                                'delay': 900,
-                                'easing': '',
-                                'duration': 1000,
-                                'target': { 'id': '5f06dfca22397ea6ca8be3da|bbaa6ec4-f4d2-fdc0-8539-fca17922f0a7' },
-                                'yValue': 5,
-                                'xUnit': 'PX',
-                                'yUnit': 'PX',
-                                'zUnit': 'PX'
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd9476f8b59091d|872cd539-b6c6-5db6-db1b-97de4fa7f11e' },
+                                'value': 0,
+                                'unit': ''
                             }
                         }
                     ]
@@ -7944,273 +14643,174 @@ Webflow.require('ix2').init({
                             'id': 'a-12-n-3',
                             'actionTypeId': 'TRANSFORM_MOVE',
                             'config': {
-                                'delay': '0',
+                                'delay': 0,
                                 'easing': '',
-                                'duration': 1000,
-                                'target': { 'id': '5f06dfca22397ea6ca8be3da|7461fed4-58cc-9fe8-6319-9af5e9e034ca' },
-                                'yValue': '0',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd9476f8b59091d|872cd539-b6c6-5db6-db1b-97de4fa7f11e' },
+                                'yValue': 0,
                                 'xUnit': 'PX',
                                 'yUnit': 'PX',
                                 'zUnit': 'PX'
+                            }
+                        },
+                        {
+                            'id': 'a-12-n-4',
+                            'actionTypeId': 'STYLE_OPACITY',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd9476f8b59091d|872cd539-b6c6-5db6-db1b-97de4fa7f11e' },
+                                'value': 1,
+                                'unit': ''
                             }
                         },
                         {
                             'id': 'a-12-n-6',
-                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'actionTypeId': 'TRANSFORM_SCALE',
                             'config': {
-                                'delay': 300,
+                                'delay': 0,
                                 'easing': '',
-                                'duration': 1000,
-                                'target': { 'id': '5f06dfca22397ea6ca8be3da|ced7da79-0ad7-f812-0d1c-732b2a898cb2' },
-                                'yValue': '0',
-                                'xUnit': 'PX',
-                                'yUnit': 'PX',
-                                'zUnit': 'PX'
-                            }
-                        },
-                        {
-                            'id': 'a-12-n-9',
-                            'actionTypeId': 'TRANSFORM_MOVE',
-                            'config': {
-                                'delay': 600,
-                                'easing': '',
-                                'duration': 1000,
-                                'target': { 'id': '5f06dfca22397ea6ca8be3da|a8310ec5-97d4-2120-6370-4155688e9a21' },
-                                'yValue': '0',
-                                'xUnit': 'PX',
-                                'yUnit': 'PX',
-                                'zUnit': 'PX'
-                            }
-                        },
-                        {
-                            'id': 'a-12-n-12',
-                            'actionTypeId': 'TRANSFORM_MOVE',
-                            'config': {
-                                'delay': 900,
-                                'easing': '',
-                                'duration': 1000,
-                                'target': { 'id': '5f06dfca22397ea6ca8be3da|bbaa6ec4-f4d2-fdc0-8539-fca17922f0a7' },
-                                'yValue': '0',
-                                'xUnit': 'PX',
-                                'yUnit': 'PX',
-                                'zUnit': 'PX'
+                                'duration': 300,
+                                'target': { 'id': '5f74cf571cd9476f8b59091d|86d5e94c-30d2-812a-16a9-b848c25b1a09' },
+                                'xValue': '1.05',
+                                'yValue': '1.05',
+                                'locked': true
                             }
                         }
                     ]
-                }
-            ],
-            'createdOn': 1586862035697,
-            'useFirstGroupAsInitialState': true
-        },
-        'a-13': {
-            'id': 'a-13',
-            'title': 'gateway',
-            'actionItemGroups': [
-                {
-                    'actionItems': [{
-                            'id': 'a-13-n',
-                            'actionTypeId': 'TRANSFORM_MOVE',
-                            'config': {
-                                'delay': '0',
-                                'easing': '',
-                                'duration': 500,
-                                'target': { 'id': '5f06dfca22397ea6ca8be3da|70768702-9898-7aee-6783-187ccedf7d77' },
-                                'xValue': -2200,
-                                'xUnit': 'PX',
-                                'yUnit': 'PX',
-                                'zUnit': 'PX'
-                            }
-                        }]
                 },
                 {
                     'actionItems': [{
-                            'id': 'a-13-n-2',
-                            'actionTypeId': 'TRANSFORM_MOVE',
-                            'config': {
-                                'delay': '0',
-                                'easing': 'easeIn',
-                                'duration': 500,
-                                'target': { 'id': '5f06dfca22397ea6ca8be3da|70768702-9898-7aee-6783-187ccedf7d77' },
-                                'xValue': '0',
-                                'xUnit': 'PX',
-                                'yUnit': 'PX',
-                                'zUnit': 'PX'
-                            }
-                        }]
-                },
-                {
-                    'actionItems': [{
-                            'id': 'a-13-n-3',
+                            'id': 'a-12-n-7',
                             'actionTypeId': 'TRANSFORM_SCALE',
                             'config': {
-                                'delay': '0',
+                                'delay': 0,
                                 'easing': '',
-                                'duration': 500,
-                                'target': { 'id': '5f06dfca22397ea6ca8be3da|70768702-9898-7aee-6783-187ccedf7d77' },
-                                'xValue': '1.2',
-                                'yValue': '1.2',
-                                'locked': true
-                            }
-                        }]
-                },
-                {
-                    'actionItems': [{
-                            'id': 'a-13-n-4',
-                            'actionTypeId': 'TRANSFORM_SCALE',
-                            'config': {
-                                'delay': '0',
-                                'easing': '',
-                                'duration': 500,
-                                'target': { 'id': '5f06dfca22397ea6ca8be3da|70768702-9898-7aee-6783-187ccedf7d77' },
+                                'duration': 300,
+                                'target': { 'id': '5f74cf571cd9476f8b59091d|86d5e94c-30d2-812a-16a9-b848c25b1a09' },
                                 'xValue': 1,
                                 'yValue': 1,
                                 'locked': true
                             }
                         }]
-                },
+                }
+            ],
+            'useFirstGroupAsInitialState': true,
+            'createdOn': 1588585475594
+        },
+        'a-13': {
+            'id': 'a-13',
+            'title': 'Supernodehoro',
+            'actionItemGroups': [
                 {
-                    'actionItems': [{
-                            'id': 'a-13-n-5',
+                    'actionItems': [
+                        {
+                            'id': 'a-13-n',
                             'actionTypeId': 'TRANSFORM_MOVE',
                             'config': {
-                                'delay': '0',
+                                'delay': 0,
                                 'easing': '',
                                 'duration': 500,
-                                'target': { 'id': '5f06dfca22397ea6ca8be3da|70768702-9898-7aee-6783-187ccedf7d77' },
-                                'xValue': '0',
+                                'target': { 'id': '5f74cf571cd947f7c459091e|5bd5e07a-3279-a5ab-1057-1b2428b601c5' },
+                                'yValue': 100,
                                 'xUnit': 'PX',
                                 'yUnit': 'PX',
                                 'zUnit': 'PX'
                             }
-                        }]
+                        },
+                        {
+                            'id': 'a-13-n-2',
+                            'actionTypeId': 'STYLE_OPACITY',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd947f7c459091e|5bd5e07a-3279-a5ab-1057-1b2428b601c5' },
+                                'value': 0,
+                                'unit': ''
+                            }
+                        }
+                    ]
+                },
+                {
+                    'actionItems': [
+                        {
+                            'id': 'a-13-n-3',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd947f7c459091e|5bd5e07a-3279-a5ab-1057-1b2428b601c5' },
+                                'yValue': 0,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        },
+                        {
+                            'id': 'a-13-n-4',
+                            'actionTypeId': 'STYLE_OPACITY',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd947f7c459091e|5bd5e07a-3279-a5ab-1057-1b2428b601c5' },
+                                'value': 1,
+                                'unit': ''
+                            }
+                        }
+                    ]
                 }
             ],
-            'createdOn': 1586863214896,
-            'useFirstGroupAsInitialState': true
+            'useFirstGroupAsInitialState': true,
+            'createdOn': 1588586401444
         },
         'a-14': {
             'id': 'a-14',
-            'title': 'Rotating 2',
+            'title': 'Abouthero',
             'actionItemGroups': [
                 {
-                    'actionItems': [{
+                    'actionItems': [
+                        {
                             'id': 'a-14-n',
-                            'actionTypeId': 'TRANSFORM_ROTATE',
+                            'actionTypeId': 'TRANSFORM_MOVE',
                             'config': {
-                                'delay': '0',
+                                'delay': 0,
                                 'easing': '',
                                 'duration': 500,
-                                'target': { 'id': '5f06dfca22397e4b278be3dc|9e7e841c-ca12-90d9-2752-96bf1cd6302f' },
-                                'xValue': '0',
-                                'zValue': '0',
-                                'xUnit': 'DEG',
-                                'yUnit': 'DEG',
-                                'zUnit': 'DEG'
+                                'target': { 'id': '5f74cf571cd947d2c059091f|a34b68ce-633f-397b-fe72-c5c8e57fe672' },
+                                'yValue': 100,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
                             }
-                        }]
-                },
-                {
-                    'actionItems': [{
+                        },
+                        {
                             'id': 'a-14-n-2',
-                            'actionTypeId': 'TRANSFORM_ROTATE',
-                            'config': {
-                                'delay': '0',
-                                'easing': '',
-                                'duration': 20000,
-                                'target': { 'id': '5f06dfca22397e4b278be3dc|9e7e841c-ca12-90d9-2752-96bf1cd6302f' },
-                                'zValue': 180,
-                                'xUnit': 'DEG',
-                                'yUnit': 'DEG',
-                                'zUnit': 'DEG'
-                            }
-                        }]
-                }
-            ],
-            'createdOn': 1586425039580,
-            'useFirstGroupAsInitialState': true
-        },
-        'a-15': {
-            'id': 'a-15',
-            'title': 'Slides to right 2',
-            'actionItemGroups': [
-                {
-                    'actionItems': [
-                        {
-                            'id': 'a-15-n',
-                            'actionTypeId': 'TRANSFORM_MOVE',
-                            'config': {
-                                'delay': '0',
-                                'easing': 'inBack',
-                                'duration': 500,
-                                'target': { 'id': '5f06dfca22397e4b278be3dc|b56e79c4-7f75-4d90-505d-6f6caeaf13ed' },
-                                'xValue': -317,
-                                'xUnit': 'PX',
-                                'yUnit': 'PX',
-                                'zUnit': 'PX'
-                            }
-                        },
-                        {
-                            'id': 'a-15-n-2',
                             'actionTypeId': 'STYLE_OPACITY',
                             'config': {
-                                'delay': '0',
+                                'delay': 0,
                                 'easing': '',
                                 'duration': 500,
-                                'target': { 'id': '5f06dfca22397e4b278be3dc|b56e79c4-7f75-4d90-505d-6f6caeaf13ed' },
-                                'value': '0',
+                                'target': { 'id': '5f74cf571cd947d2c059091f|a34b68ce-633f-397b-fe72-c5c8e57fe672' },
+                                'value': 0,
                                 'unit': ''
                             }
                         },
                         {
-                            'id': 'a-15-n-3',
+                            'id': 'a-14-n-5',
                             'actionTypeId': 'TRANSFORM_MOVE',
                             'config': {
-                                'delay': '0',
+                                'delay': 0,
                                 'easing': '',
                                 'duration': 500,
-                                'target': { 'id': '5f06dfca22397e4b278be3dc|49fa369b-14a3-93ef-e874-df4e40dc5b4d' },
-                                'xValue': -317,
+                                'target': { 'id': '5f74cf571cd947d2c059091f|1fb8355d-fddd-c4e3-23e2-fdb42ff4139b' },
+                                'xValue': 500,
                                 'xUnit': 'PX',
                                 'yUnit': 'PX',
                                 'zUnit': 'PX'
-                            }
-                        },
-                        {
-                            'id': 'a-15-n-4',
-                            'actionTypeId': 'STYLE_OPACITY',
-                            'config': {
-                                'delay': '0',
-                                'easing': '',
-                                'duration': 500,
-                                'target': { 'id': '5f06dfca22397e4b278be3dc|49fa369b-14a3-93ef-e874-df4e40dc5b4d' },
-                                'value': '0',
-                                'unit': ''
-                            }
-                        },
-                        {
-                            'id': 'a-15-n-5',
-                            'actionTypeId': 'TRANSFORM_MOVE',
-                            'config': {
-                                'delay': '0',
-                                'easing': '',
-                                'duration': 500,
-                                'target': { 'id': '5f06dfca22397e4b278be3dc|84725a51-3fbc-1f84-230c-63888400f7a4' },
-                                'xValue': -317,
-                                'xUnit': 'PX',
-                                'yUnit': 'PX',
-                                'zUnit': 'PX'
-                            }
-                        },
-                        {
-                            'id': 'a-15-n-6',
-                            'actionTypeId': 'STYLE_OPACITY',
-                            'config': {
-                                'delay': '0',
-                                'easing': '',
-                                'duration': 500,
-                                'target': { 'id': '5f06dfca22397e4b278be3dc|84725a51-3fbc-1f84-230c-63888400f7a4' },
-                                'value': '0',
-                                'unit': ''
                             }
                         }
                     ]
@@ -8218,157 +14818,54 @@ Webflow.require('ix2').init({
                 {
                     'actionItems': [
                         {
-                            'id': 'a-15-n-7',
+                            'id': 'a-14-n-3',
                             'actionTypeId': 'TRANSFORM_MOVE',
                             'config': {
-                                'delay': '0',
-                                'easing': 'easeIn',
+                                'delay': 0,
+                                'easing': '',
                                 'duration': 500,
-                                'target': { 'id': '5f06dfca22397e4b278be3dc|b56e79c4-7f75-4d90-505d-6f6caeaf13ed' },
-                                'xValue': '0',
+                                'target': { 'id': '5f74cf571cd947d2c059091f|a34b68ce-633f-397b-fe72-c5c8e57fe672' },
+                                'yValue': 0,
                                 'xUnit': 'PX',
                                 'yUnit': 'PX',
                                 'zUnit': 'PX'
                             }
                         },
                         {
-                            'id': 'a-15-n-8',
+                            'id': 'a-14-n-4',
                             'actionTypeId': 'STYLE_OPACITY',
                             'config': {
-                                'delay': '0',
-                                'easing': '',
+                                'delay': 0,
+                                'easing': 'inQuad',
                                 'duration': 500,
-                                'target': { 'id': '5f06dfca22397e4b278be3dc|b56e79c4-7f75-4d90-505d-6f6caeaf13ed' },
+                                'target': { 'id': '5f74cf571cd947d2c059091f|a34b68ce-633f-397b-fe72-c5c8e57fe672' },
                                 'value': 1,
                                 'unit': ''
-                            }
-                        }
-                    ]
-                },
-                {
-                    'actionItems': [
-                        {
-                            'id': 'a-15-n-9',
-                            'actionTypeId': 'TRANSFORM_MOVE',
-                            'config': {
-                                'delay': '0',
-                                'easing': 'easeIn',
-                                'duration': 500,
-                                'target': { 'id': '5f06dfca22397e4b278be3dc|49fa369b-14a3-93ef-e874-df4e40dc5b4d' },
-                                'xValue': '0',
-                                'xUnit': 'PX',
-                                'yUnit': 'PX',
-                                'zUnit': 'PX'
                             }
                         },
                         {
-                            'id': 'a-15-n-10',
-                            'actionTypeId': 'STYLE_OPACITY',
-                            'config': {
-                                'delay': '0',
-                                'easing': '',
-                                'duration': 500,
-                                'target': { 'id': '5f06dfca22397e4b278be3dc|49fa369b-14a3-93ef-e874-df4e40dc5b4d' },
-                                'value': 1,
-                                'unit': ''
-                            }
-                        }
-                    ]
-                },
-                {
-                    'actionItems': [
-                        {
-                            'id': 'a-15-n-11',
+                            'id': 'a-14-n-6',
                             'actionTypeId': 'TRANSFORM_MOVE',
                             'config': {
-                                'delay': '0',
-                                'easing': 'easeIn',
+                                'delay': 0,
+                                'easing': '',
                                 'duration': 500,
-                                'target': { 'id': '5f06dfca22397e4b278be3dc|84725a51-3fbc-1f84-230c-63888400f7a4' },
-                                'xValue': '0',
+                                'target': { 'id': '5f74cf571cd947d2c059091f|1fb8355d-fddd-c4e3-23e2-fdb42ff4139b' },
+                                'xValue': 1,
                                 'xUnit': 'PX',
                                 'yUnit': 'PX',
                                 'zUnit': 'PX'
-                            }
-                        },
-                        {
-                            'id': 'a-15-n-12',
-                            'actionTypeId': 'STYLE_OPACITY',
-                            'config': {
-                                'delay': '0',
-                                'easing': '',
-                                'duration': 500,
-                                'target': { 'id': '5f06dfca22397e4b278be3dc|84725a51-3fbc-1f84-230c-63888400f7a4' },
-                                'value': 1,
-                                'unit': ''
                             }
                         }
                     ]
                 }
             ],
-            'createdOn': 1586426695170,
-            'useFirstGroupAsInitialState': true
-        },
-        'a-16': {
-            'id': 'a-16',
-            'title': 'Floating 2',
-            'actionItemGroups': [
-                {
-                    'actionItems': [{
-                            'id': 'a-16-n',
-                            'actionTypeId': 'TRANSFORM_MOVE',
-                            'config': {
-                                'delay': '0',
-                                'easing': '',
-                                'duration': 500,
-                                'target': { 'id': '5f06dfca22397e4b278be3dc|5d982744-cc96-f493-39b2-b51c1068486d' },
-                                'xValue': '0',
-                                'yValue': -7,
-                                'xUnit': 'PX',
-                                'yUnit': 'PX',
-                                'zUnit': 'PX'
-                            }
-                        }]
-                },
-                {
-                    'actionItems': [{
-                            'id': 'a-16-n-2',
-                            'actionTypeId': 'TRANSFORM_MOVE',
-                            'config': {
-                                'delay': '0',
-                                'easing': '',
-                                'duration': 1500,
-                                'target': { 'id': '5f06dfca22397e4b278be3dc|5d982744-cc96-f493-39b2-b51c1068486d' },
-                                'yValue': '0',
-                                'xUnit': 'PX',
-                                'yUnit': 'PX',
-                                'zUnit': 'PX'
-                            }
-                        }]
-                },
-                {
-                    'actionItems': [{
-                            'id': 'a-16-n-3',
-                            'actionTypeId': 'TRANSFORM_MOVE',
-                            'config': {
-                                'delay': '0',
-                                'easing': '',
-                                'duration': 1500,
-                                'target': { 'id': '5f06dfca22397e4b278be3dc|5d982744-cc96-f493-39b2-b51c1068486d' },
-                                'yValue': -7,
-                                'xUnit': 'PX',
-                                'yUnit': 'PX',
-                                'zUnit': 'PX'
-                            }
-                        }]
-                }
-            ],
-            'createdOn': 1586425976851,
-            'useFirstGroupAsInitialState': true
+            'useFirstGroupAsInitialState': true,
+            'createdOn': 1588587104618
         },
         'a-17': {
             'id': 'a-17',
-            'title': 'windowhero 2',
+            'title': 'New Timed Animation 2',
             'actionItemGroups': [
                 {
                     'actionItems': [
@@ -8376,11 +14873,14 @@ Webflow.require('ix2').init({
                             'id': 'a-17-n',
                             'actionTypeId': 'TRANSFORM_MOVE',
                             'config': {
-                                'delay': '0',
+                                'delay': 0,
                                 'easing': '',
                                 'duration': 500,
-                                'target': { 'id': '5f06dfca22397efd808be3dd|7461fed4-58cc-9fe8-6319-9af5e9e034ca' },
-                                'yValue': '0',
+                                'target': {
+                                    'useEventTarget': true,
+                                    'id': '5e8f58af93a4a310718d66d8|af99dd38-e9d3-4e87-2673-2b3aa9075f38'
+                                },
+                                'yValue': 50,
                                 'xUnit': 'PX',
                                 'yUnit': 'PX',
                                 'zUnit': 'PX'
@@ -8388,27 +14888,35 @@ Webflow.require('ix2').init({
                         },
                         {
                             'id': 'a-17-n-2',
-                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'actionTypeId': 'STYLE_OPACITY',
                             'config': {
-                                'delay': '0',
+                                'delay': 0,
                                 'easing': '',
                                 'duration': 500,
-                                'target': { 'id': '5f06dfca22397efd808be3dd|ced7da79-0ad7-f812-0d1c-732b2a898cb2' },
-                                'yValue': '0',
-                                'xUnit': 'PX',
-                                'yUnit': 'PX',
-                                'zUnit': 'PX'
+                                'target': {
+                                    'useEventTarget': true,
+                                    'id': '5e8f58af93a4a310718d66d8|af99dd38-e9d3-4e87-2673-2b3aa9075f38'
+                                },
+                                'value': 0,
+                                'unit': ''
                             }
-                        },
+                        }
+                    ]
+                },
+                {
+                    'actionItems': [
                         {
                             'id': 'a-17-n-3',
                             'actionTypeId': 'TRANSFORM_MOVE',
                             'config': {
-                                'delay': '0',
-                                'easing': '',
-                                'duration': 500,
-                                'target': { 'id': '5f06dfca22397efd808be3dd|a8310ec5-97d4-2120-6370-4155688e9a21' },
-                                'yValue': '0',
+                                'delay': 0,
+                                'easing': 'inOutQuad',
+                                'duration': 1000,
+                                'target': {
+                                    'useEventTarget': true,
+                                    'id': '5e8f58af93a4a310718d66d8|af99dd38-e9d3-4e87-2673-2b3aa9075f38'
+                                },
+                                'yValue': 0,
                                 'xUnit': 'PX',
                                 'yUnit': 'PX',
                                 'zUnit': 'PX'
@@ -8416,16 +14924,107 @@ Webflow.require('ix2').init({
                         },
                         {
                             'id': 'a-17-n-4',
+                            'actionTypeId': 'STYLE_OPACITY',
+                            'config': {
+                                'delay': 0,
+                                'easing': 'inOutQuad',
+                                'duration': 1000,
+                                'target': {
+                                    'useEventTarget': true,
+                                    'id': '5e8f58af93a4a310718d66d8|af99dd38-e9d3-4e87-2673-2b3aa9075f38'
+                                },
+                                'value': 1,
+                                'unit': ''
+                            }
+                        }
+                    ]
+                }
+            ],
+            'useFirstGroupAsInitialState': true,
+            'createdOn': 1585919548475
+        },
+        'a-23': {
+            'id': 'a-23',
+            'title': 'Hero 2',
+            'actionItemGroups': [
+                {
+                    'actionItems': [
+                        {
+                            'id': 'a-23-n',
                             'actionTypeId': 'TRANSFORM_MOVE',
                             'config': {
-                                'delay': '0',
+                                'delay': 0,
                                 'easing': '',
                                 'duration': 500,
-                                'target': { 'id': '5f06dfca22397efd808be3dd|bbaa6ec4-f4d2-fdc0-8539-fca17922f0a7' },
-                                'yValue': '0',
+                                'target': { 'id': '5f74cf571cd94759ff590926|0f54c0b9-99a3-59d4-b9d1-162f6bbdd1c1' },
+                                'yValue': 48,
                                 'xUnit': 'PX',
                                 'yUnit': 'PX',
                                 'zUnit': 'PX'
+                            }
+                        },
+                        {
+                            'id': 'a-23-n-2',
+                            'actionTypeId': 'STYLE_OPACITY',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd94759ff590926|0f54c0b9-99a3-59d4-b9d1-162f6bbdd1c1' },
+                                'value': 0,
+                                'unit': ''
+                            }
+                        },
+                        {
+                            'id': 'a-23-n-3',
+                            'actionTypeId': 'STYLE_OPACITY',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd94759ff590926|bf64f584-bce8-b336-b654-96deda198024' },
+                                'value': 0,
+                                'unit': ''
+                            }
+                        },
+                        {
+                            'id': 'a-23-n-4',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd94759ff590926|bf64f584-bce8-b336-b654-96deda198024' },
+                                'yValue': 48,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        },
+                        {
+                            'id': 'a-23-n-5',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd94759ff590926|96e85f0a-5045-f748-e220-082ca734d163' },
+                                'yValue': 48,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        },
+                        {
+                            'id': 'a-23-n-6',
+                            'actionTypeId': 'STYLE_OPACITY',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd94759ff590926|96e85f0a-5045-f748-e220-082ca734d163' },
+                                'value': 0,
+                                'unit': ''
                             }
                         }
                     ]
@@ -8433,59 +15032,29 @@ Webflow.require('ix2').init({
                 {
                     'actionItems': [
                         {
-                            'id': 'a-17-n-5',
+                            'id': 'a-23-n-7',
                             'actionTypeId': 'TRANSFORM_MOVE',
                             'config': {
-                                'delay': '0',
+                                'delay': 0,
                                 'easing': '',
-                                'duration': 1000,
-                                'target': { 'id': '5f06dfca22397efd808be3dd|7461fed4-58cc-9fe8-6319-9af5e9e034ca' },
-                                'yValue': 5,
+                                'duration': 300,
+                                'target': { 'id': '5f74cf571cd94759ff590926|0f54c0b9-99a3-59d4-b9d1-162f6bbdd1c1' },
+                                'yValue': 0,
                                 'xUnit': 'PX',
                                 'yUnit': 'PX',
                                 'zUnit': 'PX'
                             }
                         },
                         {
-                            'id': 'a-17-n-6',
-                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'id': 'a-23-n-8',
+                            'actionTypeId': 'STYLE_OPACITY',
                             'config': {
-                                'delay': 300,
+                                'delay': 0,
                                 'easing': '',
-                                'duration': 1000,
-                                'target': { 'id': '5f06dfca22397efd808be3dd|ced7da79-0ad7-f812-0d1c-732b2a898cb2' },
-                                'yValue': 5,
-                                'xUnit': 'PX',
-                                'yUnit': 'PX',
-                                'zUnit': 'PX'
-                            }
-                        },
-                        {
-                            'id': 'a-17-n-7',
-                            'actionTypeId': 'TRANSFORM_MOVE',
-                            'config': {
-                                'delay': 600,
-                                'easing': '',
-                                'duration': 1000,
-                                'target': { 'id': '5f06dfca22397efd808be3dd|a8310ec5-97d4-2120-6370-4155688e9a21' },
-                                'yValue': 5,
-                                'xUnit': 'PX',
-                                'yUnit': 'PX',
-                                'zUnit': 'PX'
-                            }
-                        },
-                        {
-                            'id': 'a-17-n-8',
-                            'actionTypeId': 'TRANSFORM_MOVE',
-                            'config': {
-                                'delay': 900,
-                                'easing': '',
-                                'duration': 1000,
-                                'target': { 'id': '5f06dfca22397efd808be3dd|bbaa6ec4-f4d2-fdc0-8539-fca17922f0a7' },
-                                'yValue': 5,
-                                'xUnit': 'PX',
-                                'yUnit': 'PX',
-                                'zUnit': 'PX'
+                                'duration': 300,
+                                'target': { 'id': '5f74cf571cd94759ff590926|0f54c0b9-99a3-59d4-b9d1-162f6bbdd1c1' },
+                                'value': 1,
+                                'unit': ''
                             }
                         }
                     ]
@@ -8493,56 +15062,56 @@ Webflow.require('ix2').init({
                 {
                     'actionItems': [
                         {
-                            'id': 'a-17-n-9',
+                            'id': 'a-23-n-9',
                             'actionTypeId': 'TRANSFORM_MOVE',
                             'config': {
-                                'delay': '0',
+                                'delay': 0,
                                 'easing': '',
-                                'duration': 1000,
-                                'target': { 'id': '5f06dfca22397efd808be3dd|7461fed4-58cc-9fe8-6319-9af5e9e034ca' },
-                                'yValue': '0',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd94759ff590926|bf64f584-bce8-b336-b654-96deda198024' },
+                                'yValue': 0,
                                 'xUnit': 'PX',
                                 'yUnit': 'PX',
                                 'zUnit': 'PX'
                             }
                         },
                         {
-                            'id': 'a-17-n-10',
-                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'id': 'a-23-n-10',
+                            'actionTypeId': 'STYLE_OPACITY',
                             'config': {
-                                'delay': 300,
+                                'delay': 0,
                                 'easing': '',
-                                'duration': 1000,
-                                'target': { 'id': '5f06dfca22397efd808be3dd|ced7da79-0ad7-f812-0d1c-732b2a898cb2' },
-                                'yValue': '0',
-                                'xUnit': 'PX',
-                                'yUnit': 'PX',
-                                'zUnit': 'PX'
+                                'duration': 700,
+                                'target': { 'id': '5f74cf571cd94759ff590926|bf64f584-bce8-b336-b654-96deda198024' },
+                                'value': 1,
+                                'unit': ''
+                            }
+                        }
+                    ]
+                },
+                {
+                    'actionItems': [
+                        {
+                            'id': 'a-23-n-11',
+                            'actionTypeId': 'STYLE_OPACITY',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 700,
+                                'target': { 'id': '5f74cf571cd94759ff590926|96e85f0a-5045-f748-e220-082ca734d163' },
+                                'value': 1,
+                                'unit': ''
                             }
                         },
                         {
-                            'id': 'a-17-n-11',
+                            'id': 'a-23-n-12',
                             'actionTypeId': 'TRANSFORM_MOVE',
                             'config': {
-                                'delay': 600,
+                                'delay': 0,
                                 'easing': '',
-                                'duration': 1000,
-                                'target': { 'id': '5f06dfca22397efd808be3dd|a8310ec5-97d4-2120-6370-4155688e9a21' },
-                                'yValue': '0',
-                                'xUnit': 'PX',
-                                'yUnit': 'PX',
-                                'zUnit': 'PX'
-                            }
-                        },
-                        {
-                            'id': 'a-17-n-12',
-                            'actionTypeId': 'TRANSFORM_MOVE',
-                            'config': {
-                                'delay': 900,
-                                'easing': '',
-                                'duration': 1000,
-                                'target': { 'id': '5f06dfca22397efd808be3dd|bbaa6ec4-f4d2-fdc0-8539-fca17922f0a7' },
-                                'yValue': '0',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd94759ff590926|96e85f0a-5045-f748-e220-082ca734d163' },
+                                'yValue': 0,
                                 'xUnit': 'PX',
                                 'yUnit': 'PX',
                                 'zUnit': 'PX'
@@ -8551,69 +15120,1487 @@ Webflow.require('ix2').init({
                     ]
                 }
             ],
-            'createdOn': 1586862035697,
-            'useFirstGroupAsInitialState': true
+            'useFirstGroupAsInitialState': true,
+            'createdOn': 1588577437030
         },
-        'a-18': {
-            'id': 'a-18',
-            'title': 'gateway 2',
+        'a-24': {
+            'id': 'a-24',
+            'title': 'hero image 2',
             'actionItemGroups': [
                 {
-                    'actionItems': [{
-                            'id': 'a-18-n',
+                    'actionItems': [
+                        {
+                            'id': 'a-24-n',
                             'actionTypeId': 'TRANSFORM_MOVE',
                             'config': {
-                                'delay': '0',
+                                'delay': 0,
                                 'easing': '',
                                 'duration': 500,
-                                'target': { 'id': '5f06dfca22397efd808be3dd|70768702-9898-7aee-6783-187ccedf7d77' },
-                                'xValue': -2200,
+                                'target': { 'id': '5f74cf571cd94759ff590926|ea981538-12c8-7fd2-1fd2-e3255da14d73' },
+                                'xValue': 204,
                                 'xUnit': 'PX',
                                 'yUnit': 'PX',
                                 'zUnit': 'PX'
                             }
-                        }]
-                },
-                {
-                    'actionItems': [{
-                            'id': 'a-18-n-2',
+                        },
+                        {
+                            'id': 'a-24-n-2',
                             'actionTypeId': 'TRANSFORM_MOVE',
                             'config': {
-                                'delay': '0',
-                                'easing': 'easeIn',
+                                'delay': 0,
+                                'easing': '',
                                 'duration': 500,
-                                'target': { 'id': '5f06dfca22397efd808be3dd|70768702-9898-7aee-6783-187ccedf7d77' },
-                                'xValue': '0',
+                                'target': { 'id': '5f74cf571cd94759ff590926|25b20cc5-274b-554c-48be-b8de6a690583' },
+                                'yValue': 60,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        },
+                        {
+                            'id': 'a-24-n-3',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd94759ff590926|e52b9171-d58b-0cf6-2ef9-de0cd37ec63a' },
+                                'yValue': 60,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        },
+                        {
+                            'id': 'a-24-n-4',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd94759ff590926|b53065e7-f961-8b19-e1b3-480d86e61a12' },
+                                'yValue': 60,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        },
+                        {
+                            'id': 'a-24-n-5',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd94759ff590926|785f3d80-3b48-6a72-c556-159bf571a740' },
+                                'yValue': 60,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        },
+                        {
+                            'id': 'a-24-n-6',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd94759ff590926|df8afa78-d02d-c142-5813-7fac6f80564f' },
+                                'yValue': 60,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        }
+                    ]
+                },
+                {
+                    'actionItems': [
+                        {
+                            'id': 'a-24-n-7',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd94759ff590926|25b20cc5-274b-554c-48be-b8de6a690583' },
+                                'yValue': 0,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        },
+                        {
+                            'id': 'a-24-n-8',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd94759ff590926|e52b9171-d58b-0cf6-2ef9-de0cd37ec63a' },
+                                'yValue': 0,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        },
+                        {
+                            'id': 'a-24-n-9',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd94759ff590926|b53065e7-f961-8b19-e1b3-480d86e61a12' },
+                                'yValue': 0,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        },
+                        {
+                            'id': 'a-24-n-10',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd94759ff590926|785f3d80-3b48-6a72-c556-159bf571a740' },
+                                'yValue': 0,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        },
+                        {
+                            'id': 'a-24-n-11',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd94759ff590926|df8afa78-d02d-c142-5813-7fac6f80564f' },
+                                'yValue': 0,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        }
+                    ]
+                },
+                {
+                    'actionItems': [{
+                            'id': 'a-24-n-12',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 1000,
+                                'target': { 'id': '5f74cf571cd94759ff590926|ea981538-12c8-7fd2-1fd2-e3255da14d73' },
+                                'xValue': 0,
                                 'xUnit': 'PX',
                                 'yUnit': 'PX',
                                 'zUnit': 'PX'
                             }
                         }]
+                }
+            ],
+            'useFirstGroupAsInitialState': true,
+            'createdOn': 1588579399813
+        },
+        'a-27': {
+            'id': 'a-27',
+            'title': 'New Timed Animation 4',
+            'actionItemGroups': [
+                {
+                    'actionItems': [
+                        {
+                            'id': 'a-27-n',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd947aa01590927|872cd539-b6c6-5db6-db1b-97de4fa7f11e' },
+                                'yValue': 100,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        },
+                        {
+                            'id': 'a-27-n-2',
+                            'actionTypeId': 'STYLE_OPACITY',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd947aa01590927|872cd539-b6c6-5db6-db1b-97de4fa7f11e' },
+                                'value': 0,
+                                'unit': ''
+                            }
+                        }
+                    ]
                 },
                 {
-                    'actionItems': [{
-                            'id': 'a-18-n-3',
+                    'actionItems': [
+                        {
+                            'id': 'a-27-n-3',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd947aa01590927|872cd539-b6c6-5db6-db1b-97de4fa7f11e' },
+                                'yValue': 0,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        },
+                        {
+                            'id': 'a-27-n-4',
+                            'actionTypeId': 'STYLE_OPACITY',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd947aa01590927|872cd539-b6c6-5db6-db1b-97de4fa7f11e' },
+                                'value': 1,
+                                'unit': ''
+                            }
+                        },
+                        {
+                            'id': 'a-27-n-5',
                             'actionTypeId': 'TRANSFORM_SCALE',
                             'config': {
-                                'delay': '0',
+                                'delay': 0,
                                 'easing': '',
-                                'duration': 500,
-                                'target': { 'id': '5f06dfca22397efd808be3dd|70768702-9898-7aee-6783-187ccedf7d77' },
-                                'xValue': '1.2',
-                                'yValue': '1.2',
+                                'duration': 300,
+                                'target': { 'id': '5f74cf571cd947aa01590927|86d5e94c-30d2-812a-16a9-b848c25b1a09' },
+                                'xValue': '1.05',
+                                'yValue': '1.05',
+                                'locked': true
+                            }
+                        }
+                    ]
+                },
+                {
+                    'actionItems': [{
+                            'id': 'a-27-n-6',
+                            'actionTypeId': 'TRANSFORM_SCALE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 300,
+                                'target': { 'id': '5f74cf571cd947aa01590927|86d5e94c-30d2-812a-16a9-b848c25b1a09' },
+                                'xValue': 1,
+                                'yValue': 1,
                                 'locked': true
                             }
                         }]
+                }
+            ],
+            'useFirstGroupAsInitialState': true,
+            'createdOn': 1588585475594
+        },
+        'a-28': {
+            'id': 'a-28',
+            'title': 'New Scroll Animation 2',
+            'continuousParameterGroups': [{
+                    'id': 'a-28-p',
+                    'type': 'SCROLL_PROGRESS',
+                    'parameterLabel': 'Scroll',
+                    'continuousActionGroups': []
+                }],
+            'createdOn': 1587743374946
+        },
+        'a-31': {
+            'id': 'a-31',
+            'title': 'Supernodehoro 2',
+            'actionItemGroups': [
+                {
+                    'actionItems': [
+                        {
+                            'id': 'a-31-n',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd947862f590928|5bd5e07a-3279-a5ab-1057-1b2428b601c5' },
+                                'yValue': 100,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        },
+                        {
+                            'id': 'a-31-n-2',
+                            'actionTypeId': 'STYLE_OPACITY',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd947862f590928|5bd5e07a-3279-a5ab-1057-1b2428b601c5' },
+                                'value': 0,
+                                'unit': ''
+                            }
+                        }
+                    ]
+                },
+                {
+                    'actionItems': [
+                        {
+                            'id': 'a-31-n-3',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd947862f590928|5bd5e07a-3279-a5ab-1057-1b2428b601c5' },
+                                'yValue': 0,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        },
+                        {
+                            'id': 'a-31-n-4',
+                            'actionTypeId': 'STYLE_OPACITY',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd947862f590928|5bd5e07a-3279-a5ab-1057-1b2428b601c5' },
+                                'value': 1,
+                                'unit': ''
+                            }
+                        }
+                    ]
+                }
+            ],
+            'useFirstGroupAsInitialState': true,
+            'createdOn': 1588586401444
+        },
+        'a-34': {
+            'id': 'a-34',
+            'title': 'Abouthero 2',
+            'actionItemGroups': [
+                {
+                    'actionItems': [
+                        {
+                            'id': 'a-34-n',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd94730a8590929|a34b68ce-633f-397b-fe72-c5c8e57fe672' },
+                                'yValue': 100,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        },
+                        {
+                            'id': 'a-34-n-2',
+                            'actionTypeId': 'STYLE_OPACITY',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd94730a8590929|a34b68ce-633f-397b-fe72-c5c8e57fe672' },
+                                'value': 0,
+                                'unit': ''
+                            }
+                        },
+                        {
+                            'id': 'a-34-n-3',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd94730a8590929|1fb8355d-fddd-c4e3-23e2-fdb42ff4139b' },
+                                'xValue': 500,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        }
+                    ]
+                },
+                {
+                    'actionItems': [
+                        {
+                            'id': 'a-34-n-4',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd94730a8590929|a34b68ce-633f-397b-fe72-c5c8e57fe672' },
+                                'yValue': 0,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        },
+                        {
+                            'id': 'a-34-n-5',
+                            'actionTypeId': 'STYLE_OPACITY',
+                            'config': {
+                                'delay': 0,
+                                'easing': 'inQuad',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd94730a8590929|a34b68ce-633f-397b-fe72-c5c8e57fe672' },
+                                'value': 1,
+                                'unit': ''
+                            }
+                        },
+                        {
+                            'id': 'a-34-n-6',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd94730a8590929|1fb8355d-fddd-c4e3-23e2-fdb42ff4139b' },
+                                'xValue': 1,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        }
+                    ]
+                }
+            ],
+            'useFirstGroupAsInitialState': true,
+            'createdOn': 1588587104618
+        },
+        'a-39': {
+            'id': 'a-39',
+            'title': 'Hero 3',
+            'actionItemGroups': [
+                {
+                    'actionItems': [
+                        {
+                            'id': 'a-39-n',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd947116459092c|0f54c0b9-99a3-59d4-b9d1-162f6bbdd1c1' },
+                                'yValue': 48,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        },
+                        {
+                            'id': 'a-39-n-2',
+                            'actionTypeId': 'STYLE_OPACITY',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd947116459092c|0f54c0b9-99a3-59d4-b9d1-162f6bbdd1c1' },
+                                'value': 0,
+                                'unit': ''
+                            }
+                        },
+                        {
+                            'id': 'a-39-n-3',
+                            'actionTypeId': 'STYLE_OPACITY',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd947116459092c|bf64f584-bce8-b336-b654-96deda198024' },
+                                'value': 0,
+                                'unit': ''
+                            }
+                        },
+                        {
+                            'id': 'a-39-n-4',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd947116459092c|bf64f584-bce8-b336-b654-96deda198024' },
+                                'yValue': 48,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        },
+                        {
+                            'id': 'a-39-n-5',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd947116459092c|96e85f0a-5045-f748-e220-082ca734d163' },
+                                'yValue': 48,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        },
+                        {
+                            'id': 'a-39-n-6',
+                            'actionTypeId': 'STYLE_OPACITY',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd947116459092c|96e85f0a-5045-f748-e220-082ca734d163' },
+                                'value': 0,
+                                'unit': ''
+                            }
+                        }
+                    ]
+                },
+                {
+                    'actionItems': [
+                        {
+                            'id': 'a-39-n-7',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 300,
+                                'target': { 'id': '5f74cf571cd947116459092c|0f54c0b9-99a3-59d4-b9d1-162f6bbdd1c1' },
+                                'yValue': 0,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        },
+                        {
+                            'id': 'a-39-n-8',
+                            'actionTypeId': 'STYLE_OPACITY',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 300,
+                                'target': { 'id': '5f74cf571cd947116459092c|0f54c0b9-99a3-59d4-b9d1-162f6bbdd1c1' },
+                                'value': 1,
+                                'unit': ''
+                            }
+                        }
+                    ]
+                },
+                {
+                    'actionItems': [
+                        {
+                            'id': 'a-39-n-9',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd947116459092c|bf64f584-bce8-b336-b654-96deda198024' },
+                                'yValue': 0,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        },
+                        {
+                            'id': 'a-39-n-10',
+                            'actionTypeId': 'STYLE_OPACITY',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 700,
+                                'target': { 'id': '5f74cf571cd947116459092c|bf64f584-bce8-b336-b654-96deda198024' },
+                                'value': 1,
+                                'unit': ''
+                            }
+                        }
+                    ]
+                },
+                {
+                    'actionItems': [
+                        {
+                            'id': 'a-39-n-11',
+                            'actionTypeId': 'STYLE_OPACITY',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 700,
+                                'target': { 'id': '5f74cf571cd947116459092c|96e85f0a-5045-f748-e220-082ca734d163' },
+                                'value': 1,
+                                'unit': ''
+                            }
+                        },
+                        {
+                            'id': 'a-39-n-12',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd947116459092c|96e85f0a-5045-f748-e220-082ca734d163' },
+                                'yValue': 0,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        }
+                    ]
+                }
+            ],
+            'useFirstGroupAsInitialState': true,
+            'createdOn': 1588577437030
+        },
+        'a-40': {
+            'id': 'a-40',
+            'title': 'hero image 3',
+            'actionItemGroups': [
+                {
+                    'actionItems': [
+                        {
+                            'id': 'a-40-n',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd947116459092c|ea981538-12c8-7fd2-1fd2-e3255da14d73' },
+                                'xValue': 204,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        },
+                        {
+                            'id': 'a-40-n-2',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd947116459092c|25b20cc5-274b-554c-48be-b8de6a690583' },
+                                'yValue': 60,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        },
+                        {
+                            'id': 'a-40-n-3',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd947116459092c|e52b9171-d58b-0cf6-2ef9-de0cd37ec63a' },
+                                'yValue': 60,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        },
+                        {
+                            'id': 'a-40-n-4',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd947116459092c|b53065e7-f961-8b19-e1b3-480d86e61a12' },
+                                'yValue': 60,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        },
+                        {
+                            'id': 'a-40-n-5',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd947116459092c|785f3d80-3b48-6a72-c556-159bf571a740' },
+                                'yValue': 60,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        },
+                        {
+                            'id': 'a-40-n-6',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd947116459092c|df8afa78-d02d-c142-5813-7fac6f80564f' },
+                                'yValue': 60,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        }
+                    ]
+                },
+                {
+                    'actionItems': [
+                        {
+                            'id': 'a-40-n-7',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd947116459092c|25b20cc5-274b-554c-48be-b8de6a690583' },
+                                'yValue': 0,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        },
+                        {
+                            'id': 'a-40-n-8',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd947116459092c|e52b9171-d58b-0cf6-2ef9-de0cd37ec63a' },
+                                'yValue': 0,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        },
+                        {
+                            'id': 'a-40-n-9',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd947116459092c|b53065e7-f961-8b19-e1b3-480d86e61a12' },
+                                'yValue': 0,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        },
+                        {
+                            'id': 'a-40-n-10',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd947116459092c|785f3d80-3b48-6a72-c556-159bf571a740' },
+                                'yValue': 0,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        },
+                        {
+                            'id': 'a-40-n-11',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd947116459092c|df8afa78-d02d-c142-5813-7fac6f80564f' },
+                                'yValue': 0,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        }
+                    ]
                 },
                 {
                     'actionItems': [{
-                            'id': 'a-18-n-4',
-                            'actionTypeId': 'TRANSFORM_SCALE',
+                            'id': 'a-40-n-12',
+                            'actionTypeId': 'TRANSFORM_MOVE',
                             'config': {
-                                'delay': '0',
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 1000,
+                                'target': { 'id': '5f74cf571cd947116459092c|ea981538-12c8-7fd2-1fd2-e3255da14d73' },
+                                'xValue': 0,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        }]
+                }
+            ],
+            'useFirstGroupAsInitialState': true,
+            'createdOn': 1588579399813
+        },
+        'a-43': {
+            'id': 'a-43',
+            'title': 'New Timed Animation 5',
+            'actionItemGroups': [
+                {
+                    'actionItems': [
+                        {
+                            'id': 'a-43-n',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
                                 'easing': '',
                                 'duration': 500,
-                                'target': { 'id': '5f06dfca22397efd808be3dd|70768702-9898-7aee-6783-187ccedf7d77' },
+                                'target': { 'id': '5f74cf571cd94780b659092d|872cd539-b6c6-5db6-db1b-97de4fa7f11e' },
+                                'yValue': 100,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        },
+                        {
+                            'id': 'a-43-n-2',
+                            'actionTypeId': 'STYLE_OPACITY',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd94780b659092d|872cd539-b6c6-5db6-db1b-97de4fa7f11e' },
+                                'value': 0,
+                                'unit': ''
+                            }
+                        }
+                    ]
+                },
+                {
+                    'actionItems': [
+                        {
+                            'id': 'a-43-n-3',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd94780b659092d|872cd539-b6c6-5db6-db1b-97de4fa7f11e' },
+                                'yValue': 0,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        },
+                        {
+                            'id': 'a-43-n-4',
+                            'actionTypeId': 'STYLE_OPACITY',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd94780b659092d|872cd539-b6c6-5db6-db1b-97de4fa7f11e' },
+                                'value': 1,
+                                'unit': ''
+                            }
+                        },
+                        {
+                            'id': 'a-43-n-5',
+                            'actionTypeId': 'TRANSFORM_SCALE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 300,
+                                'target': { 'id': '5f74cf571cd94780b659092d|86d5e94c-30d2-812a-16a9-b848c25b1a09' },
+                                'xValue': '1.05',
+                                'yValue': '1.05',
+                                'locked': true
+                            }
+                        }
+                    ]
+                },
+                {
+                    'actionItems': [{
+                            'id': 'a-43-n-6',
+                            'actionTypeId': 'TRANSFORM_SCALE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 300,
+                                'target': { 'id': '5f74cf571cd94780b659092d|86d5e94c-30d2-812a-16a9-b848c25b1a09' },
+                                'xValue': 1,
+                                'yValue': 1,
+                                'locked': true
+                            }
+                        }]
+                }
+            ],
+            'useFirstGroupAsInitialState': true,
+            'createdOn': 1588585475594
+        },
+        'a-44': {
+            'id': 'a-44',
+            'title': 'New Scroll Animation 3',
+            'continuousParameterGroups': [{
+                    'id': 'a-44-p',
+                    'type': 'SCROLL_PROGRESS',
+                    'parameterLabel': 'Scroll',
+                    'continuousActionGroups': []
+                }],
+            'createdOn': 1587743374946
+        },
+        'a-47': {
+            'id': 'a-47',
+            'title': 'Supernodehoro 3',
+            'actionItemGroups': [
+                {
+                    'actionItems': [
+                        {
+                            'id': 'a-47-n',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd9472d0659092e|5bd5e07a-3279-a5ab-1057-1b2428b601c5' },
+                                'yValue': 100,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        },
+                        {
+                            'id': 'a-47-n-2',
+                            'actionTypeId': 'STYLE_OPACITY',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd9472d0659092e|5bd5e07a-3279-a5ab-1057-1b2428b601c5' },
+                                'value': 0,
+                                'unit': ''
+                            }
+                        }
+                    ]
+                },
+                {
+                    'actionItems': [
+                        {
+                            'id': 'a-47-n-3',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd9472d0659092e|5bd5e07a-3279-a5ab-1057-1b2428b601c5' },
+                                'yValue': 0,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        },
+                        {
+                            'id': 'a-47-n-4',
+                            'actionTypeId': 'STYLE_OPACITY',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd9472d0659092e|5bd5e07a-3279-a5ab-1057-1b2428b601c5' },
+                                'value': 1,
+                                'unit': ''
+                            }
+                        }
+                    ]
+                }
+            ],
+            'useFirstGroupAsInitialState': true,
+            'createdOn': 1588586401444
+        },
+        'a-51': {
+            'id': 'a-51',
+            'title': 'Menu Entrance',
+            'actionItemGroups': [
+                {
+                    'actionItems': [
+                        {
+                            'id': 'a-51-n',
+                            'actionTypeId': 'TRANSFORM_SCALE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': {
+                                    'useEventTarget': 'SIBLINGS',
+                                    'selector': '.nav-menu-2',
+                                    'selectorGuids': ['576abf76-dabd-b52f-f55e-6f84e3e3b749']
+                                },
+                                'xValue': '0.01',
+                                'yValue': '0.01',
+                                'locked': true
+                            }
+                        },
+                        {
+                            'id': 'a-51-n-2',
+                            'actionTypeId': 'GENERAL_DISPLAY',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 0,
+                                'target': {
+                                    'useEventTarget': 'SIBLINGS',
+                                    'selector': '.nav-menu-2',
+                                    'selectorGuids': ['576abf76-dabd-b52f-f55e-6f84e3e3b749']
+                                },
+                                'value': 'none'
+                            }
+                        }
+                    ]
+                },
+                {
+                    'actionItems': [
+                        {
+                            'id': 'a-51-n-3',
+                            'actionTypeId': 'TRANSFORM_SCALE',
+                            'config': {
+                                'delay': 0,
+                                'easing': 'ease',
+                                'duration': 500,
+                                'target': {
+                                    'useEventTarget': 'SIBLINGS',
+                                    'selector': '.nav-menu-2',
+                                    'selectorGuids': ['576abf76-dabd-b52f-f55e-6f84e3e3b749']
+                                },
+                                'xValue': 1,
+                                'yValue': 1,
+                                'locked': true
+                            }
+                        },
+                        {
+                            'id': 'a-51-n-4',
+                            'actionTypeId': 'TRANSFORM_ROTATE',
+                            'config': {
+                                'delay': 0,
+                                'easing': 'ease',
+                                'duration': 500,
+                                'target': {
+                                    'useEventTarget': 'CHILDREN',
+                                    'selector': '.nav-icon',
+                                    'selectorGuids': ['576abf76-dabd-b52f-f55e-6f84e3e3b74c']
+                                },
+                                'zValue': 45,
+                                'xUnit': 'DEG',
+                                'yUnit': 'DEG',
+                                'zUnit': 'DEG'
+                            }
+                        },
+                        {
+                            'id': 'a-51-n-5',
+                            'actionTypeId': 'TRANSFORM_ROTATE',
+                            'config': {
+                                'delay': 0,
+                                'easing': 'ease',
+                                'duration': 500,
+                                'target': {
+                                    'useEventTarget': true,
+                                    'id': '5f74cf571cd9476623590932|d477ed63-75dd-7e73-6a29-c85b200ee172'
+                                },
+                                'zValue': 90,
+                                'xUnit': 'DEG',
+                                'yUnit': 'DEG',
+                                'zUnit': 'DEG'
+                            }
+                        },
+                        {
+                            'id': 'a-51-n-6',
+                            'actionTypeId': 'GENERAL_DISPLAY',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 0,
+                                'target': {
+                                    'useEventTarget': 'SIBLINGS',
+                                    'selector': '.nav-menu-2',
+                                    'selectorGuids': ['576abf76-dabd-b52f-f55e-6f84e3e3b749']
+                                },
+                                'value': 'block'
+                            }
+                        }
+                    ]
+                }
+            ],
+            'useFirstGroupAsInitialState': true,
+            'createdOn': 1582561742209
+        },
+        'a-52': {
+            'id': 'a-52',
+            'title': 'Menu Exit',
+            'actionItemGroups': [
+                {
+                    'actionItems': [
+                        {
+                            'id': 'a-52-n',
+                            'actionTypeId': 'TRANSFORM_SCALE',
+                            'config': {
+                                'delay': 0,
+                                'easing': 'ease',
+                                'duration': 500,
+                                'target': {
+                                    'useEventTarget': 'SIBLINGS',
+                                    'selector': '.nav-menu-2',
+                                    'selectorGuids': ['576abf76-dabd-b52f-f55e-6f84e3e3b749']
+                                },
+                                'xValue': '0.01',
+                                'yValue': '0.01',
+                                'locked': true
+                            }
+                        },
+                        {
+                            'id': 'a-52-n-2',
+                            'actionTypeId': 'TRANSFORM_ROTATE',
+                            'config': {
+                                'delay': 0,
+                                'easing': 'ease',
+                                'duration': 500,
+                                'target': {
+                                    'useEventTarget': 'CHILDREN',
+                                    'selector': '.nav-icon',
+                                    'selectorGuids': ['576abf76-dabd-b52f-f55e-6f84e3e3b74c']
+                                },
+                                'zValue': 0,
+                                'xUnit': 'DEG',
+                                'yUnit': 'DEG',
+                                'zUnit': 'DEG'
+                            }
+                        },
+                        {
+                            'id': 'a-52-n-3',
+                            'actionTypeId': 'TRANSFORM_ROTATE',
+                            'config': {
+                                'delay': 0,
+                                'easing': 'ease',
+                                'duration': 500,
+                                'target': {
+                                    'useEventTarget': true,
+                                    'id': '5f74cf571cd9476623590932|d477ed63-75dd-7e73-6a29-c85b200ee172'
+                                },
+                                'zValue': 0,
+                                'xUnit': 'DEG',
+                                'yUnit': 'DEG',
+                                'zUnit': 'DEG'
+                            }
+                        }
+                    ]
+                },
+                {
+                    'actionItems': [{
+                            'id': 'a-52-n-4',
+                            'actionTypeId': 'GENERAL_DISPLAY',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 0,
+                                'target': {
+                                    'useEventTarget': 'SIBLINGS',
+                                    'selector': '.nav-menu-2',
+                                    'selectorGuids': ['576abf76-dabd-b52f-f55e-6f84e3e3b749']
+                                },
+                                'value': 'none'
+                            }
+                        }]
+                }
+            ],
+            'useFirstGroupAsInitialState': false,
+            'createdOn': 1582561742209
+        },
+        'a-53': {
+            'id': 'a-53',
+            'title': 'New Timed Animation',
+            'actionItemGroups': [],
+            'useFirstGroupAsInitialState': false,
+            'createdOn': 1601634470264
+        },
+        'a-54': {
+            'id': 'a-54',
+            'title': 'Datadash hero text',
+            'actionItemGroups': [
+                {
+                    'actionItems': [
+                        {
+                            'id': 'a-54-n',
+                            'actionTypeId': 'STYLE_OPACITY',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd9471ba9590933|f1ac865f-36b8-7877-4991-d72f2c5756c0' },
+                                'value': '0.5',
+                                'unit': ''
+                            }
+                        },
+                        {
+                            'id': 'a-54-n-2',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd9471ba9590933|f1ac865f-36b8-7877-4991-d72f2c5756c0' },
+                                'xValue': -500,
+                                'zValue': 0,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        }
+                    ]
+                },
+                {
+                    'actionItems': [
+                        {
+                            'id': 'a-54-n-3',
+                            'actionTypeId': 'STYLE_OPACITY',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd9471ba9590933|f1ac865f-36b8-7877-4991-d72f2c5756c0' },
+                                'value': 1,
+                                'unit': ''
+                            }
+                        },
+                        {
+                            'id': 'a-54-n-4',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f74cf571cd9471ba9590933|f1ac865f-36b8-7877-4991-d72f2c5756c0' },
+                                'xValue': 0,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        }
+                    ]
+                }
+            ],
+            'useFirstGroupAsInitialState': true,
+            'createdOn': 1601635297356
+        },
+        'a-55': {
+            'id': 'a-55',
+            'title': 'datadash scroll down',
+            'actionItemGroups': [
+                {
+                    'actionItems': [
+                        {
+                            'id': 'a-55-n',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': {
+                                    'useEventTarget': true,
+                                    'id': '5f74cf571cd9471ba9590933|27fca0d5-e55c-96f5-f459-00ce96219d29'
+                                },
+                                'yValue': 91,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        },
+                        {
+                            'id': 'a-55-n-2',
+                            'actionTypeId': 'STYLE_OPACITY',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': {
+                                    'useEventTarget': true,
+                                    'id': '5f74cf571cd9471ba9590933|27fca0d5-e55c-96f5-f459-00ce96219d29'
+                                },
+                                'value': 0,
+                                'unit': ''
+                            }
+                        }
+                    ]
+                },
+                {
+                    'actionItems': [
+                        {
+                            'id': 'a-55-n-3',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 700,
+                                'target': {
+                                    'useEventTarget': true,
+                                    'id': '5f74cf571cd9471ba9590933|27fca0d5-e55c-96f5-f459-00ce96219d29'
+                                },
+                                'yValue': 0,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        },
+                        {
+                            'id': 'a-55-n-4',
+                            'actionTypeId': 'STYLE_OPACITY',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 700,
+                                'target': {
+                                    'useEventTarget': true,
+                                    'id': '5f74cf571cd9471ba9590933|27fca0d5-e55c-96f5-f459-00ce96219d29'
+                                },
+                                'value': 1,
+                                'unit': ''
+                            }
+                        }
+                    ]
+                }
+            ],
+            'useFirstGroupAsInitialState': true,
+            'createdOn': 1601637792174
+        },
+        'a-59': {
+            'id': 'a-59',
+            'title': 'New Timed Animation 7',
+            'actionItemGroups': [],
+            'useFirstGroupAsInitialState': false,
+            'createdOn': 1601634470264
+        },
+        'a-60': {
+            'id': 'a-60',
+            'title': 'Datadash hero text 3',
+            'actionItemGroups': [
+                {
+                    'actionItems': [
+                        {
+                            'id': 'a-60-n',
+                            'actionTypeId': 'STYLE_OPACITY',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f7c4f5f0144894b18694db7|f1ac865f-36b8-7877-4991-d72f2c5756c0' },
+                                'value': '0.5',
+                                'unit': ''
+                            }
+                        },
+                        {
+                            'id': 'a-60-n-2',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f7c4f5f0144894b18694db7|f1ac865f-36b8-7877-4991-d72f2c5756c0' },
+                                'xValue': -500,
+                                'zValue': 0,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        }
+                    ]
+                },
+                {
+                    'actionItems': [
+                        {
+                            'id': 'a-60-n-3',
+                            'actionTypeId': 'STYLE_OPACITY',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f7c4f5f0144894b18694db7|f1ac865f-36b8-7877-4991-d72f2c5756c0' },
+                                'value': 1,
+                                'unit': ''
+                            }
+                        },
+                        {
+                            'id': 'a-60-n-4',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f7c4f5f0144894b18694db7|f1ac865f-36b8-7877-4991-d72f2c5756c0' },
+                                'xValue': 0,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        }
+                    ]
+                }
+            ],
+            'useFirstGroupAsInitialState': true,
+            'createdOn': 1601635297356
+        },
+        'a-56': {
+            'id': 'a-56',
+            'title': 'Mining image',
+            'actionItemGroups': [
+                {
+                    'actionItems': [
+                        {
+                            'id': 'a-56-n',
+                            'actionTypeId': 'TRANSFORM_SCALE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': {
+                                    'useEventTarget': true,
+                                    'id': '5f74cf571cd9471ba9590933|cab0ebfd-b96e-bf4f-8f2b-9cced60810a7'
+                                },
+                                'xValue': '0.8',
+                                'yValue': '0.8',
+                                'locked': true
+                            }
+                        },
+                        {
+                            'id': 'a-56-n-3',
+                            'actionTypeId': 'TRANSFORM_SCALE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': {
+                                    'selector': '.image-55',
+                                    'selectorGuids': ['23f5a109-b7db-54cd-0e8f-87c5ae36e3cb']
+                                },
+                                'xValue': '0.8',
+                                'yValue': '0.8',
+                                'locked': true
+                            }
+                        }
+                    ]
+                },
+                {
+                    'actionItems': [{
+                            'id': 'a-56-n-2',
+                            'actionTypeId': 'TRANSFORM_SCALE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 700,
+                                'target': {
+                                    'useEventTarget': true,
+                                    'id': '5f74cf571cd9471ba9590933|cab0ebfd-b96e-bf4f-8f2b-9cced60810a7'
+                                },
                                 'xValue': 1,
                                 'yValue': 1,
                                 'locked': true
@@ -8622,23 +16609,377 @@ Webflow.require('ix2').init({
                 },
                 {
                     'actionItems': [{
-                            'id': 'a-18-n-5',
-                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'id': 'a-56-n-4',
+                            'actionTypeId': 'TRANSFORM_SCALE',
                             'config': {
-                                'delay': '0',
+                                'delay': 0,
                                 'easing': '',
                                 'duration': 500,
-                                'target': { 'id': '5f06dfca22397efd808be3dd|70768702-9898-7aee-6783-187ccedf7d77' },
-                                'xValue': '0',
-                                'xUnit': 'PX',
-                                'yUnit': 'PX',
-                                'zUnit': 'PX'
+                                'target': {
+                                    'selector': '.image-55',
+                                    'selectorGuids': ['23f5a109-b7db-54cd-0e8f-87c5ae36e3cb']
+                                },
+                                'xValue': 1,
+                                'yValue': 1,
+                                'locked': true
                             }
                         }]
                 }
             ],
-            'createdOn': 1586863214896,
-            'useFirstGroupAsInitialState': true
+            'useFirstGroupAsInitialState': true,
+            'createdOn': 1601638588340
+        },
+        'a-61': {
+            'id': 'a-61',
+            'title': 'New Timed Animation 8',
+            'actionItemGroups': [],
+            'useFirstGroupAsInitialState': false,
+            'createdOn': 1601634470264
+        },
+        'a-62': {
+            'id': 'a-62',
+            'title': 'Datadash hero text 4',
+            'actionItemGroups': [
+                {
+                    'actionItems': [
+                        {
+                            'id': 'a-62-n',
+                            'actionTypeId': 'STYLE_OPACITY',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f7c52468f0ea77ea559c1ff|f1ac865f-36b8-7877-4991-d72f2c5756c0' },
+                                'value': '0.5',
+                                'unit': ''
+                            }
+                        },
+                        {
+                            'id': 'a-62-n-2',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f7c52468f0ea77ea559c1ff|f1ac865f-36b8-7877-4991-d72f2c5756c0' },
+                                'xValue': -500,
+                                'zValue': 0,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        }
+                    ]
+                },
+                {
+                    'actionItems': [
+                        {
+                            'id': 'a-62-n-3',
+                            'actionTypeId': 'STYLE_OPACITY',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f7c52468f0ea77ea559c1ff|f1ac865f-36b8-7877-4991-d72f2c5756c0' },
+                                'value': 1,
+                                'unit': ''
+                            }
+                        },
+                        {
+                            'id': 'a-62-n-4',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '5f7c52468f0ea77ea559c1ff|f1ac865f-36b8-7877-4991-d72f2c5756c0' },
+                                'xValue': 0,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        }
+                    ]
+                }
+            ],
+            'useFirstGroupAsInitialState': true,
+            'createdOn': 1601635297356
+        },
+        'a-63': {
+            'id': 'a-63',
+            'title': 'Hero 4',
+            'actionItemGroups': [
+                {
+                    'actionItems': [
+                        {
+                            'id': 'a-63-n',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '60cb1a382097985add321c16|0f54c0b9-99a3-59d4-b9d1-162f6bbdd1c1' },
+                                'yValue': 48,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        },
+                        {
+                            'id': 'a-63-n-2',
+                            'actionTypeId': 'STYLE_OPACITY',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '60cb1a382097985add321c16|0f54c0b9-99a3-59d4-b9d1-162f6bbdd1c1' },
+                                'value': 0,
+                                'unit': ''
+                            }
+                        },
+                        {
+                            'id': 'a-63-n-3',
+                            'actionTypeId': 'STYLE_OPACITY',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '60cb1a382097985add321c16|bf64f584-bce8-b336-b654-96deda198024' },
+                                'value': 0,
+                                'unit': ''
+                            }
+                        },
+                        {
+                            'id': 'a-63-n-4',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '60cb1a382097985add321c16|bf64f584-bce8-b336-b654-96deda198024' },
+                                'yValue': 48,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        },
+                        {
+                            'id': 'a-63-n-5',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '60cb1a382097985add321c16|96e85f0a-5045-f748-e220-082ca734d163' },
+                                'yValue': 48,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        },
+                        {
+                            'id': 'a-63-n-6',
+                            'actionTypeId': 'STYLE_OPACITY',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '60cb1a382097985add321c16|96e85f0a-5045-f748-e220-082ca734d163' },
+                                'value': 0,
+                                'unit': ''
+                            }
+                        }
+                    ]
+                },
+                {
+                    'actionItems': [
+                        {
+                            'id': 'a-63-n-7',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 300,
+                                'target': { 'id': '60cb1a382097985add321c16|0f54c0b9-99a3-59d4-b9d1-162f6bbdd1c1' },
+                                'yValue': 0,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        },
+                        {
+                            'id': 'a-63-n-8',
+                            'actionTypeId': 'STYLE_OPACITY',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 300,
+                                'target': { 'id': '60cb1a382097985add321c16|0f54c0b9-99a3-59d4-b9d1-162f6bbdd1c1' },
+                                'value': 1,
+                                'unit': ''
+                            }
+                        }
+                    ]
+                },
+                {
+                    'actionItems': [
+                        {
+                            'id': 'a-63-n-9',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '60cb1a382097985add321c16|bf64f584-bce8-b336-b654-96deda198024' },
+                                'yValue': 0,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        },
+                        {
+                            'id': 'a-63-n-10',
+                            'actionTypeId': 'STYLE_OPACITY',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 700,
+                                'target': { 'id': '60cb1a382097985add321c16|bf64f584-bce8-b336-b654-96deda198024' },
+                                'value': 1,
+                                'unit': ''
+                            }
+                        }
+                    ]
+                },
+                {
+                    'actionItems': [
+                        {
+                            'id': 'a-63-n-11',
+                            'actionTypeId': 'STYLE_OPACITY',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 700,
+                                'target': { 'id': '60cb1a382097985add321c16|96e85f0a-5045-f748-e220-082ca734d163' },
+                                'value': 1,
+                                'unit': ''
+                            }
+                        },
+                        {
+                            'id': 'a-63-n-12',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '60cb1a382097985add321c16|96e85f0a-5045-f748-e220-082ca734d163' },
+                                'yValue': 0,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        }
+                    ]
+                }
+            ],
+            'useFirstGroupAsInitialState': true,
+            'createdOn': 1588577437030
+        },
+        'a-64': {
+            'id': 'a-64',
+            'title': 'Abouthero 4',
+            'actionItemGroups': [
+                {
+                    'actionItems': [
+                        {
+                            'id': 'a-64-n',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '60cb1a382097985add321c16|a34b68ce-633f-397b-fe72-c5c8e57fe672' },
+                                'yValue': 100,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        },
+                        {
+                            'id': 'a-64-n-2',
+                            'actionTypeId': 'STYLE_OPACITY',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '60cb1a382097985add321c16|a34b68ce-633f-397b-fe72-c5c8e57fe672' },
+                                'value': 0,
+                                'unit': ''
+                            }
+                        },
+                        {
+                            'id': 'a-64-n-3',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '60cb1a382097985add321c16|1fb8355d-fddd-c4e3-23e2-fdb42ff4139b' },
+                                'xValue': 500,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        }
+                    ]
+                },
+                {
+                    'actionItems': [
+                        {
+                            'id': 'a-64-n-4',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '60cb1a382097985add321c16|a34b68ce-633f-397b-fe72-c5c8e57fe672' },
+                                'yValue': 0,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        },
+                        {
+                            'id': 'a-64-n-5',
+                            'actionTypeId': 'STYLE_OPACITY',
+                            'config': {
+                                'delay': 0,
+                                'easing': 'inQuad',
+                                'duration': 500,
+                                'target': { 'id': '60cb1a382097985add321c16|a34b68ce-633f-397b-fe72-c5c8e57fe672' },
+                                'value': 1,
+                                'unit': ''
+                            }
+                        },
+                        {
+                            'id': 'a-64-n-6',
+                            'actionTypeId': 'TRANSFORM_MOVE',
+                            'config': {
+                                'delay': 0,
+                                'easing': '',
+                                'duration': 500,
+                                'target': { 'id': '60cb1a382097985add321c16|1fb8355d-fddd-c4e3-23e2-fdb42ff4139b' },
+                                'xValue': 1,
+                                'xUnit': 'PX',
+                                'yUnit': 'PX',
+                                'zUnit': 'PX'
+                            }
+                        }
+                    ]
+                }
+            ],
+            'useFirstGroupAsInitialState': true,
+            'createdOn': 1588587104618
         }
     },
     'site': {
@@ -8660,7 +17001,7 @@ Webflow.require('ix2').init({
             },
             {
                 'key': 'tiny',
-                'min': '0',
+                'min': 0,
                 'max': 479
             }
         ]
